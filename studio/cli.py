@@ -1,6 +1,7 @@
 """`studio` command line."""
 import argparse
 import json
+import os
 import shutil
 import sys
 from collections import Counter
@@ -11,8 +12,10 @@ import yaml
 from pydantic import ValidationError
 
 from studio.config import load_settings
+from studio.cost import BudgetExceeded
 from studio.contracts import ApprovalRecord, BriefInput, Gate, ProviderKind, RunStatus, SourceIndex
 from studio.orchestrator import Orchestrator
+from studio.nodes.research_live import ResearchFailed
 from studio.providers.base import ProviderResponseError, ProviderUnavailable
 from studio.providers.live import AnthropicLLM, ScriptedResearchPolicy, UnavailableProvider
 from studio.providers.mock import SimulatedCrash, build_mock_providers
@@ -81,6 +84,55 @@ def cmd_run(a) -> int:
     return EXIT_OK
 
 
+def trace_from_ledger(ops) -> list[dict]:
+    """Rebuild the real step sequence (model decision -> tool result) from the operation ledger."""
+    steps: dict[int, dict] = {}
+    for o in ops:
+        part = o.idempotency_key.split("|")[-1]  # e.g. "s2:policy" or "s3:web_fetch"
+        if not part.startswith("s") or ":" not in part:
+            continue
+        n, kind = part[1:].split(":", 1)
+        st = steps.setdefault(int(n), {"step": int(n)})
+        if kind == "policy":
+            st["policy_status"] = o.status.value
+            if o.error:
+                st["policy_error"] = o.error[:200]
+        else:
+            st["tool_status"], st["tool_called"] = o.status.value, kind
+    return [steps[k] for k in sorted(steps)]
+
+
+def _write_failure_report(orch, a, llm, exc) -> None:
+    """Persist what really happened in a failed paid run: decisions (with the model's reasons), tool results, usage."""
+    out = Path(a.out)
+    out.mkdir(parents=True, exist_ok=True)
+    decisions, results = [], []
+    with orch.open(a.run) as (svc, *_):
+        ops = svc.ledger.list(a.run)
+        import sqlite3
+        conn = sqlite3.connect(svc.ledger.db_path)
+        rows = conn.execute("SELECT idempotency_key, status, result_json FROM operations ORDER BY started_at, rowid").fetchall()
+        conn.close()
+    for key, status, res in rows:
+        part = key.split("|")[-1]
+        if status != "done" or not res or ":" not in part:
+            continue
+        doc = json.loads(res)
+        if part.endswith(":policy"):
+            decisions.append({"step": part, "action": doc.get("action"), "tool": doc.get("tool"), "args": doc.get("args"),
+                              "reason": doc.get("rationale")})
+        else:
+            results.append({"step": part, "ok": doc.get("ok"), "error": doc.get("error"),
+                            "urls": [s["url"] for s in doc.get("sources", [])]})
+    report = {"status": "failed", "failure": f"{type(exc).__name__}: {str(exc)[:400]}", "model": llm.model_id,
+              "policy_autonomous": True, "mode": a.mode, "model_decisions": decisions, "tool_results": results,
+              "ledger_steps": trace_from_ledger(ops), "api": llm.accounting()}
+    (out / "run_summary.json").write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
+    src = Path(llm.usage_path) if llm.usage_path else None
+    if src and src.is_file():
+        (out / "api_usage.jsonl").write_text(src.read_text(encoding="utf-8"), encoding="utf-8")
+
+
 def cmd_research(a) -> int:
     """Research workflow (research_agent -> brand_product_analyst) on the shared engine."""
     settings = load_settings(a.config)
@@ -95,10 +147,14 @@ def cmd_research(a) -> int:
             return EXIT_ERROR
         transport, origin = RecordedTransport.from_file(Path(a.fixtures) / "transport.json"), "fixture"
     if a.policy == "anthropic":
-        ap = settings.anthropic_pricing
-        llm = AnthropicLLM(settings.models.research_llm, transport, cfg.anthropic_max_tokens, origin,
-                           input_usd_per_mtok=ap.input_usd_per_mtok, output_usd_per_mtok=ap.output_usd_per_mtok,
-                           budget_usd=a.max_api_spend_usd)
+        model = a.model or settings.models.research_llm
+        price = settings.anthropic_pricing.get(model)
+        llm = AnthropicLLM(model, transport, cfg.anthropic_max_tokens, origin,
+                           input_usd_per_mtok=price.input_usd_per_mtok if price else None,
+                           output_usd_per_mtok=price.output_usd_per_mtok if price else None,
+                           max_prompt_tokens=price.max_prompt_tokens if price else 100_000,
+                           budget_usd=a.max_api_spend_usd, max_requests=a.max_requests,
+                           usage_path=(Path(a.runs_dir or settings.runs_dir) / a.run / "api_usage.jsonl") if a.run else None)
         if not llm.api_key:
             print("error: --policy anthropic needs ANTHROPIC_API_KEY (not set). Nothing was run. Choose "
                   "--policy scripted explicitly to use the non-autonomous scripted crawl plan.", file=sys.stderr)
@@ -106,16 +162,24 @@ def cmd_research(a) -> int:
         if a.mode == "live" and a.max_api_spend_usd is None:
             print("error: a real Anthropic run needs an explicit --max-api-spend-usd. Nothing was run.", file=sys.stderr)
             return EXIT_ERROR
-        if a.mode == "live" and (ap.input_usd_per_mtok is None or ap.output_usd_per_mtok is None):
-            print("error: anthropic_pricing in config.yaml is empty; fill the per-million-token prices from the official "
-                  "pricing page so the spend cap can be enforced. Nothing was run.", file=sys.stderr)
+        if a.mode == "live" and price is None:
+            print(f"error: anthropic_pricing in config.yaml has no entry for model '{model}'; add its per-million-token "
+                  "prices from the official pricing page so the spend cap can be enforced. Nothing was run.", file=sys.stderr)
             return EXIT_ERROR
-        try:  # free call (no tokens): is the key valid and the model accessible?
-            pf = llm.preflight()
-        except ProviderUnavailable as e:
-            print(f"error: {e}. Nothing was run.", file=sys.stderr)
+        if a.mode == "live" and not a.run:
+            print("error: a real Anthropic run needs --run RUN_ID (its request/spend accounting is persisted per run). "
+                  "Nothing was run.", file=sys.stderr)
             return EXIT_ERROR
-        print(f"preflight ok: model {pf['model']} accessible; budget {llm.budget_usd} USD, max steps {cfg.max_steps}")
+        if a.skip_preflight:
+            print(f"preflight skipped by request; already used {llm.api_requests} of {llm.max_requests} API requests")
+        else:
+            try:  # free call (no tokens): is the key valid and the model accessible?
+                pf = llm.preflight()
+            except (ProviderUnavailable, BudgetExceeded) as e:
+                print(f"error: {e}. Nothing was run.", file=sys.stderr)
+                return EXIT_ERROR
+            print(f"preflight ok: model {pf['model']} accessible; budget {llm.budget_usd} USD, max steps {cfg.max_steps}, "
+                  f"max API requests {llm.max_requests} (preflight counted: {llm.api_requests} used)")
         if a.preflight_only:
             return EXIT_OK
     else:
@@ -137,8 +201,14 @@ def cmd_research(a) -> int:
     orch = Orchestrator(settings, runs_dir=a.runs_dir, providers=providers, auto_approve_mock=False, until="analyst")
     try:
         res = orch.run(a.run, brief=load_brief(a.brief))
-    except (ProviderUnavailable, ProviderResponseError, ValueError, ValidationError) as e:
+    except (ProviderUnavailable, ProviderResponseError, ResearchFailed, ValueError, ValidationError) as e:
         print(f"research failed: {type(e).__name__}: {e}", file=sys.stderr)
+        if a.policy == "anthropic":  # spending and the real tool sequence are never lost, even on failure
+            acc = llm.accounting()
+            print(f"api accounting: {acc['api_requests']}/{acc['max_requests']} requests, {acc['input_tokens']} in / "
+                  f"{acc['output_tokens']} out tokens, spent {acc['spent_usd']} of {acc['budget_usd']} USD", file=sys.stderr)
+            if a.out and a.run:
+                _write_failure_report(orch, a, llm, e)
         return EXIT_ERROR
     v = res.values
     index = SourceIndex.model_validate(v["research"]["source_index"])
@@ -154,11 +224,7 @@ def cmd_research(a) -> int:
         "analysis_mode": v["brand_profile"]["profile"]["analysis_mode"],
         "operations": ops, "estimated_cost_usd": cost, "trace": v["research"]["trace"],
         "tools_selected": dict(Counter(t["tool"] for t in v["research"]["trace"])),
-        "api": ({"model": llm.model_id, "http_requests": llm.http_requests, "budget_usd": llm.budget_usd,
-                 "spent_usd": llm.spent_usd, "remaining_usd": llm.remaining_usd(),
-                 "input_tokens": sum(u["input_tokens"] for u in llm.usage_log),
-                 "output_tokens": sum(u["output_tokens"] for u in llm.usage_log), "calls": llm.usage_log}
-                if a.policy == "anthropic" else None)}
+        "api": (llm.accounting() | {"http_requests": llm.http_requests} if a.policy == "anthropic" else None)}
     run_research = Path(orch.run_dir(res.run_id)) / "research"
     (run_research / "run_summary.json").write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
     if a.out:  # JSON only; raw third-party artifacts stay in the run directory
@@ -339,6 +405,11 @@ def build_parser() -> argparse.ArgumentParser:
     rs.add_argument("--max-steps", type=int, help="override research.max_steps for this run (e.g. 5)")
     rs.add_argument("--max-api-spend-usd", type=float,
                     help="hard cap on Anthropic spend; REQUIRED for a real run; checked before every request")
+    rs.add_argument("--model", help="Anthropic model id (default: config models.research_llm), e.g. claude-haiku-5-5")
+    rs.add_argument("--max-requests", type=int,
+                    help="cap on ALL API requests incl. the preflight and retries (a real run should set it)")
+    rs.add_argument("--skip-preflight", action="store_true",
+                    help="skip the preflight (it counts as an API request); only after a previous preflight succeeded")
     rs.add_argument("--preflight-only", action="store_true",
                     help="verify key + model access (free) and exit without researching")
     rs.add_argument("--out", help="copy brand_profile/evidence_registry/source_index JSON here")
@@ -363,7 +434,28 @@ def build_parser() -> argparse.ArgumentParser:
     return p
 
 
+def load_dotenv(path: Path = Path(".env")) -> list[str]:
+    """Minimal .env reader: sets variables that are NOT already in the environment. Returns the NAMES it set.
+
+    Values are never printed or returned. Skipped when STUDIO_NO_DOTENV=1 (the test suite sets it so a real
+    key on a developer machine can never reach a test)."""
+    if os.environ.get("STUDIO_NO_DOTENV") == "1" or not path.is_file():
+        return []
+    set_names = []
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        name, _, value = line.removeprefix("export ").partition("=")
+        name, value = name.strip(), value.strip().strip("\"'")
+        if name.isidentifier() and value and name not in os.environ:
+            os.environ[name] = value
+            set_names.append(name)
+    return set_names
+
+
 def main(argv: list[str] | None = None) -> int:
+    load_dotenv()
     args = build_parser().parse_args(argv)
     return args.fn(args)
 

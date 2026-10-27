@@ -53,6 +53,7 @@ def make_orch(settings, tmp_path):
 @pytest.fixture(autouse=True)
 def no_credentials(monkeypatch):
     """Tests must never see real credentials, so no paid provider can be reached by accident."""
+    monkeypatch.setenv("STUDIO_NO_DOTENV", "1")  # a developer's real .env must never reach a test
     for k in ("ANTHROPIC_API_KEY", "APIFY_TOKEN", "APIFY_API_TOKEN", "OPENAI_API_KEY"):
         monkeypatch.delenv(k, raising=False)
 

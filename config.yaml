@@ -15,11 +15,15 @@ models:
   research_llm: claude-sonnet-5-5   # live Anthropic adapter only (needs ANTHROPIC_API_KEY)
 
 # Unit prices are filled in Phase 2 when real providers are chosen and verified.
-# Token prices for the Anthropic adapter, USD per million tokens. LEFT EMPTY ON PURPOSE: fill them from the
-# official pricing page before a real run; without them a spend cap cannot be enforced and the run is refused.
+# Token prices for the Anthropic adapter, per model id. A model with no entry here is refused (no spend cap possible).
+# Prices apply to prompts up to max_prompt_tokens; longer prompts are priced higher and are refused, not guessed.
 anthropic_pricing:
-  input_usd_per_mtok:
-  output_usd_per_mtok:
+  claude-haiku-5-5:
+    input_usd_per_mtok: 0.10
+    output_usd_per_mtok: 0.50
+    max_prompt_tokens: 100000
+    source_url: https://platform.claude.com/docs/en/about-claude/pricing
+    verified_on: "2026-10-27"   # base prices for prompts up to 100,000 tokens (over 100k: 0.50 in / 2.50 out)
 
 pricing:
   llm: {unit: call, usd_per_unit: 0.0}
