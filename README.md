@@ -93,3 +93,12 @@ studio research --mode live --policy scripted --instagram import `
   Read `research/README.md` for what is real, manual, fixture or mock.
 
 Phase 1 commands (`studio run --mock ...`) are unchanged.
+
+### Phase 2b additions
+* `studio compare-research --a DIR --b DIR` diffs two research outputs (sources, products, evidence, cost).
+* `brand_profile.json` now also contains `selected_packshot` (source, retrieval date, server `Last-Modified`,
+  resolution/alpha checks, recorded cut-out), `selected_font`, per-post visual conclusions and per-format post lists.
+* Optional extra for image checks and cut-outs: `pip install -e ".[images]"` (Pillow). Without it these steps are
+  skipped **explicitly** and reported in `limitations`.
+* Instagram collection details: [docs/instagram_collection.md](docs/instagram_collection.md).
+* `.claude/skills/` is tracked; other `.claude/` files are ignored and a CI check fails if they are committed.

@@ -1,0 +1,348 @@
+# MANUAL VISUAL OBSERVATIONS - NOT produced by the studio runtime. See provenance.
+provenance:
+  observer: Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run
+    by the studio
+  method: Cover images (video cover frame / first carousel slide) were downloaded from the Instagram CDN URLs returned
+    by the Apify export, viewed on two labelled contact sheets of 7 covers each (about 400 px per cover), and labelled
+    by eye. Palettes were computed from the same bytes with studio.tools.imagecheck.dominant_colors.
+  observed_at: '2026-10-27'
+  palette_method: median-cut quantisation, k=5 per cover on a 96 px thumbnail (Pillow); shares are pixel fractions
+  images_stored: NO - cover images are third-party media; only their sha256 is recorded here
+  selection: 14 of the 30 imported posts, chosen for variety (reels, carousels, one image; product and non-product);
+    the other 16 were not analysed
+  limitations: thumbnail-scale viewing; first frame/slide only; labels are subjective; tone is not assessed here
+observations:
+- post_url: https://www.instagram.com/p/De_YTBHE7Nw/
+  cover_sha256: fab5ae373f3c01952cbb70a361e4e1c68ed0805caa1884eab1e9174e8dd7726d
+  media_kind: video_cover
+  cover_size: 1080x1920
+  dominant_colors:
+  - hex: '#535258'
+    share: 0.263
+  - hex: '#26262e'
+    share: 0.241
+  - hex: '#757579'
+    share: 0.198
+  - hex: '#8f8f92'
+    share: 0.189
+  - hex: '#a7a6a7'
+    share: 0.108
+  composition:
+  - lifestyle_photo
+  - behind_the_scenes
+  product_shown: apparel_worn
+  people_shown: one
+  text_overlay: false
+  overlay_type_style: null
+  notes: Muscular man seen from behind walking through a warehouse aisle, black GymBeam tee with neon-lime logo
+    print.
+- post_url: https://www.instagram.com/p/De9xZm9kdUN/
+  cover_sha256: 2ec10ae7764646f94922a1b009e0d4febce71e8a0d0b49bb93f4f91abfe35af5
+  media_kind: video_cover
+  cover_size: 2250x4000
+  dominant_colors:
+  - hex: '#1a1a19'
+    share: 0.284
+  - hex: '#151514'
+    share: 0.271
+  - hex: '#0b0b0b'
+    share: 0.202
+  - hex: '#545442'
+    share: 0.129
+  - hex: '#262621'
+    share: 0.114
+  composition:
+  - flat_lay
+  product_shown: apparel_flat_lay
+  people_shown: none
+  text_overlay: false
+  overlay_type_style: null
+  notes: Black GymBeam Running jacket and sports bra flat-lay on grey fabric, neon yellow-green print.
+- post_url: https://www.instagram.com/p/De7MhWqkTas/
+  cover_sha256: 4bce1879c2ff6fded4979b4ca42b32ca1c2ccca09da55049bcc112a127df8c01
+  media_kind: video_cover
+  cover_size: 1080x1920
+  dominant_colors:
+  - hex: '#7d6d66'
+    share: 0.324
+  - hex: '#150e12'
+    share: 0.233
+  - hex: '#614e48'
+    share: 0.193
+  - hex: '#d6b9a4'
+    share: 0.126
+  - hex: '#a98976'
+    share: 0.124
+  composition:
+  - talking_head
+  - lifestyle_photo
+  product_shown: in_use
+  people_shown: one
+  text_overlay: true
+  overlay_type_style: subtitle_sans
+  notes: Man speaking to camera in a home kitchen, GymBeam tee; supplement bottle (ProbioTen) on the table; burned-in
+    subtitle.
+- post_url: https://www.instagram.com/p/De18LcqEsNP/
+  cover_sha256: 36abe8b46ef38f5d6fa8b590f77d14eafd41e930d3a6177a29250757b720d391
+  media_kind: video_cover
+  cover_size: 1320x2347
+  dominant_colors:
+  - hex: '#725f5a'
+    share: 0.275
+  - hex: '#422821'
+    share: 0.233
+  - hex: '#a99eae'
+    share: 0.206
+  - hex: '#907e81'
+    share: 0.204
+  - hex: '#c8bfd2'
+    share: 0.081
+  composition:
+  - lifestyle_photo
+  - creator_portrait
+  product_shown: none
+  people_shown: one
+  text_overlay: false
+  overlay_type_style: null
+  notes: Smiling woman in light activewear holding a glass of drink; the product itself is not identifiable.
+- post_url: https://www.instagram.com/p/Dewyc-KkXL_/
+  cover_sha256: 3b736d7c19d5597181fb5ba14615e8dff16200c4241bb20ad9d450a08fd76f63
+  media_kind: video_cover
+  cover_size: 1080x1920
+  dominant_colors:
+  - hex: '#bc4124'
+    share: 0.29
+  - hex: '#361e2b'
+    share: 0.222
+  - hex: '#d69970'
+    share: 0.183
+  - hex: '#d2d0c5'
+    share: 0.178
+  - hex: '#e3e8dd'
+    share: 0.126
+  composition:
+  - lifestyle_photo
+  - food
+  product_shown: none
+  people_shown: one
+  text_overlay: false
+  overlay_type_style: null
+  notes: Woman on an orange sofa in a red GymBeam top holding a plate of pasta/gnocchi; no packaging visible.
+- post_url: https://www.instagram.com/p/DeweAhoFvZr/
+  cover_sha256: 9f41546259d4fbbaf51197b6efc14818d17ccaceea5c3170057199f7ce654101
+  media_kind: carousel_first_slide
+  cover_size: 1080x1349
+  dominant_colors:
+  - hex: '#251d30'
+    share: 0.256
+  - hex: '#7e3c49'
+    share: 0.247
+  - hex: '#997984'
+    share: 0.22
+  - hex: '#cab3b4'
+    share: 0.157
+  - hex: '#e6d7d5'
+    share: 0.12
+  composition:
+  - product_staged
+  - conceptual_scene
+  product_shown: packshot
+  people_shown: none
+  text_overlay: false
+  overlay_type_style: null
+  shows_creatine_pack: new
+  notes: NEW orange/silver 'Creatine Monohydrate - 100% Pure micronised - Unflavoured' pouch standing on a fashion
+    runway with white feather angel wings (campaign 'GymBeam Anđeo').
+- post_url: https://www.instagram.com/p/DeuNpiTikK6/
+  cover_sha256: 9a605be2fd49572a9141e5d17d4697bd8b2ce5418e215f3d4fee78864798b2ab
+  media_kind: carousel_first_slide
+  cover_size: 1080x1350
+  dominant_colors:
+  - hex: '#f2b2bc'
+    share: 0.293
+  - hex: '#cd857e'
+    share: 0.231
+  - hex: '#833746'
+    share: 0.226
+  - hex: '#eba6b0'
+    share: 0.169
+  - hex: '#f0c1c4'
+    share: 0.08
+  composition:
+  - graphic_design
+  - co_brand_layout
+  - creator_portrait
+  product_shown: in_use
+  people_shown: one
+  text_overlay: true
+  overlay_type_style: script_serif_display
+  notes: Pink layout 'GymBeam x Anja Blagojevic - CreaGlow' in a decorative serif/script face, creator holding the
+    CreaGlow tub, handwritten signature.
+- post_url: https://www.instagram.com/p/DepEBX5CRks/
+  cover_sha256: 8831214d113625c169373656d452478a911f7029a5fecd0314a26e6e57b7457b
+  media_kind: carousel_first_slide
+  cover_size: 1080x1349
+  dominant_colors:
+  - hex: '#04080a'
+    share: 0.295
+  - hex: '#616465'
+    share: 0.227
+  - hex: '#2c2d2c'
+    share: 0.22
+  - hex: '#b2b0ae'
+    share: 0.132
+  - hex: '#eee9e4'
+    share: 0.126
+  composition:
+  - lifestyle_photo
+  - text_heavy_overlay
+  product_shown: equipment
+  people_shown: one
+  text_overlay: true
+  overlay_type_style: bold_geometric_sans_caps
+  notes: Man in an ice-bath tub on a rooftop; large white caps 'IZLAGANJE HLADNOCE' over a dark gradient, small
+    caps subtitle, GymBeam wordmark on the tub.
+- post_url: https://www.instagram.com/p/DegX7qjj4Sx/
+  cover_sha256: d211651ff28b2a1cd58687bf1d1b2b13a6c6d14352655c47a329077b6e61273d
+  media_kind: carousel_first_slide
+  cover_size: 1080x1350
+  dominant_colors:
+  - hex: '#130e0d'
+    share: 0.292
+  - hex: '#050505'
+    share: 0.268
+  - hex: '#422518'
+    share: 0.154
+  - hex: '#885134'
+    share: 0.154
+  - hex: '#ac7452'
+    share: 0.132
+  composition:
+  - action_motion
+  - lifestyle_photo
+  product_shown: apparel_worn
+  people_shown: one
+  text_overlay: false
+  overlay_type_style: null
+  notes: Woman in black GymBeam sports set with neon-lime print, motion-blurred figures behind, dark moody grade.
+- post_url: https://www.instagram.com/p/DedzClSiOcs/
+  cover_sha256: e66d02d9f6ed8476c096faf411ed34a38860a82dab6d6ea51eac6c8eb9771582
+  media_kind: carousel_first_slide
+  cover_size: 720x900
+  dominant_colors:
+  - hex: '#67422f'
+    share: 0.294
+  - hex: '#edc774'
+    share: 0.28
+  - hex: '#d18b84'
+    share: 0.229
+  - hex: '#e3d5b1'
+    share: 0.175
+  - hex: '#5c3929'
+    share: 0.023
+  composition:
+  - graphic_design
+  - colour_blocks
+  product_shown: none
+  people_shown: none
+  text_overlay: true
+  overlay_type_style: null
+  notes: 'Poll slide: flat colour blocks (vanilla yellow, chocolate brown, strawberry pink) with a faint G logo;
+    headline text is only partly legible on the cover.'
+- post_url: https://www.instagram.com/p/DeZnc3_DmCF/
+  cover_sha256: 95aa6da601d47f64d0d5d5a6c3d7902ba30ac3adbb92a1dfa01f2f0fdd88ae1f
+  media_kind: carousel_first_slide
+  cover_size: 1080x1350
+  dominant_colors:
+  - hex: '#030201'
+    share: 0.277
+  - hex: '#160c08'
+    share: 0.246
+  - hex: '#372218'
+    share: 0.224
+  - hex: '#6b3d2d'
+    share: 0.157
+  - hex: '#b28770'
+    share: 0.095
+  composition:
+  - lifestyle_photo
+  - text_heavy_overlay
+  product_shown: hidden
+  people_shown: none
+  text_overlay: true
+  overlay_type_style: bold_geometric_sans_caps
+  notes: Gaming PC setup at dusk with the G logo on the monitor; product pixelated as a teaser; white/orange caps
+    'OVO VAM NEDOSTAJE U VASEM GAMING SETUPU'.
+- post_url: https://www.instagram.com/p/DeQ7N2-G1AX/
+  cover_sha256: bb1b7aacb360726ec5447cfdc2559124e8c3de23642e9cdb0b4feb735f730336
+  media_kind: carousel_first_slide
+  cover_size: 1080x1350
+  dominant_colors:
+  - hex: '#f2ede7'
+    share: 0.282
+  - hex: '#f4f0ea'
+    share: 0.236
+  - hex: '#f1eee8'
+    share: 0.216
+  - hex: '#8a4f40'
+    share: 0.203
+  - hex: '#ccb0a4'
+    share: 0.063
+  composition:
+  - product_staged
+  - graphic_design
+  - playful_concept
+  product_shown: packshot
+  people_shown: hands_only
+  text_overlay: true
+  overlay_type_style: bold_sans_sentence_case
+  notes: Off-white background, protein bar packshot top-left, two hands playing rock-paper-scissors, headline 'Kriza
+    za slatkim', GymBeam wordmark at the bottom.
+- post_url: https://www.instagram.com/p/DePXg5KD9nl/
+  cover_sha256: 8ea28325c7d7658895785ffe08c204f8430b94a423ead616c75dc5165f1bf86b
+  media_kind: video_cover
+  cover_size: 720x1280
+  dominant_colors:
+  - hex: '#080908'
+    share: 0.24
+  - hex: '#4f433b'
+    share: 0.236
+  - hex: '#af957f'
+    share: 0.228
+  - hex: '#2c1f1d'
+    share: 0.156
+  - hex: '#161514'
+    share: 0.139
+  composition:
+  - lifestyle_photo
+  - in_gym
+  product_shown: in_use
+  people_shown: one
+  text_overlay: false
+  overlay_type_style: null
+  notes: Bald bearded man in a gym scooping powder from a Crazy Pump tub into a shaker.
+- post_url: https://www.instagram.com/p/DeG1oeEFsWk/
+  cover_sha256: 61f0fedbbed43467fc423474e6dd1ad4e3e6f2551489d3f33a4aed782b74e89b
+  media_kind: image
+  cover_size: 1080x1350
+  dominant_colors:
+  - hex: '#453e3f'
+    share: 0.243
+  - hex: '#9d7e7f'
+    share: 0.22
+  - hex: '#1e1817'
+    share: 0.195
+  - hex: '#302b2c'
+    share: 0.188
+  - hex: '#392e2d'
+    share: 0.154
+  composition:
+  - co_brand_layout
+  - lifestyle_photo
+  - text_heavy_overlay
+  product_shown: in_use
+  people_shown: one
+  text_overlay: true
+  overlay_type_style: bold_sans_sentence_case
+  notes: Dark grey backdrop, woman in lilac activewear holding a protein bar, 'GymBeam x BOX NOW' lock-up and white
+    headline about free delivery.

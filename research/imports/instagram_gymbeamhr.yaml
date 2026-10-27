@@ -1,183 +1,604 @@
-# MANUAL IMPORT - NOT collected by the studio's runtime research agent.
-# Collected at development time by the operator session (Claude Code) through the Apify MCP
-# connector, then transcribed here. The studio loads this file through the `instagram_fetch`
-# tool's manual-import adapter, which refuses files without the provenance block below.
+# MANUAL IMPORT - NOT collected by the studio's runtime research agent. See provenance.
 provenance:
-  collected_by: "Claude Code operator session (development time) - NOT the studio runtime agent"
-  method: "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
-  apify_run_ids: [IBw4JCdf06bKLQwA7, aTPUrqbrkIqnXC8o3]
-  collected_at: "2026-10-27T19:42:15Z"
-  source_description: "Public posts of https://www.instagram.com/gymbeamhr/ (feed order, newest first)"
-  selection: >-
-    The 10 newest posts whose ownerUsername is gymbeamhr. Within the same window 17 brand-owned
-    posts were seen in total (7 older ones not imported) and 7 posts owned by other accounts
-    (creator collaborations shown on the profile) were seen and excluded from brand-voice data.
-  captions: "Transcribed verbatim from the actor output; media (images/video) NOT downloaded."
-  non_owner_posts_seen_and_excluded: 7
-  metrics_note: "likes/comments are a snapshot at collected_at; hidden counts are omitted (null)."
-  estimated_cost_usd: "about 0.06 (36 posts x 0.0017 listed FREE-tier price; actual Apify billing not checked)"
+  collected_by: Claude Code operator session (development time) - NOT the studio runtime agent
+  method: Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData
+  apify_actor: apify/instagram-post-scraper (id nH2AHrwxeTRJoN5hX)
+  apify_run_id: WtGf9fc7CBKSCedez
+  apify_dataset_id: Ws21r5QsYrcldky99
+  apify_input:
+    username:
+    - gymbeamhr
+    resultsLimit: 70
+    skipPinnedPosts: false
+    dataDetailLevel: basicData
+  apify_call_options:
+    maxTotalChargeUsd: 0.15
+  collected_at: '2026-10-27T20:54:07Z'
+  source_description: Public posts of https://www.instagram.com/gymbeamhr/ (feed order, newest first)
+  selection: The 30 newest posts whose ownerUsername is gymbeamhr. The run returned 60 items (46 brand-owned,
+    14 owned by other accounts = creator collaborations, excluded). 16 older brand-owned posts were returned
+    but not imported.
+  captions: Copied programmatically from the raw export; media (images/video) NOT stored in the repo.
+  metrics_note: likes/comments are a snapshot at collected_at; hidden counts (-1) are null.
+  non_owner_posts_seen_and_excluded: 14
+  estimated_cost_usd: about 0.10 (60 posts x 0.0017 listed FREE-tier price; actual Apify billing not checked)
+  supersedes: earlier 10-post import from runs IBw4JCdf06bKLQwA7 / aTPUrqbrkIqnXC8o3
 posts:
-  - shortcode: De_YTBHE7Nw
-    url: https://www.instagram.com/p/De_YTBHE7Nw/
-    type: Video
-    timestamp: "2026-10-27T08:01:38.000Z"
-    owner: gymbeamhr
-    likes: 22
-    comments: 0
-    hashtags: [gbig, mysteryweek]
-    caption: |-
-      Mystery Week je počeo 🔥 Potrošite 50 € ili više i darujemo Vam BESPLATAN Mystery poklon u vrijednosti većoj od 10 €.
+- shortcode: De_YTBHE7Nw
+  url: https://www.instagram.com/p/De_YTBHE7Nw/
+  type: Video
+  timestamp: '2026-10-27T08:01:38.000Z'
+  owner: gymbeamhr
+  likes: 26
+  comments: 0
+  hashtags:
+  - gbig
+  - mysteryweek
+  caption: |-
+    Mystery Week je počeo 🔥 Potrošite 50 € ili više i darujemo Vam BESPLATAN Mystery poklon u vrijednosti većoj od 10 €.
 
-      ⏳ Samo na ograničeno vrijeme. Zgrabite svoj prije nego što nestane!
+    ⏳ Samo na ograničeno vrijeme. Zgrabite svoj prije nego što nestane!
 
-      #gbig #mysteryweek
-  - shortcode: De9xZm9kdUN
-    url: https://www.instagram.com/p/De9xZm9kdUN/
-    type: Video
-    timestamp: "2026-10-26T17:02:36.000Z"
-    owner: gymbeamhr
-    likes: 28
-    comments: 0
-    hashtags: [gymbeamhr, gbfit, gbwomen, gbig]
-    caption: |-
-      Vaš tempo. Vaša ruta. Vaš PACE. ⚡
+    #gbig #mysteryweek
+- shortcode: De9xZm9kdUN
+  url: https://www.instagram.com/p/De9xZm9kdUN/
+  type: Video
+  timestamp: '2026-10-26T17:02:36.000Z'
+  owner: gymbeamhr
+  likes: 28
+  comments: 0
+  hashtags:
+  - gymbeamhr
+  - gbfit
+  - gbwomen
+  - gbig
+  caption: |-
+    Vaš tempo. Vaša ruta. Vaš PACE. ⚡
 
-      ✔️ prozračan materijal
-      ✔️ brzo se suši
-      ✔️ nije proziran
-      ✔️ reflektirajući print za vidljivost u sumrak i noću
+    ✔️ prozračan materijal
+    ✔️ brzo se suši
+    ✔️ nije proziran
+    ✔️ reflektirajući print za vidljivost u sumrak i noću
 
-      Nova PACE kolekcija stvorena je za trening bez kompromisa – bilo kada. Stil i sigurnost u jednom! 🏃‍♀️🌙
+    Nova PACE kolekcija stvorena je za trening bez kompromisa – bilo kada. Stil i sigurnost u jednom! 🏃‍♀️🌙
 
-      🛒 Istražite cijelu kolekciju na linku u opisu profila!
+    🛒 Istražite cijelu kolekciju na linku u opisu profila!
 
-      #gymbeamhr #gbfit #gbwomen #gbig
-  - shortcode: De7MhWqkTas
-    url: https://www.instagram.com/p/De7MhWqkTas/
-    type: Video
-    timestamp: "2026-10-25T17:01:54.000Z"
-    owner: gymbeamhr
-    likes: 14
-    comments: 0
-    hashtags: [gymbeamhr, gbhealthy, gbmen, gbig]
-    caption: |-
-      Mala kapsula za veliku podršku vašem tijelu! 🌿✨
+    #gymbeamhr #gbfit #gbwomen #gbig
+- shortcode: De7MhWqkTas
+  url: https://www.instagram.com/p/De7MhWqkTas/
+  type: Video
+  timestamp: '2026-10-25T17:01:54.000Z'
+  owner: gymbeamhr
+  likes: 14
+  comments: 0
+  hashtags:
+  - gymbeamhr
+  - gbhealthy
+  - gbmen
+  - gbig
+  caption: |-
+    Mala kapsula za veliku podršku vašem tijelu! 🌿✨
 
-      Osigurajte svojem crijevnom mikrobiomu snažnu dozu od 10 milijardi dobrih bakterija i inulina uz ProbioTen. Praktične kapsule lako se uklapaju u vašu svakodnevnu rutinu i pružaju jednostavnu podršku probavi iz dana u dan.
+    Osigurajte svojem crijevnom mikrobiomu snažnu dozu od 10 milijardi dobrih bakterija i inulina uz ProbioTen. Praktične kapsule lako se uklapaju u vašu svakodnevnu rutinu i pružaju jednostavnu podršku probavi iz dana u dan.
 
-      👉 Potražite ProbioTen na GymBeamu i pobrinite se za svoje zdravlje iznutra! 💚
+    👉 Potražite ProbioTen na GymBeamu i pobrinite se za svoje zdravlje iznutra! 💚
 
-      #gymbeamhr #gbhealthy #gbmen #gbig
-  - shortcode: De18LcqEsNP
-    url: https://www.instagram.com/p/De18LcqEsNP/
-    type: Video
-    timestamp: "2026-10-23T16:02:49.000Z"
-    owner: gymbeamhr
-    likes: 975
-    comments: 23
-    hashtags: [gymbeamhr, gbhealthy, gbwomen, gbig]
-    caption: |-
-      Mali jutarnji rituali čine razliku. ☀️
-      Za @zanamari dan počinje uz Anti-Aging Collagen — ukusan napitak koji se jednostavno uklapa u svakodnevnu rutinu. Sadrži 6 g hidroliziranog goveđeg kolagena po porciji te vitamin C, cink i koenzim Q10.
+    #gymbeamhr #gbhealthy #gbmen #gbig
+- shortcode: De18LcqEsNP
+  url: https://www.instagram.com/p/De18LcqEsNP/
+  type: Video
+  timestamp: '2026-10-23T16:02:49.000Z'
+  owner: gymbeamhr
+  likes: 979
+  comments: 23
+  hashtags:
+  - gymbeamhr
+  - gbhealthy
+  - gbwomen
+  - gbig
+  caption: |-
+    Mali jutarnji rituali čine razliku. ☀️
+    Za @zanamari dan počinje uz Anti-Aging Collagen — ukusan napitak koji se jednostavno uklapa u svakodnevnu rutinu. Sadrži 6 g hidroliziranog goveđeg kolagena po porciji te vitamin C, cink i koenzim Q10.
 
-      Napunite čašu, odvojite trenutak za sebe i spremni ste za sve što vas čeka. 🤍
+    Napunite čašu, odvojite trenutak za sebe i spremni ste za sve što vas čeka. 🤍
 
-      #gymbeamhr #gbhealthy #gbwomen #gbig
-  - shortcode: DeyZefpD8Bb
-    url: https://www.instagram.com/p/DeyZefpD8Bb/
-    type: Video
-    timestamp: "2026-10-22T07:02:18.000Z"
-    owner: gymbeamhr
-    likes: 23
-    comments: 0
-    hashtags: [gbwomen, pinkoctober, ruzicastilistopad, gymbeamhr, gbig]
-    caption: |-
-      Ne mora svaki dan biti 10/10 💭 Snaga je u tome da izgurate one teške dane i vratite se još jače 💖
+    #gymbeamhr #gbhealthy #gbwomen #gbig
+- shortcode: DeyZefpD8Bb
+  url: https://www.instagram.com/p/DeyZefpD8Bb/
+  type: Video
+  timestamp: '2026-10-22T07:02:18.000Z'
+  owner: gymbeamhr
+  likes: 23
+  comments: 0
+  hashtags:
+  - gbwomen
+  - pinkoctober
+  - ruzicastilistopad
+  - gymbeamhr
+  - gbig
+  caption: |-
+    Ne mora svaki dan biti 10/10 💭 Snaga je u tome da izgurate one teške dane i vratite se još jače 💖
 
-      Vaše zdravlje je pravi temelj vaše snage. Čuvajte ga 🔒✨
+    Vaše zdravlje je pravi temelj vaše snage. Čuvajte ga 🔒✨
 
-      🎀 Ružičasti listopad podsjetnik: Vi ste na prvom mjestu. Ne zaboravite napraviti samopregled danas 🌸
+    🎀 Ružičasti listopad podsjetnik: Vi ste na prvom mjestu. Ne zaboravite napraviti samopregled danas 🌸
 
-      #gbwomen #pinkoctober #ruzicastilistopad #gymbeamhr #gbig
-  - shortcode: Dewyc-KkXL_
-    url: https://www.instagram.com/p/Dewyc-KkXL_/
-    type: Video
-    timestamp: "2026-10-21T16:02:03.000Z"
-    owner: gymbeamhr
-    likes: 347
-    comments: 1
-    hashtags: [gymbeamhr, gbhealthy, gbwomen, zdravahrana, recepti, gbig]
-    caption: |-
-      Kad vam se ne da kuhati, a želite nešto fino i zasitno 🙌 GymBeam bezglutenski njoki gotovi su za par minuta. Dodajte piletinu, tunu ili sir i dobivate brz obrok pun proteina. Dokaz da zdrava prehrana ne mora biti komplicirana. 💚
+    #gbwomen #pinkoctober #ruzicastilistopad #gymbeamhr #gbig
+- shortcode: Dewyc-KkXL_
+  url: https://www.instagram.com/p/Dewyc-KkXL_/
+  type: Video
+  timestamp: '2026-10-21T16:02:03.000Z'
+  owner: gymbeamhr
+  likes: 348
+  comments: 1
+  hashtags:
+  - gymbeamhr
+  - gbhealthy
+  - gbwomen
+  - zdravahrana
+  - recepti
+  - gbig
+  caption: |-
+    Kad vam se ne da kuhati, a želite nešto fino i zasitno 🙌 GymBeam bezglutenski njoki gotovi su za par minuta. Dodajte piletinu, tunu ili sir i dobivate brz obrok pun proteina. Dokaz da zdrava prehrana ne mora biti komplicirana. 💚
 
-      🛒 Opremite svoju kuhinju zdravom hranom na linku u opisu profila.
+    🛒 Opremite svoju kuhinju zdravom hranom na linku u opisu profila.
 
-      👇 Napišite nam u komentarima koje je vaše omiljeno zdravo i brzo jelo!
+    👇 Napišite nam u komentarima koje je vaše omiljeno zdravo i brzo jelo!
 
-      #gymbeamhr #gbhealthy #gbwomen #zdravahrana #recepti #gbig
-  - shortcode: DeweAhoFvZr
-    url: https://www.instagram.com/p/DeweAhoFvZr/
-    type: Sidecar
-    timestamp: "2026-10-21T13:02:20.000Z"
-    owner: gymbeamhr
-    likes: 61
-    comments: 0
-    hashtags: [gymbeamhr, gbfit, gbwomen, gbig]
-    caption: |-
-      Neki imaju pistu, a naša su krila su za teretanu. Koji GymBeam „Anđeo” danas ide s vama na trening? 👇
+    #gymbeamhr #gbhealthy #gbwomen #zdravahrana #recepti #gbig
+- shortcode: DeweAhoFvZr
+  url: https://www.instagram.com/p/DeweAhoFvZr/
+  type: Sidecar
+  timestamp: '2026-10-21T13:02:20.000Z'
+  owner: gymbeamhr
+  likes: 61
+  comments: 0
+  hashtags:
+  - gymbeamhr
+  - gbfit
+  - gbwomen
+  - gbig
+  caption: |-
+    Neki imaju pistu, a naša su krila su za teretanu. Koji GymBeam „Anđeo” danas ide s vama na trening? 👇
 
-      #gymbeamhr #gbfit #gbwomen #gymbeamhr #gbig
-  - shortcode: DeuNtm9Dm95
-    url: https://www.instagram.com/p/DeuNtm9Dm95/
-    type: Video
-    timestamp: "2026-10-20T16:02:30.000Z"
-    owner: gymbeamhr
-    likes: 24
-    comments: 0
-    hashtags: [gymbeamhr, gbhealthy, gbmen, bryanjohnson, longevity, gbig]
-    caption: |-
-      Blueprint by Bryan Johnson stigao je u GymBeam! 🆕
-      Bilo da želite poboljšati performanse, izgraditi mišiće, sagorjeti masti ili se redovito brinuti o vitaminima i mineralima, u našoj najnovijoj ponudi pronaći ćete sve što vam treba za kvalitetniji i zdraviji život. 🌱
+    #gymbeamhr #gbfit #gbwomen #gymbeamhr #gbig
+- shortcode: DeuNtm9Dm95
+  url: https://www.instagram.com/p/DeuNtm9Dm95/
+  type: Video
+  timestamp: '2026-10-20T16:02:30.000Z'
+  owner: gymbeamhr
+  likes: 24
+  comments: 0
+  hashtags:
+  - gymbeamhr
+  - gbhealthy
+  - gbmen
+  - bryanjohnson
+  - longevity
+  - gbig
+  caption: |-
+    Blueprint by Bryan Johnson stigao je u GymBeam! 🆕
+    Bilo da želite poboljšati performanse, izgraditi mišiće, sagorjeti masti ili se redovito brinuti o vitaminima i mineralima, u našoj najnovijoj ponudi pronaći ćete sve što vam treba za kvalitetniji i zdraviji život. 🌱
 
-      Posebno izdvajamo ova tri proizvoda o kojima više možete saznati u samom videu, a uz njih vas čeka i cijela Blueprint linija. 🤗
+    Posebno izdvajamo ova tri proizvoda o kojima više možete saznati u samom videu, a uz njih vas čeka i cijela Blueprint linija. 🤗
 
-      👉 Pogledajte novosti na našem webshopu!
+    👉 Pogledajte novosti na našem webshopu!
 
-      #gymbeamhr #gbhealthy #gbmen #bryanjohnson #longevity #gbig
-  - shortcode: DeuNpiTikK6
-    url: https://www.instagram.com/p/DeuNpiTikK6/
-    type: Sidecar
-    timestamp: "2026-10-20T16:00:56.000Z"
-    owner: gymbeamhr
-    likes: 58
-    comments: 0
-    hashtags: [gbwomen, creaglow, anjablaa, glowfromwithin]
-    caption: |-
-      Za sve naše cure koje vole biti snažne u teretani, ali nikad ne rade kompromise kada je riječ o brizi o sebi, pripremili smo nešto posebno za vas! ✨🫶🏽
+    #gymbeamhr #gbhealthy #gbmen #bryanjohnson #longevity #gbig
+- shortcode: DeuNpiTikK6
+  url: https://www.instagram.com/p/DeuNpiTikK6/
+  type: Sidecar
+  timestamp: '2026-10-20T16:00:56.000Z'
+  owner: gymbeamhr
+  likes: 58
+  comments: 0
+  hashtags:
+  - gbwomen
+  - creaglow
+  - anjablaa
+  - glowfromwithin
+  caption: |-
+    Za sve naše cure koje vole biti snažne u teretani, ali nikad ne rade kompromise kada je riječ o brizi o sebi, pripremili smo nešto posebno za vas! ✨🫶🏽
 
-      Predstavljamo CreaGlow, proizvod razvijen u suradnji s @anjablaa koji spaja ljepotu i performanse u jednoj čaši dnevno.
+    Predstavljamo CreaGlow, proizvod razvijen u suradnji s @anjablaa koji spaja ljepotu i performanse u jednoj čaši dnevno.
 
-      ✨ 10 g Peptan® B kolagena + 3 g kreatina za kožu, kosu, nokte i rezultate na treningu. ✨ Cink, biotin i resveratrol za blistav izgled iznutra prema van. ✨ 1 mjerica dnevno: više nema potrebe za miješanjem zasebnih dodataka prehrani! 🫐 Ukusan okus šumskog voća (bez glutena i laktoze).
+    ✨ 10 g Peptan® B kolagena + 3 g kreatina za kožu, kosu, nokte i rezultate na treningu. ✨ Cink, biotin i resveratrol za blistav izgled iznutra prema van. ✨ 1 mjerica dnevno: više nema potrebe za miješanjem zasebnih dodataka prehrani! 🫐 Ukusan okus šumskog voća (bez glutena i laktoze).
 
-      Zablistajte i ostvarujte rezultate kao nikad prije! Kliknite na poveznicu u opisu profila i nabavite svoj CreaGlow! 💗🤗
+    Zablistajte i ostvarujte rezultate kao nikad prije! Kliknite na poveznicu u opisu profila i nabavite svoj CreaGlow! 💗🤗
 
-      #gbwomen #creaglow #anjablaa #glowfromwithin
-  - shortcode: Dero9b3E4rf
-    url: https://www.instagram.com/p/Dero9b3E4rf/
-    type: Video
-    timestamp: "2026-10-19T16:03:06.000Z"
-    owner: gymbeamhr
-    likes: 30
-    comments: 0
-    hashtags: [gymbeamhr, gbhealthy, gbwomen, gbig]
-    caption: |-
-      Napitak od badema za one koji žele probati biljnu alternativu mlijeku. 🌰🥛
-      Biljna alternativa mlijeku, obogaćena kalcijem i vitaminom D3. Ugodno je sladak zahvaljujući rogaču i jabuci, bez umjetnih sladila, a ima samo 41 kcal na 100 ml.
+    #gbwomen #creaglow #anjablaa #glowfromwithin
+- shortcode: Dero9b3E4rf
+  url: https://www.instagram.com/p/Dero9b3E4rf/
+  type: Video
+  timestamp: '2026-10-19T16:03:06.000Z'
+  owner: gymbeamhr
+  likes: 30
+  comments: 0
+  hashtags:
+  - gymbeamhr
+  - gbhealthy
+  - gbwomen
+  - gbig
+  caption: "Napitak od badema za one koji žele probati biljnu alternativu mlijeku. \U0001F330\U0001F95B\
+    \ \nBiljna alternativa mlijeku, obogaćena kalcijem i vitaminom D3. Ugodno je sladak zahvaljujući rogaču\
+    \ i jabuci, bez umjetnih sladila, a ima samo 41 kcal na 100 ml.\n\n✔️ Bez laktoze i GMO-a\n✔️ Pogodan\
+    \ za vegane\n✔️ Kremasta tekstura\n\nProbajte ga u kavi, kaši, smoothieju ili proteinskom shakeu.\
+    \ Link je u opisu profila! \U0001F6D2\n\n#gymbeamhr #gbhealthy #gbwomen #gbig"
+- shortcode: DepEBX5CRks
+  url: https://www.instagram.com/p/DepEBX5CRks/
+  type: Sidecar
+  timestamp: '2026-10-18T16:00:34.000Z'
+  owner: gymbeamhr
+  likes: 60
+  comments: 0
+  hashtags:
+  - coldexposure
+  - gbfit
+  caption: |-
+    Cilj nije izdržati najduže. Cilj je postupno i sigurno se priviknuti na hladnoću. 🧊
 
-      ✔️ Bez laktoze i GMO-a
-      ✔️ Pogodan za vegane
-      ✔️ Kremasta tekstura
+    Prelistajte za svoj potpuni plan izlaganja hladnoći ➡️
 
-      Probajte ga u kavi, kaši, smoothieju ili proteinskom shakeu. Link je u opisu profila! 🛒
+    Sve za terapiju hladnoćom pronađite na našoj web stranici.
 
-      #gymbeamhr #gbhealthy #gbwomen #gbig
+    Oznaka vašeg partnera za izlaganje hladnoći 👇
+
+    *Izlaganje hladnoćama ne preporučuje se osobama s kardiovaskularnim bolestima, visokim krvnim tlakom, Raynaudovim sindromom niti tijekom trudnoće. U slučaju nedoumica, najprije se posavjetujte sa svojim liječnikom.
+
+    #coldexposure #gbfit
+- shortcode: DemfNwBEXeK
+  url: https://www.instagram.com/p/DemfNwBEXeK/
+  type: Video
+  timestamp: '2026-10-17T16:01:07.000Z'
+  owner: gymbeamhr
+  likes: 309
+  comments: 0
+  hashtags:
+  - gymbeamhr
+  - gbhealthy
+  - gbwomen
+  - gbig
+  caption: |-
+    Recharge day po vašoj mjeri. 🌲🏋️‍♀️ Malo treninga, malo prirode, dobro društvo i nešto fino za kraj. Uz Yum Yum Whey imate ukusan proteinski dodatak koji se lako uklapa u vaš aktivan dan.
+
+    Kako vi najradije punite baterije?
+
+    #gymbeamhr #gbhealthy #gbwomen #gbig
+- shortcode: Dej6oqHlXhG
+  url: https://www.instagram.com/p/Dej6oqHlXhG/
+  type: Video
+  timestamp: '2026-10-16T16:03:00.000Z'
+  owner: gymbeamhr
+  likes: 2796
+  comments: 70
+  hashtags:
+  - gymbeamhr
+  - gbhealthy
+  - gbmen
+  - gbig
+  caption: |-
+    Nova Cosmo kolekcija je stigla! ✨ Futuristički stil, trendi vibe. Prati liniju vašeg tijela, jako je mekana, a vanjski šavovi naglašavaju vašu siluetu. 😍
+    Isprobajte razne kombinacije topova, tajica, sportskih grudnjaka, jumpsuita i još mnogo toga u Black, Brown, Pink, Olive & Cream bojama. 🤎
+
+    Tagajte frendicu s kojom ćete se matchati, kliknite na link u opisu profila i saznajte više! 👯‍♀️
+
+    #gymbeamhr #gbhealthy #gbmen #gbig
+- shortcode: DegX7qjj4Sx
+  url: https://www.instagram.com/p/DegX7qjj4Sx/
+  type: Sidecar
+  timestamp: '2026-10-15T07:01:24.000Z'
+  owner: gymbeamhr
+  likes: 72
+  comments: 2
+  hashtags:
+  - gbfit
+  - runningcollection
+  - pace
+  caption: |-
+    Stvoreno za vaše sljedeće trčanje. PACE od GymBeama. ⚡
+
+    #gbfit #runningcollection #pace
+- shortcode: DedzClSiOcs
+  url: https://www.instagram.com/p/DedzClSiOcs/
+  type: Sidecar
+  timestamp: '2026-10-14T07:00:02.000Z'
+  owner: gymbeamhr
+  likes: 15
+  comments: 0
+  hashtags:
+  - gymbeamhr
+  - gbhealthy
+  caption: "Koji je vaš omiljeni okus? \n\U0001F49B Vanilija \n\U0001F90E Čokolada \n\U0001F493 Jagoda\
+    \ \n\nNapišite u komentarima i pošaljite prijatelju! \U0001F964 \n\n#gymbeamhr #gbhealthy"
+- shortcode: DebOQZOCrrR
+  url: https://www.instagram.com/p/DebOQZOCrrR/
+  type: Video
+  timestamp: '2026-10-13T07:01:23.000Z'
+  owner: gymbeamhr
+  likes: 27
+  comments: 0
+  hashtags:
+  - gymbeamhr
+  - gbig
+  - akcijaodjece
+  - strix
+  caption: |-
+    VAŠ SLJEDEĆI GYM OUTFIT? NEKA BUDE STRIX. 🔥
+    Zadnji komadi se rasprodaju - sada po odličnim cijenama. Ugrabite svoje favorite prije nego što nestanu!
+
+    Kupite STRIX odmah. 🛍️
+    Vrijedi samo za odabrane artikle.
+
+    #gymbeamhr #gbig #akcijaodjece #strix
+- shortcode: DeZnc3_DmCF
+  url: https://www.instagram.com/p/DeZnc3_DmCF/
+  type: Sidecar
+  timestamp: '2026-10-12T16:02:20.000Z'
+  owner: gymbeamhr
+  likes: 36
+  comments: 0
+  hashtags: []
+  caption: |-
+    LOCK IN 🔥
+
+    Kada GymBeam udruži snage s legendarnom esport organizacijom FNATIC, znate da stiže nešto veliko. 🔥
+
+    Predstavljamo LOCK IN – dodatak prehrani za gejming razvijen u suradnji GymBeama i FNATIC-a, stvoren za sve vas koji želite podići svoje gejming sesije na višu razinu.
+
+    ⚡ 23 aktivna sastojka
+
+    🎯 Podržava fokus i mentalne sposobnosti
+
+    🧠 Vitamini i minerali
+
+    🥭 Okus manga i marakuje, bez šećera i bez kofeina
+
+    Bilo da se borite za rang, odrađujete dugu gejming sesiju ili idete po pobjednički clutch, vrijeme je da se fokusirate – LOCK IN. 🔒
+
+    🛒 Dostupno već sada na GymBeamu!
+- shortcode: DeXCd8lDvQf
+  url: https://www.instagram.com/p/DeXCd8lDvQf/
+  type: Video
+  timestamp: '2026-10-11T16:01:45.000Z'
+  owner: gymbeamhr
+  likes: 39
+  comments: 1
+  hashtags:
+  - gbnutrition
+  - cheesecakesmoothie
+  - highprotein
+  - fitdessert
+  - healthyrecipes
+  caption: |-
+    PROTEINSKI CHEESECAKE SMOOTHIE 🍓
+
+    Kremast, pun šumskog voća i posut hrskavim mrvicama keksa.
+
+    Ispunjavanje vaših makronutrijenata nikada nije imalo ovoliko okus po varanju! 🤤
+
+    Spremite ovu objavu, vaša želja za slatkim zahvalit će vam kasnije! 📌💅
+
+    #gbnutrition #cheesecakesmoothie #highprotein #fitdessert #healthyrecipes
+- shortcode: DeUdqY_EVTp
+  url: https://www.instagram.com/p/DeUdqY_EVTp/
+  type: Video
+  timestamp: '2026-10-10T16:01:40.000Z'
+  owner: gymbeamhr
+  likes: 594
+  comments: 0
+  hashtags:
+  - gymbeamhr
+  - gbhealthy
+  - gbwomen
+  - gbig
+  caption: |-
+    Tražite nešto slatko, a ne želite kompromise u prehrani? Imamo savršeno rješenje! 🥄✨
+
+    Ovaj kremasti desert pruža puni užitak poput klasičnog pudinga, ali u zdravoj varijanti bez grižnje savjesti. Bogat je proteinima koji vas drže sitima, vlaknima za dobru probavu i probioticima za zdrav mikrobiom.
+
+    Idealan je odabir kada vas uhvati želja za slatkim – brzo, ukusno i hranjivo! 🍫💪
+
+    👉 Spremite ovaj video za sljedeći napad želje za slatkim i potražite sastojke na GymBeamu!
+
+    #gymbeamhr #gbhealthy #gbwomen #gbig
+- shortcode: DeQ7N2-G1AX
+  url: https://www.instagram.com/p/DeQ7N2-G1AX/
+  type: Sidecar
+  timestamp: '2026-10-09T07:02:02.000Z'
+  owner: gymbeamhr
+  likes: 64
+  comments: 0
+  hashtags:
+  - gymbeamhr
+  - gbhealthy
+  - gbfit
+  - gbig
+  caption: |-
+    Znamo što uvijek pobjeđuje! A uz besplatnu BOXNOW dostavu, kupnja je još slađa! 😎
+
+    #gymbeamhr #gbhealthy #gbfit #gbig
+- shortcode: DePXg5KD9nl
+  url: https://www.instagram.com/p/DePXg5KD9nl/
+  type: Video
+  timestamp: '2026-10-08T16:31:52.000Z'
+  owner: gymbeamhr
+  likes: 31
+  comments: 0
+  hashtags: []
+  caption: |-
+    Jedna mjerica supermoći. ⚡
+
+    Stigao je Crazy Pump 2.0, stvoren u suradnji s @ifbb_pro_petar_klancir 💥
+
+    Pre-workout profesionalaca, sada u vašem shakeru. 💪
+
+    Kupite putem linka u opisu profila.🔥
+- shortcode: DePUSA1DjlP
+  url: https://www.instagram.com/p/DePUSA1DjlP/
+  type: Video
+  timestamp: '2026-10-08T16:02:44.000Z'
+  owner: gymbeamhr
+  likes: 27
+  comments: 0
+  hashtags:
+  - gbwomen
+  - cosmo
+  - novakolekcija
+  caption: |-
+    Samopouzdanje počinje sa savršenim krojem. 🤎
+
+    #gbwomen #cosmo #novakolekcija
+- shortcode: DeOWZL6jbbl
+  url: https://www.instagram.com/p/DeOWZL6jbbl/
+  type: Sidecar
+  timestamp: '2026-10-08T07:01:38.000Z'
+  owner: gymbeamhr
+  likes: 132
+  comments: 1
+  hashtags:
+  - gbwomen
+  - cosmo
+  - novakolekcija
+  caption: |-
+    Stigla je nova COSMO kolekcija brenda GymBeam. 🔥
+    #gbwomen #cosmo #novakolekcija
+- shortcode: DeNDbrlogsI
+  url: https://www.instagram.com/p/DeNDbrlogsI/
+  type: Video
+  timestamp: '2026-10-07T19:05:05.000Z'
+  owner: gymbeamhr
+  likes: 64
+  comments: 2
+  hashtags:
+  - gymbeamhr
+  - thefitnesscroatia
+  - gbfit
+  - gbmovation
+  - movefest
+  caption: |-
+    Vikend proveden onako kako najviše volimo: u pokretu! 🏃‍♀️ Na MOVE FESTU by @the_fitness_croatia održali smo Booty & Core trening by GymBeam, a zatim i plank challenge koji je pokazao koliko ste jaki. Svaka vam čast! 💪
+
+    Hvala The Fitness ekipi za top organizaciju i svima koji ste došli! Vidimo se opet! 🫶🏻
+
+    #gymbeamhr #thefitnesscroatia #gbfit #gbmovation #movefest
+- shortcode: DeMvee0DEpN
+  url: https://www.instagram.com/p/DeMvee0DEpN/
+  type: Video
+  timestamp: '2026-10-07T16:03:20.000Z'
+  owner: gymbeamhr
+  likes: 14
+  comments: 0
+  hashtags:
+  - gymbeamhr
+  - gbhealthy
+  - gbwomen
+  caption: |-
+    Vaša doza ljepote i svježine – bilo kad i bilo gdje! 💖✨
+    Nove Pink Collagen šumeće tablete u trenu se pretvaraju u osvježavajući napitak s hidroliziranim kolagenom, hijaluronskom kiselinom, vitaminom C i biotinom za blistavu kožu i zdravu kosu. Ubacite ih u torbu i uživajte u svojoj rutini ljepote gdje god se nalazili! 🌸
+
+    👉 Potražite Pink Collagen u GymBeam ponudi i zablistajte na najjednostavniji način! Iskoristite kod PINK i ostvarite 20% popusta.
+
+    #gymbeamhr #gbhealthy #gbwomen
+- shortcode: DeLxgHgClb6
+  url: https://www.instagram.com/p/DeLxgHgClb6/
+  type: Sidecar
+  timestamp: '2026-10-07T07:01:00.000Z'
+  owner: gymbeamhr
+  likes: 54
+  comments: 2
+  hashtags: []
+  caption: |-
+    Izradio profesionalac. Stvoreno za tvoj sljedeći trening. 🔥
+
+    Crazy Pump 2.0 je stigao, razvijen u suradnji s @ifbb_pro_petar_klancir
+
+    Jedno serviranje od 26 g donosi:
+
+    ⚡ 7 g citrulin malata
+
+    ⚡ 3 g kreatina
+
+    ⚡ 200 mg kofeina
+
+    ⚡ 10 g brzodjelujućih ugljikohidrata
+
+    Potpuno gorivo za trening.
+
+    Spremni isprobati ono na čemu trenira profesionalac? 👉 Provjerite putem linka u opisu profila (link in bio).
+- shortcode: DeJMroHFArc
+  url: https://www.instagram.com/p/DeJMroHFArc/
+  type: Sidecar
+  timestamp: '2026-10-06T07:00:44.000Z'
+  owner: gymbeamhr
+  likes: 25
+  comments: 0
+  hashtags: []
+  caption: |-
+    Blueprint brenda Bryan Johnson — od sada je dostupan ekskluzivno na GymBeam-u.
+
+    A kako bismo proslavili lansiranje, uživajte u dodatnih 15% POPUSTA. 🧡
+
+    Ova ponuda vrijedi samo 48 sati! 🚀
+
+    Longevity ne znači samo živjeti duže. Radi se o tome da živite bolje i kvalitetnije, duže.
+
+    Vaše longevity putovanje počinje danas.
+- shortcode: DeHlouaBVsN
+  url: https://www.instagram.com/p/DeHlouaBVsN/
+  type: Video
+  timestamp: '2026-10-05T16:00:07.000Z'
+  owner: gymbeamhr
+  likes: 108
+  comments: 8
+  hashtags:
+  - gymbeamhr
+  - gbwomen
+  - mochi
+  - gbmotivation
+  caption: |-
+    Ono kad odjeća izgleda jednako dobro kako se u njoj i osjećate. ☁️✨
+    Stigla je nova Mochi kolekcija!! Pastelne boje, ležerni krojevi i besprijekorna udobnost u koju ćete se zaljubiti na prvu.
+
+    👉 Pronađite svoj novi omiljeni outfit na GymBeamu!
+
+    #gymbeamhr #gbwomen #mochi #gbmotivation
+- shortcode: DeG1oeEFsWk
+  url: https://www.instagram.com/p/DeG1oeEFsWk/
+  type: Image
+  timestamp: '2026-10-05T09:00:40.000Z'
+  owner: gymbeamhr
+  likes: 69
+  comments: 2
+  hashtags:
+  - gymbeamhr
+  - boxnow
+  - freeshipping
+  - paketomat
+  - gbig
+  caption: |-
+    BESPLATNA DOSTAVA S BOX NOW! 🚚📦
+    Dostava vaše narudžbe za 0€ uz BOX NOW! 🤫 Bez minimalne narudžbe, bez skrivenih uvjeta ✨.
+
+    Ne čekajte – napunite košaricu i osigurajte besplatnu dostavu prije nego vrijeme istekne! ⏳
+
+    #gymbeamhr #boxnow #freeshipping #paketomat #gbig
+- shortcode: DeFA5jbgOXh
+  url: https://www.instagram.com/p/DeFA5jbgOXh/
+  type: Video
+  timestamp: '2026-10-04T16:01:22.000Z'
+  owner: gymbeamhr
+  likes: 468
+  comments: 2
+  hashtags:
+  - gbnutrition
+  - palacinke
+  - proteinrecepti
+  - gymbeamhr
+  - gbig
+  caption: |-
+    Mekane, ukusne i pune 40g proteina. 🤤
+    Savršen slatki doručak ili poslastica nakon treninga! 🥞⚡️
+    Sačuvajte ovaj post kako biste ovo napravili sutra ujutro! 📌🔥
+
+    #gbnutrition #palacinke #proteinrecepti #gymbeamhr #gbig

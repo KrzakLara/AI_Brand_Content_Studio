@@ -9,5 +9,6 @@ submission/*
 !submission/.gitkeep
 !submission/README.md
 
-# Claude Code configuration and skills
-.claude/
+# Claude Code: ignore local settings/state only; .claude/skills/ IS tracked
+.claude/*
+!.claude/skills/

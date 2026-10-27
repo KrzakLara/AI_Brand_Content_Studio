@@ -97,7 +97,7 @@ class ScriptedResearchPolicy:
 
     def __post_init__(self):
         self.info = ProviderInfo("scripted-research-policy", ProviderKind.LLM, "scripted-v1", is_mock=False,
-                                 safe_to_retry=True, config={"autonomous": False, "plan_version": 3})
+                                 safe_to_retry=True, config={"autonomous": False, "plan_version": 4})
         self.calls: list[str] = []
 
     def structured(self, schema, *, task: str, payload: dict):
@@ -140,6 +140,9 @@ class ScriptedResearchPolicy:
                     if low.endswith(".html") and any(k in low for k in kws) and ("web_fetch", link) not in done:
                         return tool("web_fetch", "candidate product page", url=link)
         n_img = sum(1 for h in hist if h["tool"] == "download_image")
+        for img in brief.get("seed_images", []):
+            if n_img < lim["max_images"] and ("download_image", img) not in done:
+                return tool("download_image", "operator-listed packshot candidate", url=img, role="packshot_candidate")
         if n_img < lim["max_images"]:
             for h in ok:
                 if is_product_page(h):

@@ -21,6 +21,7 @@ class FetchResult:
     error: str | None = None
     kind: str = "ok"  # ok | blocked_host | blocked_robots | http_error | network_error | too_large
     attempts: int = 0
+    headers: dict | None = None
 
 
 def host_allowed(url: str, allowed: list[str]) -> bool:
@@ -57,7 +58,7 @@ class HttpClient:
                     return FetchResult(False, url, status=r.status, kind="blocked_host", attempts=attempt,
                                        error=f"redirected outside allowlist to {r.url}")
                 if r.status < 400:
-                    return FetchResult(True, r.url, r.status, r.body, r.content_type, attempts=attempt)
+                    return FetchResult(True, r.url, r.status, r.body, r.content_type, attempts=attempt, headers=r.headers)
                 last = FetchResult(False, url, r.status, kind="http_error", attempts=attempt,
                                    error=f"HTTP {r.status}")
                 if r.status not in RETRY_STATUS:

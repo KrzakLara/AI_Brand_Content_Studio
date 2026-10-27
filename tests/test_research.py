@@ -464,7 +464,7 @@ def test_manual_import_keeps_provenance_and_excludes_other_owners(tmp_path, rset
     prof = next(s for s in index_of(res).sources if s.kind == "instagram_profile")
     assert prof.provenance["collected_by"] == "operator"
     assert any("3 collaboration" in x for x in res.values["brand_profile"]["profile"]["limitations"])
-    assert any("Only 2 of the 10" in x for x in res.values["brand_profile"]["profile"]["limitations"])
+    assert any("Only 2 of the 20-30" in x for x in res.values["brand_profile"]["profile"]["limitations"])
     assert res.values["brand_profile"]["profile"]["data_origins"]["manual_import"] == 3
 
 
@@ -566,3 +566,27 @@ def test_cli_refuses_autonomous_policy_without_key_and_does_not_fall_back(tmp_pa
     assert rc == cli.EXIT_ERROR and "ANTHROPIC_API_KEY" in err and "Nothing was run" in err
     assert not list(tmp_path.iterdir())  # no run directory was even created
     assert cli.main(["research", "--mode", "fixture"]) == cli.EXIT_ERROR
+
+
+def test_cli_compare_research_reports_differences(tmp_path, capsys):
+    def folder(name, urls, skus, policy, autonomous, cost):
+        d = tmp_path / name
+        d.mkdir()
+        src = [{"url": u, "retrieval_status": "ok", "kind": "web_page"} for u in urls]
+        (d / "source_index.json").write_text(json.dumps({"sources": src}))
+        (d / "evidence_registry.json").write_text(json.dumps({"items": [{"verification_status": "verified"}] * len(urls)}))
+        (d / "brand_profile.json").write_text(json.dumps({"analysis_mode": "heuristic_only",
+                                                          "product_catalog": [{"sku": k} for k in skus]}))
+        (d / "run_summary.json").write_text(json.dumps({"policy": policy, "policy_autonomous": autonomous, "mode": "live",
+                                                        "stop_reason": "policy_finished", "counts": {"steps": 3},
+                                                        "estimated_cost_usd": cost}))
+        return d
+    a = folder("a", ["u1", "u2", "u3"], ["1", "2"], "anthropic-llm", True, 0.42)
+    b = folder("b", ["u2", "u3", "u4"], ["2", "3"], "scripted-research-policy", False, 0.0)
+    out = tmp_path / "cmp.md"
+    assert cli.main(["compare-research", "--a", str(a), "--b", str(b), "--label-a", "agent", "--label-b", "manual",
+                     "--out", str(out)]) == cli.EXIT_OK
+    text = capsys.readouterr().out
+    assert "- both: 2" in text and "- only agent: 1" in text and "agent only: u1" in text and "manual only: u4" in text
+    assert "autonomous=True" in text and "cost_usd=0.42" in text and out.read_text(encoding="utf-8").strip() == text.strip()
+    assert cli.main(["compare-research", "--a", str(tmp_path / "nope"), "--b", str(b)]) == cli.EXIT_ERROR

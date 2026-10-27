@@ -12,3 +12,10 @@ seed_urls:
 focus_keywords: [kreatin, creatine]
 manual_observations_path: research/imports/packaging_observations_gymbeam_hr.yaml
 notes: Phase 2 research brief. Pay attention to 100% Creatine Monohydrate packaging variants.
+seed_images:   # operator-listed packshot candidates (some are deliberately wrong, to test the selection rules)
+  - https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/c/r/creatine-monohydrate-unflavoured-01_8.jpg
+  - https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/s/k/sk-creatine-monohydrate-unflavoured-01.jpg
+  - https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/c/r/creatine-monohydrate-mango-maracuja-mockup-view3.jpg
+  - https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/f/d/fdjdsj.jpg
+  - https://gymbeam.hr/media/catalog/product/cache/bf5a31e851f50f3ed6850cbbf183db11/c/r/creatine-monohydrate-unflavoured-250-g-gymbeam.png
+visual_observations_path: research/imports/instagram_visual_observations_gymbeamhr.yaml

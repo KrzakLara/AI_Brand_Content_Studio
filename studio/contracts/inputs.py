@@ -19,6 +19,8 @@ class BriefInput(Contract):
     seed_urls: list[str] = Field(default_factory=list)  # official pages to start from
     focus_keywords: list[str] = Field(default_factory=list)  # e.g. ["kreatin"]
     manual_observations_path: str | None = None  # operator-attested observations (with provenance)
+    seed_images: list[str] = Field(default_factory=list)  # operator-listed packshot candidates (allow-listed hosts)
+    visual_observations_path: str | None = None  # operator-labelled Instagram cover analysis (with provenance)
 
     @field_validator("website_url")
     @classmethod

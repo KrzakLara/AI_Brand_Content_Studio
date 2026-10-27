@@ -37,7 +37,7 @@ def live_research_agent(svc: Services, state: dict) -> dict:
     limits = _limits(cfg)
     fp = fingerprint(
         "research-live", brief.brand_name, brief.website_url, brief.instagram_handle, brief.seed_urls,
-        brief.focus_keywords, cfg, prompts.version("research_agent"), svc.llm.info.fingerprint(),
+        brief.focus_keywords, brief.seed_images, cfg, prompts.version("research_agent"), svc.llm.info.fingerprint(),
         tools.info.fingerprint(), tools.info_for("instagram_fetch").fingerprint())
 
     def compute() -> dict:

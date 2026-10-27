@@ -85,7 +85,7 @@ class ResearchToolset:
         if tool == "web_fetch":
             return self._web_fetch(str(args["url"]), kind=args.get("kind"))
         if tool == "download_image":
-            return self._download_image(str(args["url"]), referrer=args.get("page_url"))
+            return self._download_image(str(args["url"]), referrer=args.get("page_url"), role=args.get("role"))
         if tool == "instagram_fetch":
             return self._instagram(str(args["handle"]), int(args.get("limit", self.cfg.instagram_limit)))
         raise ValueError(f"unknown tool {tool!r}")
@@ -133,7 +133,7 @@ class ResearchToolset:
                 "stylesheets": sheets, "images": images, "product_count": nprod,
                 "product_urls": plist}
 
-    def _download_image(self, url: str, referrer: str | None) -> dict:
+    def _download_image(self, url: str, referrer: str | None, role: str | None = None) -> dict:
         r = self.http.get(url)
         if not r.ok:
             status = "blocked" if r.kind.startswith("blocked") else "failed"
@@ -147,7 +147,9 @@ class ResearchToolset:
                          content_sha256=sha, origin=self.origin, retrieved_at=self._now(), artifact_path=path,
                          artifact_sha256=sha, access_limitations=LICENSE_NOTE,
                          provenance={"referrer_page": referrer, "content_type": r.content_type,
-                                     "bytes": len(r.body), "license_note": LICENSE_NOTE})
+                                     "bytes": len(r.body), "license_note": LICENSE_NOTE, "role": role,
+                                     "last_modified": (r.headers or {}).get("last-modified"),
+                                     "etag": (r.headers or {}).get("etag")})
         return {"ok": True, "tool": "download_image", "sources": [src.dump()]}
 
     def _instagram(self, handle: str, limit: int) -> dict:

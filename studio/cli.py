@@ -150,6 +150,52 @@ def cmd_research(a) -> int:
     return EXIT_OK
 
 
+def _load_research(d: Path) -> dict:
+    out = {n: json.loads((d / f"{n}.json").read_text(encoding="utf-8"))
+           for n in ("source_index", "evidence_registry", "brand_profile")}
+    summ = d / "run_summary.json"
+    out["summary"] = json.loads(summ.read_text(encoding="utf-8")) if summ.is_file() else {}
+    return out
+
+
+def compare_research(a: dict, b: dict, label_a: str, label_b: str) -> str:
+    """Human-readable diff of two research outputs: what each found that the other did not."""
+    def urls(r, ok_only=True):
+        return {s["url"] for s in r["source_index"]["sources"] if not ok_only or s["retrieval_status"] == "ok"}
+
+    def skus(r):
+        return {p["sku"] for p in r["brand_profile"]["product_catalog"]}
+
+    def ev(r):
+        return Counter(i["verification_status"] for i in r["evidence_registry"]["items"])
+
+    lines = [f"# Research comparison: {label_a} vs {label_b}", ""]
+    for name, fa, fb in (("sources (ok)", urls(a), urls(b)), ("products (sku)", skus(a), skus(b))):
+        lines += [f"## {name}", f"- both: {len(fa & fb)}", f"- only {label_a}: {len(fa - fb)}", f"- only {label_b}: {len(fb - fa)}"]
+        lines += [f"  - {label_a} only: {x}" for x in sorted(fa - fb)[:25]] + [f"  - {label_b} only: {x}" for x in sorted(fb - fa)[:25]]
+    lines += ["", "## evidence by verification status", f"- {label_a}: {dict(ev(a))}", f"- {label_b}: {dict(ev(b))}", "",
+              "## provenance and cost"]
+    for lab, r in ((label_a, a), (label_b, b)):
+        s = r["summary"]
+        lines.append(f"- {lab}: policy={s.get('policy')} autonomous={s.get('policy_autonomous')} mode={s.get('mode')} "
+                     f"stop={s.get('stop_reason')} steps={s.get('counts', {}).get('steps')} "
+                     f"cost_usd={s.get('estimated_cost_usd')} analysis={r['brand_profile'].get('analysis_mode')}")
+    return "\n".join(lines) + "\n"
+
+
+def cmd_compare(a) -> int:
+    try:
+        ra, rb = _load_research(Path(a.a)), _load_research(Path(a.b))
+    except (OSError, ValueError, KeyError) as e:
+        print(f"error: cannot read research outputs: {e}", file=sys.stderr)
+        return EXIT_ERROR
+    text = compare_research(ra, rb, a.label_a, a.label_b)
+    print(text)
+    if a.out:
+        Path(a.out).write_text(text, encoding="utf-8")
+    return EXIT_OK
+
+
 def cmd_approve(a) -> int:
     settings = load_settings(a.config)
     orch = Orchestrator(settings, runs_dir=a.runs_dir, auto_approve_mock=False)
@@ -266,6 +312,14 @@ def build_parser() -> argparse.ArgumentParser:
     rs.add_argument("--run", help="existing run id to resume or reuse the cache of")
     rs.add_argument("--out", help="copy brand_profile/evidence_registry/source_index JSON here")
     rs.set_defaults(fn=cmd_research)
+
+    cp = sub.add_parser("compare-research", help="diff two research output folders (e.g. autonomous agent vs manual)")
+    cp.add_argument("--a", required=True, help="folder with brand_profile/evidence_registry/source_index JSON")
+    cp.add_argument("--b", required=True)
+    cp.add_argument("--label-a", default="A")
+    cp.add_argument("--label-b", default="B")
+    cp.add_argument("--out", help="also write the report (markdown) here")
+    cp.set_defaults(fn=cmd_compare)
 
     st = sub.add_parser("status", help="show run status, ledger summary and cost")
     st.add_argument("--run", required=True)
