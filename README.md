@@ -101,4 +101,17 @@ Phase 1 commands (`studio run --mock ...`) are unchanged.
 * Optional extra for image checks and cut-outs: `pip install -e ".[images]"` (Pillow). Without it these steps are
   skipped **explicitly** and reported in `limitations`.
 * Instagram collection details: [docs/instagram_collection.md](docs/instagram_collection.md).
-* `.claude/skills/` is tracked; other `.claude/` files are ignored and a CI check fails if they are committed.
+* The whole `.claude/` directory is git-ignored and a CI check fails if any file under it is tracked.
+
+### Running the real autonomous agent (needs your key and prices)
+```powershell
+$env:ANTHROPIC_API_KEY = "..."      # never commit it; the code never prints or logs it
+# 1. fill anthropic_pricing in config.yaml (USD per million tokens, from Anthropic's official pricing page)
+# 2. free preflight: key valid + model accessible, no tokens spent
+studio research --mode live --policy anthropic --max-api-spend-usd 1 --max-steps 5 --preflight-only
+# 3. the run (refused unless a spend cap is given; the cap is checked before EVERY request, retries included)
+studio research --mode live --policy anthropic --instagram import --instagram-import research/imports/instagram_gymbeamhr.yaml `
+  --max-api-spend-usd 1 --max-steps 5 --run research-agent-live --out research/gymbeam_hr_agent
+studio compare-research --a research/gymbeam_hr_agent --b research/gymbeam_hr --label-a agent --label-b scripted --out docs/agent_vs_scripted.md
+```
+`run_summary.json` then contains the tool sequence, the model's stated reasons, request ids and token usage/cost.

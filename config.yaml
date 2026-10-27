@@ -15,6 +15,12 @@ models:
   research_llm: claude-sonnet-5-5   # live Anthropic adapter only (needs ANTHROPIC_API_KEY)
 
 # Unit prices are filled in Phase 2 when real providers are chosen and verified.
+# Token prices for the Anthropic adapter, USD per million tokens. LEFT EMPTY ON PURPOSE: fill them from the
+# official pricing page before a real run; without them a spend cap cannot be enforced and the run is refused.
+anthropic_pricing:
+  input_usd_per_mtok:
+  output_usd_per_mtok:
+
 pricing:
   llm: {unit: call, usd_per_unit: 0.0}
   vision: {unit: image, usd_per_unit: 0.0}

@@ -1,4 +1,4 @@
-"""`.gitignore` and the CI guard: local Claude settings stay out, `.claude/skills/` stays in."""
+"""`.gitignore` and the CI guard: NOTHING under `.claude/` (settings, caches, skills) may be tracked."""
 import shutil
 import subprocess
 from pathlib import Path
@@ -38,21 +38,14 @@ def git(*args, cwd=ROOT):
 
 
 @pytest.mark.parametrize("path", [".claude/settings.local.json", ".claude/sessions/x.json", ".claude/cache/y",
-                                  ".claude/settings.json"])
-def test_local_claude_files_are_ignored(path):
+                                  ".claude/settings.json", ".claude/skills/.gitkeep", ".claude/skills/my-skill/SKILL.md"])
+def test_everything_under_claude_is_ignored(path):
     assert git("check-ignore", "-q", path).returncode == 0, path
 
 
-@pytest.mark.parametrize("path", [".claude/skills/.gitkeep", ".claude/skills/my-skill/SKILL.md"])
-def test_claude_skills_are_not_ignored(path):
-    assert git("check-ignore", "-q", path).returncode == 1, path
-
-
-def test_skills_folder_exists_and_is_tracked_while_nothing_else_under_claude_is():
-    # -c -o --exclude-standard = tracked files plus untracked-but-not-ignored ones (true before the first commit too)
-    tracked = git("ls-files", "-co", "--exclude-standard", ".claude").stdout.split()
-    assert ".claude/skills/.gitkeep" in tracked
-    assert [p for p in tracked if not p.startswith(".claude/skills/")] == []
+def test_nothing_under_claude_is_tracked_or_trackable():
+    # tracked files + untracked-but-not-ignored files: both must be empty
+    assert git("ls-files", "-co", "--exclude-standard", ".claude").stdout.split() == []
 
 
 def guard_script() -> str:
@@ -74,25 +67,21 @@ def make_repo(tmp_path):
     return tmp_path
 
 
-def test_ci_guard_passes_for_clean_repo_and_for_tracked_skills(tmp_path):
+def test_ci_guard_passes_for_a_clean_repo(tmp_path):
     repo = make_repo(tmp_path)
-    assert run_guard(repo).returncode == 0
-    (repo / ".claude" / "skills" / "s").mkdir(parents=True)
-    (repo / ".claude" / "skills" / "s" / "SKILL.md").write_text("skill")
-    git("add", "-A", cwd=repo)
-    assert ".claude/skills/s/SKILL.md" in git("ls-files", cwd=repo).stdout  # not ignored
     r = run_guard(repo)
     assert r.returncode == 0, r.stdout + r.stderr
 
 
-@pytest.mark.parametrize("path", [".claude/settings.local.json", ".claude/sessions/s.json", ".CLAUDE/settings.local.json"])
-def test_ci_guard_fails_when_local_files_are_force_added(tmp_path, path):
+@pytest.mark.parametrize("path", [".claude/settings.local.json", ".claude/sessions/s.json", ".claude/skills/s/SKILL.md",
+                                  ".claude/skills/.gitkeep", ".CLAUDE/settings.local.json"])
+def test_ci_guard_fails_for_any_force_added_claude_file_including_skills(tmp_path, path):
     repo = make_repo(tmp_path)
     f = repo / path
     f.parent.mkdir(parents=True, exist_ok=True)
     f.write_text("{}")
     assert git("add", path, cwd=repo).returncode != 0  # a plain add is refused by .gitignore ...
     if path.startswith(".claude/"):
-        assert git("add", "-f", path, cwd=repo).returncode == 0  # ... but a forced add gets through git
+        assert git("add", "-f", path, cwd=repo).returncode == 0  # ... a forced add gets through git ...
         r = run_guard(repo)
         assert r.returncode == 1 and path in r.stdout, r.stdout + r.stderr  # ... and the CI guard catches it

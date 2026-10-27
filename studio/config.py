@@ -39,6 +39,15 @@ class ResearchConfig(BaseModel):
     anthropic_max_tokens: int = Field(default=4096, ge=1)
 
 
+class AnthropicPricing(BaseModel):
+    """USD per million tokens. Deliberately NULL until filled from Anthropic's official pricing page:
+    with unknown prices a spend limit cannot be enforced, so the adapter refuses to run with a budget."""
+
+    model_config = ConfigDict(extra="forbid")
+    input_usd_per_mtok: float | None = Field(default=None, ge=0)
+    output_usd_per_mtok: float | None = Field(default=None, ge=0)
+
+
 class Settings(BaseModel):
     model_config = ConfigDict(extra="forbid")
     runs_dir: str = "runs"
@@ -50,6 +59,7 @@ class Settings(BaseModel):
     research: ResearchConfig = Field(default_factory=ResearchConfig)
     models: Models
     pricing: dict[str, Price] = Field(default_factory=dict)  # keyed by provider kind
+    anthropic_pricing: AnthropicPricing = Field(default_factory=AnthropicPricing)
 
 
 def load_settings(path: str | Path = "config.yaml") -> Settings:

@@ -7,6 +7,7 @@ failed sources rather than hidden, and fetched content only reaches the policy a
 sanitised, wrapped data.
 """
 from studio import prompts
+from studio.cost import BudgetExceeded
 from studio.contracts import BriefInput, EvidenceRegistry, SourceIndex, SourceItem
 from studio.fingerprint import canonical, fingerprint
 from studio.providers.base import ResearchStep
@@ -47,11 +48,15 @@ def live_research_agent(svc: Services, state: dict) -> dict:
         seen: set[str] = set()
         fetches, stop = 0, "max_steps"
         for i in range(cfg.max_steps):
-            step = ResearchStep.model_validate(svc.op(
-                node="research_agent", scope=svc.GLOBAL, stage="research", fp=fp, suffix=f"s{i}:policy",
-                provider=svc.llm.info,
-                fn=lambda: svc.llm.structured(ResearchStep, task="research_policy", payload={
-                    "brief": brief.dump(), "history": _view(history), "limits": limits}).model_dump()))
+            try:
+                step = ResearchStep.model_validate(svc.op(
+                    node="research_agent", scope=svc.GLOBAL, stage="research", fp=fp, suffix=f"s{i}:policy",
+                    provider=svc.llm.info,
+                    fn=lambda: svc.llm.structured(ResearchStep, task="research_policy", payload={
+                        "brief": brief.dump(), "history": _view(history), "limits": limits}).model_dump()))
+            except BudgetExceeded:  # raised BEFORE any request is sent: stop safely with what was collected
+                stop = "max_api_budget"
+                break
             if step.action == "finish":
                 stop = "policy_finished"
                 break
