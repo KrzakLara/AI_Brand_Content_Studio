@@ -1,0 +1,739 @@
+{
+  "sources": [
+    {
+      "source_id": "S-856b1621ed",
+      "url": "https://gymbeam.hr/kreatin-monohidrat",
+      "title": "Kreatin Monohidrat | GymBeam.hr",
+      "kind": "web_page",
+      "content_sha256": "4b34a3f9317a0ee8fb7461ad4c2d8e0016bdc6a523b0cf81025ecf86ab4e8771",
+      "mock": false,
+      "origin": "live",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:22.301838Z",
+      "artifact_path": "research/raw/4b34a3f9317a0ee8.html",
+      "artifact_sha256": "4b34a3f9317a0ee8fb7461ad4c2d8e0016bdc6a523b0cf81025ecf86ab4e8771",
+      "record_sha256": null,
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "http_status": 200,
+        "content_type": "text/html",
+        "final_url": "https://gymbeam.hr/kreatin-monohidrat",
+        "bytes": 966337,
+        "attempts": 1
+      }
+    },
+    {
+      "source_id": "S-5ac791f816",
+      "url": "https://gymbeam.hr/kreatin-monohidrat-gymbeam-120106.html",
+      "title": "Kreatin Monohidrat – GymBeam | GymBeam.hr",
+      "kind": "web_page",
+      "content_sha256": "5e2e51c81bd2aa87426ac9dada7ae84ebdf34b9c0fd8eaff0ec2806531ca3f82",
+      "mock": false,
+      "origin": "live",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:24.104637Z",
+      "artifact_path": "research/raw/5e2e51c81bd2aa87.html",
+      "artifact_sha256": "5e2e51c81bd2aa87426ac9dada7ae84ebdf34b9c0fd8eaff0ec2806531ca3f82",
+      "record_sha256": null,
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "http_status": 200,
+        "content_type": "text/html",
+        "final_url": "https://gymbeam.hr/kreatin-monohidrat-gymbeam-120106.html",
+        "bytes": 960222,
+        "attempts": 1
+      }
+    },
+    {
+      "source_id": "S-d23f5013e9",
+      "url": "https://gymbeam.hr/kreatin-monohidrat-prah-mammut-nutrition.html",
+      "title": "Kreatin monohidrat prah - Mammut Nutrition | GymBeam.hr",
+      "kind": "web_page",
+      "content_sha256": "09cb339c0b627aa0256dd03c238f21b3df32526c3eda4b5cad33171d2c11afad",
+      "mock": false,
+      "origin": "live",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:26.172826Z",
+      "artifact_path": "research/raw/09cb339c0b627aa0.html",
+      "artifact_sha256": "09cb339c0b627aa0256dd03c238f21b3df32526c3eda4b5cad33171d2c11afad",
+      "record_sha256": null,
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "http_status": 200,
+        "content_type": "text/html",
+        "final_url": "https://gymbeam.hr/kreatin-monohidrat-prah-mammut-nutrition.html",
+        "bytes": 953938,
+        "attempts": 1
+      }
+    },
+    {
+      "source_id": "S-044e208df9",
+      "url": "https://www.instagram.com/gymbeamhr/",
+      "title": "@gymbeamhr (collected posts)",
+      "kind": "instagram_profile",
+      "content_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.391192Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": null,
+      "access_limitations": "instagram.com HTML is not scraped (login wall / access control); posts come from manual_import collection, basic data only, metrics are a snapshot",
+      "flags": [],
+      "provenance": {
+        "collected_by": "Claude Code operator session (development time) - NOT the studio runtime agent",
+        "method": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData",
+        "apify_actor": "apify/instagram-post-scraper (id nH2AHrwxeTRJoN5hX)",
+        "apify_run_id": "WtGf9fc7CBKSCedez",
+        "apify_dataset_id": "Ws21r5QsYrcldky99",
+        "apify_input": {
+          "username": [
+            "gymbeamhr"
+          ],
+          "resultsLimit": 70,
+          "skipPinnedPosts": false,
+          "dataDetailLevel": "basicData"
+        },
+        "apify_call_options": {
+          "maxTotalChargeUsd": 0.15
+        },
+        "collected_at": "2026-10-27T20:54:07Z",
+        "source_description": "Public posts of https://www.instagram.com/gymbeamhr/ (feed order, newest first)",
+        "selection": "The 30 newest posts whose ownerUsername is gymbeamhr. The run returned 60 items (46 brand-owned, 14 owned by other accounts = creator collaborations, excluded). 16 older brand-owned posts were returned but not imported.",
+        "captions": "Copied programmatically from the raw export; media (images/video) NOT stored in the repo.",
+        "metrics_note": "likes/comments are a snapshot at collected_at; hidden counts (-1) are null.",
+        "non_owner_posts_seen_and_excluded": 14,
+        "estimated_cost_usd": "about 0.10 (60 posts x 0.0017 listed FREE-tier price; actual Apify billing not checked)",
+        "supersedes": "earlier 10-post import from runs IBw4JCdf06bKLQwA7 / aTPUrqbrkIqnXC8o3",
+        "import_file": "instagram_gymbeamhr.yaml"
+      }
+    },
+    {
+      "source_id": "S-8df05147e9",
+      "url": "https://www.instagram.com/p/De_YTBHE7Nw/",
+      "title": "@gymbeamhr Video De_YTBHE7Nw",
+      "kind": "instagram_post",
+      "content_sha256": "2b4711b20cf03792226c5a5bf035bc7551f72538fa261eb3dd55deda978a07ec",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.391192Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "2b4711b20cf03792226c5a5bf035bc7551f72538fa261eb3dd55deda978a07ec",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-27T08:01:38.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-0606c3d71c",
+      "url": "https://www.instagram.com/p/De9xZm9kdUN/",
+      "title": "@gymbeamhr Video De9xZm9kdUN",
+      "kind": "instagram_post",
+      "content_sha256": "1d9784ea40acf17a4dd7447123baeb6790920775a2f784343157b75573aa036c",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "1d9784ea40acf17a4dd7447123baeb6790920775a2f784343157b75573aa036c",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-26T17:02:36.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-170261fbf9",
+      "url": "https://www.instagram.com/p/De7MhWqkTas/",
+      "title": "@gymbeamhr Video De7MhWqkTas",
+      "kind": "instagram_post",
+      "content_sha256": "4b9e561479db66d9e1f3d81e02fa8dd21e4c2be7ff9b5043c6536471b6157489",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "4b9e561479db66d9e1f3d81e02fa8dd21e4c2be7ff9b5043c6536471b6157489",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-25T17:01:54.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-19f577856e",
+      "url": "https://www.instagram.com/p/De18LcqEsNP/",
+      "title": "@gymbeamhr Video De18LcqEsNP",
+      "kind": "instagram_post",
+      "content_sha256": "21a38177d14a20a0f3711914b9e60f2244913d1d4d0f9fdff076bde68506bb37",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "21a38177d14a20a0f3711914b9e60f2244913d1d4d0f9fdff076bde68506bb37",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-23T16:02:49.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-7261b420b0",
+      "url": "https://www.instagram.com/p/DeyZefpD8Bb/",
+      "title": "@gymbeamhr Video DeyZefpD8Bb",
+      "kind": "instagram_post",
+      "content_sha256": "8858b01d9f204ade07b0984a017ee220dbeb393e2453692a2c982e6b8eb57b0a",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "8858b01d9f204ade07b0984a017ee220dbeb393e2453692a2c982e6b8eb57b0a",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-22T07:02:18.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-debabb63fe",
+      "url": "https://www.instagram.com/p/Dewyc-KkXL_/",
+      "title": "@gymbeamhr Video Dewyc-KkXL_",
+      "kind": "instagram_post",
+      "content_sha256": "cbc50737f935037825a2bfa7ab8c5ff842519935212d795608329f0f47022cd6",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "cbc50737f935037825a2bfa7ab8c5ff842519935212d795608329f0f47022cd6",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-21T16:02:03.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-08364f604a",
+      "url": "https://www.instagram.com/p/DeweAhoFvZr/",
+      "title": "@gymbeamhr Sidecar DeweAhoFvZr",
+      "kind": "instagram_post",
+      "content_sha256": "e9614ec81642f2f48507c453f7dab9731642c5c440c2df66386640ee00154e3c",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "e9614ec81642f2f48507c453f7dab9731642c5c440c2df66386640ee00154e3c",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-21T13:02:20.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-691cb23b36",
+      "url": "https://www.instagram.com/p/DeuNtm9Dm95/",
+      "title": "@gymbeamhr Video DeuNtm9Dm95",
+      "kind": "instagram_post",
+      "content_sha256": "042d0843d06a16747f03e3bb3afe8b737acedb032c5570600832eb1ea3630b54",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "042d0843d06a16747f03e3bb3afe8b737acedb032c5570600832eb1ea3630b54",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-20T16:02:30.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-f554895a29",
+      "url": "https://www.instagram.com/p/DeuNpiTikK6/",
+      "title": "@gymbeamhr Sidecar DeuNpiTikK6",
+      "kind": "instagram_post",
+      "content_sha256": "4e474e14f66129c809ff85c361415e63f03b3d479b06cbc9440fb8ab4702dd9b",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "4e474e14f66129c809ff85c361415e63f03b3d479b06cbc9440fb8ab4702dd9b",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-20T16:00:56.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-62ba0e40ba",
+      "url": "https://www.instagram.com/p/Dero9b3E4rf/",
+      "title": "@gymbeamhr Video Dero9b3E4rf",
+      "kind": "instagram_post",
+      "content_sha256": "c4a5e8f70aa1e986f589a4c972d7d8dd2c81413a589b7c338b193605d92a2f57",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "c4a5e8f70aa1e986f589a4c972d7d8dd2c81413a589b7c338b193605d92a2f57",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-19T16:03:06.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-70711e662a",
+      "url": "https://www.instagram.com/p/DepEBX5CRks/",
+      "title": "@gymbeamhr Sidecar DepEBX5CRks",
+      "kind": "instagram_post",
+      "content_sha256": "f8f7d88e979b806ee5e1f0c66c87465110e4b7c071914c9a15d08a2ebaf24c4f",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "f8f7d88e979b806ee5e1f0c66c87465110e4b7c071914c9a15d08a2ebaf24c4f",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-18T16:00:34.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-2fc9f452fd",
+      "url": "https://www.instagram.com/p/DemfNwBEXeK/",
+      "title": "@gymbeamhr Video DemfNwBEXeK",
+      "kind": "instagram_post",
+      "content_sha256": "407564bd9394d16ce686dd0db3a2a7526d05df0f2e3662b1389bb3118dcb6a53",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "407564bd9394d16ce686dd0db3a2a7526d05df0f2e3662b1389bb3118dcb6a53",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-17T16:01:07.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-41955b099c",
+      "url": "https://www.instagram.com/p/Dej6oqHlXhG/",
+      "title": "@gymbeamhr Video Dej6oqHlXhG",
+      "kind": "instagram_post",
+      "content_sha256": "9248180ac04f2e2cab440abcea3d0428b9173ffded55339fbf9e5c2deff92862",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "9248180ac04f2e2cab440abcea3d0428b9173ffded55339fbf9e5c2deff92862",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-16T16:03:00.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-11305e3b7a",
+      "url": "https://www.instagram.com/p/DegX7qjj4Sx/",
+      "title": "@gymbeamhr Sidecar DegX7qjj4Sx",
+      "kind": "instagram_post",
+      "content_sha256": "2f88089f6b9d54c5f622b118283939e0ecc1757f9880f87ae7fc8a6c6a66bf31",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "2f88089f6b9d54c5f622b118283939e0ecc1757f9880f87ae7fc8a6c6a66bf31",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-15T07:01:24.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-74dce1c2b3",
+      "url": "https://www.instagram.com/p/DedzClSiOcs/",
+      "title": "@gymbeamhr Sidecar DedzClSiOcs",
+      "kind": "instagram_post",
+      "content_sha256": "a6f294a5e58d256f04de9705cb187fd0124e24c0cc722536cde44fa2f1ababdf",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "a6f294a5e58d256f04de9705cb187fd0124e24c0cc722536cde44fa2f1ababdf",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-14T07:00:02.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-b36752d066",
+      "url": "https://www.instagram.com/p/DebOQZOCrrR/",
+      "title": "@gymbeamhr Video DebOQZOCrrR",
+      "kind": "instagram_post",
+      "content_sha256": "ab0c1bab9f05a2522f2376f1a3ca2505eacd995713b309e0df209db0149fb713",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "ab0c1bab9f05a2522f2376f1a3ca2505eacd995713b309e0df209db0149fb713",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-13T07:01:23.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-8acb112df7",
+      "url": "https://www.instagram.com/p/DeZnc3_DmCF/",
+      "title": "@gymbeamhr Sidecar DeZnc3_DmCF",
+      "kind": "instagram_post",
+      "content_sha256": "2d5601214f726d23a71b378b9068857b05271131ee826f93fc30cc20d3bbb8b0",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "2d5601214f726d23a71b378b9068857b05271131ee826f93fc30cc20d3bbb8b0",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-12T16:02:20.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-64a8417e77",
+      "url": "https://www.instagram.com/p/DeXCd8lDvQf/",
+      "title": "@gymbeamhr Video DeXCd8lDvQf",
+      "kind": "instagram_post",
+      "content_sha256": "73ac5c0b71a4e045cfb134c49740c939419ebb220937c8912adbed814e01024d",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "73ac5c0b71a4e045cfb134c49740c939419ebb220937c8912adbed814e01024d",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-11T16:01:45.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-41d13fa7fb",
+      "url": "https://www.instagram.com/p/DeUdqY_EVTp/",
+      "title": "@gymbeamhr Video DeUdqY_EVTp",
+      "kind": "instagram_post",
+      "content_sha256": "24809e3f2487a452bc72c4c477817f697e72970e5c5dfd67cbf6a78d86471fee",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "24809e3f2487a452bc72c4c477817f697e72970e5c5dfd67cbf6a78d86471fee",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-10T16:01:40.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-d89045f682",
+      "url": "https://www.instagram.com/p/DeQ7N2-G1AX/",
+      "title": "@gymbeamhr Sidecar DeQ7N2-G1AX",
+      "kind": "instagram_post",
+      "content_sha256": "01c55bef0da1bca76d838abf11b9e8e0be9dd86c7e13ab3e8ad911b6e5ebe958",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "01c55bef0da1bca76d838abf11b9e8e0be9dd86c7e13ab3e8ad911b6e5ebe958",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-09T07:02:02.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-3088f8eade",
+      "url": "https://www.instagram.com/p/DePXg5KD9nl/",
+      "title": "@gymbeamhr Video DePXg5KD9nl",
+      "kind": "instagram_post",
+      "content_sha256": "1ece4eddb06241d7d4a47df3f6a618c28bbc1538d3b17cb4f48adda50c5ba8a1",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "1ece4eddb06241d7d4a47df3f6a618c28bbc1538d3b17cb4f48adda50c5ba8a1",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-08T16:31:52.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-860c37faa3",
+      "url": "https://www.instagram.com/p/DePUSA1DjlP/",
+      "title": "@gymbeamhr Video DePUSA1DjlP",
+      "kind": "instagram_post",
+      "content_sha256": "a466a793d9bca5b264a029df10aefadd756c2c1da335e756174b8e2d0e1ead9b",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "a466a793d9bca5b264a029df10aefadd756c2c1da335e756174b8e2d0e1ead9b",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-08T16:02:44.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-82ae99026b",
+      "url": "https://www.instagram.com/p/DeOWZL6jbbl/",
+      "title": "@gymbeamhr Sidecar DeOWZL6jbbl",
+      "kind": "instagram_post",
+      "content_sha256": "368e10186ec7a1b8bfeea2270976646cbab05f343f05bf953c10e4cb9d77f716",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "368e10186ec7a1b8bfeea2270976646cbab05f343f05bf953c10e4cb9d77f716",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-08T07:01:38.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-31960be5ea",
+      "url": "https://www.instagram.com/p/DeNDbrlogsI/",
+      "title": "@gymbeamhr Video DeNDbrlogsI",
+      "kind": "instagram_post",
+      "content_sha256": "c41e66cf31b8b12eb58433bea57ee3771cecef5b7951e464e55d2b724031226e",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "c41e66cf31b8b12eb58433bea57ee3771cecef5b7951e464e55d2b724031226e",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-07T19:05:05.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-63ef2e2baf",
+      "url": "https://www.instagram.com/p/DeMvee0DEpN/",
+      "title": "@gymbeamhr Video DeMvee0DEpN",
+      "kind": "instagram_post",
+      "content_sha256": "c96218ac91e63d0331d3316716ca11d57605f35b0f74dd7ae720b35808a7c284",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "c96218ac91e63d0331d3316716ca11d57605f35b0f74dd7ae720b35808a7c284",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-07T16:03:20.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-2e49badde6",
+      "url": "https://www.instagram.com/p/DeLxgHgClb6/",
+      "title": "@gymbeamhr Sidecar DeLxgHgClb6",
+      "kind": "instagram_post",
+      "content_sha256": "b65148442b3fc794fabc559764e676e04a310cf5a21d073e31f50a45cccb84fa",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "b65148442b3fc794fabc559764e676e04a310cf5a21d073e31f50a45cccb84fa",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-07T07:01:00.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-116d1c475e",
+      "url": "https://www.instagram.com/p/DeJMroHFArc/",
+      "title": "@gymbeamhr Sidecar DeJMroHFArc",
+      "kind": "instagram_post",
+      "content_sha256": "de31e60ecc34fd7aaf3ec5572635fc8ca0ab65b57130d57473128e7e3d343753",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "de31e60ecc34fd7aaf3ec5572635fc8ca0ab65b57130d57473128e7e3d343753",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-06T07:00:44.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-12569d005f",
+      "url": "https://www.instagram.com/p/DeHlouaBVsN/",
+      "title": "@gymbeamhr Video DeHlouaBVsN",
+      "kind": "instagram_post",
+      "content_sha256": "6b4342b2bb00dea7f3f2606b7570075d830d9d46ed2e3a8033327054e1305a94",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "6b4342b2bb00dea7f3f2606b7570075d830d9d46ed2e3a8033327054e1305a94",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-05T16:00:07.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-5b3afc94af",
+      "url": "https://www.instagram.com/p/DeG1oeEFsWk/",
+      "title": "@gymbeamhr Image DeG1oeEFsWk",
+      "kind": "instagram_post",
+      "content_sha256": "eb7f46a70614a5eed5e47f1a4cba32ddbe57524460f7b7a2163ad8699a096200",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "eb7f46a70614a5eed5e47f1a4cba32ddbe57524460f7b7a2163ad8699a096200",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-05T09:00:40.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-80f6414c12",
+      "url": "https://www.instagram.com/p/DeFA5jbgOXh/",
+      "title": "@gymbeamhr Video DeFA5jbgOXh",
+      "kind": "instagram_post",
+      "content_sha256": "a98d6dac461d34f7c337ecee6aa256afffe26014e2b981d26a99b4186d41fab4",
+      "mock": false,
+      "origin": "manual_import",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "artifact_path": "research/raw/d249fee7c8492973.json",
+      "artifact_sha256": "d249fee7c8492973061af0b32e4440bffbc0746b94752981ebf7485c72219aa5",
+      "record_sha256": "a98d6dac461d34f7c337ecee6aa256afffe26014e2b981d26a99b4186d41fab4",
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "posted_at": "2026-10-04T16:01:22.000Z",
+        "collection": "Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData"
+      }
+    },
+    {
+      "source_id": "S-b9e10ef329",
+      "url": "https://gymbeam.hr/kreatin-creapure",
+      "title": "Kreatin Creapure® | GymBeam.hr",
+      "kind": "web_page",
+      "content_sha256": "240c983f09934d3f8d6c8c063f2921bd40c1287ca1efb0707ece1fecc804e131",
+      "mock": false,
+      "origin": "live",
+      "retrieval_status": "ok",
+      "retrieved_at": "2026-10-27T22:09:29.352764Z",
+      "artifact_path": "research/raw/240c983f09934d3f.html",
+      "artifact_sha256": "240c983f09934d3f8d6c8c063f2921bd40c1287ca1efb0707ece1fecc804e131",
+      "record_sha256": null,
+      "access_limitations": "",
+      "flags": [],
+      "provenance": {
+        "http_status": 200,
+        "content_type": "text/html",
+        "final_url": "https://gymbeam.hr/kreatin-creapure",
+        "bytes": 768159,
+        "attempts": 1
+      }
+    }
+  ]
+}

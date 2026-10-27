@@ -21,7 +21,7 @@ from studio.providers.live import AnthropicLLM, ScriptedResearchPolicy, Unavaila
 from studio.providers.mock import SimulatedCrash, build_mock_providers
 from studio.tools.instagram import ApifyInstagram, ManualImportInstagram
 from studio.tools.toolset import ResearchToolset
-from studio.tools.transport import RecordedTransport, UrllibTransport
+from studio.tools.transport import GuardedTransport, RecordedTransport, UrllibTransport
 from studio.tools.web import HttpClient
 
 EXIT_OK, EXIT_ERROR, EXIT_PAUSED, EXIT_CRASH = 0, 2, 3, 4
@@ -124,13 +124,19 @@ def _write_failure_report(orch, a, llm, exc) -> None:
         else:
             results.append({"step": part, "ok": doc.get("ok"), "error": doc.get("error"),
                             "urls": [s["url"] for s in doc.get("sources", [])]})
+    partial = getattr(exc, "partial", {}) or {}
     report = {"status": "failed", "failure": f"{type(exc).__name__}: {str(exc)[:400]}", "model": llm.model_id,
+              "stop_reason": partial.get("stop_reason"), "sources_recorded": partial.get("sources", []),
+              "agent_trace": partial.get("trace", []),
               "policy_autonomous": True, "mode": a.mode, "model_decisions": decisions, "tool_results": results,
               "ledger_steps": trace_from_ledger(ops), "api": llm.accounting()}
     (out / "run_summary.json").write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
     src = Path(llm.usage_path) if llm.usage_path else None
     if src and src.is_file():
         (out / "api_usage.jsonl").write_text(src.read_text(encoding="utf-8"), encoding="utf-8")
+        guard_log = src.parent / "api_requests.log"
+        if guard_log.is_file():
+            (out / "api_requests.log").write_text(guard_log.read_text(encoding="utf-8"), encoding="utf-8")
 
 
 def cmd_research(a) -> int:
@@ -148,8 +154,13 @@ def cmd_research(a) -> int:
         transport, origin = RecordedTransport.from_file(Path(a.fixtures) / "transport.json"), "fixture"
     if a.policy == "anthropic":
         model = a.model or settings.models.research_llm
+        run_dir = (Path(a.runs_dir or settings.runs_dir) / a.run) if a.run else None
+        llm_transport = transport
+        if a.max_requests is not None and run_dir is not None:  # independent hard cap at the transport level
+            llm_transport = GuardedTransport(transport, limit=a.max_requests, hosts=("api.anthropic.com",),
+                                             log_path=run_dir / "api_requests.log")
         price = settings.anthropic_pricing.get(model)
-        llm = AnthropicLLM(model, transport, cfg.anthropic_max_tokens, origin,
+        llm = AnthropicLLM(model, llm_transport, cfg.anthropic_max_tokens, origin,
                            input_usd_per_mtok=price.input_usd_per_mtok if price else None,
                            output_usd_per_mtok=price.output_usd_per_mtok if price else None,
                            max_prompt_tokens=price.max_prompt_tokens if price else 100_000,
@@ -158,6 +169,10 @@ def cmd_research(a) -> int:
         if not llm.api_key:
             print("error: --policy anthropic needs ANTHROPIC_API_KEY (not set). Nothing was run. Choose "
                   "--policy scripted explicitly to use the non-autonomous scripted crawl plan.", file=sys.stderr)
+            return EXIT_ERROR
+        if a.mode == "live" and a.max_requests is None:
+            print("error: a real Anthropic run needs an explicit --max-requests (preflight, messages and retries all "
+                  "count). Nothing was run.", file=sys.stderr)
             return EXIT_ERROR
         if a.mode == "live" and a.max_api_spend_usd is None:
             print("error: a real Anthropic run needs an explicit --max-api-spend-usd. Nothing was run.", file=sys.stderr)
@@ -222,7 +237,9 @@ def cmd_research(a) -> int:
         "stop_reason": v["research"]["stop_reason"], "counts": v["research"]["counts"],
         "evidence": dict(Counter(e["verification_status"] for e in ev)),
         "analysis_mode": v["brand_profile"]["profile"]["analysis_mode"],
-        "operations": ops, "estimated_cost_usd": cost, "trace": v["research"]["trace"],
+        "operations": ops, "tool_cost_usd": cost,
+        "estimated_cost_usd": round(cost + (llm.spent_usd if a.policy == "anthropic" else 0.0), 6),
+        "trace": v["research"]["trace"],
         "tools_selected": dict(Counter(t["tool"] for t in v["research"]["trace"])),
         "api": (llm.accounting() | {"http_requests": llm.http_requests} if a.policy == "anthropic" else None)}
     run_research = Path(orch.run_dir(res.run_id)) / "research"
@@ -236,7 +253,9 @@ def cmd_research(a) -> int:
           f"(autonomous: {a.policy == 'anthropic'}); instagram: {ig.name if ig else 'none'}")
     print(f"sources ok by origin: {dict(origins)}; stop_reason: {summary['stop_reason']}")
     print(f"evidence: {summary['evidence']}; analysis_mode: {summary['analysis_mode']}; "
-          f"estimated cost: ${cost:.4f}")
+          f"estimated cost: ${summary['estimated_cost_usd']:.6f}"
+          + (f" (API {llm.api_requests}/{llm.max_requests} requests, {llm.accounting()['input_tokens']} in / "
+             f"{llm.accounting()['output_tokens']} out tokens)" if a.policy == "anthropic" else ""))
     if a.out:
         print(f"wrote: {a.out}")
     return EXIT_OK

@@ -154,10 +154,57 @@ traceback, request accounting persisted per run and cumulative across restarts. 
 **Not done:** a successful agent run, the comparison, `phase-2b` tag, push. A retry needs a NEW explicit request allowance
 (suggested: 6 requests / 0.10 USD, expected cost ~0.003 USD) - I did not extend it.
 
+## 2026-10-27 - Phase 2b, fourth attempt: DEBUG + ONE CONTROLLED REAL RETRY (claude-haiku-5-5) - SUCCEEDED
+
+**Diagnosis of the failed run (from its ledger, hop by hop).** API response -> `tool_use` -> parsed decision: worked every
+time. Tool routing: 3 of 4 decisions named tools that do not exist (`fetch_page`, `browse`) because our payload never
+listed the tools (our bug, not Haiku's) and were correctly refused. Execution: the only call that ran was a GUESSED url
+(`/kreatin.html`, HTTP 404) because the homepage fetch had been refused, so no links were known. Persistence: the failed
+source existed only in the ledger; `ResearchFailed` fired before anything was written -> no source index, no stage cache,
+no evidence. Zero sources = three refusals + one 404 + a failure path that discarded partial results.
+
+**Fixes (all covered by recorded-response tests; 165 tests pass; mock smoke test passes):**
+- Tool catalogue + allowed hosts sent to the model; refusals list the valid tool names and are fed back to the model.
+- Failure path now persists everything (`research/partial_research.json`, failed sources, refusals, reasons) and raises
+  `ResearchFailed` carrying it; distinct stop reasons `policy_finished` / `max_steps` / `max_api_requests` / `max_api_budget`.
+- Request limit: a `GuardedTransport` is now the FINAL authority: it counts every request to api.anthropic.com (retries,
+  preflight, any code path), writes the count to `runs/<id>/api_requests.log` BEFORE forwarding and refuses at the limit,
+  independent of the adapter's own counter (the first run's sixth request came from my wrong hand-written accounting).
+  Tests: exactly five pass and the sixth is refused without being forwarded; holds when the adapter's bookkeeping is
+  wrong; retries and preflight consume the same allowance; across restarts; malformed replies cause no hidden recovery
+  call. The money limit is enforced separately (worst case before each request + stop once actual spend reaches it);
+  tests show each limit binds while the other has headroom. `--max-requests` is now mandatory for a real run.
+- Optional LLM enrichment in the analyst can no longer crash a run (found by the real run, see below).
+
+**The real run** (UTC 22:09; brief `briefs/gymbeam_hr.yaml`, seeds = previously verified GymBeam URLs; preflight skipped so all
+5 requests were model requests; limits 5 requests / 0.03 USD; prices 0.10 in / 0.50 out per MTok verified earlier today):
+- Requests: **5 of 5 (guard log: 5 lines, all POST /v1/messages)**. Tokens: **18,525 in / 778 out**. Cost: **0.002241 USD of
+  0.03** (recomputed independently 0.002242). Request ids in `research/gymbeam_hr_agent/api_usage.jsonl`.
+- Tool sequence chosen by the model, all valid, all executed: s0 web_fetch /kreatin-monohidrat (seed) -> s1 web_fetch
+  .../kreatin-monohidrat-gymbeam-120106.html (seed) -> s2 web_fetch .../kreatin-monohidrat-prah-mammut-nutrition.html (a link it
+  saw itself) -> s3 instagram_fetch gymbeamhr -> s4 web_fetch /kreatin-creapure (a link it saw itself). Stop: `max_steps`.
+- The analyst's optional tone call tried a SIXTH request: refused BEFORE sending (the limit worked) but the refusal crashed the
+  analyst; fixed, tested, run resumed from cache with ZERO further requests (guard log still 5).
+- Sources: 4 live pages + 31 manual-import (Instagram) = 35 ok, 0 failed. Evidence: 36 verified + 14 manual. An independent audit
+  (separate code from the analyst) reopened every artifact: **36/36 verified items re-found in the stored, hash-checked content.**
+- Comparison with the manual snapshot (`studio compare-research`, `research/gymbeam_hr_agent/comparison_vs_manual.md`):
+  33 sources in common; agent-only 2 (`/kreatin-creapure` category, a third-party Mammut Nutrition product); manual-only 27.
+
+**Honest assessment of the agent's quality.** Limits and plumbing work; research quality with a 5-step budget is weak: it never
+fetched the focal product page (sku 3885 `100% Kreatin Monohidrat`) or the homepage/CSS (so no font/palette), spent a step on a
+third-party brand's product, downloaded no packshots, so no packshot/packaging result. Agent-derived web evidence is only 6 items
+(2 descriptions, 2 ratings, 2 variants); the 30 Instagram evidence items and 14 visual observations come from OUR manual imports,
+which the agent merely triggered by calling `instagram_fetch`. Differences are mostly "what 5 steps could reach", not defects.
+
+**Success criteria:** within both limits OK; genuine tool calls recorded OK; >=1 real source OK; provenance persisted OK; evidence
+supported by retrieved content OK (36/36); comparison produced OK. Caveat: one model run, 5 steps, Haiku only.
+Active work and waiting: real run wall-clock about 14 s + resume; the rest was debugging/tests (not timed).
+
 ## Known limitations at end of Phase 2
-- The autonomous agent path (AnthropicLLM) is implemented and tested only against hand-authored recorded replies;
-  it has never run against the real API (no key). The real research run used the scripted, non-autonomous policy.
-- Instagram posts are a manual import (10 brand-owned posts), not collected by the runtime. APIFY path is tested
+- The autonomous agent (AnthropicLLM, claude-haiku-5-5) has now run ONCE against the real API (fourth Phase 2b attempt:
+  5 requests, 0.002241 USD). Its research quality under a 5-step budget is weak (see that entry); the canonical research
+  snapshot in research/gymbeam_hr/ still comes from the scripted, non-autonomous policy plus operator imports.
+- Instagram posts are a manual import (30 brand-owned posts), not collected by the runtime. APIFY path is tested
   against fixtures only.
 - No vision model: Instagram visual style and packaging generations rest on operator-labelled observations
   (status `manual`, 14 of 30 covers), not on a model.

@@ -120,9 +120,12 @@ def test_agent_never_exceeds_the_step_limit_with_a_real_policy(tmp_path, rsettin
 def test_cli_refuses_a_real_run_without_budget_or_prices_before_touching_the_network(tmp_path, monkeypatch, capsys):
     monkeypatch.chdir(ROOT)
     monkeypatch.setenv("ANTHROPIC_API_KEY", KEY)  # fake key: any network use would fail the test (sockets blocked)
-    base = ["--runs-dir", str(tmp_path), "research", "--mode", "live", "--policy", "anthropic"]
+    base = ["--runs-dir", str(tmp_path), "research", "--mode", "live", "--policy", "anthropic", "--max-requests", "5"]
     assert cli.main(base) == cli.EXIT_ERROR
     assert "explicit --max-api-spend-usd" in capsys.readouterr().err
+    assert cli.main(["--runs-dir", str(tmp_path), "research", "--mode", "live", "--policy", "anthropic",
+                     "--max-api-spend-usd", "1"]) == cli.EXIT_ERROR
+    assert "explicit --max-requests" in capsys.readouterr().err
     assert cli.main([*base, "--max-api-spend-usd", "1"]) == cli.EXIT_ERROR  # config.yaml prices are intentionally empty
     err = capsys.readouterr().err
     assert "anthropic_pricing" in err and KEY not in err and "Nothing was run" in err
@@ -158,6 +161,7 @@ def test_cli_real_policy_run_end_to_end_on_recorded_transport_writes_usage_metad
     assert (api["model"], api["http_requests"], api["input_tokens"], api["output_tokens"]) == ("claude-sonnet-5-5", 2, 3000, 200)
     assert api["spent_usd"] == pytest.approx((3000 * 3 + 200 * 15) / 1e6) and api["budget_usd"] == 1.0
     assert api["calls"][0]["request_id"] == "req_test_1" and summ["trace"][0]["why"] == "start at the home page"
+    assert summ["estimated_cost_usd"] == pytest.approx(api["spent_usd"]) and summ["tool_cost_usd"] == 0  # paid spend is not hidden
 
 
 # --- Haiku 5.5 test-run guarantees ---------------------------------------------------------------
@@ -271,7 +275,7 @@ def test_cli_real_run_needs_a_run_id_for_persistent_accounting(tmp_path, monkeyp
     monkeypatch.chdir(ROOT)
     monkeypatch.setenv("ANTHROPIC_API_KEY", KEY)
     rc = cli.main(["--runs-dir", str(tmp_path), "research", "--mode", "live", "--policy", "anthropic",
-                   "--model", "claude-haiku-5-5", "--max-api-spend-usd", "0.1"])
+                   "--model", "claude-haiku-5-5", "--max-api-spend-usd", "0.1", "--max-requests", "5"])
     assert rc == cli.EXIT_ERROR and "needs --run RUN_ID" in capsys.readouterr().err and not list(tmp_path.iterdir())
 
 
@@ -309,7 +313,7 @@ def test_cli_refuses_a_model_without_a_configured_price(tmp_path, monkeypatch, c
     monkeypatch.chdir(ROOT)
     monkeypatch.setenv("ANTHROPIC_API_KEY", KEY)
     rc = cli.main(["--runs-dir", str(tmp_path), "research", "--mode", "live", "--policy", "anthropic",
-                   "--model", "claude-unpriced-9", "--max-api-spend-usd", "0.1"])
+                   "--model", "claude-unpriced-9", "--max-api-spend-usd", "0.1", "--max-requests", "5"])
     err = capsys.readouterr().err
     assert rc == cli.EXIT_ERROR and "no entry for model 'claude-unpriced-9'" in err and KEY not in err
     assert not list(tmp_path.iterdir())
