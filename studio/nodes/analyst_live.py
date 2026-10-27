@@ -60,14 +60,26 @@ class _Ledger:
         self.svc, self.items = svc, []
         self.src = {s.source_id: s for s in index.sources}
         self._text: dict[str, str | None] = {}
+        self.integrity: dict[str, str] = {}  # source_id -> why its stored artifact was rejected
+
+    def integrity_message(self, sid: str) -> str:
+        """Provenance-rich report line for a rejected artifact."""
+        s = self.src[sid]
+        return (f"INTEGRITY FAILURE: {s.kind} {s.url} [source {sid}, origin {s.origin}, retrieved "
+                f"{s.retrieved_at.isoformat() if s.retrieved_at else 'unknown'}]: stored artifact {s.artifact_path} {self.integrity.get(sid, 'was rejected')}; "
+                f"expected sha256 {(s.artifact_sha256 or '')[:16]}...; excluded from the analysis.")
 
     def text(self, sid: str, mode: str) -> str | None:
         key = f"{sid}|{mode}"
         if key not in self._text:
             s = self.src[sid]
             p = self.svc.run_dir / s.artifact_path if s.artifact_path else None
-            if not p or not p.is_file() or sha256_bytes(p.read_bytes()) != s.artifact_sha256:
-                self._text[key] = None  # missing or tampered artifact
+            if not p or not p.is_file():
+                self.integrity[sid] = "is missing"
+                self._text[key] = None
+            elif (actual := sha256_bytes(p.read_bytes())) != s.artifact_sha256:
+                self.integrity[sid] = f"no longer matches (actual sha256 {actual[:16]}...)"
+                self._text[key] = None  # tampered artifact
             else:
                 raw = p.read_text(encoding="utf-8", errors="replace")
                 if mode == "html":
@@ -160,9 +172,7 @@ def _analyse(svc: Services, brief: BriefInput, index: SourceIndex, use_llm: bool
             continue
         raw = led.text(s.source_id, "raw")
         if raw is None:
-            limitations.append(f"{s.url}: stored artifact is missing or no longer matches its sha256; "
-                               "excluded from the analysis.")
-            continue
+            continue  # reported centrally below
         page = extract.parse_html(raw, s.url)
         for prod in extract.jsonld_products(page.jsonld):
             if not s.url.endswith(".html"):
@@ -231,6 +241,14 @@ def _analyse(svc: Services, brief: BriefInput, index: SourceIndex, use_llm: bool
     for s in index.sources:
         if s.retrieval_status != "ok":
             limitations.append(f"{s.kind} {s.url}: {s.retrieval_status} - {s.access_limitations}")
+    for sid in led.integrity:  # every rejected artifact, however it was read: report + mark the index
+        limitations.append(led.integrity_message(sid))
+        src = led.src[sid]
+        src.flags = [*src.flags, "artifact_integrity_failed"]
+        src.access_limitations = (src.access_limitations + " | " + led.integrity_message(sid)).strip(" |")
+        if src.kind == "instagram_profile":  # its posts share the rejected artifact
+            for post in (x for x in index.sources if x.kind == "instagram_post" and x.artifact_sha256 == src.artifact_sha256):
+                post.flags = [*post.flags, "artifact_integrity_failed"]
     reg = EvidenceRegistry(items=led.items)
     reg.check_sources(index)
     ver = {i.evidence_id for i in reg.items if i.verification_status == "verified"}
@@ -332,9 +350,7 @@ def _instagram(led, index, ok, limitations):
         return [], [], [], [], []
     raw = led.text(prof.source_id, "raw")  # hash-checked read
     if raw is None:
-        limitations.append(f"{prof.url}: stored Instagram artifact is missing or no longer matches its sha256; "
-                           "excluded from the analysis.")
-        return [], [], [], [], []
+        return [], [], [], [], []  # reported centrally in _analyse
     doc = json.loads(raw)
     posts = doc["posts"]
     limitations.append(

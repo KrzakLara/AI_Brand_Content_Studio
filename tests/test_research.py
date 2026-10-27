@@ -187,6 +187,7 @@ def test_a_source_url_alone_is_not_proof(tmp_path, rsettings):
 
 
 def test_tampered_artifacts_never_yield_verified_evidence(tmp_path, rsettings):
+    """Web page AND Instagram artifact tampered: both rejected, excluded, and reported with provenance."""
     t = fx.site()
     orch, _ = make(tmp_path, rsettings, t, ig=apify(t))
     res = orch.run("r8", brief=fx.brief())
@@ -196,14 +197,35 @@ def test_tampered_artifacts_never_yield_verified_evidence(tmp_path, rsettings):
     (tmp_path / "runs" / "r8" / page.artifact_path).write_text("<html>edited after retrieval</html>")
     (tmp_path / "runs" / "r8" / prof.artifact_path).write_text("{\"posts\": []}")
     res2 = orch.run("r8", from_stage="analyst")
+    profile = res2.values["brand_profile"]["profile"]
     items = res2.values["research"]["evidence"]["items"]
     assert not [e for e in items if e["source_id"] == page.source_id]  # excluded, not trusted
-    assert any(fx.A_URL in x and "no longer matches" in x for x in res2.values["brand_profile"]["profile"]["limitations"])
-    assert not [e for e in items if e["subject"] == "instagram_post"]  # tampered Instagram file: nothing trusted
-    assert any("Instagram artifact" in x and "no longer matches" in x
-               for x in res2.values["brand_profile"]["profile"]["limitations"])
-    assert res2.values["brand_profile"]["profile"]["example_posts"] == []
+    assert not [e for e in items if e["subject"] == "instagram_post"]
+    assert profile["example_posts"] == []
     assert all(e["verification_status"] == "verified" for e in items if e["subject"] == "product_variant")
+
+    for src, kind in ((page, "web_page"), (prof, "instagram_profile")):  # report names the exact provenance
+        line = next(x for x in profile["limitations"] if x.startswith("INTEGRITY FAILURE") and src.source_id in x)
+        for needle in (kind, src.url, f"origin {src.origin}", f"retrieved {src.retrieved_at.isoformat()}"[:30],
+                       src.artifact_path, "no longer matches", "actual sha256", src.artifact_sha256[:16]):
+            assert needle in line, (needle, line)
+    new_idx = {s.source_id: s for s in SourceIndex.model_validate(res2.values["research"]["source_index"]).sources}
+    assert "artifact_integrity_failed" in new_idx[page.source_id].flags
+    assert "artifact_integrity_failed" in new_idx[prof.source_id].flags
+    assert "INTEGRITY FAILURE" in new_idx[page.source_id].access_limitations
+    untouched = next(s for s in new_idx.values() if s.kind == "css")
+    assert "artifact_integrity_failed" not in untouched.flags  # only the tampered sources are marked
+
+
+def test_missing_artifact_is_reported_too(tmp_path, rsettings):
+    t = fx.site()
+    orch, _ = make(tmp_path, rsettings, t)
+    res = orch.run("r8b", brief=fx.brief(instagram_handle=None))
+    css = next(s for s in index_of(res).sources if s.kind == "css")
+    (tmp_path / "runs" / "r8b" / css.artifact_path).unlink()
+    res2 = orch.run("r8b", from_stage="analyst")
+    assert any("INTEGRITY FAILURE" in x and css.source_id in x and "is missing" in x
+               for x in res2.values["brand_profile"]["profile"]["limitations"])
 
 
 # --- packaging variants ----------------------------------------------------------------------
