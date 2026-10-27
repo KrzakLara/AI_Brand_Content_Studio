@@ -6,8 +6,11 @@ every policy decision and tool call is a ledger operation, tool failures are rec
 failed sources rather than hidden, and fetched content only reaches the policy as
 sanitised, wrapped data.
 """
+import json
+
 from studio import prompts
 from studio.cost import BudgetExceeded
+from studio.providers.live import RequestLimitExceeded
 from studio.contracts import BriefInput, EvidenceRegistry, SourceIndex, SourceItem
 from studio.fingerprint import canonical, fingerprint
 from studio.providers.base import ResearchStep
@@ -17,7 +20,11 @@ from studio.tools.toolset import now, source_id
 
 
 class ResearchFailed(RuntimeError):
-    pass
+    """No source could be retrieved. ``partial`` keeps everything the agent did so nothing is lost."""
+
+    def __init__(self, message: str, partial: dict | None = None):
+        super().__init__(message)
+        self.partial = partial or {}
 
 
 TOOL_CATALOG = {
@@ -82,6 +89,9 @@ def live_research_agent(svc: Services, state: dict) -> dict:
                     fn=lambda: svc.llm.structured(ResearchStep, task="research_policy", payload={
                         "brief": brief.dump(), "history": _view(history, compact_focus), "limits": limits,
                         "tools": TOOL_CATALOG, "allowed_hosts": cfg.allowed_hosts}).model_dump()))
+            except RequestLimitExceeded:  # raised BEFORE any request is sent
+                stop = "max_api_requests"
+                break
             except BudgetExceeded:  # raised BEFORE any request is sent: stop safely with what was collected
                 stop = "max_api_budget"
                 break
@@ -128,8 +138,14 @@ def live_research_agent(svc: Services, state: dict) -> dict:
                 retrieval_status="not_collected", retrieved_at=now(),
                 access_limitations="agent did not attempt Instagram collection within its limits").dump())
         if not any(s["retrieval_status"] == "ok" for s in sources.values()):
-            raise ResearchFailed("no source could be retrieved: " + "; ".join(
-                f"{s['url']} ({s['access_limitations']})" for s in sources.values())[:600])
+            # keep everything the agent did (failed sources, refusals, reasons): a failed run must still be auditable
+            partial = {"stop_reason": stop, "trace": trace, "limits": limits,
+                       "sources": [SourceItem.model_validate(s).dump() for s in sources.values()]}
+            out_dir = svc.run_dir / "research"
+            out_dir.mkdir(parents=True, exist_ok=True)
+            (out_dir / "partial_research.json").write_text(json.dumps(partial, indent=2, ensure_ascii=False), encoding="utf-8")
+            raise ResearchFailed(f"no source could be retrieved (stop_reason={stop}): " + "; ".join(
+                f"{s['url']} ({s['access_limitations'] or s['retrieval_status']})" for s in sources.values())[:600], partial)
         index = SourceIndex(sources=[SourceItem.model_validate(s) for s in sources.values()])
         return {"source_index": index.dump(), "evidence": EvidenceRegistry().dump(), "trace": trace,
                 "stop_reason": stop, "limits": limits,

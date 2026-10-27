@@ -1,0 +1,1529 @@
+{
+  "items": [
+    {
+      "evidence_id": "E-84e2d0f2",
+      "claim": "Description of Kreatin Monohidrat – GymBeam",
+      "source_id": "S-5ac791f816",
+      "quote": "Kreatin Monohidrat u praktičnim kapsulama. Dnevna doza osigurava 3000 mg čistog kreatina za poboljšanje izvedbe tijekom vježbanja. Veganski, bez glutena i bez GMO-a.",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "live",
+      "subject": "product_description",
+      "source_url": "https://gymbeam.hr/kreatin-monohidrat-gymbeam-120106.html",
+      "retrieved_at": "2026-10-27T22:09:24.104637Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "sku": "120100"
+      }
+    },
+    {
+      "evidence_id": "E-b81dd91f",
+      "claim": "Listed rating 4.8 from 8 reviews for Kreatin Monohidrat – GymBeam",
+      "source_id": "S-5ac791f816",
+      "quote": "4.8",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "live",
+      "subject": "product_rating",
+      "source_url": "https://gymbeam.hr/kreatin-monohidrat-gymbeam-120106.html",
+      "retrieved_at": "2026-10-27T22:09:24.104637Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "ratingValue": 4.8,
+        "reviewCount": 8
+      }
+    },
+    {
+      "evidence_id": "E-20ae1faf",
+      "claim": "Variant 120100 'Kreatin Monohidrat – GymBeam 120 kaps.' listed at 8.95 EUR, availability InStock",
+      "source_id": "S-5ac791f816",
+      "quote": "Kreatin Monohidrat – GymBeam 120 kaps.",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "live",
+      "subject": "product_variant",
+      "source_url": "https://gymbeam.hr/kreatin-monohidrat-gymbeam-120106.html",
+      "retrieved_at": "2026-10-27T22:09:24.104637Z",
+      "verification_status": "verified",
+      "verification_note": "all 4 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": "sku:120100 | 120 kaps | none",
+      "structured_value": {
+        "sku": "120100",
+        "name": "Kreatin Monohidrat – GymBeam 120 kaps.",
+        "price": 8.95,
+        "priceCurrency": "EUR",
+        "gtin13": "8586028765265",
+        "availability": "https://schema.org/InStock",
+        "url": "https://gymbeam.hr/kreatin-monohidrat-gymbeam-120106.html#120100",
+        "price_retrieved_at": "2026-10-27T22:09:24.104637+00:00"
+      }
+    },
+    {
+      "evidence_id": "E-8f903875",
+      "claim": "Description of Kreatin monohidrat prah - Mammut Nutrition",
+      "source_id": "S-d23f5013e9",
+      "quote": "Kreatin monohidrat u prahu s magnezijem idealan je za sve sportaše. Povećava fizičku izvedbu, pomaže smanjiti umor i pospješuje aktivnost mišića.",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "live",
+      "subject": "product_description",
+      "source_url": "https://gymbeam.hr/kreatin-monohidrat-prah-mammut-nutrition.html",
+      "retrieved_at": "2026-10-27T22:09:26.172826Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "sku": "56839"
+      }
+    },
+    {
+      "evidence_id": "E-6a39d2eb",
+      "claim": "Listed rating 4.4 from 17 reviews for Kreatin monohidrat prah - Mammut Nutrition",
+      "source_id": "S-d23f5013e9",
+      "quote": "4.4",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "live",
+      "subject": "product_rating",
+      "source_url": "https://gymbeam.hr/kreatin-monohidrat-prah-mammut-nutrition.html",
+      "retrieved_at": "2026-10-27T22:09:26.172826Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "ratingValue": 4.4,
+        "reviewCount": 17
+      }
+    },
+    {
+      "evidence_id": "E-9fc741a1",
+      "claim": "Variant 56839 'Kreatin monohidrat prah - Mammut Nutrition 550 g' listed at 31.95 EUR, availability InStock",
+      "source_id": "S-d23f5013e9",
+      "quote": "Kreatin monohidrat prah - Mammut Nutrition 550 g",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "live",
+      "subject": "product_variant",
+      "source_url": "https://gymbeam.hr/kreatin-monohidrat-prah-mammut-nutrition.html",
+      "retrieved_at": "2026-10-27T22:09:26.172826Z",
+      "verification_status": "verified",
+      "verification_note": "all 4 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": "sku:56839 | 550 g | none",
+      "structured_value": {
+        "sku": "56839",
+        "name": "Kreatin monohidrat prah - Mammut Nutrition 550 g",
+        "price": 31.95,
+        "priceCurrency": "EUR",
+        "gtin13": "4260495462530",
+        "availability": "https://schema.org/InStock",
+        "url": "https://gymbeam.hr/kreatin-monohidrat-prah-mammut-nutrition.html#56839",
+        "price_retrieved_at": "2026-10-27T22:09:26.172826+00:00"
+      }
+    },
+    {
+      "evidence_id": "E-991854f2",
+      "claim": "@gymbeamhr published a Video on 2026-10-27 (post De_YTBHE7Nw)",
+      "source_id": "S-8df05147e9",
+      "quote": "Mystery Week je počeo 🔥 Potrošite 50 € ili više i darujemo Vam BESPLATAN Mystery poklon u vrijednosti većoj od 10 €.\n\n⏳ Samo na ograničeno vrijeme. Zgrabite svo",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/De_YTBHE7Nw/",
+      "retrieved_at": "2026-10-27T22:09:27.391192Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Video",
+        "hashtags": [
+          "gbig",
+          "mysteryweek"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E-153830c0",
+      "claim": "@gymbeamhr published a Video on 2026-10-26 (post De9xZm9kdUN)",
+      "source_id": "S-0606c3d71c",
+      "quote": "Vaš tempo. Vaša ruta. Vaš PACE. ⚡\n\n✔️ prozračan materijal\n✔️ brzo se suši\n✔️ nije proziran\n✔️ reflektirajući print za vidljivost u sumrak i noću\n\nNova PACE kole",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/De9xZm9kdUN/",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Video",
+        "hashtags": [
+          "gymbeamhr",
+          "gbfit",
+          "gbwomen",
+          "gbig"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E-0794466b",
+      "claim": "@gymbeamhr published a Video on 2026-10-25 (post De7MhWqkTas)",
+      "source_id": "S-170261fbf9",
+      "quote": "Mala kapsula za veliku podršku vašem tijelu! 🌿✨\n\nOsigurajte svojem crijevnom mikrobiomu snažnu dozu od 10 milijardi dobrih bakterija i inulina uz ProbioTen. Pra",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/De7MhWqkTas/",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Video",
+        "hashtags": [
+          "gymbeamhr",
+          "gbhealthy",
+          "gbmen",
+          "gbig"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E-3ee6b5ba",
+      "claim": "@gymbeamhr published a Video on 2026-10-23 (post De18LcqEsNP)",
+      "source_id": "S-19f577856e",
+      "quote": "Mali jutarnji rituali čine razliku. ☀️\nZa @zanamari dan počinje uz Anti-Aging Collagen — ukusan napitak koji se jednostavno uklapa u svakodnevnu rutinu. Sadrži ",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/De18LcqEsNP/",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Video",
+        "hashtags": [
+          "gymbeamhr",
+          "gbhealthy",
+          "gbwomen",
+          "gbig"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E-52351b4a",
+      "claim": "@gymbeamhr published a Video on 2026-10-22 (post DeyZefpD8Bb)",
+      "source_id": "S-7261b420b0",
+      "quote": "Ne mora svaki dan biti 10/10 💭 Snaga je u tome da izgurate one teške dane i vratite se još jače 💖\n\nVaše zdravlje je pravi temelj vaše snage. Čuvajte ga 🔒✨\n\n🎀 Ru",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/DeyZefpD8Bb/",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Video",
+        "hashtags": [
+          "gbwomen",
+          "pinkoctober",
+          "ruzicastilistopad",
+          "gymbeamhr",
+          "gbig"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E-88f9a4f6",
+      "claim": "@gymbeamhr published a Video on 2026-10-21 (post Dewyc-KkXL_)",
+      "source_id": "S-debabb63fe",
+      "quote": "Kad vam se ne da kuhati, a želite nešto fino i zasitno 🙌 GymBeam bezglutenski njoki gotovi su za par minuta. Dodajte piletinu, tunu ili sir i dobivate brz obrok",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/Dewyc-KkXL_/",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Video",
+        "hashtags": [
+          "gymbeamhr",
+          "gbhealthy",
+          "gbwomen",
+          "zdravahrana",
+          "recepti",
+          "gbig"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E-a4691c41",
+      "claim": "@gymbeamhr published a Sidecar on 2026-10-21 (post DeweAhoFvZr)",
+      "source_id": "S-08364f604a",
+      "quote": "Neki imaju pistu, a naša su krila su za teretanu. Koji GymBeam „Anđeo” danas ide s vama na trening? 👇\n\n#gymbeamhr #gbfit #gbwomen #gymbeamhr #gbig",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/DeweAhoFvZr/",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Sidecar",
+        "hashtags": [
+          "gymbeamhr",
+          "gbfit",
+          "gbwomen",
+          "gbig"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E-ca2c7c98",
+      "claim": "@gymbeamhr published a Video on 2026-10-20 (post DeuNtm9Dm95)",
+      "source_id": "S-691cb23b36",
+      "quote": "Blueprint by Bryan Johnson stigao je u GymBeam! 🆕\nBilo da želite poboljšati performanse, izgraditi mišiće, sagorjeti masti ili se redovito brinuti o vitaminima ",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/DeuNtm9Dm95/",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Video",
+        "hashtags": [
+          "gymbeamhr",
+          "gbhealthy",
+          "gbmen",
+          "bryanjohnson",
+          "longevity",
+          "gbig"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E-d70e2da2",
+      "claim": "@gymbeamhr published a Sidecar on 2026-10-20 (post DeuNpiTikK6)",
+      "source_id": "S-f554895a29",
+      "quote": "Za sve naše cure koje vole biti snažne u teretani, ali nikad ne rade kompromise kada je riječ o brizi o sebi, pripremili smo nešto posebno za vas! ✨🫶🏽\n\nPredstav",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/DeuNpiTikK6/",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Sidecar",
+        "hashtags": [
+          "gbwomen",
+          "creaglow",
+          "anjablaa",
+          "glowfromwithin"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E-8769f61c",
+      "claim": "@gymbeamhr published a Video on 2026-10-19 (post Dero9b3E4rf)",
+      "source_id": "S-62ba0e40ba",
+      "quote": "Napitak od badema za one koji žele probati biljnu alternativu mlijeku. 🌰🥛 \nBiljna alternativa mlijeku, obogaćena kalcijem i vitaminom D3. Ugodno je sladak zahva",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/Dero9b3E4rf/",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Video",
+        "hashtags": [
+          "gymbeamhr",
+          "gbhealthy",
+          "gbwomen",
+          "gbig"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E-3e1f8026",
+      "claim": "@gymbeamhr published a Sidecar on 2026-10-18 (post DepEBX5CRks)",
+      "source_id": "S-70711e662a",
+      "quote": "Cilj nije izdržati najduže. Cilj je postupno i sigurno se priviknuti na hladnoću. 🧊\n\nPrelistajte za svoj potpuni plan izlaganja hladnoći ➡️\n\nSve za terapiju hla",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/DepEBX5CRks/",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Sidecar",
+        "hashtags": [
+          "coldexposure",
+          "gbfit"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E-0dea8f74",
+      "claim": "@gymbeamhr published a Video on 2026-10-17 (post DemfNwBEXeK)",
+      "source_id": "S-2fc9f452fd",
+      "quote": "Recharge day po vašoj mjeri. 🌲🏋️‍♀️ Malo treninga, malo prirode, dobro društvo i nešto fino za kraj. Uz Yum Yum Whey imate ukusan proteinski dodatak koji se lak",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/DemfNwBEXeK/",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Video",
+        "hashtags": [
+          "gymbeamhr",
+          "gbhealthy",
+          "gbwomen",
+          "gbig"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E-88ba6a07",
+      "claim": "@gymbeamhr published a Video on 2026-10-16 (post Dej6oqHlXhG)",
+      "source_id": "S-41955b099c",
+      "quote": "Nova Cosmo kolekcija je stigla! ✨ Futuristički stil, trendi vibe. Prati liniju vašeg tijela, jako je mekana, a vanjski šavovi naglašavaju vašu siluetu. 😍\nIsprob",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/Dej6oqHlXhG/",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Video",
+        "hashtags": [
+          "gymbeamhr",
+          "gbhealthy",
+          "gbmen",
+          "gbig"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E-d5fe3d59",
+      "claim": "@gymbeamhr published a Sidecar on 2026-10-15 (post DegX7qjj4Sx)",
+      "source_id": "S-11305e3b7a",
+      "quote": "Stvoreno za vaše sljedeće trčanje. PACE od GymBeama. ⚡\n\n#gbfit #runningcollection #pace",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/DegX7qjj4Sx/",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Sidecar",
+        "hashtags": [
+          "gbfit",
+          "runningcollection",
+          "pace"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E-39522e74",
+      "claim": "@gymbeamhr published a Sidecar on 2026-10-14 (post DedzClSiOcs)",
+      "source_id": "S-74dce1c2b3",
+      "quote": "Koji je vaš omiljeni okus? \n💛 Vanilija \n🤎 Čokolada \n💓 Jagoda \n\nNapišite u komentarima i pošaljite prijatelju! 🥤 \n\n#gymbeamhr #gbhealthy",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/DedzClSiOcs/",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Sidecar",
+        "hashtags": [
+          "gymbeamhr",
+          "gbhealthy"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E-d2884440",
+      "claim": "@gymbeamhr published a Video on 2026-10-13 (post DebOQZOCrrR)",
+      "source_id": "S-b36752d066",
+      "quote": "VAŠ SLJEDEĆI GYM OUTFIT? NEKA BUDE STRIX. 🔥\nZadnji komadi se rasprodaju - sada po odličnim cijenama. Ugrabite svoje favorite prije nego što nestanu!\n\nKupite STR",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/DebOQZOCrrR/",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Video",
+        "hashtags": [
+          "gymbeamhr",
+          "gbig",
+          "akcijaodjece",
+          "strix"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E-d1ed88bd",
+      "claim": "@gymbeamhr published a Sidecar on 2026-10-12 (post DeZnc3_DmCF)",
+      "source_id": "S-8acb112df7",
+      "quote": "LOCK IN 🔥\n\nKada GymBeam udruži snage s legendarnom esport organizacijom FNATIC, znate da stiže nešto veliko. 🔥\n\nPredstavljamo LOCK IN – dodatak prehrani za gejm",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/DeZnc3_DmCF/",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Sidecar",
+        "hashtags": []
+      }
+    },
+    {
+      "evidence_id": "E-5d9f6782",
+      "claim": "@gymbeamhr published a Video on 2026-10-11 (post DeXCd8lDvQf)",
+      "source_id": "S-64a8417e77",
+      "quote": "PROTEINSKI CHEESECAKE SMOOTHIE 🍓\n\nKremast, pun šumskog voća i posut hrskavim mrvicama keksa.\n\nIspunjavanje vaših makronutrijenata nikada nije imalo ovoliko okus",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/DeXCd8lDvQf/",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Video",
+        "hashtags": [
+          "gbnutrition",
+          "cheesecakesmoothie",
+          "highprotein",
+          "fitdessert",
+          "healthyrecipes"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E-19663a97",
+      "claim": "@gymbeamhr published a Video on 2026-10-10 (post DeUdqY_EVTp)",
+      "source_id": "S-41d13fa7fb",
+      "quote": "Tražite nešto slatko, a ne želite kompromise u prehrani? Imamo savršeno rješenje! 🥄✨\n\nOvaj kremasti desert pruža puni užitak poput klasičnog pudinga, ali u zdra",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/DeUdqY_EVTp/",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Video",
+        "hashtags": [
+          "gymbeamhr",
+          "gbhealthy",
+          "gbwomen",
+          "gbig"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E-1f3ae20a",
+      "claim": "@gymbeamhr published a Sidecar on 2026-10-09 (post DeQ7N2-G1AX)",
+      "source_id": "S-d89045f682",
+      "quote": "Znamo što uvijek pobjeđuje! A uz besplatnu BOXNOW dostavu, kupnja je još slađa! 😎\n\n#gymbeamhr #gbhealthy #gbfit #gbig",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/DeQ7N2-G1AX/",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Sidecar",
+        "hashtags": [
+          "gymbeamhr",
+          "gbhealthy",
+          "gbfit",
+          "gbig"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E-748fee34",
+      "claim": "@gymbeamhr published a Video on 2026-10-08 (post DePXg5KD9nl)",
+      "source_id": "S-3088f8eade",
+      "quote": "Jedna mjerica supermoći. ⚡\n\nStigao je Crazy Pump 2.0, stvoren u suradnji s @ifbb_pro_petar_klancir 💥\n\nPre-workout profesionalaca, sada u vašem shakeru. 💪\n\nKupit",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/DePXg5KD9nl/",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Video",
+        "hashtags": []
+      }
+    },
+    {
+      "evidence_id": "E-725c2f71",
+      "claim": "@gymbeamhr published a Video on 2026-10-08 (post DePUSA1DjlP)",
+      "source_id": "S-860c37faa3",
+      "quote": "Samopouzdanje počinje sa savršenim krojem. 🤎\n\n#gbwomen #cosmo #novakolekcija",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/DePUSA1DjlP/",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Video",
+        "hashtags": [
+          "gbwomen",
+          "cosmo",
+          "novakolekcija"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E-1b94c0a1",
+      "claim": "@gymbeamhr published a Sidecar on 2026-10-08 (post DeOWZL6jbbl)",
+      "source_id": "S-82ae99026b",
+      "quote": "Stigla je nova COSMO kolekcija brenda GymBeam. 🔥\n#gbwomen #cosmo #novakolekcija",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/DeOWZL6jbbl/",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Sidecar",
+        "hashtags": [
+          "gbwomen",
+          "cosmo",
+          "novakolekcija"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E-ed7d5b91",
+      "claim": "@gymbeamhr published a Video on 2026-10-07 (post DeNDbrlogsI)",
+      "source_id": "S-31960be5ea",
+      "quote": "Vikend proveden onako kako najviše volimo: u pokretu! 🏃‍♀️ Na MOVE FESTU by @the_fitness_croatia održali smo Booty & Core trening by GymBeam, a zatim i plank ch",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/DeNDbrlogsI/",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Video",
+        "hashtags": [
+          "gymbeamhr",
+          "thefitnesscroatia",
+          "gbfit",
+          "gbmovation",
+          "movefest"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E-87ecea41",
+      "claim": "@gymbeamhr published a Video on 2026-10-07 (post DeMvee0DEpN)",
+      "source_id": "S-63ef2e2baf",
+      "quote": "Vaša doza ljepote i svježine – bilo kad i bilo gdje! 💖✨\nNove Pink Collagen šumeće tablete u trenu se pretvaraju u osvježavajući napitak s hidroliziranim kolagen",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/DeMvee0DEpN/",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Video",
+        "hashtags": [
+          "gymbeamhr",
+          "gbhealthy",
+          "gbwomen"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E-e9e7c93d",
+      "claim": "@gymbeamhr published a Sidecar on 2026-10-07 (post DeLxgHgClb6)",
+      "source_id": "S-2e49badde6",
+      "quote": "Izradio profesionalac. Stvoreno za tvoj sljedeći trening. 🔥\n\nCrazy Pump 2.0 je stigao, razvijen u suradnji s @ifbb_pro_petar_klancir\n\nJedno serviranje od 26 g d",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/DeLxgHgClb6/",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Sidecar",
+        "hashtags": []
+      }
+    },
+    {
+      "evidence_id": "E-1e4dd436",
+      "claim": "@gymbeamhr published a Sidecar on 2026-10-06 (post DeJMroHFArc)",
+      "source_id": "S-116d1c475e",
+      "quote": "Blueprint brenda Bryan Johnson — od sada je dostupan ekskluzivno na GymBeam-u.\n\nA kako bismo proslavili lansiranje, uživajte u dodatnih 15% POPUSTA. 🧡\n\nOva ponu",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/DeJMroHFArc/",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Sidecar",
+        "hashtags": []
+      }
+    },
+    {
+      "evidence_id": "E-7b6b1860",
+      "claim": "@gymbeamhr published a Video on 2026-10-05 (post DeHlouaBVsN)",
+      "source_id": "S-12569d005f",
+      "quote": "Ono kad odjeća izgleda jednako dobro kako se u njoj i osjećate. ☁️✨\nStigla je nova Mochi kolekcija!! Pastelne boje, ležerni krojevi i besprijekorna udobnost u k",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/DeHlouaBVsN/",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Video",
+        "hashtags": [
+          "gymbeamhr",
+          "gbwomen",
+          "mochi",
+          "gbmotivation"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E-ab23e2e9",
+      "claim": "@gymbeamhr published a Image on 2026-10-05 (post DeG1oeEFsWk)",
+      "source_id": "S-5b3afc94af",
+      "quote": "BESPLATNA DOSTAVA S BOX NOW! 🚚📦\nDostava vaše narudžbe za 0€ uz BOX NOW! 🤫 Bez minimalne narudžbe, bez skrivenih uvjeta ✨.\n\nNe čekajte – napunite košaricu i osig",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/DeG1oeEFsWk/",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Image",
+        "hashtags": [
+          "gymbeamhr",
+          "boxnow",
+          "freeshipping",
+          "paketomat",
+          "gbig"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E-c4343533",
+      "claim": "@gymbeamhr published a Video on 2026-10-04 (post DeFA5jbgOXh)",
+      "source_id": "S-80f6414c12",
+      "quote": "Mekane, ukusne i pune 40g proteina. 🤤\nSavršen slatki doručak ili poslastica nakon treninga! 🥞⚡️\nSačuvajte ovaj post kako biste ovo napravili sutra ujutro! 📌🔥\n\n#",
+      "confidence": 0.9,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_post",
+      "source_url": "https://www.instagram.com/p/DeFA5jbgOXh/",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "verification_status": "verified",
+      "verification_note": "all 1 excerpt(s) located in stored artifact (hash checked)",
+      "packaging_variant": null,
+      "structured_value": {
+        "type": "Video",
+        "hashtags": [
+          "gbnutrition",
+          "palacinke",
+          "proteinrecepti",
+          "gymbeamhr",
+          "gbig"
+        ]
+      }
+    },
+    {
+      "evidence_id": "E-a9d7f722",
+      "claim": "Cover of https://www.instagram.com/p/De_YTBHE7Nw/: composition ['lifestyle_photo', 'behind_the_scenes'], product apparel_worn, people one, text overlay False",
+      "source_id": "S-8df05147e9",
+      "quote": "Muscular man seen from behind walking through a warehouse aisle, black GymBeam tee with neon-lime logo print.",
+      "confidence": 0.7,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_visual_observation",
+      "source_url": "https://www.instagram.com/p/De_YTBHE7Nw/",
+      "retrieved_at": "2026-10-27T22:09:27.391192Z",
+      "verification_status": "manual",
+      "verification_note": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio on 2026-10-27; the cover image bytes (sha256 fab5ae373f3c0195...) are not stored in the repository",
+      "packaging_variant": null,
+      "structured_value": {
+        "media_kind": "video_cover",
+        "composition": [
+          "lifestyle_photo",
+          "behind_the_scenes"
+        ],
+        "product_shown": "apparel_worn",
+        "people_shown": "one",
+        "text_overlay": false,
+        "overlay_type_style": null,
+        "dominant_colors": [
+          {
+            "hex": "#535258",
+            "share": 0.263
+          },
+          {
+            "hex": "#26262e",
+            "share": 0.241
+          },
+          {
+            "hex": "#757579",
+            "share": 0.198
+          },
+          {
+            "hex": "#8f8f92",
+            "share": 0.189
+          },
+          {
+            "hex": "#a7a6a7",
+            "share": 0.108
+          }
+        ],
+        "cover_sha256": "fab5ae373f3c01952cbb70a361e4e1c68ed0805caa1884eab1e9174e8dd7726d",
+        "shows_creatine_pack": null
+      }
+    },
+    {
+      "evidence_id": "E-de8ceccd",
+      "claim": "Cover of https://www.instagram.com/p/De9xZm9kdUN/: composition ['flat_lay'], product apparel_flat_lay, people none, text overlay False",
+      "source_id": "S-0606c3d71c",
+      "quote": "Black GymBeam Running jacket and sports bra flat-lay on grey fabric, neon yellow-green print.",
+      "confidence": 0.7,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_visual_observation",
+      "source_url": "https://www.instagram.com/p/De9xZm9kdUN/",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "verification_status": "manual",
+      "verification_note": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio on 2026-10-27; the cover image bytes (sha256 2ec10ae7764646f9...) are not stored in the repository",
+      "packaging_variant": null,
+      "structured_value": {
+        "media_kind": "video_cover",
+        "composition": [
+          "flat_lay"
+        ],
+        "product_shown": "apparel_flat_lay",
+        "people_shown": "none",
+        "text_overlay": false,
+        "overlay_type_style": null,
+        "dominant_colors": [
+          {
+            "hex": "#1a1a19",
+            "share": 0.284
+          },
+          {
+            "hex": "#151514",
+            "share": 0.271
+          },
+          {
+            "hex": "#0b0b0b",
+            "share": 0.202
+          },
+          {
+            "hex": "#545442",
+            "share": 0.129
+          },
+          {
+            "hex": "#262621",
+            "share": 0.114
+          }
+        ],
+        "cover_sha256": "2ec10ae7764646f94922a1b009e0d4febce71e8a0d0b49bb93f4f91abfe35af5",
+        "shows_creatine_pack": null
+      }
+    },
+    {
+      "evidence_id": "E-454f1b99",
+      "claim": "Cover of https://www.instagram.com/p/De7MhWqkTas/: composition ['talking_head', 'lifestyle_photo'], product in_use, people one, text overlay True",
+      "source_id": "S-170261fbf9",
+      "quote": "Man speaking to camera in a home kitchen, GymBeam tee; supplement bottle (ProbioTen) on the table; burned-in subtitle.",
+      "confidence": 0.7,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_visual_observation",
+      "source_url": "https://www.instagram.com/p/De7MhWqkTas/",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "verification_status": "manual",
+      "verification_note": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio on 2026-10-27; the cover image bytes (sha256 4bce1879c2ff6fde...) are not stored in the repository",
+      "packaging_variant": null,
+      "structured_value": {
+        "media_kind": "video_cover",
+        "composition": [
+          "talking_head",
+          "lifestyle_photo"
+        ],
+        "product_shown": "in_use",
+        "people_shown": "one",
+        "text_overlay": true,
+        "overlay_type_style": "subtitle_sans",
+        "dominant_colors": [
+          {
+            "hex": "#7d6d66",
+            "share": 0.324
+          },
+          {
+            "hex": "#150e12",
+            "share": 0.233
+          },
+          {
+            "hex": "#614e48",
+            "share": 0.193
+          },
+          {
+            "hex": "#d6b9a4",
+            "share": 0.126
+          },
+          {
+            "hex": "#a98976",
+            "share": 0.124
+          }
+        ],
+        "cover_sha256": "4bce1879c2ff6fded4979b4ca42b32ca1c2ccca09da55049bcc112a127df8c01",
+        "shows_creatine_pack": null
+      }
+    },
+    {
+      "evidence_id": "E-b51bad56",
+      "claim": "Cover of https://www.instagram.com/p/De18LcqEsNP/: composition ['lifestyle_photo', 'creator_portrait'], product none, people one, text overlay False",
+      "source_id": "S-19f577856e",
+      "quote": "Smiling woman in light activewear holding a glass of drink; the product itself is not identifiable.",
+      "confidence": 0.7,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_visual_observation",
+      "source_url": "https://www.instagram.com/p/De18LcqEsNP/",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "verification_status": "manual",
+      "verification_note": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio on 2026-10-27; the cover image bytes (sha256 36abe8b46ef38f5d...) are not stored in the repository",
+      "packaging_variant": null,
+      "structured_value": {
+        "media_kind": "video_cover",
+        "composition": [
+          "lifestyle_photo",
+          "creator_portrait"
+        ],
+        "product_shown": "none",
+        "people_shown": "one",
+        "text_overlay": false,
+        "overlay_type_style": null,
+        "dominant_colors": [
+          {
+            "hex": "#725f5a",
+            "share": 0.275
+          },
+          {
+            "hex": "#422821",
+            "share": 0.233
+          },
+          {
+            "hex": "#a99eae",
+            "share": 0.206
+          },
+          {
+            "hex": "#907e81",
+            "share": 0.204
+          },
+          {
+            "hex": "#c8bfd2",
+            "share": 0.081
+          }
+        ],
+        "cover_sha256": "36abe8b46ef38f5d6fa8b590f77d14eafd41e930d3a6177a29250757b720d391",
+        "shows_creatine_pack": null
+      }
+    },
+    {
+      "evidence_id": "E-b342a70f",
+      "claim": "Cover of https://www.instagram.com/p/Dewyc-KkXL_/: composition ['lifestyle_photo', 'food'], product none, people one, text overlay False",
+      "source_id": "S-debabb63fe",
+      "quote": "Woman on an orange sofa in a red GymBeam top holding a plate of pasta/gnocchi; no packaging visible.",
+      "confidence": 0.7,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_visual_observation",
+      "source_url": "https://www.instagram.com/p/Dewyc-KkXL_/",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "verification_status": "manual",
+      "verification_note": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio on 2026-10-27; the cover image bytes (sha256 3b736d7c19d55971...) are not stored in the repository",
+      "packaging_variant": null,
+      "structured_value": {
+        "media_kind": "video_cover",
+        "composition": [
+          "lifestyle_photo",
+          "food"
+        ],
+        "product_shown": "none",
+        "people_shown": "one",
+        "text_overlay": false,
+        "overlay_type_style": null,
+        "dominant_colors": [
+          {
+            "hex": "#bc4124",
+            "share": 0.29
+          },
+          {
+            "hex": "#361e2b",
+            "share": 0.222
+          },
+          {
+            "hex": "#d69970",
+            "share": 0.183
+          },
+          {
+            "hex": "#d2d0c5",
+            "share": 0.178
+          },
+          {
+            "hex": "#e3e8dd",
+            "share": 0.126
+          }
+        ],
+        "cover_sha256": "3b736d7c19d5597181fb5ba14615e8dff16200c4241bb20ad9d450a08fd76f63",
+        "shows_creatine_pack": null
+      }
+    },
+    {
+      "evidence_id": "E-13e05eb8",
+      "claim": "Cover of https://www.instagram.com/p/DeweAhoFvZr/: composition ['product_staged', 'conceptual_scene'], product packshot, people none, text overlay False",
+      "source_id": "S-08364f604a",
+      "quote": "NEW orange/silver 'Creatine Monohydrate - 100% Pure micronised - Unflavoured' pouch standing on a fashion runway with white feather angel wings (campaign 'GymBeam Anđeo').",
+      "confidence": 0.7,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_visual_observation",
+      "source_url": "https://www.instagram.com/p/DeweAhoFvZr/",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "verification_status": "manual",
+      "verification_note": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio on 2026-10-27; the cover image bytes (sha256 9f41546259d4fbba...) are not stored in the repository",
+      "packaging_variant": null,
+      "structured_value": {
+        "media_kind": "carousel_first_slide",
+        "composition": [
+          "product_staged",
+          "conceptual_scene"
+        ],
+        "product_shown": "packshot",
+        "people_shown": "none",
+        "text_overlay": false,
+        "overlay_type_style": null,
+        "dominant_colors": [
+          {
+            "hex": "#251d30",
+            "share": 0.256
+          },
+          {
+            "hex": "#7e3c49",
+            "share": 0.247
+          },
+          {
+            "hex": "#997984",
+            "share": 0.22
+          },
+          {
+            "hex": "#cab3b4",
+            "share": 0.157
+          },
+          {
+            "hex": "#e6d7d5",
+            "share": 0.12
+          }
+        ],
+        "cover_sha256": "9f41546259d4fbbaf51197b6efc14818d17ccaceea5c3170057199f7ce654101",
+        "shows_creatine_pack": "new"
+      }
+    },
+    {
+      "evidence_id": "E-e73f15ab",
+      "claim": "Cover of https://www.instagram.com/p/DeuNpiTikK6/: composition ['graphic_design', 'co_brand_layout', 'creator_portrait'], product in_use, people one, text overlay True",
+      "source_id": "S-f554895a29",
+      "quote": "Pink layout 'GymBeam x Anja Blagojevic - CreaGlow' in a decorative serif/script face, creator holding the CreaGlow tub, handwritten signature.",
+      "confidence": 0.7,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_visual_observation",
+      "source_url": "https://www.instagram.com/p/DeuNpiTikK6/",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "verification_status": "manual",
+      "verification_note": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio on 2026-10-27; the cover image bytes (sha256 9a605be2fd49572a...) are not stored in the repository",
+      "packaging_variant": null,
+      "structured_value": {
+        "media_kind": "carousel_first_slide",
+        "composition": [
+          "graphic_design",
+          "co_brand_layout",
+          "creator_portrait"
+        ],
+        "product_shown": "in_use",
+        "people_shown": "one",
+        "text_overlay": true,
+        "overlay_type_style": "script_serif_display",
+        "dominant_colors": [
+          {
+            "hex": "#f2b2bc",
+            "share": 0.293
+          },
+          {
+            "hex": "#cd857e",
+            "share": 0.231
+          },
+          {
+            "hex": "#833746",
+            "share": 0.226
+          },
+          {
+            "hex": "#eba6b0",
+            "share": 0.169
+          },
+          {
+            "hex": "#f0c1c4",
+            "share": 0.08
+          }
+        ],
+        "cover_sha256": "9a605be2fd49572a9141e5d17d4697bd8b2ce5418e215f3d4fee78864798b2ab",
+        "shows_creatine_pack": null
+      }
+    },
+    {
+      "evidence_id": "E-c6f62332",
+      "claim": "Cover of https://www.instagram.com/p/DepEBX5CRks/: composition ['lifestyle_photo', 'text_heavy_overlay'], product equipment, people one, text overlay True",
+      "source_id": "S-70711e662a",
+      "quote": "Man in an ice-bath tub on a rooftop; large white caps 'IZLAGANJE HLADNOCE' over a dark gradient, small caps subtitle, GymBeam wordmark on the tub.",
+      "confidence": 0.7,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_visual_observation",
+      "source_url": "https://www.instagram.com/p/DepEBX5CRks/",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "verification_status": "manual",
+      "verification_note": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio on 2026-10-27; the cover image bytes (sha256 8831214d113625c1...) are not stored in the repository",
+      "packaging_variant": null,
+      "structured_value": {
+        "media_kind": "carousel_first_slide",
+        "composition": [
+          "lifestyle_photo",
+          "text_heavy_overlay"
+        ],
+        "product_shown": "equipment",
+        "people_shown": "one",
+        "text_overlay": true,
+        "overlay_type_style": "bold_geometric_sans_caps",
+        "dominant_colors": [
+          {
+            "hex": "#04080a",
+            "share": 0.295
+          },
+          {
+            "hex": "#616465",
+            "share": 0.227
+          },
+          {
+            "hex": "#2c2d2c",
+            "share": 0.22
+          },
+          {
+            "hex": "#b2b0ae",
+            "share": 0.132
+          },
+          {
+            "hex": "#eee9e4",
+            "share": 0.126
+          }
+        ],
+        "cover_sha256": "8831214d113625c169373656d452478a911f7029a5fecd0314a26e6e57b7457b",
+        "shows_creatine_pack": null
+      }
+    },
+    {
+      "evidence_id": "E-2e368ce2",
+      "claim": "Cover of https://www.instagram.com/p/DegX7qjj4Sx/: composition ['action_motion', 'lifestyle_photo'], product apparel_worn, people one, text overlay False",
+      "source_id": "S-11305e3b7a",
+      "quote": "Woman in black GymBeam sports set with neon-lime print, motion-blurred figures behind, dark moody grade.",
+      "confidence": 0.7,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_visual_observation",
+      "source_url": "https://www.instagram.com/p/DegX7qjj4Sx/",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "verification_status": "manual",
+      "verification_note": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio on 2026-10-27; the cover image bytes (sha256 d211651ff28b2a1c...) are not stored in the repository",
+      "packaging_variant": null,
+      "structured_value": {
+        "media_kind": "carousel_first_slide",
+        "composition": [
+          "action_motion",
+          "lifestyle_photo"
+        ],
+        "product_shown": "apparel_worn",
+        "people_shown": "one",
+        "text_overlay": false,
+        "overlay_type_style": null,
+        "dominant_colors": [
+          {
+            "hex": "#130e0d",
+            "share": 0.292
+          },
+          {
+            "hex": "#050505",
+            "share": 0.268
+          },
+          {
+            "hex": "#422518",
+            "share": 0.154
+          },
+          {
+            "hex": "#885134",
+            "share": 0.154
+          },
+          {
+            "hex": "#ac7452",
+            "share": 0.132
+          }
+        ],
+        "cover_sha256": "d211651ff28b2a1cd58687bf1d1b2b13a6c6d14352655c47a329077b6e61273d",
+        "shows_creatine_pack": null
+      }
+    },
+    {
+      "evidence_id": "E-efb10183",
+      "claim": "Cover of https://www.instagram.com/p/DedzClSiOcs/: composition ['graphic_design', 'colour_blocks'], product none, people none, text overlay True",
+      "source_id": "S-74dce1c2b3",
+      "quote": "Poll slide: flat colour blocks (vanilla yellow, chocolate brown, strawberry pink) with a faint G logo; headline text is only partly legible on the cover.",
+      "confidence": 0.7,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_visual_observation",
+      "source_url": "https://www.instagram.com/p/DedzClSiOcs/",
+      "retrieved_at": "2026-10-27T22:09:27.392192Z",
+      "verification_status": "manual",
+      "verification_note": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio on 2026-10-27; the cover image bytes (sha256 e66d02d9f6ed8476...) are not stored in the repository",
+      "packaging_variant": null,
+      "structured_value": {
+        "media_kind": "carousel_first_slide",
+        "composition": [
+          "graphic_design",
+          "colour_blocks"
+        ],
+        "product_shown": "none",
+        "people_shown": "none",
+        "text_overlay": true,
+        "overlay_type_style": null,
+        "dominant_colors": [
+          {
+            "hex": "#67422f",
+            "share": 0.294
+          },
+          {
+            "hex": "#edc774",
+            "share": 0.28
+          },
+          {
+            "hex": "#d18b84",
+            "share": 0.229
+          },
+          {
+            "hex": "#e3d5b1",
+            "share": 0.175
+          },
+          {
+            "hex": "#5c3929",
+            "share": 0.023
+          }
+        ],
+        "cover_sha256": "e66d02d9f6ed8476c096faf411ed34a38860a82dab6d6ea51eac6c8eb9771582",
+        "shows_creatine_pack": null
+      }
+    },
+    {
+      "evidence_id": "E-bb511dec",
+      "claim": "Cover of https://www.instagram.com/p/DeZnc3_DmCF/: composition ['lifestyle_photo', 'text_heavy_overlay'], product hidden, people none, text overlay True",
+      "source_id": "S-8acb112df7",
+      "quote": "Gaming PC setup at dusk with the G logo on the monitor; product pixelated as a teaser; white/orange caps 'OVO VAM NEDOSTAJE U VASEM GAMING SETUPU'.",
+      "confidence": 0.7,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_visual_observation",
+      "source_url": "https://www.instagram.com/p/DeZnc3_DmCF/",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "verification_status": "manual",
+      "verification_note": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio on 2026-10-27; the cover image bytes (sha256 95aa6da601d47f64...) are not stored in the repository",
+      "packaging_variant": null,
+      "structured_value": {
+        "media_kind": "carousel_first_slide",
+        "composition": [
+          "lifestyle_photo",
+          "text_heavy_overlay"
+        ],
+        "product_shown": "hidden",
+        "people_shown": "none",
+        "text_overlay": true,
+        "overlay_type_style": "bold_geometric_sans_caps",
+        "dominant_colors": [
+          {
+            "hex": "#030201",
+            "share": 0.277
+          },
+          {
+            "hex": "#160c08",
+            "share": 0.246
+          },
+          {
+            "hex": "#372218",
+            "share": 0.224
+          },
+          {
+            "hex": "#6b3d2d",
+            "share": 0.157
+          },
+          {
+            "hex": "#b28770",
+            "share": 0.095
+          }
+        ],
+        "cover_sha256": "95aa6da601d47f64d0d5d5a6c3d7902ba30ac3adbb92a1dfa01f2f0fdd88ae1f",
+        "shows_creatine_pack": null
+      }
+    },
+    {
+      "evidence_id": "E-795afb62",
+      "claim": "Cover of https://www.instagram.com/p/DeQ7N2-G1AX/: composition ['product_staged', 'graphic_design', 'playful_concept'], product packshot, people hands_only, text overlay True",
+      "source_id": "S-d89045f682",
+      "quote": "Off-white background, protein bar packshot top-left, two hands playing rock-paper-scissors, headline 'Kriza za slatkim', GymBeam wordmark at the bottom.",
+      "confidence": 0.7,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_visual_observation",
+      "source_url": "https://www.instagram.com/p/DeQ7N2-G1AX/",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "verification_status": "manual",
+      "verification_note": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio on 2026-10-27; the cover image bytes (sha256 bb1b7aacb360726e...) are not stored in the repository",
+      "packaging_variant": null,
+      "structured_value": {
+        "media_kind": "carousel_first_slide",
+        "composition": [
+          "product_staged",
+          "graphic_design",
+          "playful_concept"
+        ],
+        "product_shown": "packshot",
+        "people_shown": "hands_only",
+        "text_overlay": true,
+        "overlay_type_style": "bold_sans_sentence_case",
+        "dominant_colors": [
+          {
+            "hex": "#f2ede7",
+            "share": 0.282
+          },
+          {
+            "hex": "#f4f0ea",
+            "share": 0.236
+          },
+          {
+            "hex": "#f1eee8",
+            "share": 0.216
+          },
+          {
+            "hex": "#8a4f40",
+            "share": 0.203
+          },
+          {
+            "hex": "#ccb0a4",
+            "share": 0.063
+          }
+        ],
+        "cover_sha256": "bb1b7aacb360726ec5447cfdc2559124e8c3de23642e9cdb0b4feb735f730336",
+        "shows_creatine_pack": null
+      }
+    },
+    {
+      "evidence_id": "E-c0b6164a",
+      "claim": "Cover of https://www.instagram.com/p/DePXg5KD9nl/: composition ['lifestyle_photo', 'in_gym'], product in_use, people one, text overlay False",
+      "source_id": "S-3088f8eade",
+      "quote": "Bald bearded man in a gym scooping powder from a Crazy Pump tub into a shaker.",
+      "confidence": 0.7,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_visual_observation",
+      "source_url": "https://www.instagram.com/p/DePXg5KD9nl/",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "verification_status": "manual",
+      "verification_note": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio on 2026-10-27; the cover image bytes (sha256 8ea28325c7d76588...) are not stored in the repository",
+      "packaging_variant": null,
+      "structured_value": {
+        "media_kind": "video_cover",
+        "composition": [
+          "lifestyle_photo",
+          "in_gym"
+        ],
+        "product_shown": "in_use",
+        "people_shown": "one",
+        "text_overlay": false,
+        "overlay_type_style": null,
+        "dominant_colors": [
+          {
+            "hex": "#080908",
+            "share": 0.24
+          },
+          {
+            "hex": "#4f433b",
+            "share": 0.236
+          },
+          {
+            "hex": "#af957f",
+            "share": 0.228
+          },
+          {
+            "hex": "#2c1f1d",
+            "share": 0.156
+          },
+          {
+            "hex": "#161514",
+            "share": 0.139
+          }
+        ],
+        "cover_sha256": "8ea28325c7d7658895785ffe08c204f8430b94a423ead616c75dc5165f1bf86b",
+        "shows_creatine_pack": null
+      }
+    },
+    {
+      "evidence_id": "E-12ee3887",
+      "claim": "Cover of https://www.instagram.com/p/DeG1oeEFsWk/: composition ['co_brand_layout', 'lifestyle_photo', 'text_heavy_overlay'], product in_use, people one, text overlay True",
+      "source_id": "S-5b3afc94af",
+      "quote": "Dark grey backdrop, woman in lilac activewear holding a protein bar, 'GymBeam x BOX NOW' lock-up and white headline about free delivery.",
+      "confidence": 0.7,
+      "mock": false,
+      "origin": "manual_import",
+      "subject": "instagram_visual_observation",
+      "source_url": "https://www.instagram.com/p/DeG1oeEFsWk/",
+      "retrieved_at": "2026-10-27T22:09:27.393193Z",
+      "verification_status": "manual",
+      "verification_note": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio on 2026-10-27; the cover image bytes (sha256 61f0fedbbed43467...) are not stored in the repository",
+      "packaging_variant": null,
+      "structured_value": {
+        "media_kind": "image",
+        "composition": [
+          "co_brand_layout",
+          "lifestyle_photo",
+          "text_heavy_overlay"
+        ],
+        "product_shown": "in_use",
+        "people_shown": "one",
+        "text_overlay": true,
+        "overlay_type_style": "bold_sans_sentence_case",
+        "dominant_colors": [
+          {
+            "hex": "#453e3f",
+            "share": 0.243
+          },
+          {
+            "hex": "#9d7e7f",
+            "share": 0.22
+          },
+          {
+            "hex": "#1e1817",
+            "share": 0.195
+          },
+          {
+            "hex": "#302b2c",
+            "share": 0.188
+          },
+          {
+            "hex": "#392e2d",
+            "share": 0.154
+          }
+        ],
+        "cover_sha256": "61f0fedbbed43467fc423474e6dd1ad4e3e6f2551489d3f33a4aed782b74e89b",
+        "shows_creatine_pack": null
+      }
+    }
+  ]
+}

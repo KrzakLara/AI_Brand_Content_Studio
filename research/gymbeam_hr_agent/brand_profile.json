@@ -1,0 +1,1644 @@
+{
+  "brand_name": "GymBeam",
+  "positioning": "unknown",
+  "voice": "UNDETERMINED (heuristic_only): see communication_tone for measured signals",
+  "palette": [],
+  "dos": [],
+  "donts": [],
+  "banned_phrases": [],
+  "product_fact_ids": [
+    "E-84e2d0f2",
+    "E-b81dd91f",
+    "E-20ae1faf",
+    "E-8f903875",
+    "E-6a39d2eb",
+    "E-9fc741a1"
+  ],
+  "audience_summary": "ASSUMPTION (unverified): Primary audience: Croatian-speaking people interested in fitness, health and sports apparel.",
+  "image_observations": [],
+  "mock": false,
+  "analysis_mode": "heuristic_only",
+  "data_origins": {
+    "live": 4,
+    "manual_import": 31
+  },
+  "identity": [],
+  "communication_tone": [
+    {
+      "statement": "29 of 30 captions are Croatian (diacritics / stop-word heuristic).",
+      "status": "verified",
+      "basis": "computed over 30 brand-owned posts (manual_import); heuristic",
+      "evidence_ids": [
+        "E-991854f2",
+        "E-153830c0",
+        "E-0794466b",
+        "E-3ee6b5ba",
+        "E-52351b4a",
+        "E-88f9a4f6",
+        "E-a4691c41",
+        "E-ca2c7c98",
+        "E-d70e2da2",
+        "E-8769f61c",
+        "E-3e1f8026",
+        "E-0dea8f74",
+        "E-88ba6a07",
+        "E-d5fe3d59",
+        "E-39522e74",
+        "E-d2884440",
+        "E-d1ed88bd",
+        "E-5d9f6782",
+        "E-19663a97",
+        "E-1f3ae20a",
+        "E-748fee34",
+        "E-725c2f71",
+        "E-1b94c0a1",
+        "E-ed7d5b91",
+        "E-87ecea41",
+        "E-e9e7c93d",
+        "E-1e4dd436",
+        "E-7b6b1860",
+        "E-ab23e2e9",
+        "E-c4343533"
+      ],
+      "post_urls": []
+    },
+    {
+      "statement": "30 of 30 captions use emoji.",
+      "status": "verified",
+      "basis": "computed over 30 brand-owned posts (manual_import)",
+      "evidence_ids": [
+        "E-991854f2",
+        "E-153830c0",
+        "E-0794466b",
+        "E-3ee6b5ba",
+        "E-52351b4a",
+        "E-88f9a4f6",
+        "E-a4691c41",
+        "E-ca2c7c98",
+        "E-d70e2da2",
+        "E-8769f61c",
+        "E-3e1f8026",
+        "E-0dea8f74",
+        "E-88ba6a07",
+        "E-d5fe3d59",
+        "E-39522e74",
+        "E-d2884440",
+        "E-d1ed88bd",
+        "E-5d9f6782",
+        "E-19663a97",
+        "E-1f3ae20a",
+        "E-748fee34",
+        "E-725c2f71",
+        "E-1b94c0a1",
+        "E-ed7d5b91",
+        "E-87ecea41",
+        "E-e9e7c93d",
+        "E-1e4dd436",
+        "E-7b6b1860",
+        "E-ab23e2e9",
+        "E-c4343533"
+      ],
+      "post_urls": []
+    },
+    {
+      "statement": "7 of 30 captions point to the 'link u opisu profila' (link in bio) call to action.",
+      "status": "verified",
+      "basis": "computed over 30 brand-owned posts (manual_import)",
+      "evidence_ids": [
+        "E-991854f2",
+        "E-153830c0",
+        "E-0794466b",
+        "E-3ee6b5ba",
+        "E-52351b4a",
+        "E-88f9a4f6",
+        "E-a4691c41",
+        "E-ca2c7c98",
+        "E-d70e2da2",
+        "E-8769f61c",
+        "E-3e1f8026",
+        "E-0dea8f74",
+        "E-88ba6a07",
+        "E-d5fe3d59",
+        "E-39522e74",
+        "E-d2884440",
+        "E-d1ed88bd",
+        "E-5d9f6782",
+        "E-19663a97",
+        "E-1f3ae20a",
+        "E-748fee34",
+        "E-725c2f71",
+        "E-1b94c0a1",
+        "E-ed7d5b91",
+        "E-87ecea41",
+        "E-e9e7c93d",
+        "E-1e4dd436",
+        "E-7b6b1860",
+        "E-ab23e2e9",
+        "E-c4343533"
+      ],
+      "post_urls": []
+    },
+    {
+      "statement": "22 of 30 captions address the reader with plural 'vi/vaš' forms.",
+      "status": "verified",
+      "basis": "computed over 30 brand-owned posts (manual_import)",
+      "evidence_ids": [
+        "E-991854f2",
+        "E-153830c0",
+        "E-0794466b",
+        "E-3ee6b5ba",
+        "E-52351b4a",
+        "E-88f9a4f6",
+        "E-a4691c41",
+        "E-ca2c7c98",
+        "E-d70e2da2",
+        "E-8769f61c",
+        "E-3e1f8026",
+        "E-0dea8f74",
+        "E-88ba6a07",
+        "E-d5fe3d59",
+        "E-39522e74",
+        "E-d2884440",
+        "E-d1ed88bd",
+        "E-5d9f6782",
+        "E-19663a97",
+        "E-1f3ae20a",
+        "E-748fee34",
+        "E-725c2f71",
+        "E-1b94c0a1",
+        "E-ed7d5b91",
+        "E-87ecea41",
+        "E-e9e7c93d",
+        "E-1e4dd436",
+        "E-7b6b1860",
+        "E-ab23e2e9",
+        "E-c4343533"
+      ],
+      "post_urls": []
+    },
+    {
+      "statement": "Most frequent hashtags: #gymbeamhr (19), #gbig (16), #gbwomen (13), #gbhealthy (11), #gbfit (6), #gbmen (3)",
+      "status": "verified",
+      "basis": "computed over 30 brand-owned posts (manual_import)",
+      "evidence_ids": [
+        "E-991854f2",
+        "E-153830c0",
+        "E-0794466b",
+        "E-3ee6b5ba",
+        "E-52351b4a",
+        "E-88f9a4f6",
+        "E-a4691c41",
+        "E-ca2c7c98",
+        "E-d70e2da2",
+        "E-8769f61c",
+        "E-3e1f8026",
+        "E-0dea8f74",
+        "E-88ba6a07",
+        "E-d5fe3d59",
+        "E-39522e74",
+        "E-d2884440",
+        "E-d1ed88bd",
+        "E-5d9f6782",
+        "E-19663a97",
+        "E-1f3ae20a",
+        "E-748fee34",
+        "E-725c2f71",
+        "E-1b94c0a1",
+        "E-ed7d5b91",
+        "E-87ecea41",
+        "E-e9e7c93d",
+        "E-1e4dd436",
+        "E-7b6b1860",
+        "E-ab23e2e9",
+        "E-c4343533"
+      ],
+      "post_urls": []
+    },
+    {
+      "statement": "Qualitative tone (e.g. playful vs. serious) is not determined: needs an LLM or human review.",
+      "status": "unknown",
+      "basis": "heuristic_only analysis",
+      "evidence_ids": [],
+      "post_urls": []
+    }
+  ],
+  "audience": [
+    {
+      "statement": "Content is tagged by the brand's own segments: #gbwomen (13), #gbmen (3), #gbhealthy (11), #gbfit (6)",
+      "status": "verified",
+      "basis": "computed over 30 brand-owned posts (manual_import)",
+      "evidence_ids": [
+        "E-991854f2",
+        "E-153830c0",
+        "E-0794466b",
+        "E-3ee6b5ba",
+        "E-52351b4a",
+        "E-88f9a4f6",
+        "E-a4691c41",
+        "E-ca2c7c98",
+        "E-d70e2da2",
+        "E-8769f61c",
+        "E-3e1f8026",
+        "E-0dea8f74",
+        "E-88ba6a07",
+        "E-d5fe3d59",
+        "E-39522e74",
+        "E-d2884440",
+        "E-d1ed88bd",
+        "E-5d9f6782",
+        "E-19663a97",
+        "E-1f3ae20a",
+        "E-748fee34",
+        "E-725c2f71",
+        "E-1b94c0a1",
+        "E-ed7d5b91",
+        "E-87ecea41",
+        "E-e9e7c93d",
+        "E-1e4dd436",
+        "E-7b6b1860",
+        "E-ab23e2e9",
+        "E-c4343533"
+      ],
+      "post_urls": []
+    }
+  ],
+  "visual_style": [
+    {
+      "statement": "People: 'one' in 9 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-a9d7f722",
+        "E-454f1b99",
+        "E-b51bad56",
+        "E-b342a70f",
+        "E-e73f15ab",
+        "E-c6f62332",
+        "E-2e368ce2",
+        "E-c0b6164a",
+        "E-12ee3887"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/De_YTBHE7Nw/",
+        "https://www.instagram.com/p/De7MhWqkTas/",
+        "https://www.instagram.com/p/De18LcqEsNP/",
+        "https://www.instagram.com/p/Dewyc-KkXL_/",
+        "https://www.instagram.com/p/DeuNpiTikK6/",
+        "https://www.instagram.com/p/DepEBX5CRks/",
+        "https://www.instagram.com/p/DegX7qjj4Sx/",
+        "https://www.instagram.com/p/DePXg5KD9nl/",
+        "https://www.instagram.com/p/DeG1oeEFsWk/"
+      ]
+    },
+    {
+      "statement": "People: 'hands_only' in 1 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-795afb62"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/DeQ7N2-G1AX/"
+      ]
+    },
+    {
+      "statement": "Product display: 'in_use' in 4 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-454f1b99",
+        "E-e73f15ab",
+        "E-c0b6164a",
+        "E-12ee3887"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/De7MhWqkTas/",
+        "https://www.instagram.com/p/DeuNpiTikK6/",
+        "https://www.instagram.com/p/DePXg5KD9nl/",
+        "https://www.instagram.com/p/DeG1oeEFsWk/"
+      ]
+    },
+    {
+      "statement": "Product display: 'apparel_worn' in 2 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-a9d7f722",
+        "E-2e368ce2"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/De_YTBHE7Nw/",
+        "https://www.instagram.com/p/DegX7qjj4Sx/"
+      ]
+    },
+    {
+      "statement": "Product display: 'packshot' in 2 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-13e05eb8",
+        "E-795afb62"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/DeweAhoFvZr/",
+        "https://www.instagram.com/p/DeQ7N2-G1AX/"
+      ]
+    },
+    {
+      "statement": "Product display: 'apparel_flat_lay' in 1 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-de8ceccd"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/De9xZm9kdUN/"
+      ]
+    },
+    {
+      "statement": "Product display: 'equipment' in 1 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-c6f62332"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/DepEBX5CRks/"
+      ]
+    },
+    {
+      "statement": "Product display: 'hidden' in 1 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-bb511dec"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/DeZnc3_DmCF/"
+      ]
+    },
+    {
+      "statement": "Composition: 'lifestyle_photo' in 9 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-a9d7f722",
+        "E-454f1b99",
+        "E-b51bad56",
+        "E-b342a70f",
+        "E-c6f62332",
+        "E-2e368ce2",
+        "E-bb511dec",
+        "E-c0b6164a",
+        "E-12ee3887"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/De_YTBHE7Nw/",
+        "https://www.instagram.com/p/De7MhWqkTas/",
+        "https://www.instagram.com/p/De18LcqEsNP/",
+        "https://www.instagram.com/p/Dewyc-KkXL_/",
+        "https://www.instagram.com/p/DepEBX5CRks/",
+        "https://www.instagram.com/p/DegX7qjj4Sx/",
+        "https://www.instagram.com/p/DeZnc3_DmCF/",
+        "https://www.instagram.com/p/DePXg5KD9nl/",
+        "https://www.instagram.com/p/DeG1oeEFsWk/"
+      ]
+    },
+    {
+      "statement": "Composition: 'graphic_design' in 3 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-e73f15ab",
+        "E-efb10183",
+        "E-795afb62"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/DeuNpiTikK6/",
+        "https://www.instagram.com/p/DedzClSiOcs/",
+        "https://www.instagram.com/p/DeQ7N2-G1AX/"
+      ]
+    },
+    {
+      "statement": "Composition: 'text_heavy_overlay' in 3 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-c6f62332",
+        "E-bb511dec",
+        "E-12ee3887"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/DepEBX5CRks/",
+        "https://www.instagram.com/p/DeZnc3_DmCF/",
+        "https://www.instagram.com/p/DeG1oeEFsWk/"
+      ]
+    },
+    {
+      "statement": "Composition: 'creator_portrait' in 2 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-b51bad56",
+        "E-e73f15ab"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/De18LcqEsNP/",
+        "https://www.instagram.com/p/DeuNpiTikK6/"
+      ]
+    },
+    {
+      "statement": "Composition: 'product_staged' in 2 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-13e05eb8",
+        "E-795afb62"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/DeweAhoFvZr/",
+        "https://www.instagram.com/p/DeQ7N2-G1AX/"
+      ]
+    },
+    {
+      "statement": "Composition: 'co_brand_layout' in 2 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-e73f15ab",
+        "E-12ee3887"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/DeuNpiTikK6/",
+        "https://www.instagram.com/p/DeG1oeEFsWk/"
+      ]
+    },
+    {
+      "statement": "Composition: 'behind_the_scenes' in 1 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-a9d7f722"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/De_YTBHE7Nw/"
+      ]
+    },
+    {
+      "statement": "Composition: 'flat_lay' in 1 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-de8ceccd"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/De9xZm9kdUN/"
+      ]
+    },
+    {
+      "statement": "Composition: 'talking_head' in 1 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-454f1b99"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/De7MhWqkTas/"
+      ]
+    },
+    {
+      "statement": "Composition: 'food' in 1 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-b342a70f"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/Dewyc-KkXL_/"
+      ]
+    },
+    {
+      "statement": "Composition: 'conceptual_scene' in 1 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-13e05eb8"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/DeweAhoFvZr/"
+      ]
+    },
+    {
+      "statement": "Composition: 'action_motion' in 1 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-2e368ce2"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/DegX7qjj4Sx/"
+      ]
+    },
+    {
+      "statement": "Composition: 'colour_blocks' in 1 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-efb10183"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/DedzClSiOcs/"
+      ]
+    },
+    {
+      "statement": "Composition: 'playful_concept' in 1 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-795afb62"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/DeQ7N2-G1AX/"
+      ]
+    },
+    {
+      "statement": "Composition: 'in_gym' in 1 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-c0b6164a"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/DePXg5KD9nl/"
+      ]
+    },
+    {
+      "statement": "Overlay typography: 'bold_geometric_sans_caps' in 2 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-c6f62332",
+        "E-bb511dec"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/DepEBX5CRks/",
+        "https://www.instagram.com/p/DeZnc3_DmCF/"
+      ]
+    },
+    {
+      "statement": "Overlay typography: 'bold_sans_sentence_case' in 2 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-795afb62",
+        "E-12ee3887"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/DeQ7N2-G1AX/",
+        "https://www.instagram.com/p/DeG1oeEFsWk/"
+      ]
+    },
+    {
+      "statement": "Overlay typography: 'subtitle_sans' in 1 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-454f1b99"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/De7MhWqkTas/"
+      ]
+    },
+    {
+      "statement": "Overlay typography: 'script_serif_display' in 1 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-e73f15ab"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/DeuNpiTikK6/"
+      ]
+    },
+    {
+      "statement": "Text overlay present on 7 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-454f1b99",
+        "E-e73f15ab",
+        "E-c6f62332",
+        "E-efb10183",
+        "E-bb511dec",
+        "E-795afb62",
+        "E-12ee3887"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/De7MhWqkTas/",
+        "https://www.instagram.com/p/DeuNpiTikK6/",
+        "https://www.instagram.com/p/DepEBX5CRks/",
+        "https://www.instagram.com/p/DedzClSiOcs/",
+        "https://www.instagram.com/p/DeZnc3_DmCF/",
+        "https://www.instagram.com/p/DeQ7N2-G1AX/",
+        "https://www.instagram.com/p/DeG1oeEFsWk/"
+      ]
+    },
+    {
+      "statement": "No person visible on 4 of 14 analysed covers",
+      "status": "manual",
+      "basis": "labelled by Claude Code operator session (development time) - NOT the studio runtime and NOT a vision model run by the studio over the cover image (first frame / first slide) of 14 posts; not the full video or carousel",
+      "evidence_ids": [
+        "E-de8ceccd",
+        "E-13e05eb8",
+        "E-efb10183",
+        "E-bb511dec"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/De9xZm9kdUN/",
+        "https://www.instagram.com/p/DeweAhoFvZr/",
+        "https://www.instagram.com/p/DedzClSiOcs/",
+        "https://www.instagram.com/p/DeZnc3_DmCF/"
+      ]
+    },
+    {
+      "statement": "Palette is computed from the pixels of the 14 covers (see colors, scope 'instagram_covers').",
+      "status": "manual",
+      "basis": "median-cut quantisation, k=5 per cover on a 96 px thumbnail (Pillow); shares are pixel fractions",
+      "evidence_ids": [
+        "E-a9d7f722",
+        "E-de8ceccd",
+        "E-454f1b99",
+        "E-b51bad56",
+        "E-b342a70f",
+        "E-13e05eb8",
+        "E-e73f15ab",
+        "E-c6f62332",
+        "E-2e368ce2",
+        "E-efb10183",
+        "E-bb511dec",
+        "E-795afb62",
+        "E-c0b6164a",
+        "E-12ee3887"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/De_YTBHE7Nw/",
+        "https://www.instagram.com/p/De9xZm9kdUN/",
+        "https://www.instagram.com/p/De7MhWqkTas/",
+        "https://www.instagram.com/p/De18LcqEsNP/",
+        "https://www.instagram.com/p/Dewyc-KkXL_/",
+        "https://www.instagram.com/p/DeweAhoFvZr/",
+        "https://www.instagram.com/p/DeuNpiTikK6/",
+        "https://www.instagram.com/p/DepEBX5CRks/",
+        "https://www.instagram.com/p/DegX7qjj4Sx/",
+        "https://www.instagram.com/p/DedzClSiOcs/",
+        "https://www.instagram.com/p/DeZnc3_DmCF/",
+        "https://www.instagram.com/p/DeQ7N2-G1AX/",
+        "https://www.instagram.com/p/DePXg5KD9nl/",
+        "https://www.instagram.com/p/DeG1oeEFsWk/"
+      ]
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#0f0d0d",
+      "scope": "instagram_covers",
+      "basis": "neutral; 21% of analysed cover pixels (median-cut, k=5 per cover, merged by 3-bit RGB bucket); in 7 of 14 covers",
+      "frequency": 7,
+      "status": "manual",
+      "post_urls": [
+        "https://www.instagram.com/p/De9xZm9kdUN/",
+        "https://www.instagram.com/p/De7MhWqkTas/",
+        "https://www.instagram.com/p/DepEBX5CRks/",
+        "https://www.instagram.com/p/DegX7qjj4Sx/",
+        "https://www.instagram.com/p/DeZnc3_DmCF/",
+        "https://www.instagram.com/p/DePXg5KD9nl/",
+        "https://www.instagram.com/p/DeG1oeEFsWk/"
+      ]
+    },
+    {
+      "hex": "#2d2a2b",
+      "scope": "instagram_covers",
+      "basis": "neutral; 7% of analysed cover pixels (median-cut, k=5 per cover, merged by 3-bit RGB bucket); in 4 of 14 covers",
+      "frequency": 4,
+      "status": "manual",
+      "post_urls": [
+        "https://www.instagram.com/p/De_YTBHE7Nw/",
+        "https://www.instagram.com/p/De9xZm9kdUN/",
+        "https://www.instagram.com/p/DepEBX5CRks/",
+        "https://www.instagram.com/p/DeG1oeEFsWk/"
+      ]
+    },
+    {
+      "hex": "#f2ede8",
+      "scope": "instagram_covers",
+      "basis": "neutral; 6% of analysed cover pixels (median-cut, k=5 per cover, merged by 3-bit RGB bucket); in 2 of 14 covers",
+      "frequency": 2,
+      "status": "manual",
+      "post_urls": [
+        "https://www.instagram.com/p/DepEBX5CRks/",
+        "https://www.instagram.com/p/DeQ7N2-G1AX/"
+      ]
+    },
+    {
+      "hex": "#726c6b",
+      "scope": "instagram_covers",
+      "basis": "neutral; 5% of analysed cover pixels (median-cut, k=5 per cover, merged by 3-bit RGB bucket); in 3 of 14 covers",
+      "frequency": 3,
+      "status": "manual",
+      "post_urls": [
+        "https://www.instagram.com/p/De_YTBHE7Nw/",
+        "https://www.instagram.com/p/De7MhWqkTas/",
+        "https://www.instagram.com/p/DepEBX5CRks/"
+      ]
+    },
+    {
+      "hex": "#453330",
+      "scope": "instagram_covers",
+      "basis": "neutral; 4% of analysed cover pixels (median-cut, k=5 per cover, merged by 3-bit RGB bucket); in 3 of 14 covers",
+      "frequency": 3,
+      "status": "manual",
+      "post_urls": [
+        "https://www.instagram.com/p/De18LcqEsNP/",
+        "https://www.instagram.com/p/DedzClSiOcs/",
+        "https://www.instagram.com/p/DeG1oeEFsWk/"
+      ]
+    },
+    {
+      "hex": "#6b5853",
+      "scope": "instagram_covers",
+      "basis": "accent; 3% of analysed cover pixels (median-cut, k=5 per cover, merged by 3-bit RGB bucket); in 2 of 14 covers",
+      "frequency": 2,
+      "status": "manual",
+      "post_urls": [
+        "https://www.instagram.com/p/De7MhWqkTas/",
+        "https://www.instagram.com/p/De18LcqEsNP/"
+      ]
+    },
+    {
+      "hex": "#efaeb8",
+      "scope": "instagram_covers",
+      "basis": "accent; 3% of analysed cover pixels (median-cut, k=5 per cover, merged by 3-bit RGB bucket); in 1 of 14 covers",
+      "frequency": 1,
+      "status": "manual",
+      "post_urls": [
+        "https://www.instagram.com/p/DeuNpiTikK6/"
+      ]
+    },
+    {
+      "hex": "#ae8f79",
+      "scope": "instagram_covers",
+      "basis": "accent; 3% of analysed cover pixels (median-cut, k=5 per cover, merged by 3-bit RGB bucket); in 3 of 14 covers",
+      "frequency": 3,
+      "status": "manual",
+      "post_urls": [
+        "https://www.instagram.com/p/De7MhWqkTas/",
+        "https://www.instagram.com/p/DeZnc3_DmCF/",
+        "https://www.instagram.com/p/DePXg5KD9nl/"
+      ]
+    },
+    {
+      "hex": "#957b83",
+      "scope": "instagram_covers",
+      "basis": "accent; 3% of analysed cover pixels (median-cut, k=5 per cover, merged by 3-bit RGB bucket); in 2 of 14 covers",
+      "frequency": 2,
+      "status": "manual",
+      "post_urls": [
+        "https://www.instagram.com/p/De18LcqEsNP/",
+        "https://www.instagram.com/p/DeweAhoFvZr/"
+      ]
+    },
+    {
+      "hex": "#d18e78",
+      "scope": "instagram_covers",
+      "basis": "accent; 3% of analysed cover pixels (median-cut, k=5 per cover, merged by 3-bit RGB bucket); in 2 of 14 covers",
+      "frequency": 2,
+      "status": "manual",
+      "post_urls": [
+        "https://www.instagram.com/p/Dewyc-KkXL_/",
+        "https://www.instagram.com/p/DeuNpiTikK6/"
+      ]
+    }
+  ],
+  "typography": [],
+  "content_formats": [
+    {
+      "statement": "Post formats over 30 posts: Video 19 (63%), Sidecar 10 (33%), Image 1 (3%)",
+      "status": "verified",
+      "basis": "computed over 30 brand-owned posts (manual_import)",
+      "evidence_ids": [
+        "E-991854f2",
+        "E-153830c0",
+        "E-0794466b",
+        "E-3ee6b5ba",
+        "E-52351b4a",
+        "E-88f9a4f6",
+        "E-a4691c41",
+        "E-ca2c7c98",
+        "E-d70e2da2",
+        "E-8769f61c",
+        "E-3e1f8026",
+        "E-0dea8f74",
+        "E-88ba6a07",
+        "E-d5fe3d59",
+        "E-39522e74",
+        "E-d2884440",
+        "E-d1ed88bd",
+        "E-5d9f6782",
+        "E-19663a97",
+        "E-1f3ae20a",
+        "E-748fee34",
+        "E-725c2f71",
+        "E-1b94c0a1",
+        "E-ed7d5b91",
+        "E-87ecea41",
+        "E-e9e7c93d",
+        "E-1e4dd436",
+        "E-7b6b1860",
+        "E-ab23e2e9",
+        "E-c4343533"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/De_YTBHE7Nw/",
+        "https://www.instagram.com/p/De9xZm9kdUN/",
+        "https://www.instagram.com/p/De7MhWqkTas/",
+        "https://www.instagram.com/p/De18LcqEsNP/",
+        "https://www.instagram.com/p/DeyZefpD8Bb/",
+        "https://www.instagram.com/p/Dewyc-KkXL_/",
+        "https://www.instagram.com/p/DeweAhoFvZr/",
+        "https://www.instagram.com/p/DeuNtm9Dm95/",
+        "https://www.instagram.com/p/DeuNpiTikK6/",
+        "https://www.instagram.com/p/Dero9b3E4rf/",
+        "https://www.instagram.com/p/DepEBX5CRks/",
+        "https://www.instagram.com/p/DemfNwBEXeK/",
+        "https://www.instagram.com/p/Dej6oqHlXhG/",
+        "https://www.instagram.com/p/DegX7qjj4Sx/",
+        "https://www.instagram.com/p/DedzClSiOcs/",
+        "https://www.instagram.com/p/DebOQZOCrrR/",
+        "https://www.instagram.com/p/DeZnc3_DmCF/",
+        "https://www.instagram.com/p/DeXCd8lDvQf/",
+        "https://www.instagram.com/p/DeUdqY_EVTp/",
+        "https://www.instagram.com/p/DeQ7N2-G1AX/",
+        "https://www.instagram.com/p/DePXg5KD9nl/",
+        "https://www.instagram.com/p/DePUSA1DjlP/",
+        "https://www.instagram.com/p/DeOWZL6jbbl/",
+        "https://www.instagram.com/p/DeNDbrlogsI/",
+        "https://www.instagram.com/p/DeMvee0DEpN/",
+        "https://www.instagram.com/p/DeLxgHgClb6/",
+        "https://www.instagram.com/p/DeJMroHFArc/",
+        "https://www.instagram.com/p/DeHlouaBVsN/",
+        "https://www.instagram.com/p/DeG1oeEFsWk/",
+        "https://www.instagram.com/p/DeFA5jbgOXh/"
+      ]
+    },
+    {
+      "statement": "Video (Reel or feed video; the collected data cannot tell them apart): 19 of 30 posts (63%)",
+      "status": "verified",
+      "basis": "computed over 30 brand-owned posts (manual_import)",
+      "evidence_ids": [
+        "E-991854f2",
+        "E-153830c0",
+        "E-0794466b",
+        "E-3ee6b5ba",
+        "E-52351b4a",
+        "E-88f9a4f6",
+        "E-ca2c7c98",
+        "E-8769f61c",
+        "E-0dea8f74",
+        "E-88ba6a07",
+        "E-d2884440",
+        "E-5d9f6782",
+        "E-19663a97",
+        "E-748fee34",
+        "E-725c2f71",
+        "E-ed7d5b91",
+        "E-87ecea41",
+        "E-7b6b1860",
+        "E-c4343533"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/De_YTBHE7Nw/",
+        "https://www.instagram.com/p/De9xZm9kdUN/",
+        "https://www.instagram.com/p/De7MhWqkTas/",
+        "https://www.instagram.com/p/De18LcqEsNP/",
+        "https://www.instagram.com/p/DeyZefpD8Bb/",
+        "https://www.instagram.com/p/Dewyc-KkXL_/",
+        "https://www.instagram.com/p/DeuNtm9Dm95/",
+        "https://www.instagram.com/p/Dero9b3E4rf/",
+        "https://www.instagram.com/p/DemfNwBEXeK/",
+        "https://www.instagram.com/p/Dej6oqHlXhG/",
+        "https://www.instagram.com/p/DebOQZOCrrR/",
+        "https://www.instagram.com/p/DeXCd8lDvQf/",
+        "https://www.instagram.com/p/DeUdqY_EVTp/",
+        "https://www.instagram.com/p/DePXg5KD9nl/",
+        "https://www.instagram.com/p/DePUSA1DjlP/",
+        "https://www.instagram.com/p/DeNDbrlogsI/",
+        "https://www.instagram.com/p/DeMvee0DEpN/",
+        "https://www.instagram.com/p/DeHlouaBVsN/",
+        "https://www.instagram.com/p/DeFA5jbgOXh/"
+      ]
+    },
+    {
+      "statement": "Sidecar (carousel): 10 of 30 posts (33%)",
+      "status": "verified",
+      "basis": "computed over 30 brand-owned posts (manual_import)",
+      "evidence_ids": [
+        "E-a4691c41",
+        "E-d70e2da2",
+        "E-3e1f8026",
+        "E-d5fe3d59",
+        "E-39522e74",
+        "E-d1ed88bd",
+        "E-1f3ae20a",
+        "E-1b94c0a1",
+        "E-e9e7c93d",
+        "E-1e4dd436"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/DeweAhoFvZr/",
+        "https://www.instagram.com/p/DeuNpiTikK6/",
+        "https://www.instagram.com/p/DepEBX5CRks/",
+        "https://www.instagram.com/p/DegX7qjj4Sx/",
+        "https://www.instagram.com/p/DedzClSiOcs/",
+        "https://www.instagram.com/p/DeZnc3_DmCF/",
+        "https://www.instagram.com/p/DeQ7N2-G1AX/",
+        "https://www.instagram.com/p/DeOWZL6jbbl/",
+        "https://www.instagram.com/p/DeLxgHgClb6/",
+        "https://www.instagram.com/p/DeJMroHFArc/"
+      ]
+    },
+    {
+      "statement": "Image (single photo): 1 of 30 posts (3%)",
+      "status": "verified",
+      "basis": "computed over 30 brand-owned posts (manual_import)",
+      "evidence_ids": [
+        "E-ab23e2e9"
+      ],
+      "post_urls": [
+        "https://www.instagram.com/p/DeG1oeEFsWk/"
+      ]
+    }
+  ],
+  "example_posts": [
+    {
+      "source_id": "S-8df05147e9",
+      "url": "https://www.instagram.com/p/De_YTBHE7Nw/",
+      "shortcode": "De_YTBHE7Nw",
+      "post_type": "Video",
+      "posted_at": "2026-10-27T08:01:38Z",
+      "caption_excerpt": "Mystery Week je počeo 🔥 Potrošite 50 € ili više i darujemo Vam BESPLATAN Mystery poklon u vrijednosti većoj od 10 €.\n\n⏳ Samo na ograničeno vrijeme. Zgrabite svoj prije nego što nestane!\n\n#gbig #myster",
+      "hashtags": [
+        "gbig",
+        "mysteryweek"
+      ],
+      "likes": 26,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-991854f2",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-0606c3d71c",
+      "url": "https://www.instagram.com/p/De9xZm9kdUN/",
+      "shortcode": "De9xZm9kdUN",
+      "post_type": "Video",
+      "posted_at": "2026-10-26T17:02:36Z",
+      "caption_excerpt": "Vaš tempo. Vaša ruta. Vaš PACE. ⚡\n\n✔️ prozračan materijal\n✔️ brzo se suši\n✔️ nije proziran\n✔️ reflektirajući print za vidljivost u sumrak i noću\n\nNova PACE kolekcija stvorena je za trening bez komprom",
+      "hashtags": [
+        "gymbeamhr",
+        "gbfit",
+        "gbwomen",
+        "gbig"
+      ],
+      "likes": 28,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-153830c0",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-170261fbf9",
+      "url": "https://www.instagram.com/p/De7MhWqkTas/",
+      "shortcode": "De7MhWqkTas",
+      "post_type": "Video",
+      "posted_at": "2026-10-25T17:01:54Z",
+      "caption_excerpt": "Mala kapsula za veliku podršku vašem tijelu! 🌿✨\n\nOsigurajte svojem crijevnom mikrobiomu snažnu dozu od 10 milijardi dobrih bakterija i inulina uz ProbioTen. Praktične kapsule lako se uklapaju u vašu s",
+      "hashtags": [
+        "gymbeamhr",
+        "gbhealthy",
+        "gbmen",
+        "gbig"
+      ],
+      "likes": 14,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-0794466b",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-19f577856e",
+      "url": "https://www.instagram.com/p/De18LcqEsNP/",
+      "shortcode": "De18LcqEsNP",
+      "post_type": "Video",
+      "posted_at": "2026-10-23T16:02:49Z",
+      "caption_excerpt": "Mali jutarnji rituali čine razliku. ☀️\nZa @zanamari dan počinje uz Anti-Aging Collagen — ukusan napitak koji se jednostavno uklapa u svakodnevnu rutinu. Sadrži 6 g hidroliziranog goveđeg kolagena po p",
+      "hashtags": [
+        "gymbeamhr",
+        "gbhealthy",
+        "gbwomen",
+        "gbig"
+      ],
+      "likes": 979,
+      "comments": 23,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-3ee6b5ba",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-7261b420b0",
+      "url": "https://www.instagram.com/p/DeyZefpD8Bb/",
+      "shortcode": "DeyZefpD8Bb",
+      "post_type": "Video",
+      "posted_at": "2026-10-22T07:02:18Z",
+      "caption_excerpt": "Ne mora svaki dan biti 10/10 💭 Snaga je u tome da izgurate one teške dane i vratite se još jače 💖\n\nVaše zdravlje je pravi temelj vaše snage. Čuvajte ga 🔒✨\n\n🎀 Ružičasti listopad podsjetnik: Vi ste na p",
+      "hashtags": [
+        "gbwomen",
+        "pinkoctober",
+        "ruzicastilistopad",
+        "gymbeamhr",
+        "gbig"
+      ],
+      "likes": 23,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-52351b4a",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-debabb63fe",
+      "url": "https://www.instagram.com/p/Dewyc-KkXL_/",
+      "shortcode": "Dewyc-KkXL_",
+      "post_type": "Video",
+      "posted_at": "2026-10-21T16:02:03Z",
+      "caption_excerpt": "Kad vam se ne da kuhati, a želite nešto fino i zasitno 🙌 GymBeam bezglutenski njoki gotovi su za par minuta. Dodajte piletinu, tunu ili sir i dobivate brz obrok pun proteina. Dokaz da zdrava prehrana ",
+      "hashtags": [
+        "gymbeamhr",
+        "gbhealthy",
+        "gbwomen",
+        "zdravahrana",
+        "recepti",
+        "gbig"
+      ],
+      "likes": 348,
+      "comments": 1,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-88f9a4f6",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-08364f604a",
+      "url": "https://www.instagram.com/p/DeweAhoFvZr/",
+      "shortcode": "DeweAhoFvZr",
+      "post_type": "Sidecar",
+      "posted_at": "2026-10-21T13:02:20Z",
+      "caption_excerpt": "Neki imaju pistu, a naša su krila su za teretanu. Koji GymBeam „Anđeo” danas ide s vama na trening? 👇\n\n#gymbeamhr #gbfit #gbwomen #gymbeamhr #gbig",
+      "hashtags": [
+        "gymbeamhr",
+        "gbfit",
+        "gbwomen",
+        "gbig"
+      ],
+      "likes": 61,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-a4691c41",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-691cb23b36",
+      "url": "https://www.instagram.com/p/DeuNtm9Dm95/",
+      "shortcode": "DeuNtm9Dm95",
+      "post_type": "Video",
+      "posted_at": "2026-10-20T16:02:30Z",
+      "caption_excerpt": "Blueprint by Bryan Johnson stigao je u GymBeam! 🆕\nBilo da želite poboljšati performanse, izgraditi mišiće, sagorjeti masti ili se redovito brinuti o vitaminima i mineralima, u našoj najnovijoj ponudi ",
+      "hashtags": [
+        "gymbeamhr",
+        "gbhealthy",
+        "gbmen",
+        "bryanjohnson",
+        "longevity",
+        "gbig"
+      ],
+      "likes": 24,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-ca2c7c98",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-f554895a29",
+      "url": "https://www.instagram.com/p/DeuNpiTikK6/",
+      "shortcode": "DeuNpiTikK6",
+      "post_type": "Sidecar",
+      "posted_at": "2026-10-20T16:00:56Z",
+      "caption_excerpt": "Za sve naše cure koje vole biti snažne u teretani, ali nikad ne rade kompromise kada je riječ o brizi o sebi, pripremili smo nešto posebno za vas! ✨🫶🏽\n\nPredstavljamo CreaGlow, proizvod razvijen u sura",
+      "hashtags": [
+        "gbwomen",
+        "creaglow",
+        "anjablaa",
+        "glowfromwithin"
+      ],
+      "likes": 58,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-d70e2da2",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-62ba0e40ba",
+      "url": "https://www.instagram.com/p/Dero9b3E4rf/",
+      "shortcode": "Dero9b3E4rf",
+      "post_type": "Video",
+      "posted_at": "2026-10-19T16:03:06Z",
+      "caption_excerpt": "Napitak od badema za one koji žele probati biljnu alternativu mlijeku. 🌰🥛 \nBiljna alternativa mlijeku, obogaćena kalcijem i vitaminom D3. Ugodno je sladak zahvaljujući rogaču i jabuci, bez umjetnih sl",
+      "hashtags": [
+        "gymbeamhr",
+        "gbhealthy",
+        "gbwomen",
+        "gbig"
+      ],
+      "likes": 30,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-8769f61c",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-70711e662a",
+      "url": "https://www.instagram.com/p/DepEBX5CRks/",
+      "shortcode": "DepEBX5CRks",
+      "post_type": "Sidecar",
+      "posted_at": "2026-10-18T16:00:34Z",
+      "caption_excerpt": "Cilj nije izdržati najduže. Cilj je postupno i sigurno se priviknuti na hladnoću. 🧊\n\nPrelistajte za svoj potpuni plan izlaganja hladnoći ➡️\n\nSve za terapiju hladnoćom pronađite na našoj web stranici.\n",
+      "hashtags": [
+        "coldexposure",
+        "gbfit"
+      ],
+      "likes": 60,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-3e1f8026",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-2fc9f452fd",
+      "url": "https://www.instagram.com/p/DemfNwBEXeK/",
+      "shortcode": "DemfNwBEXeK",
+      "post_type": "Video",
+      "posted_at": "2026-10-17T16:01:07Z",
+      "caption_excerpt": "Recharge day po vašoj mjeri. 🌲🏋️‍♀️ Malo treninga, malo prirode, dobro društvo i nešto fino za kraj. Uz Yum Yum Whey imate ukusan proteinski dodatak koji se lako uklapa u vaš aktivan dan.\n\nKako vi naj",
+      "hashtags": [
+        "gymbeamhr",
+        "gbhealthy",
+        "gbwomen",
+        "gbig"
+      ],
+      "likes": 309,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-0dea8f74",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-41955b099c",
+      "url": "https://www.instagram.com/p/Dej6oqHlXhG/",
+      "shortcode": "Dej6oqHlXhG",
+      "post_type": "Video",
+      "posted_at": "2026-10-16T16:03:00Z",
+      "caption_excerpt": "Nova Cosmo kolekcija je stigla! ✨ Futuristički stil, trendi vibe. Prati liniju vašeg tijela, jako je mekana, a vanjski šavovi naglašavaju vašu siluetu. 😍\nIsprobajte razne kombinacije topova, tajica, s",
+      "hashtags": [
+        "gymbeamhr",
+        "gbhealthy",
+        "gbmen",
+        "gbig"
+      ],
+      "likes": 2796,
+      "comments": 70,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-88ba6a07",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-11305e3b7a",
+      "url": "https://www.instagram.com/p/DegX7qjj4Sx/",
+      "shortcode": "DegX7qjj4Sx",
+      "post_type": "Sidecar",
+      "posted_at": "2026-10-15T07:01:24Z",
+      "caption_excerpt": "Stvoreno za vaše sljedeće trčanje. PACE od GymBeama. ⚡\n\n#gbfit #runningcollection #pace",
+      "hashtags": [
+        "gbfit",
+        "runningcollection",
+        "pace"
+      ],
+      "likes": 72,
+      "comments": 2,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-d5fe3d59",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-74dce1c2b3",
+      "url": "https://www.instagram.com/p/DedzClSiOcs/",
+      "shortcode": "DedzClSiOcs",
+      "post_type": "Sidecar",
+      "posted_at": "2026-10-14T07:00:02Z",
+      "caption_excerpt": "Koji je vaš omiljeni okus? \n💛 Vanilija \n🤎 Čokolada \n💓 Jagoda \n\nNapišite u komentarima i pošaljite prijatelju! 🥤 \n\n#gymbeamhr #gbhealthy",
+      "hashtags": [
+        "gymbeamhr",
+        "gbhealthy"
+      ],
+      "likes": 15,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-39522e74",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-b36752d066",
+      "url": "https://www.instagram.com/p/DebOQZOCrrR/",
+      "shortcode": "DebOQZOCrrR",
+      "post_type": "Video",
+      "posted_at": "2026-10-13T07:01:23Z",
+      "caption_excerpt": "VAŠ SLJEDEĆI GYM OUTFIT? NEKA BUDE STRIX. 🔥\nZadnji komadi se rasprodaju - sada po odličnim cijenama. Ugrabite svoje favorite prije nego što nestanu!\n\nKupite STRIX odmah. 🛍️\nVrijedi samo za odabrane ar",
+      "hashtags": [
+        "gymbeamhr",
+        "gbig",
+        "akcijaodjece",
+        "strix"
+      ],
+      "likes": 27,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-d2884440",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-8acb112df7",
+      "url": "https://www.instagram.com/p/DeZnc3_DmCF/",
+      "shortcode": "DeZnc3_DmCF",
+      "post_type": "Sidecar",
+      "posted_at": "2026-10-12T16:02:20Z",
+      "caption_excerpt": "LOCK IN 🔥\n\nKada GymBeam udruži snage s legendarnom esport organizacijom FNATIC, znate da stiže nešto veliko. 🔥\n\nPredstavljamo LOCK IN – dodatak prehrani za gejming razvijen u suradnji GymBeama i FNATI",
+      "hashtags": [],
+      "likes": 36,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-d1ed88bd",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-64a8417e77",
+      "url": "https://www.instagram.com/p/DeXCd8lDvQf/",
+      "shortcode": "DeXCd8lDvQf",
+      "post_type": "Video",
+      "posted_at": "2026-10-11T16:01:45Z",
+      "caption_excerpt": "PROTEINSKI CHEESECAKE SMOOTHIE 🍓\n\nKremast, pun šumskog voća i posut hrskavim mrvicama keksa.\n\nIspunjavanje vaših makronutrijenata nikada nije imalo ovoliko okus po varanju! 🤤\n\nSpremite ovu objavu, vaš",
+      "hashtags": [
+        "gbnutrition",
+        "cheesecakesmoothie",
+        "highprotein",
+        "fitdessert",
+        "healthyrecipes"
+      ],
+      "likes": 39,
+      "comments": 1,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-5d9f6782",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-41d13fa7fb",
+      "url": "https://www.instagram.com/p/DeUdqY_EVTp/",
+      "shortcode": "DeUdqY_EVTp",
+      "post_type": "Video",
+      "posted_at": "2026-10-10T16:01:40Z",
+      "caption_excerpt": "Tražite nešto slatko, a ne želite kompromise u prehrani? Imamo savršeno rješenje! 🥄✨\n\nOvaj kremasti desert pruža puni užitak poput klasičnog pudinga, ali u zdravoj varijanti bez grižnje savjesti. Boga",
+      "hashtags": [
+        "gymbeamhr",
+        "gbhealthy",
+        "gbwomen",
+        "gbig"
+      ],
+      "likes": 594,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-19663a97",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-d89045f682",
+      "url": "https://www.instagram.com/p/DeQ7N2-G1AX/",
+      "shortcode": "DeQ7N2-G1AX",
+      "post_type": "Sidecar",
+      "posted_at": "2026-10-09T07:02:02Z",
+      "caption_excerpt": "Znamo što uvijek pobjeđuje! A uz besplatnu BOXNOW dostavu, kupnja je još slađa! 😎\n\n#gymbeamhr #gbhealthy #gbfit #gbig",
+      "hashtags": [
+        "gymbeamhr",
+        "gbhealthy",
+        "gbfit",
+        "gbig"
+      ],
+      "likes": 64,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-1f3ae20a",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-3088f8eade",
+      "url": "https://www.instagram.com/p/DePXg5KD9nl/",
+      "shortcode": "DePXg5KD9nl",
+      "post_type": "Video",
+      "posted_at": "2026-10-08T16:31:52Z",
+      "caption_excerpt": "Jedna mjerica supermoći. ⚡\n\nStigao je Crazy Pump 2.0, stvoren u suradnji s @ifbb_pro_petar_klancir 💥\n\nPre-workout profesionalaca, sada u vašem shakeru. 💪\n\nKupite putem linka u opisu profila.🔥",
+      "hashtags": [],
+      "likes": 31,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-748fee34",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-860c37faa3",
+      "url": "https://www.instagram.com/p/DePUSA1DjlP/",
+      "shortcode": "DePUSA1DjlP",
+      "post_type": "Video",
+      "posted_at": "2026-10-08T16:02:44Z",
+      "caption_excerpt": "Samopouzdanje počinje sa savršenim krojem. 🤎\n\n#gbwomen #cosmo #novakolekcija",
+      "hashtags": [
+        "gbwomen",
+        "cosmo",
+        "novakolekcija"
+      ],
+      "likes": 27,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-725c2f71",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-82ae99026b",
+      "url": "https://www.instagram.com/p/DeOWZL6jbbl/",
+      "shortcode": "DeOWZL6jbbl",
+      "post_type": "Sidecar",
+      "posted_at": "2026-10-08T07:01:38Z",
+      "caption_excerpt": "Stigla je nova COSMO kolekcija brenda GymBeam. 🔥\n#gbwomen #cosmo #novakolekcija",
+      "hashtags": [
+        "gbwomen",
+        "cosmo",
+        "novakolekcija"
+      ],
+      "likes": 132,
+      "comments": 1,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-1b94c0a1",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-31960be5ea",
+      "url": "https://www.instagram.com/p/DeNDbrlogsI/",
+      "shortcode": "DeNDbrlogsI",
+      "post_type": "Video",
+      "posted_at": "2026-10-07T19:05:05Z",
+      "caption_excerpt": "Vikend proveden onako kako najviše volimo: u pokretu! 🏃‍♀️ Na MOVE FESTU by @the_fitness_croatia održali smo Booty & Core trening by GymBeam, a zatim i plank challenge koji je pokazao koliko ste jaki.",
+      "hashtags": [
+        "gymbeamhr",
+        "thefitnesscroatia",
+        "gbfit",
+        "gbmovation",
+        "movefest"
+      ],
+      "likes": 64,
+      "comments": 2,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-ed7d5b91",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-63ef2e2baf",
+      "url": "https://www.instagram.com/p/DeMvee0DEpN/",
+      "shortcode": "DeMvee0DEpN",
+      "post_type": "Video",
+      "posted_at": "2026-10-07T16:03:20Z",
+      "caption_excerpt": "Vaša doza ljepote i svježine – bilo kad i bilo gdje! 💖✨\nNove Pink Collagen šumeće tablete u trenu se pretvaraju u osvježavajući napitak s hidroliziranim kolagenom, hijaluronskom kiselinom, vitaminom C",
+      "hashtags": [
+        "gymbeamhr",
+        "gbhealthy",
+        "gbwomen"
+      ],
+      "likes": 14,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-87ecea41",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-2e49badde6",
+      "url": "https://www.instagram.com/p/DeLxgHgClb6/",
+      "shortcode": "DeLxgHgClb6",
+      "post_type": "Sidecar",
+      "posted_at": "2026-10-07T07:01:00Z",
+      "caption_excerpt": "Izradio profesionalac. Stvoreno za tvoj sljedeći trening. 🔥\n\nCrazy Pump 2.0 je stigao, razvijen u suradnji s @ifbb_pro_petar_klancir\n\nJedno serviranje od 26 g donosi:\n\n⚡ 7 g citrulin malata\n\n⚡ 3 g kre",
+      "hashtags": [],
+      "likes": 54,
+      "comments": 2,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-e9e7c93d",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-116d1c475e",
+      "url": "https://www.instagram.com/p/DeJMroHFArc/",
+      "shortcode": "DeJMroHFArc",
+      "post_type": "Sidecar",
+      "posted_at": "2026-10-06T07:00:44Z",
+      "caption_excerpt": "Blueprint brenda Bryan Johnson — od sada je dostupan ekskluzivno na GymBeam-u.\n\nA kako bismo proslavili lansiranje, uživajte u dodatnih 15% POPUSTA. 🧡\n\nOva ponuda vrijedi samo 48 sati! 🚀\n\nLongevity ne",
+      "hashtags": [],
+      "likes": 25,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-1e4dd436",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-12569d005f",
+      "url": "https://www.instagram.com/p/DeHlouaBVsN/",
+      "shortcode": "DeHlouaBVsN",
+      "post_type": "Video",
+      "posted_at": "2026-10-05T16:00:07Z",
+      "caption_excerpt": "Ono kad odjeća izgleda jednako dobro kako se u njoj i osjećate. ☁️✨\nStigla je nova Mochi kolekcija!! Pastelne boje, ležerni krojevi i besprijekorna udobnost u koju ćete se zaljubiti na prvu.\n\n👉 Pronađ",
+      "hashtags": [
+        "gymbeamhr",
+        "gbwomen",
+        "mochi",
+        "gbmotivation"
+      ],
+      "likes": 108,
+      "comments": 8,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-7b6b1860",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-5b3afc94af",
+      "url": "https://www.instagram.com/p/DeG1oeEFsWk/",
+      "shortcode": "DeG1oeEFsWk",
+      "post_type": "Image",
+      "posted_at": "2026-10-05T09:00:40Z",
+      "caption_excerpt": "BESPLATNA DOSTAVA S BOX NOW! 🚚📦\nDostava vaše narudžbe za 0€ uz BOX NOW! 🤫 Bez minimalne narudžbe, bez skrivenih uvjeta ✨.\n\nNe čekajte – napunite košaricu i osigurajte besplatnu dostavu prije nego vrij",
+      "hashtags": [
+        "gymbeamhr",
+        "boxnow",
+        "freeshipping",
+        "paketomat",
+        "gbig"
+      ],
+      "likes": 69,
+      "comments": 2,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-ab23e2e9",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-80f6414c12",
+      "url": "https://www.instagram.com/p/DeFA5jbgOXh/",
+      "shortcode": "DeFA5jbgOXh",
+      "post_type": "Video",
+      "posted_at": "2026-10-04T16:01:22Z",
+      "caption_excerpt": "Mekane, ukusne i pune 40g proteina. 🤤\nSavršen slatki doručak ili poslastica nakon treninga! 🥞⚡️\nSačuvajte ovaj post kako biste ovo napravili sutra ujutro! 📌🔥\n\n#gbnutrition #palacinke #proteinrecepti #",
+      "hashtags": [
+        "gbnutrition",
+        "palacinke",
+        "proteinrecepti",
+        "gymbeamhr",
+        "gbig"
+      ],
+      "likes": 468,
+      "comments": 2,
+      "metrics_collected_at": "2026-10-27T22:09:27.391192Z",
+      "evidence_id": "E-c4343533",
+      "origin": "manual_import"
+    }
+  ],
+  "product_catalog": [
+    {
+      "brand": "GymBeam",
+      "product_family": "Kreatin Monohidrat – GymBeam [sku 120100]",
+      "url": "https://gymbeam.hr/kreatin-monohidrat-gymbeam-120106.html",
+      "sku": "120100",
+      "name": "Kreatin Monohidrat – GymBeam",
+      "description_excerpt": "Kreatin Monohidrat u praktičnim kapsulama. Dnevna doza osigurava 3000 mg čistog kreatina za poboljšanje izvedbe tijekom vježbanja. Veganski, bez glutena i bez GMO-a.",
+      "image_source_ids": [],
+      "alias_urls": [],
+      "packaging_observations": [],
+      "variants": [
+        {
+          "sku": "120100",
+          "name": "Kreatin Monohidrat – GymBeam 120 kaps.",
+          "size": "120 kaps",
+          "flavor": "",
+          "price": 8.95,
+          "currency": "EUR",
+          "gtin13": "8586028765265",
+          "availability": "InStock",
+          "price_retrieved_at": "2026-10-27T22:09:24.104637Z",
+          "evidence_id": "E-20ae1faf",
+          "packaging_generation": "unverified"
+        }
+      ],
+      "evidence_ids": [
+        "E-84e2d0f2",
+        "E-b81dd91f",
+        "E-20ae1faf"
+      ]
+    },
+    {
+      "brand": "Mammut Nutrition",
+      "product_family": "Kreatin monohidrat prah - Mammut Nutrition [sku 56839]",
+      "url": "https://gymbeam.hr/kreatin-monohidrat-prah-mammut-nutrition.html",
+      "sku": "56839",
+      "name": "Kreatin monohidrat prah - Mammut Nutrition",
+      "description_excerpt": "Kreatin monohidrat u prahu s magnezijem idealan je za sve sportaše. Povećava fizičku izvedbu, pomaže smanjiti umor i pospješuje aktivnost mišića.",
+      "image_source_ids": [],
+      "alias_urls": [],
+      "packaging_observations": [],
+      "variants": [
+        {
+          "sku": "56839",
+          "name": "Kreatin monohidrat prah - Mammut Nutrition 550 g",
+          "size": "550 g",
+          "flavor": "",
+          "price": 31.95,
+          "currency": "EUR",
+          "gtin13": "4260495462530",
+          "availability": "InStock",
+          "price_retrieved_at": "2026-10-27T22:09:26.172826Z",
+          "evidence_id": "E-9fc741a1",
+          "packaging_generation": "unverified"
+        }
+      ],
+      "evidence_ids": [
+        "E-8f903875",
+        "E-6a39d2eb",
+        "E-9fc741a1"
+      ]
+    }
+  ],
+  "assumptions": [
+    {
+      "statement": "Primary audience: Croatian-speaking people interested in fitness, health and sports apparel.",
+      "status": "assumption",
+      "basis": "inferred from caption language, topic hashtags and product range; no audience analytics were available",
+      "evidence_ids": [],
+      "post_urls": []
+    }
+  ],
+  "limitations": [
+    "Which packaging generation (old vs new) is shipped for each priced variant is NOT established: text data cannot tell, so every variant carries packaging_generation='unverified'. Gallery photos show both generations (see packaging_observations, operator-attested).",
+    "Product images are listed per product page, not per variant: the JSON-LD gives fewer images than variants, and file names such as 'km750g' only suggest a size. Image-to-variant mapping is unverified.",
+    "Prices, availability and ratings are snapshots as of each source's retrieved_at.",
+    "manual observation for https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/k/m/km750g.jpg ignored: no downloaded image with that sha256 in the source index.",
+    "manual observation for https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/k/m/km1000g.jpg ignored: no downloaded image with that sha256 in the source index.",
+    "manual observation for https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/k/m/km1500g.jpg ignored: no downloaded image with that sha256 in the source index.",
+    "manual observation for https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/f/d/fdjdsj.jpg ignored: no downloaded image with that sha256 in the source index.",
+    "manual observation for https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/k/r/kreatin.jpg ignored: no downloaded image with that sha256 in the source index.",
+    "manual observation for https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/c/r/creatine-monohydrate-unflavoured-01_8.jpg ignored: no downloaded image with that sha256 in the source index.",
+    "manual observation for https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/s/k/sk-creatine-monohydrate-unflavoured-01.jpg ignored: no downloaded image with that sha256 in the source index.",
+    "manual observation for https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/c/r/creatine-monohydrate-mango-maracuja-mockup-view3.jpg ignored: no downloaded image with that sha256 in the source index.",
+    "manual observation for https://gymbeam.hr/media/catalog/product/cache/bf5a31e851f50f3ed6850cbbf183db11/c/r/creatine-monohydrate-unflavoured-250-g-gymbeam.png ignored: no downloaded image with that sha256 in the source index.",
+    "Packaging observations caveat: These are gallery photos. Which pouch generation is physically shipped for a given priced variant (size x flavour) is NOT established by this file.",
+    "Reference images were downloaded for 0 of 2 catalog products (research.max_images cap); the others have none stored.",
+    "No site CSS was retrieved, so typography is unknown.",
+    "Website colours/typography are measured from CSS. Instagram cover analysis (if present) is operator-labelled on cover frames only, from images that are not stored in the repository; no vision model ran in the studio.",
+    "Instagram: 30 brand-owned posts from 'Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData' (origin: manual_import); 14 collaboration/tagged posts by other accounts were seen and excluded from brand-voice analysis. Likes/comments are a snapshot; hidden counts stay null.",
+    "No packshot candidates were downloaded (brief.seed_images empty or all failed); no current-pack packshot selected.",
+    "Optional LLM tone analysis was skipped (RequestLimitExceeded: API request limit 5 reached (preflight, messages and retries all count) - request NOT sent); tone stays 'unknown'. Nothing was sent to the model."
+  ],
+  "selected_packshot": null,
+  "selected_font": null,
+  "visual_analysis_post_urls": [
+    "https://www.instagram.com/p/De_YTBHE7Nw/",
+    "https://www.instagram.com/p/De9xZm9kdUN/",
+    "https://www.instagram.com/p/De7MhWqkTas/",
+    "https://www.instagram.com/p/De18LcqEsNP/",
+    "https://www.instagram.com/p/Dewyc-KkXL_/",
+    "https://www.instagram.com/p/DeweAhoFvZr/",
+    "https://www.instagram.com/p/DeuNpiTikK6/",
+    "https://www.instagram.com/p/DepEBX5CRks/",
+    "https://www.instagram.com/p/DegX7qjj4Sx/",
+    "https://www.instagram.com/p/DedzClSiOcs/",
+    "https://www.instagram.com/p/DeZnc3_DmCF/",
+    "https://www.instagram.com/p/DeQ7N2-G1AX/",
+    "https://www.instagram.com/p/DePXg5KD9nl/",
+    "https://www.instagram.com/p/DeG1oeEFsWk/"
+  ]
+}

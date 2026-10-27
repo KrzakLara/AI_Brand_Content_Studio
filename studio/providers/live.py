@@ -25,7 +25,7 @@ from studio.providers.base import (
     ProviderUnavailable,
     ResearchStep,
 )
-from studio.tools.transport import ResponseTooLarge, Transport, TransportError
+from studio.tools.transport import RequestLimitReached, ResponseTooLarge, Transport, TransportError
 
 ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
 ANTHROPIC_VERSION = "2023-06-01"
@@ -122,6 +122,8 @@ class AnthropicLLM:
                                  "configured one - request NOT sent")
         if self.budget_usd is None:
             return 0.0
+        if self.spent_usd >= self.budget_usd:
+            raise BudgetExceeded(f"budget {self.budget_usd:.4f} USD already spent ({self.spent_usd:.4f}) - request NOT sent")
         worst = self._worst_case_usd(prompt, max_tokens)
         if self.spent_usd + worst > self.budget_usd:
             raise BudgetExceeded(f"next Anthropic request could cost up to {worst:.4f} USD; spent {self.spent_usd:.4f} of "
@@ -139,6 +141,8 @@ class AnthropicLLM:
         try:
             r = self.transport.request("GET", ANTHROPIC_MODELS_URL + self.model_id, timeout=30.0, headers={
                 "x-api-key": self.api_key, "anthropic-version": ANTHROPIC_VERSION})
+        except RequestLimitReached as e:
+            raise RequestLimitExceeded(str(e)) from e
         except (TransportError, ResponseTooLarge) as e:
             raise ProviderUnavailable(f"preflight failed (network): {e}") from e
         if r.status == 200:
@@ -176,6 +180,8 @@ class AnthropicLLM:
             self.http_requests += 1
             try:
                 r = self.transport.request("POST", ANTHROPIC_URL, headers=headers, body=body, timeout=120.0)
+            except RequestLimitReached as e:  # the transport-level guard is the final authority
+                raise RequestLimitExceeded(str(e)) from e
             except (TransportError, ResponseTooLarge) as e:
                 last = str(e)
             else:

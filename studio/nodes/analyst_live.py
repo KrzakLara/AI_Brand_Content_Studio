@@ -32,7 +32,9 @@ from studio.contracts import (
     VariantEntry,
 )
 from studio.fingerprint import fingerprint, sha256_bytes
+from studio.cost import BudgetExceeded
 from studio.nodes import visual
+from studio.providers.base import ProviderResponseError, ProviderUnavailable
 from studio.services import Services
 from studio.tools import extract
 from studio.tools.toolset import source_id
@@ -266,8 +268,13 @@ def _analyse(svc: Services, brief: BriefInput, index: SourceIndex, use_llm: bool
 
     mode = "heuristic_only"
     if use_llm and posts:
-        mode = "llm_assisted"
-        assumptions += _llm_tone(svc, brief, led, posts, fp)
+        try:
+            assumptions += _llm_tone(svc, brief, led, posts, fp)
+            mode = "llm_assisted"
+        except (BudgetExceeded, ProviderResponseError, ProviderUnavailable) as e:
+            # the model step is OPTIONAL enrichment: a spent allowance or a bad reply must never kill a run
+            limitations.append(f"Optional LLM tone analysis was skipped ({type(e).__name__}: {str(e)[:160]}); "
+                               "tone stays 'unknown'. Nothing was sent to the model.")
 
     # --- failed / blocked sources are part of the report ------------------------------------
     for s in index.sources:

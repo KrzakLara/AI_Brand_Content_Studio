@@ -19,6 +19,10 @@ class ResponseTooLarge(Exception):
     pass
 
 
+class RequestLimitReached(Exception):
+    """A GuardedTransport refused a request because the hard cap for that host was already used up."""
+
+
 class UnrecordedRequest(AssertionError):
     """A RecordedTransport was asked for something that was not recorded."""
 
@@ -61,6 +65,38 @@ class UrllibTransport:
         if len(data) > max_bytes:
             raise ResponseTooLarge(f"response exceeds {max_bytes} bytes")
         return Response(status, {k.lower(): v for k, v in r.headers.items()}, data, url)
+
+
+class GuardedTransport:
+    """Final authority on how many requests may reach a paid host, independent of any adapter logic.
+
+    Every request to ``hosts`` is counted and the count is written to ``log_path`` BEFORE it is forwarded
+    (so a crash cannot hide a request). Once ``limit`` requests have been counted, further requests are
+    refused without being sent. The log holds method + host + path only: no headers, no query, no key.
+    Requests to other hosts pass through untouched.
+    """
+
+    def __init__(self, inner: Transport, *, limit: int, hosts: tuple[str, ...], log_path: Path | None = None):
+        if limit < 0:
+            raise ValueError("limit must be >= 0")
+        self.inner, self.limit, self.hosts, self.log_path = inner, limit, tuple(hosts), log_path
+        self.count = 0
+        if log_path and Path(log_path).is_file():
+            self.count = sum(1 for line in Path(log_path).read_text(encoding="utf-8").splitlines() if line.strip())
+
+    def request(self, method, url, *, headers=None, body=None, timeout=20.0, max_bytes=4_000_000):
+        from urllib.parse import urlparse
+        u = urlparse(url)
+        if (u.hostname or "").lower() in self.hosts:
+            if self.count >= self.limit:
+                raise RequestLimitReached(f"hard request limit {self.limit} for {u.hostname} reached "
+                                          f"({self.count} counted) - request NOT sent")
+            self.count += 1
+            if self.log_path:
+                Path(self.log_path).parent.mkdir(parents=True, exist_ok=True)
+                with open(self.log_path, "a", encoding="utf-8") as f:
+                    f.write(f"{method} {u.hostname}{u.path}\n")
+        return self.inner.request(method, url, headers=headers, body=body, timeout=timeout, max_bytes=max_bytes)
 
 
 @dataclass
