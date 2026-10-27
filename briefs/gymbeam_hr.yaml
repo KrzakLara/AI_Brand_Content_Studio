@@ -1,0 +1,14 @@
+# Research brief for GymBeam Croatia. Research only: no campaign or product decision is made here.
+brand_name: GymBeam
+product_name: 100% Kreatin Monohidrat (candidate - not yet decided)
+campaign_goal: Research only - no campaign decided in Phase 2
+audience: To be determined by research
+language: hr
+website_url: https://gymbeam.hr
+instagram_handle: gymbeamhr
+seed_urls:
+  - https://gymbeam.hr/kreatin-monohidrat
+  - https://gymbeam.hr/kreatin-monohidrat-gymbeam-120106.html   # capsule product, operator-provided seed
+focus_keywords: [kreatin, creatine]
+manual_observations_path: research/imports/packaging_observations_gymbeam_hr.yaml
+notes: Phase 2 research brief. Pay attention to 100% Creatine Monohydrate packaging variants.
