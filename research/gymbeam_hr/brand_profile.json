@@ -1,0 +1,1122 @@
+{
+  "brand_name": "GymBeam",
+  "positioning": "Mi smo web trgovina s dodacima prehrani za sportaše, širokim asortimanom, brzom dostavom i fer cijenama.",
+  "voice": "UNDETERMINED (heuristic_only): see communication_tone for measured signals",
+  "palette": [
+    "#ff8c32",
+    "#ff4100",
+    "#ef4a2b",
+    "#8bc34a",
+    "#ff4410",
+    "#db3700"
+  ],
+  "dos": [],
+  "donts": [],
+  "banned_phrases": [],
+  "product_fact_ids": [
+    "E-84e2d0f2",
+    "E-b81dd91f",
+    "E-20ae1faf",
+    "E-0921eae1",
+    "E-f34fb0e8",
+    "E-d451bed0",
+    "E-c57f7f20",
+    "E-21699367",
+    "E-8e3532fb",
+    "E-158f49a7",
+    "E-058b813a",
+    "E-c3a419bd",
+    "E-b14e9d71",
+    "E-1a1ccbfa",
+    "E-ed423112",
+    "E-8386eaef",
+    "E-d99df1b5",
+    "E-c15f68f7",
+    "E-a9909491",
+    "E-21e0655f",
+    "E-1bdc2bb8",
+    "E-b39728d7",
+    "E-fda99e85",
+    "E-b8afc08a",
+    "E-846dc905",
+    "E-2fe04fca",
+    "E-a38e4404",
+    "E-d5a40e37",
+    "E-f0c2d1cf",
+    "E-71959f79",
+    "E-ade14ac6",
+    "E-247abe90",
+    "E-91f6c418",
+    "E-c1924dc7",
+    "E-318afe93",
+    "E-2fad0207",
+    "E-63b4f8a8",
+    "E-bee3837b",
+    "E-9dc3052f",
+    "E-f5c7b62d",
+    "E-95a92a1a",
+    "E-bd3bb5b8",
+    "E-01eb63bf",
+    "E-d33c31e3",
+    "E-56c9241e",
+    "E-f0219278",
+    "E-37994e0a"
+  ],
+  "audience_summary": "ASSUMPTION (unverified): Primary audience: Croatian-speaking people interested in fitness, health and sports apparel.",
+  "image_observations": [],
+  "mock": false,
+  "analysis_mode": "heuristic_only",
+  "data_origins": {
+    "live": 22,
+    "manual_import": 11
+  },
+  "identity": [
+    {
+      "statement": "Official site name: GYMBEAM.HR",
+      "status": "verified",
+      "basis": "https://gymbeam.hr meta 'og:site_name'",
+      "evidence_ids": [
+        "E-14c3a4ae"
+      ]
+    },
+    {
+      "statement": "Site self-description: Mi smo web trgovina s dodacima prehrani za sportaše, širokim asortimanom, brzom dostavom i fer cijenama.",
+      "status": "verified",
+      "basis": "https://gymbeam.hr meta 'og:description'",
+      "evidence_ids": [
+        "E-b78a854e"
+      ]
+    },
+    {
+      "statement": "Site theme colour: #ff8c32",
+      "status": "verified",
+      "basis": "https://gymbeam.hr meta 'theme-color'",
+      "evidence_ids": [
+        "E-ceb3f15e"
+      ]
+    }
+  ],
+  "communication_tone": [
+    {
+      "statement": "10 of 10 captions are Croatian (diacritics / stop-word heuristic).",
+      "status": "verified",
+      "basis": "computed over 10 brand-owned posts (manual_import); heuristic",
+      "evidence_ids": [
+        "E-991854f2",
+        "E-153830c0",
+        "E-0794466b",
+        "E-3ee6b5ba",
+        "E-52351b4a",
+        "E-88f9a4f6",
+        "E-a4691c41",
+        "E-ca2c7c98",
+        "E-d70e2da2",
+        "E-8769f61c"
+      ]
+    },
+    {
+      "statement": "10 of 10 captions use emoji.",
+      "status": "verified",
+      "basis": "computed over 10 brand-owned posts (manual_import)",
+      "evidence_ids": [
+        "E-991854f2",
+        "E-153830c0",
+        "E-0794466b",
+        "E-3ee6b5ba",
+        "E-52351b4a",
+        "E-88f9a4f6",
+        "E-a4691c41",
+        "E-ca2c7c98",
+        "E-d70e2da2",
+        "E-8769f61c"
+      ]
+    },
+    {
+      "statement": "4 of 10 captions point to the 'link u opisu profila' (link in bio) call to action.",
+      "status": "verified",
+      "basis": "computed over 10 brand-owned posts (manual_import)",
+      "evidence_ids": [
+        "E-991854f2",
+        "E-153830c0",
+        "E-0794466b",
+        "E-3ee6b5ba",
+        "E-52351b4a",
+        "E-88f9a4f6",
+        "E-a4691c41",
+        "E-ca2c7c98",
+        "E-d70e2da2",
+        "E-8769f61c"
+      ]
+    },
+    {
+      "statement": "8 of 10 captions address the reader with plural 'vi/vaš' forms.",
+      "status": "verified",
+      "basis": "computed over 10 brand-owned posts (manual_import)",
+      "evidence_ids": [
+        "E-991854f2",
+        "E-153830c0",
+        "E-0794466b",
+        "E-3ee6b5ba",
+        "E-52351b4a",
+        "E-88f9a4f6",
+        "E-a4691c41",
+        "E-ca2c7c98",
+        "E-d70e2da2",
+        "E-8769f61c"
+      ]
+    },
+    {
+      "statement": "Most frequent hashtags: #gbig (9), #gymbeamhr (8), #gbwomen (7), #gbhealthy (5), #gbfit (2), #gbmen (2)",
+      "status": "verified",
+      "basis": "computed over 10 brand-owned posts (manual_import)",
+      "evidence_ids": [
+        "E-991854f2",
+        "E-153830c0",
+        "E-0794466b",
+        "E-3ee6b5ba",
+        "E-52351b4a",
+        "E-88f9a4f6",
+        "E-a4691c41",
+        "E-ca2c7c98",
+        "E-d70e2da2",
+        "E-8769f61c"
+      ]
+    },
+    {
+      "statement": "Qualitative tone (e.g. playful vs. serious) is not determined: needs an LLM or human review.",
+      "status": "unknown",
+      "basis": "heuristic_only analysis",
+      "evidence_ids": []
+    }
+  ],
+  "audience": [
+    {
+      "statement": "Content is tagged by the brand's own segments: #gbwomen (7), #gbmen (2), #gbhealthy (5), #gbfit (2)",
+      "status": "verified",
+      "basis": "computed over 10 brand-owned posts (manual_import)",
+      "evidence_ids": [
+        "E-991854f2",
+        "E-153830c0",
+        "E-0794466b",
+        "E-3ee6b5ba",
+        "E-52351b4a",
+        "E-88f9a4f6",
+        "E-a4691c41",
+        "E-ca2c7c98",
+        "E-d70e2da2",
+        "E-8769f61c"
+      ]
+    }
+  ],
+  "visual_style": [
+    {
+      "statement": "Instagram visual style (imagery, layout, graphics) was not analysed.",
+      "status": "unknown",
+      "basis": "no vision capability in this run",
+      "evidence_ids": []
+    },
+    {
+      "statement": "Website palette: #ff8c32, #ff4100, #ef4a2b, #8bc34a, #ff4410, #db3700 (website only).",
+      "status": "verified",
+      "basis": "theme-color + CSS frequency",
+      "evidence_ids": [
+        "E-14c3a4ae",
+        "E-b78a854e",
+        "E-ceb3f15e",
+        "E-8e56e0ab",
+        "E-1059b032",
+        "E-9c154233"
+      ]
+    }
+  ],
+  "colors": [
+    {
+      "hex": "#ff8c32",
+      "scope": "website",
+      "basis": "meta theme-color",
+      "frequency": null,
+      "status": "verified"
+    },
+    {
+      "hex": "#ff4100",
+      "scope": "website",
+      "basis": "occurrences in site CSS (non-neutral)",
+      "frequency": 26,
+      "status": "verified"
+    },
+    {
+      "hex": "#ef4a2b",
+      "scope": "website",
+      "basis": "occurrences in site CSS (non-neutral)",
+      "frequency": 14,
+      "status": "verified"
+    },
+    {
+      "hex": "#8bc34a",
+      "scope": "website",
+      "basis": "occurrences in site CSS (non-neutral)",
+      "frequency": 7,
+      "status": "verified"
+    },
+    {
+      "hex": "#ff4410",
+      "scope": "website",
+      "basis": "occurrences in site CSS (non-neutral)",
+      "frequency": 4,
+      "status": "verified"
+    },
+    {
+      "hex": "#db3700",
+      "scope": "website",
+      "basis": "occurrences in site CSS (non-neutral)",
+      "frequency": 4,
+      "status": "verified"
+    }
+  ],
+  "typography": [
+    {
+      "family": "Inter",
+      "scope": "website",
+      "basis": "declaration count in site CSS (E-8e56e0ab)",
+      "frequency": 8,
+      "status": "verified"
+    },
+    {
+      "family": "Helvetica Neue",
+      "scope": "website",
+      "basis": "declaration count in site CSS (E-1059b032)",
+      "frequency": 2,
+      "status": "verified"
+    },
+    {
+      "family": "Helvetica",
+      "scope": "website",
+      "basis": "declaration count in site CSS (E-9c154233)",
+      "frequency": 2,
+      "status": "verified"
+    },
+    {
+      "family": "Arial",
+      "scope": "website",
+      "basis": "declaration count in site CSS (E-a9080036)",
+      "frequency": 2,
+      "status": "verified"
+    }
+  ],
+  "content_formats": [
+    {
+      "statement": "Post formats: Video 8 (80%), Sidecar 2 (20%) (Sidecar = carousel).",
+      "status": "verified",
+      "basis": "computed over 10 brand-owned posts (manual_import)",
+      "evidence_ids": [
+        "E-991854f2",
+        "E-153830c0",
+        "E-0794466b",
+        "E-3ee6b5ba",
+        "E-52351b4a",
+        "E-88f9a4f6",
+        "E-a4691c41",
+        "E-ca2c7c98",
+        "E-d70e2da2",
+        "E-8769f61c"
+      ]
+    }
+  ],
+  "example_posts": [
+    {
+      "source_id": "S-8df05147e9",
+      "url": "https://www.instagram.com/p/De_YTBHE7Nw/",
+      "shortcode": "De_YTBHE7Nw",
+      "post_type": "Video",
+      "posted_at": "2026-10-27T08:01:38Z",
+      "caption_excerpt": "Mystery Week je počeo 🔥 Potrošite 50 € ili više i darujemo Vam BESPLATAN Mystery poklon u vrijednosti većoj od 10 €.\n\n⏳ Samo na ograničeno vrijeme. Zgrabite svoj prije nego što nestane!\n\n#gbig #myster",
+      "hashtags": [
+        "gbig",
+        "mysteryweek"
+      ],
+      "likes": 22,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T20:06:48.767542Z",
+      "evidence_id": "E-991854f2",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-0606c3d71c",
+      "url": "https://www.instagram.com/p/De9xZm9kdUN/",
+      "shortcode": "De9xZm9kdUN",
+      "post_type": "Video",
+      "posted_at": "2026-10-26T17:02:36Z",
+      "caption_excerpt": "Vaš tempo. Vaša ruta. Vaš PACE. ⚡\n\n✔️ prozračan materijal\n✔️ brzo se suši\n✔️ nije proziran\n✔️ reflektirajući print za vidljivost u sumrak i noću\n\nNova PACE kolekcija stvorena je za trening bez komprom",
+      "hashtags": [
+        "gymbeamhr",
+        "gbfit",
+        "gbwomen",
+        "gbig"
+      ],
+      "likes": 28,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T20:06:48.767542Z",
+      "evidence_id": "E-153830c0",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-170261fbf9",
+      "url": "https://www.instagram.com/p/De7MhWqkTas/",
+      "shortcode": "De7MhWqkTas",
+      "post_type": "Video",
+      "posted_at": "2026-10-25T17:01:54Z",
+      "caption_excerpt": "Mala kapsula za veliku podršku vašem tijelu! 🌿✨\n\nOsigurajte svojem crijevnom mikrobiomu snažnu dozu od 10 milijardi dobrih bakterija i inulina uz ProbioTen. Praktične kapsule lako se uklapaju u vašu s",
+      "hashtags": [
+        "gymbeamhr",
+        "gbhealthy",
+        "gbmen",
+        "gbig"
+      ],
+      "likes": 14,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T20:06:48.767542Z",
+      "evidence_id": "E-0794466b",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-19f577856e",
+      "url": "https://www.instagram.com/p/De18LcqEsNP/",
+      "shortcode": "De18LcqEsNP",
+      "post_type": "Video",
+      "posted_at": "2026-10-23T16:02:49Z",
+      "caption_excerpt": "Mali jutarnji rituali čine razliku. ☀️\nZa @zanamari dan počinje uz Anti-Aging Collagen — ukusan napitak koji se jednostavno uklapa u svakodnevnu rutinu. Sadrži 6 g hidroliziranog goveđeg kolagena po p",
+      "hashtags": [
+        "gymbeamhr",
+        "gbhealthy",
+        "gbwomen",
+        "gbig"
+      ],
+      "likes": 975,
+      "comments": 23,
+      "metrics_collected_at": "2026-10-27T20:06:48.767542Z",
+      "evidence_id": "E-3ee6b5ba",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-7261b420b0",
+      "url": "https://www.instagram.com/p/DeyZefpD8Bb/",
+      "shortcode": "DeyZefpD8Bb",
+      "post_type": "Video",
+      "posted_at": "2026-10-22T07:02:18Z",
+      "caption_excerpt": "Ne mora svaki dan biti 10/10 💭 Snaga je u tome da izgurate one teške dane i vratite se još jače 💖\n\nVaše zdravlje je pravi temelj vaše snage. Čuvajte ga 🔒✨\n\n🎀 Ružičasti listopad podsjetnik: Vi ste na p",
+      "hashtags": [
+        "gbwomen",
+        "pinkoctober",
+        "ruzicastilistopad",
+        "gymbeamhr",
+        "gbig"
+      ],
+      "likes": 23,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T20:06:48.767542Z",
+      "evidence_id": "E-52351b4a",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-debabb63fe",
+      "url": "https://www.instagram.com/p/Dewyc-KkXL_/",
+      "shortcode": "Dewyc-KkXL_",
+      "post_type": "Video",
+      "posted_at": "2026-10-21T16:02:03Z",
+      "caption_excerpt": "Kad vam se ne da kuhati, a želite nešto fino i zasitno 🙌 GymBeam bezglutenski njoki gotovi su za par minuta. Dodajte piletinu, tunu ili sir i dobivate brz obrok pun proteina. Dokaz da zdrava prehrana ",
+      "hashtags": [
+        "gymbeamhr",
+        "gbhealthy",
+        "gbwomen",
+        "zdravahrana",
+        "recepti",
+        "gbig"
+      ],
+      "likes": 347,
+      "comments": 1,
+      "metrics_collected_at": "2026-10-27T20:06:48.767542Z",
+      "evidence_id": "E-88f9a4f6",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-08364f604a",
+      "url": "https://www.instagram.com/p/DeweAhoFvZr/",
+      "shortcode": "DeweAhoFvZr",
+      "post_type": "Sidecar",
+      "posted_at": "2026-10-21T13:02:20Z",
+      "caption_excerpt": "Neki imaju pistu, a naša su krila su za teretanu. Koji GymBeam „Anđeo” danas ide s vama na trening? 👇\n\n#gymbeamhr #gbfit #gbwomen #gymbeamhr #gbig",
+      "hashtags": [
+        "gymbeamhr",
+        "gbfit",
+        "gbwomen",
+        "gbig"
+      ],
+      "likes": 61,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T20:06:48.767542Z",
+      "evidence_id": "E-a4691c41",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-691cb23b36",
+      "url": "https://www.instagram.com/p/DeuNtm9Dm95/",
+      "shortcode": "DeuNtm9Dm95",
+      "post_type": "Video",
+      "posted_at": "2026-10-20T16:02:30Z",
+      "caption_excerpt": "Blueprint by Bryan Johnson stigao je u GymBeam! 🆕\nBilo da želite poboljšati performanse, izgraditi mišiće, sagorjeti masti ili se redovito brinuti o vitaminima i mineralima, u našoj najnovijoj ponudi ",
+      "hashtags": [
+        "gymbeamhr",
+        "gbhealthy",
+        "gbmen",
+        "bryanjohnson",
+        "longevity",
+        "gbig"
+      ],
+      "likes": 24,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T20:06:48.767542Z",
+      "evidence_id": "E-ca2c7c98",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-f554895a29",
+      "url": "https://www.instagram.com/p/DeuNpiTikK6/",
+      "shortcode": "DeuNpiTikK6",
+      "post_type": "Sidecar",
+      "posted_at": "2026-10-20T16:00:56Z",
+      "caption_excerpt": "Za sve naše cure koje vole biti snažne u teretani, ali nikad ne rade kompromise kada je riječ o brizi o sebi, pripremili smo nešto posebno za vas! ✨🫶🏽\n\nPredstavljamo CreaGlow, proizvod razvijen u sura",
+      "hashtags": [
+        "gbwomen",
+        "creaglow",
+        "anjablaa",
+        "glowfromwithin"
+      ],
+      "likes": 58,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T20:06:48.767542Z",
+      "evidence_id": "E-d70e2da2",
+      "origin": "manual_import"
+    },
+    {
+      "source_id": "S-62ba0e40ba",
+      "url": "https://www.instagram.com/p/Dero9b3E4rf/",
+      "shortcode": "Dero9b3E4rf",
+      "post_type": "Video",
+      "posted_at": "2026-10-19T16:03:06Z",
+      "caption_excerpt": "Napitak od badema za one koji žele probati biljnu alternativu mlijeku. 🌰🥛\nBiljna alternativa mlijeku, obogaćena kalcijem i vitaminom D3. Ugodno je sladak zahvaljujući rogaču i jabuci, bez umjetnih sla",
+      "hashtags": [
+        "gymbeamhr",
+        "gbhealthy",
+        "gbwomen",
+        "gbig"
+      ],
+      "likes": 30,
+      "comments": 0,
+      "metrics_collected_at": "2026-10-27T20:06:48.767542Z",
+      "evidence_id": "E-8769f61c",
+      "origin": "manual_import"
+    }
+  ],
+  "product_catalog": [
+    {
+      "brand": "GymBeam",
+      "product_family": "Kreatin Monohidrat – GymBeam [sku 120100]",
+      "url": "https://gymbeam.hr/kreatin-monohidrat-gymbeam-120106.html",
+      "sku": "120100",
+      "name": "Kreatin Monohidrat – GymBeam",
+      "description_excerpt": "Kreatin Monohidrat u praktičnim kapsulama. Dnevna doza osigurava 3000 mg čistog kreatina za poboljšanje izvedbe tijekom vježbanja. Veganski, bez glutena i bez GMO-a.",
+      "image_source_ids": [
+        "S-54e15aa25e",
+        "S-9f31ca3d52"
+      ],
+      "alias_urls": [],
+      "packaging_observations": [],
+      "variants": [
+        {
+          "sku": "120100",
+          "name": "Kreatin Monohidrat – GymBeam 120 kaps.",
+          "size": "120 kaps",
+          "flavor": "",
+          "price": 8.95,
+          "currency": "EUR",
+          "gtin13": "8586028765265",
+          "availability": "InStock",
+          "evidence_id": "E-20ae1faf",
+          "packaging_generation": "unverified"
+        }
+      ],
+      "evidence_ids": [
+        "E-84e2d0f2",
+        "E-b81dd91f",
+        "E-20ae1faf"
+      ]
+    },
+    {
+      "brand": "GymBeam",
+      "product_family": "100% Kreatin Monohidrat - GymBeam [sku 3885]",
+      "url": "https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html",
+      "sku": "3885",
+      "name": "100% Kreatin Monohidrat - GymBeam",
+      "description_excerpt": "100% Kreatin monohidrat učinkovit je dodatak za povećanje fizičke izvedbe. Omogućit će vam da trenirate intenzivno, napravite više ponavljanja ili dulje sprintate.",
+      "image_source_ids": [
+        "S-788f6541e8",
+        "S-dfa9b4b73a",
+        "S-00d380b48e",
+        "S-e345fa9b46"
+      ],
+      "alias_urls": [],
+      "packaging_observations": [
+        {
+          "generation": "old",
+          "size": "750 g",
+          "flavor": "unflavoured",
+          "image_source_id": "S-00d380b48e",
+          "evidence_id": "E-7256fc39",
+          "includes_gift_merchandise": true
+        },
+        {
+          "generation": "old",
+          "size": "1000 g",
+          "flavor": "unflavoured",
+          "image_source_id": "S-e345fa9b46",
+          "evidence_id": "E-25399592",
+          "includes_gift_merchandise": true
+        },
+        {
+          "generation": "old",
+          "size": "1500 g",
+          "flavor": "unflavoured",
+          "image_source_id": "S-dfa9b4b73a",
+          "evidence_id": "E-e1abb183",
+          "includes_gift_merchandise": true
+        },
+        {
+          "generation": "new",
+          "size": "unknown (not printed)",
+          "flavor": "unflavoured",
+          "image_source_id": "S-788f6541e8",
+          "evidence_id": "E-83a8e7b8",
+          "includes_gift_merchandise": true
+        }
+      ],
+      "variants": [
+        {
+          "sku": "118783",
+          "name": "100% Kreatin Monohidrat - GymBeam 1000 g - zelena jabuka",
+          "size": "1000 g",
+          "flavor": "zelena jabuka",
+          "price": 29.95,
+          "currency": "EUR",
+          "gtin13": "8586028763773",
+          "availability": "InStock",
+          "evidence_id": "E-d451bed0",
+          "packaging_generation": "unverified"
+        },
+        {
+          "sku": "118786",
+          "name": "100% Kreatin Monohidrat - GymBeam 1000 g - limun - limeta",
+          "size": "1000 g",
+          "flavor": "limun - limeta",
+          "price": 29.95,
+          "currency": "EUR",
+          "gtin13": "8586028763896",
+          "availability": "InStock",
+          "evidence_id": "E-c57f7f20",
+          "packaging_generation": "unverified"
+        },
+        {
+          "sku": "118789",
+          "name": "100% Kreatin Monohidrat - GymBeam 1000 g - mango - marakuja",
+          "size": "1000 g",
+          "flavor": "mango - marakuja",
+          "price": 29.95,
+          "currency": "EUR",
+          "gtin13": "8586028763841",
+          "availability": "InStock",
+          "evidence_id": "E-21699367",
+          "packaging_generation": "unverified"
+        },
+        {
+          "sku": "118792",
+          "name": "100% Kreatin Monohidrat - GymBeam 1500 g - zelena jabuka",
+          "size": "1500 g",
+          "flavor": "zelena jabuka",
+          "price": 42.95,
+          "currency": "EUR",
+          "gtin13": "8586028763780",
+          "availability": "InStock",
+          "evidence_id": "E-8e3532fb",
+          "packaging_generation": "unverified"
+        },
+        {
+          "sku": "118795",
+          "name": "100% Kreatin Monohidrat - GymBeam 1500 g - limun - limeta",
+          "size": "1500 g",
+          "flavor": "limun - limeta",
+          "price": 42.95,
+          "currency": "EUR",
+          "gtin13": "8586028763902",
+          "availability": "InStock",
+          "evidence_id": "E-158f49a7",
+          "packaging_generation": "unverified"
+        },
+        {
+          "sku": "118798",
+          "name": "100% Kreatin Monohidrat - GymBeam 1500 g - mango - marakuja",
+          "size": "1500 g",
+          "flavor": "mango - marakuja",
+          "price": 42.95,
+          "currency": "EUR",
+          "gtin13": "8586028763858",
+          "availability": "InStock",
+          "evidence_id": "E-058b813a",
+          "packaging_generation": "unverified"
+        },
+        {
+          "sku": "113929",
+          "name": "100% Kreatin Monohidrat - GymBeam 1500 g - bez okusa",
+          "size": "1500 g",
+          "flavor": "bez okusa",
+          "price": 42.95,
+          "currency": "EUR",
+          "gtin13": "8586028136003",
+          "availability": "InStock",
+          "evidence_id": "E-c3a419bd",
+          "packaging_generation": "unverified"
+        },
+        {
+          "sku": "118801",
+          "name": "100% Kreatin Monohidrat - GymBeam 250 g - zelena jabuka",
+          "size": "250 g",
+          "flavor": "zelena jabuka",
+          "price": 8.95,
+          "currency": "EUR",
+          "gtin13": "8586028763742",
+          "availability": "InStock",
+          "evidence_id": "E-b14e9d71",
+          "packaging_generation": "unverified"
+        },
+        {
+          "sku": "118804",
+          "name": "100% Kreatin Monohidrat - GymBeam 250 g - limun - limeta",
+          "size": "250 g",
+          "flavor": "limun - limeta",
+          "price": 8.95,
+          "currency": "EUR",
+          "gtin13": "8586028763865",
+          "availability": "InStock",
+          "evidence_id": "E-1a1ccbfa",
+          "packaging_generation": "unverified"
+        },
+        {
+          "sku": "118807",
+          "name": "100% Kreatin Monohidrat - GymBeam 250 g - mango - marakuja",
+          "size": "250 g",
+          "flavor": "mango - marakuja",
+          "price": 8.95,
+          "currency": "EUR",
+          "gtin13": "8586028763810",
+          "availability": "InStock",
+          "evidence_id": "E-ed423112",
+          "packaging_generation": "unverified"
+        },
+        {
+          "sku": "110725",
+          "name": "100% Kreatin Monohidrat - GymBeam 250 g - bez okusa",
+          "size": "250 g",
+          "flavor": "bez okusa",
+          "price": 8.95,
+          "currency": "EUR",
+          "gtin13": "8586028125991",
+          "availability": "InStock",
+          "evidence_id": "E-8386eaef",
+          "packaging_generation": "unverified"
+        },
+        {
+          "sku": "118810",
+          "name": "100% Kreatin Monohidrat - GymBeam 500 g - zelena jabuka",
+          "size": "500 g",
+          "flavor": "zelena jabuka",
+          "price": 15.95,
+          "currency": "EUR",
+          "gtin13": "8586028763759",
+          "availability": "InStock",
+          "evidence_id": "E-d99df1b5",
+          "packaging_generation": "unverified"
+        },
+        {
+          "sku": "118813",
+          "name": "100% Kreatin Monohidrat - GymBeam 500 g - limun - limeta",
+          "size": "500 g",
+          "flavor": "limun - limeta",
+          "price": 15.95,
+          "currency": "EUR",
+          "gtin13": "8586028763872",
+          "availability": "InStock",
+          "evidence_id": "E-c15f68f7",
+          "packaging_generation": "unverified"
+        },
+        {
+          "sku": "118816",
+          "name": "100% Kreatin Monohidrat - GymBeam 500 g - mango - marakuja",
+          "size": "500 g",
+          "flavor": "mango - marakuja",
+          "price": 15.95,
+          "currency": "EUR",
+          "gtin13": "8586028763827",
+          "availability": "InStock",
+          "evidence_id": "E-a9909491",
+          "packaging_generation": "unverified"
+        },
+        {
+          "sku": "110728",
+          "name": "100% Kreatin Monohidrat - GymBeam 500 g - bez okusa",
+          "size": "500 g",
+          "flavor": "bez okusa",
+          "price": 15.95,
+          "currency": "EUR",
+          "gtin13": "8586028126004",
+          "availability": "InStock",
+          "evidence_id": "E-21e0655f",
+          "packaging_generation": "unverified"
+        },
+        {
+          "sku": "118819",
+          "name": "100% Kreatin Monohidrat - GymBeam 750 g - zelena jabuka",
+          "size": "750 g",
+          "flavor": "zelena jabuka",
+          "price": 22.95,
+          "currency": "EUR",
+          "gtin13": "8586028763766",
+          "availability": "InStock",
+          "evidence_id": "E-1bdc2bb8",
+          "packaging_generation": "unverified"
+        },
+        {
+          "sku": "118822",
+          "name": "100% Kreatin Monohidrat - GymBeam 750 g - limun - limeta",
+          "size": "750 g",
+          "flavor": "limun - limeta",
+          "price": 22.95,
+          "currency": "EUR",
+          "gtin13": "8586028763889",
+          "availability": "InStock",
+          "evidence_id": "E-b39728d7",
+          "packaging_generation": "unverified"
+        },
+        {
+          "sku": "118825",
+          "name": "100% Kreatin Monohidrat - GymBeam 750 g - mango - marakuja",
+          "size": "750 g",
+          "flavor": "mango - marakuja",
+          "price": 22.95,
+          "currency": "EUR",
+          "gtin13": "8586028763834",
+          "availability": "InStock",
+          "evidence_id": "E-fda99e85",
+          "packaging_generation": "unverified"
+        },
+        {
+          "sku": "113923",
+          "name": "100% Kreatin Monohidrat - GymBeam 750 g - bez okusa",
+          "size": "750 g",
+          "flavor": "bez okusa",
+          "price": 22.95,
+          "currency": "EUR",
+          "gtin13": "8586028135990",
+          "availability": "InStock",
+          "evidence_id": "E-b8afc08a",
+          "packaging_generation": "unverified"
+        }
+      ],
+      "evidence_ids": [
+        "E-0921eae1",
+        "E-f34fb0e8",
+        "E-d451bed0",
+        "E-c57f7f20",
+        "E-21699367",
+        "E-8e3532fb",
+        "E-158f49a7",
+        "E-058b813a",
+        "E-c3a419bd",
+        "E-b14e9d71",
+        "E-1a1ccbfa",
+        "E-ed423112",
+        "E-8386eaef",
+        "E-d99df1b5",
+        "E-c15f68f7",
+        "E-a9909491",
+        "E-21e0655f",
+        "E-1bdc2bb8",
+        "E-b39728d7",
+        "E-fda99e85",
+        "E-b8afc08a"
+      ]
+    },
+    {
+      "brand": "Optimum Nutrition",
+      "product_family": "Micronized Creatine Powder – Optimum Nutrition [sku 4792]",
+      "url": "https://gymbeam.hr/kreatin-powder-optimum-nutrition.html",
+      "sku": "4792",
+      "name": "Micronized Creatine Powder – Optimum Nutrition",
+      "description_excerpt": "Mikronizirani kreatin u prahu je čisti kreatin monohidrat s izvrsnom topljivošću. Pomaže poboljšati i maksimizirati sportsku izvedbu.",
+      "image_source_ids": [
+        "S-4a113cf323",
+        "S-ab1a89ae44",
+        "S-1625d7ebb4"
+      ],
+      "alias_urls": [],
+      "packaging_observations": [],
+      "variants": [
+        {
+          "sku": "4973",
+          "name": "Micronized Creatine Powder – Optimum Nutrition 317 g",
+          "size": "317 g",
+          "flavor": "",
+          "price": 23.95,
+          "currency": "EUR",
+          "gtin13": "5060245605397",
+          "availability": "InStock",
+          "evidence_id": "E-a38e4404",
+          "packaging_generation": "unverified"
+        },
+        {
+          "sku": "4974",
+          "name": "Micronized Creatine Powder – Optimum Nutrition 634 g",
+          "size": "634 g",
+          "flavor": "",
+          "price": 43.95,
+          "currency": "EUR",
+          "gtin13": "5060245605403",
+          "availability": "InStock",
+          "evidence_id": "E-d5a40e37",
+          "packaging_generation": "unverified"
+        }
+      ],
+      "evidence_ids": [
+        "E-846dc905",
+        "E-2fe04fca",
+        "E-a38e4404",
+        "E-d5a40e37"
+      ]
+    },
+    {
+      "brand": "GymBeam",
+      "product_family": "Creatine monohydrate+ - GymBeam [sku 82252]",
+      "url": "https://gymbeam.hr/creatine-performance-gymbeam.html",
+      "sku": "82252",
+      "name": "Creatine monohydrate+ - GymBeam",
+      "description_excerpt": "Creatine monohydrate+ jedinstvena je kombinacija kreatin monohidrata, vitamina B6 i taurina za povećanje sportskih performansi. Prikladan je za uzimanje prije treninga.",
+      "image_source_ids": [],
+      "alias_urls": [],
+      "packaging_observations": [],
+      "variants": [
+        {
+          "sku": "82237",
+          "name": "Creatine Performance - GymBeam 400 g - zelena jabuka",
+          "size": "400 g",
+          "flavor": "zelena jabuka",
+          "price": 19.5,
+          "currency": "EUR",
+          "gtin13": "8586025609517",
+          "availability": "InStock",
+          "evidence_id": "E-ade14ac6",
+          "packaging_generation": "unverified"
+        },
+        {
+          "sku": "82249",
+          "name": "Creatine Performance - GymBeam 400 g - limun - limeta",
+          "size": "400 g",
+          "flavor": "limun - limeta",
+          "price": 19.5,
+          "currency": "EUR",
+          "gtin13": "8586025609524",
+          "availability": "InStock",
+          "evidence_id": "E-247abe90",
+          "packaging_generation": "unverified"
+        },
+        {
+          "sku": "82252",
+          "name": "Creatine Performance - GymBeam 400 g - bez okusa",
+          "size": "400 g",
+          "flavor": "bez okusa",
+          "price": 19.5,
+          "currency": "EUR",
+          "gtin13": "8586025609500",
+          "availability": "InStock",
+          "evidence_id": "E-91f6c418",
+          "packaging_generation": "unverified"
+        }
+      ],
+      "evidence_ids": [
+        "E-f0c2d1cf",
+        "E-71959f79",
+        "E-ade14ac6",
+        "E-247abe90",
+        "E-91f6c418"
+      ]
+    },
+    {
+      "brand": "GymBeam",
+      "product_family": "Creatine (100% Creapure®) - GymBeam [sku 78079]",
+      "url": "https://gymbeam.hr/kreatin-caps-100-creapurer-gymbeam.html",
+      "sku": "78079",
+      "name": "Creatine (100% Creapure®) - GymBeam",
+      "description_excerpt": "Kreatin (100 % Creapure®) najčišći je njemački monohidrat za povećanje performansi. 3250 mg po porciji. Praktične kapsule za precizno doziranje. Pogodan i za vegane.",
+      "image_source_ids": [],
+      "alias_urls": [],
+      "packaging_observations": [],
+      "variants": [
+        {
+          "sku": "78079",
+          "name": "Creatine (100% Creapure®) - GymBeam 120 kaps.",
+          "size": "120 kaps",
+          "flavor": "",
+          "price": 15.5,
+          "currency": "EUR",
+          "gtin13": "8586024621039",
+          "availability": "InStock",
+          "evidence_id": "E-2fad0207",
+          "packaging_generation": "unverified"
+        },
+        {
+          "sku": "113410",
+          "name": "Creatine (100% Creapure®) - GymBeam 240 kaps.",
+          "size": "240 kaps",
+          "flavor": "",
+          "price": 28.95,
+          "currency": "EUR",
+          "gtin13": "8586028135969",
+          "availability": "InStock",
+          "evidence_id": "E-63b4f8a8",
+          "packaging_generation": "unverified"
+        }
+      ],
+      "evidence_ids": [
+        "E-c1924dc7",
+        "E-318afe93",
+        "E-2fad0207",
+        "E-63b4f8a8"
+      ]
+    },
+    {
+      "brand": "GymBeam",
+      "product_family": "Kreatin Monohidrat 100% Creapure® - GymBeam [sku 28876]",
+      "url": "https://gymbeam.hr/kreatin-creapure-gymbeam.html",
+      "sku": "28876",
+      "name": "Kreatin Monohidrat 100% Creapure® - GymBeam",
+      "description_excerpt": "100% mikronizirani kreatin monohidrat Creapure® najviše kvalitete, proizveden u Njemačkoj. Povećava fizičke performanse tijekom intenzivnog vježbanja. Prikladan za sportaše.",
+      "image_source_ids": [],
+      "alias_urls": [],
+      "packaging_observations": [],
+      "variants": [],
+      "evidence_ids": [
+        "E-bee3837b",
+        "E-9dc3052f"
+      ]
+    },
+    {
+      "brand": "GymBeam",
+      "product_family": "Kreatin TABS 1000 mg - GymBeam [sku 65095]",
+      "url": "https://gymbeam.hr/kreatin-tabs-1000-mg-gymbeam.html",
+      "sku": "65095",
+      "name": "Kreatin TABS 1000 mg - GymBeam",
+      "description_excerpt": "Kreatin TABS s kreatin monohidratom pomaže povećati učinkovitost tijekom kratkotrajnih uzastopnih intervala intenzivnog treninga. Dolazi u obliku tableta.",
+      "image_source_ids": [],
+      "alias_urls": [],
+      "packaging_observations": [],
+      "variants": [
+        {
+          "sku": "111370",
+          "name": "Creatine TABS 1000mg - GymBeam 300 tab",
+          "size": "",
+          "flavor": "",
+          "price": 18.5,
+          "currency": "EUR",
+          "gtin13": "8586028123751",
+          "availability": "InStock",
+          "evidence_id": "E-bd3bb5b8",
+          "packaging_generation": "unverified"
+        }
+      ],
+      "evidence_ids": [
+        "E-f5c7b62d",
+        "E-95a92a1a",
+        "E-bd3bb5b8"
+      ]
+    },
+    {
+      "brand": "GymBeam BeastPink",
+      "product_family": "Pink Creatine - GymBeam [sku 121912]",
+      "url": "https://gymbeam.hr/ruzicasti-kreatin-gymbeam.html",
+      "sku": "121912",
+      "name": "Pink Creatine - GymBeam",
+      "description_excerpt": "Pink Creatine je kreatin za žene s beauty kompleksom. Sadrži 3 g kreatina za fizičku izvedbu, vitamin C, cink i biotin za normalno stanje kože i kose.",
+      "image_source_ids": [],
+      "alias_urls": [],
+      "packaging_observations": [],
+      "variants": [
+        {
+          "sku": "121921",
+          "name": "Pink Creatine - GymBeam peach",
+          "size": "",
+          "flavor": "",
+          "price": 23.95,
+          "currency": "EUR",
+          "gtin13": "8586028781715",
+          "availability": "InStock",
+          "evidence_id": "E-56c9241e",
+          "packaging_generation": "unverified"
+        },
+        {
+          "sku": "121918",
+          "name": "Pink Creatine - GymBeam ananás",
+          "size": "",
+          "flavor": "",
+          "price": 23.95,
+          "currency": "EUR",
+          "gtin13": "8586028781722",
+          "availability": "InStock",
+          "evidence_id": "E-f0219278",
+          "packaging_generation": "unverified"
+        },
+        {
+          "sku": "121915",
+          "name": "Pink Creatine - GymBeam mango-maracuja",
+          "size": "",
+          "flavor": "",
+          "price": 23.95,
+          "currency": "EUR",
+          "gtin13": "8586028781708",
+          "availability": "InStock",
+          "evidence_id": "E-37994e0a",
+          "packaging_generation": "unverified"
+        }
+      ],
+      "evidence_ids": [
+        "E-01eb63bf",
+        "E-d33c31e3",
+        "E-56c9241e",
+        "E-f0219278",
+        "E-37994e0a"
+      ]
+    }
+  ],
+  "assumptions": [
+    {
+      "statement": "Primary audience: Croatian-speaking people interested in fitness, health and sports apparel.",
+      "status": "assumption",
+      "basis": "inferred from caption language, topic hashtags and product range; no audience analytics were available",
+      "evidence_ids": []
+    }
+  ],
+  "limitations": [
+    "Which packaging generation (old vs new) is shipped for each priced variant is NOT established: text data cannot tell, so every variant carries packaging_generation='unverified'. Gallery photos show both generations (see packaging_observations, operator-attested).",
+    "Product images are listed per product page, not per variant: the JSON-LD gives fewer images than variants, and file names such as 'km750g' only suggest a size. Image-to-variant mapping is unverified.",
+    "Prices, availability and ratings are snapshots as of each source's retrieved_at.",
+    "Packaging observations caveat: These are gallery photos. Which pouch generation is physically shipped for a given priced variant (size x flavour) is NOT established by this file.",
+    "Reference images were downloaded for 3 of 8 catalog products (research.max_images cap); the others have none stored.",
+    "Colours and typography are measured on the website only; Instagram visuals were not analysed (no vision model available, and third-party media is not downloaded).",
+    "Instagram: 10 brand-owned posts from 'Apify actor apify/instagram-post-scraper via the Apify MCP connector; dataDetailLevel=basicData' (origin: manual_import); 7 collaboration/tagged posts by other accounts were seen and excluded from brand-voice analysis. Likes/comments are a snapshot; hidden counts stay null."
+  ]
+}

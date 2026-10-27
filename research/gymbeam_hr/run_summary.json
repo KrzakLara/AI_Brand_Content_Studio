@@ -1,0 +1,354 @@
+{
+  "run_id": "research-gymbeam-hr-live",
+  "mode": "live",
+  "policy": "scripted-research-policy",
+  "policy_autonomous": false,
+  "instagram_provider": "instagram-manual-import",
+  "data_origins_ok_sources": {
+    "live": 22,
+    "manual_import": 11
+  },
+  "stop_reason": "policy_finished",
+  "counts": {
+    "steps": 23,
+    "fetches": 22,
+    "ok": 33,
+    "not_ok": 0
+  },
+  "evidence": {
+    "verified": 64,
+    "manual": 5
+  },
+  "analysis_mode": "heuristic_only",
+  "operations": {
+    "pending": 0,
+    "done": 47,
+    "failed": 0,
+    "unknown": 0
+  },
+  "estimated_cost_usd": 0.0,
+  "trace": [
+    {
+      "i": 0,
+      "tool": "web_fetch",
+      "args": {
+        "url": "https://gymbeam.hr"
+      },
+      "why": "official website home page",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-21b5dd4b43"
+      ]
+    },
+    {
+      "i": 1,
+      "tool": "web_fetch",
+      "args": {
+        "url": "https://gymbeam.hr/api/v1/fe-assets/_astro/_slug_.Du_ZdWsK.css",
+        "kind": "css"
+      },
+      "why": "site stylesheet (colours, typography)",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-a357e3985d"
+      ]
+    },
+    {
+      "i": 2,
+      "tool": "web_fetch",
+      "args": {
+        "url": "https://gymbeam.hr/api/v1/fe-assets/_astro/_slug_.xTh2hX-w.css",
+        "kind": "css"
+      },
+      "why": "site stylesheet (colours, typography)",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-67190a3be7"
+      ]
+    },
+    {
+      "i": 3,
+      "tool": "web_fetch",
+      "args": {
+        "url": "https://gymbeam.hr/kreatin-monohidrat"
+      },
+      "why": "seed page from brief",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-856b1621ed"
+      ]
+    },
+    {
+      "i": 4,
+      "tool": "web_fetch",
+      "args": {
+        "url": "https://gymbeam.hr/kreatin-monohidrat-gymbeam-120106.html"
+      },
+      "why": "seed page from brief",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-5ac791f816"
+      ]
+    },
+    {
+      "i": 5,
+      "tool": "instagram_fetch",
+      "args": {
+        "handle": "gymbeamhr",
+        "limit": 10
+      },
+      "why": "official Instagram posts",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-044e208df9",
+        "S-8df05147e9",
+        "S-0606c3d71c",
+        "S-170261fbf9",
+        "S-19f577856e",
+        "S-7261b420b0",
+        "S-debabb63fe",
+        "S-08364f604a",
+        "S-691cb23b36",
+        "S-f554895a29",
+        "S-62ba0e40ba"
+      ]
+    },
+    {
+      "i": 6,
+      "tool": "web_fetch",
+      "args": {
+        "url": "https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html"
+      },
+      "why": "candidate product page",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-9de631a5c3"
+      ]
+    },
+    {
+      "i": 7,
+      "tool": "web_fetch",
+      "args": {
+        "url": "https://gymbeam.hr/kreatin-powder-optimum-nutrition.html"
+      },
+      "why": "candidate product page",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-ee56d24eee"
+      ]
+    },
+    {
+      "i": 8,
+      "tool": "web_fetch",
+      "args": {
+        "url": "https://gymbeam.hr/creatine-performance-gymbeam.html"
+      },
+      "why": "candidate product page",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-a86fb9b346"
+      ]
+    },
+    {
+      "i": 9,
+      "tool": "web_fetch",
+      "args": {
+        "url": "https://gymbeam.hr/kreatin-caps-100-creapurer-gymbeam.html"
+      },
+      "why": "candidate product page",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-fde976cb48"
+      ]
+    },
+    {
+      "i": 10,
+      "tool": "web_fetch",
+      "args": {
+        "url": "https://gymbeam.hr/kreatin-creapure-gymbeam.html"
+      },
+      "why": "candidate product page",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-8943e859c5"
+      ]
+    },
+    {
+      "i": 11,
+      "tool": "web_fetch",
+      "args": {
+        "url": "https://gymbeam.hr/kreatin-tabs-1000-mg-gymbeam.html"
+      },
+      "why": "candidate product page",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-8051242fcd"
+      ]
+    },
+    {
+      "i": 12,
+      "tool": "web_fetch",
+      "args": {
+        "url": "https://gymbeam.hr/ruzicasti-kreatin-gymbeam.html"
+      },
+      "why": "candidate product page",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-34782cff01"
+      ]
+    },
+    {
+      "i": 13,
+      "tool": "download_image",
+      "args": {
+        "url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/c/r/creatine-monohydrate-120-caps-gymbeam.jpg",
+        "page_url": "https://gymbeam.hr/kreatin-monohidrat-gymbeam-120106.html"
+      },
+      "why": "product reference image",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-54e15aa25e"
+      ]
+    },
+    {
+      "i": 14,
+      "tool": "download_image",
+      "args": {
+        "url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/c/r/creatine-monohydrate-120-caps-gymbeam-lifestyle1.jpg",
+        "page_url": "https://gymbeam.hr/kreatin-monohidrat-gymbeam-120106.html"
+      },
+      "why": "product reference image",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-9f31ca3d52"
+      ]
+    },
+    {
+      "i": 15,
+      "tool": "download_image",
+      "args": {
+        "url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/f/d/fdjdsj.jpg",
+        "page_url": "https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html"
+      },
+      "why": "product reference image",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-788f6541e8"
+      ]
+    },
+    {
+      "i": 16,
+      "tool": "download_image",
+      "args": {
+        "url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/k/m/km1500g.jpg",
+        "page_url": "https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html"
+      },
+      "why": "product reference image",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-dfa9b4b73a"
+      ]
+    },
+    {
+      "i": 17,
+      "tool": "download_image",
+      "args": {
+        "url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/k/m/km750g.jpg",
+        "page_url": "https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html"
+      },
+      "why": "product reference image",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-00d380b48e"
+      ]
+    },
+    {
+      "i": 18,
+      "tool": "download_image",
+      "args": {
+        "url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/k/m/km1000g.jpg",
+        "page_url": "https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html"
+      },
+      "why": "product reference image",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-e345fa9b46"
+      ]
+    },
+    {
+      "i": 19,
+      "tool": "download_image",
+      "args": {
+        "url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/k/r/kreatin.jpg",
+        "page_url": "https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html"
+      },
+      "why": "product reference image",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-e2e5499dc0"
+      ]
+    },
+    {
+      "i": 20,
+      "tool": "download_image",
+      "args": {
+        "url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/c/r/creatine_186srv_fr_6058185_web.png",
+        "page_url": "https://gymbeam.hr/kreatin-powder-optimum-nutrition.html"
+      },
+      "why": "product reference image",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-4a113cf323"
+      ]
+    },
+    {
+      "i": 21,
+      "tool": "download_image",
+      "args": {
+        "url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/m/i/mikronizovany-kreatin634g.jpg",
+        "page_url": "https://gymbeam.hr/kreatin-powder-optimum-nutrition.html"
+      },
+      "why": "product reference image",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-ab1a89ae44"
+      ]
+    },
+    {
+      "i": 22,
+      "tool": "download_image",
+      "args": {
+        "url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/m/i/mikronizovany-kreatin317g.jpg",
+        "page_url": "https://gymbeam.hr/kreatin-powder-optimum-nutrition.html"
+      },
+      "why": "product reference image",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-1625d7ebb4"
+      ]
+    }
+  ]
+}

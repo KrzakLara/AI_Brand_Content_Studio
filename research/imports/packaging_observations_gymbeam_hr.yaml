@@ -1,0 +1,63 @@
+# MANUAL VISUAL OBSERVATIONS - NOT produced by the studio runtime.
+# The runtime has no vision model in Phase 2 (no credentials), so packaging generations were
+# compared by the operator session (Claude Code) looking at the images the research agent
+# downloaded. The analyst links each observation to the stored artifact by sha256 and marks it
+# verification_status "manual" (attested by a person/operator, artifact hash checked), never "verified".
+provenance:
+  observer: "Claude Code operator session (development time) - NOT the studio runtime"
+  method: "viewed the downloaded product-page images; recorded only what is visibly printed/shown"
+  observed_at: "2026-10-27"
+  scope: "gallery images of https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html (sku 3885)"
+  caveat: >-
+    These are gallery photos. Which pouch generation is physically shipped for a given priced
+    variant (size x flavour) is NOT established by this file.
+observations:
+  - image_url: https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/k/m/km750g.jpg
+    image_sha256: 4606171d0f2bbd7c854b2aab8f348883addad5816baf2cd2f5531cdf9cc3369a
+    generation: old
+    size: 750 g
+    flavor: unflavoured
+    includes_gift_merchandise: true
+    statement: >-
+      OLD pack: white pouch with grey and orange bands, vertical GymBeam wordmark, text
+      'Creatine monohydrate NET WT.: 750 g Unflavoured'. Image also shows four GymBeam t-shirts (promo gift, not packaging).
+  - image_url: https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/k/m/km1000g.jpg
+    image_sha256: 950219ed9579af33585937a8f25beb962fd56eef95a5eb70e2c4031d09ab13cc
+    generation: old
+    size: 1000 g
+    flavor: unflavoured
+    includes_gift_merchandise: true
+    statement: >-
+      OLD pack: same white/grey-orange pouch, text 'Creatine monohydrate NET WT. 1000 g Unflavoured'.
+      Image also shows four GymBeam t-shirts (promo gift, not packaging).
+  - image_url: https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/k/m/km1500g.jpg
+    image_sha256:   # two fetches of this URL gave different bytes (CDN re-encode); both were viewed and show the same pack
+      - 5ab7b8c0f580b9fbb05b7526ddc09190101d50e2f397a07e11e9248987aa07d2
+      - ced910b9a887e2be0d89c87be7cb5bcb609618c868f8f0c3699119682abbb792
+    generation: old
+    size: 1500 g
+    flavor: unflavoured
+    includes_gift_merchandise: true
+    statement: >-
+      OLD pack: same white/grey-orange pouch, text 'Creatine monohydrate NET WT.: 1500 g Unflavoured'.
+      Image also shows four GymBeam t-shirts (promo gift, not packaging).
+  - image_url: https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/f/d/fdjdsj.jpg
+    image_sha256: cb1a1293a7c8419e9354ce2b8ca652dbaf7abf27b771ee5b09326bf343e35a90
+    generation: new
+    size: unknown (not printed)
+    flavor: unflavoured
+    includes_gift_merchandise: true
+    statement: >-
+      NEW pack: orange and silver pouch, large 'GymBeam' wordmark, text 'Creatine Monohydrate / 100% Pure
+      micronised / Unflavoured', four round badges (lab tested, fast absorption, IFS, HPLC tested) and
+      'Made in Germany'. Image also shows three pairs of white GymBeam socks (promo gift, not packaging).
+  - image_url: https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/k/r/kreatin.jpg
+    image_sha256: d09b23e6336a9937d897629f17831d509e9b4c35d460f2ab37d5ca5ddb6f1cd4
+    generation: split_comparison
+    size: 1000 g (partly legible on the old half)
+    flavor: Mango-Maracuja (new half)
+    includes_gift_merchandise: false
+    statement: >-
+      Single image divided by a diagonal line: the old white/grey-orange pouch on one side and the NEW
+      orange/silver pouch on the other. The new half reads 'Mango-Maracuja' and '100% Pure micronised' on a
+      gold band, whereas the new unflavoured pouch (fdjdsj.jpg) shows a dark-red band: the band colour appears to vary by flavour.

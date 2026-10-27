@@ -1,0 +1,39 @@
+# Model ids are configuration, never hardcoded. Phase 1 uses mock providers only;
+# these ids are recorded in fingerprints and the ledger but no model is called.
+runs_dir: runs
+export_dir: submission
+default_brief: briefs/gymbeam.yaml
+max_repairs: 2
+budget_usd: 5.0
+research_max_steps: 6
+
+models:
+  llm: mock-llm-v1
+  vision: mock-vision-v1
+  image: mock-image-v1
+  video: mock-video-v1
+  research_llm: claude-sonnet-5-5   # live Anthropic adapter only (needs ANTHROPIC_API_KEY)
+
+# Unit prices are filled in Phase 2 when real providers are chosen and verified.
+pricing:
+  llm: {unit: call, usd_per_unit: 0.0}
+  vision: {unit: image, usd_per_unit: 0.0}
+  image: {unit: image, usd_per_unit: 0.0}
+  video: {unit: second, usd_per_unit: 0.0}
+  research: {unit: call, usd_per_unit: 0.0}
+  instagram: {unit: post, usd_per_unit: 0.0017}   # Apify apify/instagram-post-scraper, FREE-tier price seen 2026-10-27
+
+# Live research bounds (Phase 2). Everything is capped; the agent stops at the first limit hit.
+research:
+  max_steps: 30
+  max_fetches: 30
+  max_cost_usd: 0.25
+  max_bytes: 4000000
+  timeout_s: 20
+  retries: 2
+  backoff_s: 1.0
+  respect_robots: true
+  allowed_hosts: [gymbeam.hr]
+  max_product_pages: 8
+  max_images: 10
+  instagram_limit: 10
