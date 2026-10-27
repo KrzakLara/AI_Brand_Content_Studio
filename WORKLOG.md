@@ -85,6 +85,30 @@ per-variant gallery packshots turned out to be the OLD design; cached analyst ou
 Measured: Apify run 67.6 s; full pytest 124 passed in 89.5 s. Apify cost for this run about 0.10 USD (estimate;
 billing not checked). Human active time: not measured.
 
+## 2026-10-27 - Phase 2b, second attempt: real agent run STILL BLOCKED
+
+Requested: one real run of the autonomous research agent with `claude-sonnet-5-5`, max 5 steps, max 1 USD,
+budget checked before every request. **Result: not executed.** Preflight found `ANTHROPIC_API_KEY` unset in the process,
+in the Windows user/machine environment and as a `.env` file. Per the instructions I stopped there and did not look for
+a key elsewhere. **Real API calls: 0. Autonomous steps: 0. Tokens: 0. Cost: 0.00 USD. No comparison exists.**
+Waiting time: none (blocked immediately); active work this attempt = building the spend controls below (not timed).
+
+What was built so the run is safe the moment a key exists (tested on recorded transports only):
+- `AnthropicLLM`: worst-case cost of each request is checked BEFORE every HTTP request (retries included) against the cap;
+  refuses to run without configured token prices (`anthropic_pricing` in config.yaml is empty on purpose - I did not
+  invent Sonnet 5.5 prices); `max_tokens` capped at 1024 for policy decisions; actual tokens/cost from each response's
+  `usage` block; request ids kept; key never logged (tested).
+- Free preflight (`GET /v1/models/claude-sonnet-5-5`, no tokens) distinguishing 401 / 403 / 404 / 429 / network.
+- Agent stops safely with `stop_reason: max_api_budget` instead of crashing; `--max-steps 5` verified to give exactly 5
+  requests; `--max-api-spend-usd` is mandatory for a real run.
+- `run_summary.json` gains `tools_selected` and an `api` block (model, requests, tokens, spent, per-call usage).
+
+Housekeeping per instructions: whole `.claude/` ignored again, `.claude/skills/.gitkeep` removed from tracking, CI guard
+rejects ANY tracked `.claude/` file (tests execute the real guard script, incl. force-added skills). The earlier
+unpushed commit b2ad6d7 still contains `.claude/skills/.gitkeep` in its tree (history not rewritten); the new commit removes it.
+
+Not done because the real run did not succeed: no `phase-2b` tag, no push (as instructed: only on success).
+
 ## Known limitations at end of Phase 2
 - The autonomous agent path (AnthropicLLM) is implemented and tested only against hand-authored recorded replies;
   it has never run against the real API (no key). The real research run used the scripted, non-autonomous policy.

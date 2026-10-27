@@ -73,6 +73,7 @@ class RecordedTransport:
 
     entries: dict[tuple[str, str], list] = field(default_factory=dict)
     calls: list[tuple[str, str]] = field(default_factory=list)
+    bodies: list[bytes | None] = field(default_factory=list)  # request bodies, for tests
 
     def add(self, url: str, *, status: int = 200, body: bytes | str = b"", content_type: str = "text/html",
             method: str = "GET", final_url: str | None = None, headers: dict | None = None,
@@ -98,6 +99,7 @@ class RecordedTransport:
 
     def request(self, method, url, *, headers=None, body=None, timeout=20.0, max_bytes=4_000_000):
         self.calls.append((method, url))
+        self.bodies.append(body)
         queue = self.entries.get((method, url))
         if not queue:
             raise UnrecordedRequest(f"no recorded response for {method} {url}")

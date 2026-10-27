@@ -1,8 +1,7 @@
-name: no-claude-local-files
+name: no-claude-files
 
-# Fails if anything under .claude/ OTHER than .claude/skills/ is tracked, including files
-# force-added with `git add -f` despite .gitignore (settings.local.json, caches, sessions...).
-# .claude/skills/ is intentionally part of the repository.
+# Fails if ANY file under .claude/ is tracked - including files force-added with `git add -f`
+# despite .gitignore (settings, caches, sessions, skills). Claude Code configuration is never published.
 on:
   push:
   pull_request:
@@ -15,14 +14,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Fail if local Claude files are tracked
+      - name: Fail if .claude/ is tracked
         shell: bash
         run: |
-          tracked="$(git ls-files -- '.claude' ':(icase).claude/**' | grep -v -i '^\.claude/skills/' || true)"
+          tracked="$(git ls-files -- '.claude' '.claude/*' ':(icase).claude/**')"
           if [ -n "$tracked" ]; then
-            echo "::error::Local Claude Code files are tracked and must be removed from Git (only .claude/skills/ may be tracked):"
+            echo "::error::Files under .claude/ are tracked and must be removed from Git:"
             echo "$tracked"
-            echo "Fix: git rm -r --cached <path> && git commit"
+            echo "Fix: git rm -r --cached .claude && git commit"
             exit 1
           fi
-          echo "OK: only .claude/skills/ (if anything) is tracked under .claude/."
+          echo "OK: no .claude/ files are tracked."

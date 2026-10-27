@@ -84,6 +84,8 @@ def cmd_run(a) -> int:
 def cmd_research(a) -> int:
     """Research workflow (research_agent -> brand_product_analyst) on the shared engine."""
     settings = load_settings(a.config)
+    if a.max_steps is not None:
+        settings = settings.model_copy(update={"research": settings.research.model_copy(update={"max_steps": a.max_steps})})
     cfg = settings.research
     if a.mode == "live":
         transport, origin = UrllibTransport(), "live"
@@ -93,11 +95,29 @@ def cmd_research(a) -> int:
             return EXIT_ERROR
         transport, origin = RecordedTransport.from_file(Path(a.fixtures) / "transport.json"), "fixture"
     if a.policy == "anthropic":
-        llm = AnthropicLLM(settings.models.research_llm, transport, cfg.anthropic_max_tokens, origin)
+        ap = settings.anthropic_pricing
+        llm = AnthropicLLM(settings.models.research_llm, transport, cfg.anthropic_max_tokens, origin,
+                           input_usd_per_mtok=ap.input_usd_per_mtok, output_usd_per_mtok=ap.output_usd_per_mtok,
+                           budget_usd=a.max_api_spend_usd)
         if not llm.api_key:
             print("error: --policy anthropic needs ANTHROPIC_API_KEY (not set). Nothing was run. Choose "
                   "--policy scripted explicitly to use the non-autonomous scripted crawl plan.", file=sys.stderr)
             return EXIT_ERROR
+        if a.mode == "live" and a.max_api_spend_usd is None:
+            print("error: a real Anthropic run needs an explicit --max-api-spend-usd. Nothing was run.", file=sys.stderr)
+            return EXIT_ERROR
+        if a.mode == "live" and (ap.input_usd_per_mtok is None or ap.output_usd_per_mtok is None):
+            print("error: anthropic_pricing in config.yaml is empty; fill the per-million-token prices from the official "
+                  "pricing page so the spend cap can be enforced. Nothing was run.", file=sys.stderr)
+            return EXIT_ERROR
+        try:  # free call (no tokens): is the key valid and the model accessible?
+            pf = llm.preflight()
+        except ProviderUnavailable as e:
+            print(f"error: {e}. Nothing was run.", file=sys.stderr)
+            return EXIT_ERROR
+        print(f"preflight ok: model {pf['model']} accessible; budget {llm.budget_usd} USD, max steps {cfg.max_steps}")
+        if a.preflight_only:
+            return EXIT_OK
     else:
         llm = ScriptedResearchPolicy()
     if a.instagram == "apify":
@@ -132,7 +152,13 @@ def cmd_research(a) -> int:
         "stop_reason": v["research"]["stop_reason"], "counts": v["research"]["counts"],
         "evidence": dict(Counter(e["verification_status"] for e in ev)),
         "analysis_mode": v["brand_profile"]["profile"]["analysis_mode"],
-        "operations": ops, "estimated_cost_usd": cost, "trace": v["research"]["trace"]}
+        "operations": ops, "estimated_cost_usd": cost, "trace": v["research"]["trace"],
+        "tools_selected": dict(Counter(t["tool"] for t in v["research"]["trace"])),
+        "api": ({"model": llm.model_id, "http_requests": llm.http_requests, "budget_usd": llm.budget_usd,
+                 "spent_usd": llm.spent_usd, "remaining_usd": llm.remaining_usd(),
+                 "input_tokens": sum(u["input_tokens"] for u in llm.usage_log),
+                 "output_tokens": sum(u["output_tokens"] for u in llm.usage_log), "calls": llm.usage_log}
+                if a.policy == "anthropic" else None)}
     run_research = Path(orch.run_dir(res.run_id)) / "research"
     (run_research / "run_summary.json").write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
     if a.out:  # JSON only; raw third-party artifacts stay in the run directory
@@ -310,6 +336,11 @@ def build_parser() -> argparse.ArgumentParser:
     rs.add_argument("--instagram-import", help="manual import YAML (with provenance)")
     rs.add_argument("--fixtures", help="directory with transport.json (fixture mode)")
     rs.add_argument("--run", help="existing run id to resume or reuse the cache of")
+    rs.add_argument("--max-steps", type=int, help="override research.max_steps for this run (e.g. 5)")
+    rs.add_argument("--max-api-spend-usd", type=float,
+                    help="hard cap on Anthropic spend; REQUIRED for a real run; checked before every request")
+    rs.add_argument("--preflight-only", action="store_true",
+                    help="verify key + model access (free) and exit without researching")
     rs.add_argument("--out", help="copy brand_profile/evidence_registry/source_index JSON here")
     rs.set_defaults(fn=cmd_research)
 

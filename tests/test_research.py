@@ -533,7 +533,8 @@ def dump_transport(t: RecordedTransport, d: Path) -> None:
     rows = []
     for (method, url), queue in t.entries.items():
         for i, r in enumerate(queue):
-            row = {"url": url, "method": method, "status": r.status, "content_type": r.content_type}
+            row = {"url": url, "method": method, "status": r.status, "content_type": r.content_type,
+                   "headers": {k: v for k, v in r.headers.items() if k != "content-type"}}
             name = f"body{len(rows)}.bin"
             (d / name).write_bytes(r.body)
             rows.append({**row, "body_file": name})
