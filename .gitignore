@@ -8,3 +8,6 @@ runs/
 submission/*
 !submission/.gitkeep
 !submission/README.md
+
+# Claude Code configuration and skills
+.claude/
