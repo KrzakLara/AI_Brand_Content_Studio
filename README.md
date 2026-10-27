@@ -106,12 +106,15 @@ Phase 1 commands (`studio run --mock ...`) are unchanged.
 ### Running the real autonomous agent (needs your key and prices)
 ```powershell
 $env:ANTHROPIC_API_KEY = "..."      # never commit it; the code never prints or logs it
-# 1. fill anthropic_pricing in config.yaml (USD per million tokens, from Anthropic's official pricing page)
+# 1. config.yaml anthropic_pricing needs an entry for the model (claude-haiku-5-5 is filled in, verified 2026-10-27)
 # 2. free preflight: key valid + model accessible, no tokens spent
-studio research --mode live --policy anthropic --max-api-spend-usd 1 --max-steps 5 --preflight-only
+studio research --mode live --policy anthropic --model claude-haiku-5-5 --run RUN_ID --max-api-spend-usd 0.10 --max-requests 5 --preflight-only
 # 3. the run (refused unless a spend cap is given; the cap is checked before EVERY request, retries included)
 studio research --mode live --policy anthropic --instagram import --instagram-import research/imports/instagram_gymbeamhr.yaml `
-  --max-api-spend-usd 1 --max-steps 5 --run research-agent-live --out research/gymbeam_hr_agent
+  --model claude-haiku-5-5 --max-api-spend-usd 0.10 --max-requests 5 --max-steps 5 --run research-agent-live --out research/gymbeam_hr_agent
 studio compare-research --a research/gymbeam_hr_agent --b research/gymbeam_hr --label-a agent --label-b scripted --out docs/agent_vs_scripted.md
 ```
 `run_summary.json` then contains the tool sequence, the model's stated reasons, request ids and token usage/cost.
+
+Note: `--max-requests` counts the preflight and retries too, and is cumulative per run id (`runs/<id>/api_usage.jsonl`).
+The `.env` file (git-ignored) is read by the CLI for variables not already set; it is never printed or committed.

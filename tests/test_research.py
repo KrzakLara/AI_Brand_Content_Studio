@@ -339,8 +339,9 @@ def test_agent_refuses_unknown_tools_duplicates_and_bad_args(tmp_path, rsettings
              ResearchStep(action="tool", tool="web_fetch", args={}), ResearchStep(action="finish")]
     orch, h = make(tmp_path, rsettings, t, llm=LoopPolicy(steps))
     trace = orch.run("r15", brief=fx.brief(instagram_handle=None)).values["research"]["trace"]
-    assert [x.get("error") for x in trace] == [None, "unknown tool 'shell'", "duplicate call refused",
-                                               "missing argument 'url'"]
+    errs = [x.get("error") for x in trace]
+    assert errs[0] is None and errs[2:] == ["duplicate call refused", "missing argument 'url'"]
+    assert errs[1].startswith("unknown tool 'shell'; valid tools are exactly: web_fetch, instagram_fetch, download_image")
     assert [c["tool"] for c in h.toolset.calls] == ["web_fetch"]  # nothing substituted or executed
 
 

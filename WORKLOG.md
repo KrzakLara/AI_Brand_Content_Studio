@@ -109,6 +109,51 @@ unpushed commit b2ad6d7 still contains `.claude/skills/.gitkeep` in its tree (hi
 
 Not done because the real run did not succeed: no `phase-2b` tag, no push (as instructed: only on success).
 
+## 2026-10-27 - Phase 2b, third attempt: FIRST REAL AGENT RUN (claude-haiku-5-5) - FAILED, allowance exhausted
+
+Setup requested: model `claude-haiku-5-5`, max 5 API requests, max 0.10 USD, compact prompts, low output limits, no
+paid server-side tools. The key was found in a git-ignored `.env` (never printed; a search for its value in the repo,
+run outputs and all commits found 0 occurrences).
+
+**Pricing verified** on the official page (platform.claude.com/docs/en/about-claude/pricing, read 2026-10-27, page shows
+no date): Claude Haiku 5.5 = 0.10 USD/MTok input and 0.50 USD/MTok output for prompts up to 100,000 tokens (0.50/2.50 above;
+the adapter REFUSES prompts that could cross 100k tokens instead of guessing a tier). Worst case per request ~0.002 USD, so
+the 0.10 USD cap allowed the run with a very wide margin; it never came close.
+
+**What really happened** (timestamps UTC; wall clock: attempt 1 = 9 s, attempt 2 = 7 s; human active time not measured):
+1. 21:43 attempt 1: preflight OK (key valid, model accessible). Step s0 succeeded; step s1 returned free-text JSON that
+   did not parse -> run aborted. Token usage of these two calls was lost with the process (upper bound 0.001 USD each).
+2. Compatibility fix (no budget change): replaced free-text JSON with ONE client-side forced tool (`respond`, schema =
+   the step schema, `tool_choice` forced). No server-side tools are sent (tested: request keys and tool shape).
+3. 21:45 attempt 2 (preflight skipped, same run id; s0 reused from the ledger): the model returned valid tool calls, but
+   - s0 `fetch_page`, s1 `browse`, s2 `fetch_page`: **tool names that do not exist** - REFUSED by the agent (our bug:
+     the prompt never listed the tools);
+   - s3 `web_fetch https://gymbeam.hr/kreatin.html` (a guessed path): executed, **HTTP 404**;
+   - s4: not sent (request cap reached). Result: 0 sources retrieved -> `ResearchFailed`.
+   Model's stated reasons (verbatim): "Official homepage first, to find creatine category and product pages." /
+   "Try official Croatian creatine category page directly." / "Prior calls used unknown tool names; retry with a plausible
+   fetch tool on the creatine category page." Full record: `research/gymbeam_hr_agent/run_summary.json`.
+
+**Requests, tokens, cost (measured vs bounded):**
+- API requests that reached Anthropic: **6 = 1 preflight + 5 messages. This is ONE MORE than the approved 5.** Cause: after
+  attempt 1 I recorded the lost accounting by hand as if only ONE message had been sent; the ledger shows two (s0 and the
+  malformed s1). The cap then allowed a request it should have refused. Corrected in `api_usage.jsonl`; verified against the
+  ledger (`s0 sent, s1 failed-sent, s1 retry, s2, s3 sent, s4 NOT SENT`). Impact: well under 0.01 USD, but it is a breach.
+- Measured (usage blocks): 3 calls (all in attempt 2) = 1330/159, 1446/169 and 1575/187 input/output tokens = 4,351 in /
+  515 out = **0.000693 USD**. Unmeasured: the 2 calls of attempt 1, bounded at 0.001 USD each. **Total <= 0.002693 USD of 0.10.**
+  Request ids are in `api_usage.jsonl`.
+
+**Comparison with the GymBeam research:** not meaningful. Agent: 0 sources, 0 evidence, 0 products. Manual/scripted snapshot:
+60 sources (29 live + 31 imported), 109 evidence items, 8 products. `studio compare-research` cannot run because the agent
+produced no `brand_profile`/`source_index`. No success metric is claimed.
+
+**Fixes made after the run (tested offline, NOT re-run against the API):** tool catalogue + allowed hosts now sent to the model,
+"never guess paths" instruction, refusal text lists the valid tools, failed paid runs write their report instead of a
+traceback, request accounting persisted per run and cumulative across restarts. 152 tests pass.
+
+**Not done:** a successful agent run, the comparison, `phase-2b` tag, push. A retry needs a NEW explicit request allowance
+(suggested: 6 requests / 0.10 USD, expected cost ~0.003 USD) - I did not extend it.
+
 ## Known limitations at end of Phase 2
 - The autonomous agent path (AnthropicLLM) is implemented and tested only against hand-authored recorded replies;
   it has never run against the real API (no key). The real research run used the scripted, non-autonomous policy.

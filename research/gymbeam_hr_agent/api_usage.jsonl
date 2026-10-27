@@ -1,0 +1,9 @@
+{"kind": "preflight", "model": "claude-haiku-5-5", "note": "first process: succeeded (key valid, model accessible)", "requests": 1}
+{"cost_usd": null, "cost_usd_upper_bound": 0.001, "kind": "message", "model": "claude-haiku-5-5", "note": "first process, step s0: succeeded (result kept in the ledger and reused by the retry) but the process died before its token usage was recorded; cost is an UPPER BOUND", "requests": 1}
+{"cost_usd": null, "cost_usd_upper_bound": 0.001, "kind": "message", "model": "claude-haiku-5-5", "note": "first process, step s1: response was malformed free-text JSON; usage not recorded; cost is an UPPER BOUND", "requests": 1}
+{"kind": "message", "model": "claude-haiku-5-5", "requests": 1}
+{"cost_usd": 0.000213, "input_tokens": 1330, "kind": "usage", "model": "claude-haiku-5-5", "output_tokens": 159, "request_id": "req_011CgTUTiZsdp4D6Qbvqr3Qu", "requests": 0, "stop_reason": "tool_use", "task": "research_policy"}
+{"kind": "message", "model": "claude-haiku-5-5", "requests": 1}
+{"cost_usd": 0.000229, "input_tokens": 1446, "kind": "usage", "model": "claude-haiku-5-5", "output_tokens": 169, "request_id": "req_011CgTUTovL81QsBpQchZcx7", "requests": 0, "stop_reason": "tool_use", "task": "research_policy"}
+{"kind": "message", "model": "claude-haiku-5-5", "requests": 1}
+{"cost_usd": 0.000251, "input_tokens": 1575, "kind": "usage", "model": "claude-haiku-5-5", "output_tokens": 187, "request_id": "req_011CgTUTvLJVoa6o1RvMTTN1", "requests": 0, "stop_reason": "tool_use", "task": "research_policy"}

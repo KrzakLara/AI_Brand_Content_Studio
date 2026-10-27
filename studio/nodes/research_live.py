@@ -20,15 +20,40 @@ class ResearchFailed(RuntimeError):
     pass
 
 
+TOOL_CATALOG = {
+    "web_fetch": {"purpose": "fetch one page or stylesheet from an allowed host; robots.txt is honoured",
+                  "args": {"url": "absolute https URL on an allowed host; use URLs you have SEEN in results, "
+                                  "do not guess paths"}},
+    "instagram_fetch": {"purpose": "collect the brand's recent Instagram posts via the configured collector",
+                        "args": {"handle": "instagram handle without @", "limit": "max posts"}},
+    "download_image": {"purpose": "download one image seen in results (packshots, product photos)",
+                       "args": {"url": "absolute image URL on an allowed host", "role": "optional label"}},
+}
+
+
 def _limits(cfg) -> dict:
     return {"max_steps": cfg.max_steps, "max_fetches": cfg.max_fetches, "max_cost_usd": cfg.max_cost_usd,
             "max_product_pages": cfg.max_product_pages, "max_images": cfg.max_images,
             "instagram_limit": cfg.instagram_limit}
 
 
-def _view(history: list[dict]) -> list[dict]:
+def _compact(h: dict, focus: list[str]) -> dict:
+    """Short, relevant excerpt for a PAID model: only links that look useful, capped, no bulky fields."""
+    def pick(urls, n):
+        hit = [u for u in urls if any(k in u.lower() for k in focus) or u.lower().endswith(".html")]
+        return list(dict.fromkeys(hit + urls))[:n]
+    out = {k: h[k] for k in ("tool", "args", "ok", "error", "product_count", "titles") if k in h}
+    out["links"] = pick(h.get("links", []), 12)
+    out["product_urls"] = pick(h.get("product_urls", []), 12)
+    out["stylesheets"] = h.get("stylesheets", [])[:2]
+    out["images"] = h.get("images", [])[:6]
+    return out
+
+
+def _view(history: list[dict], focus: list[str] | None = None) -> list[dict]:
     """What the policy may see: structure and URLs, with page titles wrapped as untrusted data."""
-    return [{**h, "titles": [extract.untrusted(t, 120) for t in h.get("titles", [])]} for h in history]
+    rows = [{**h, "titles": [extract.untrusted(t, 120) for t in h.get("titles", [])]} for h in history]
+    return [_compact(r, focus) for r in rows] if focus is not None else rows
     # (links are URLs on allow-listed hosts only; free text never reaches the policy unwrapped)
 
 
@@ -43,6 +68,8 @@ def live_research_agent(svc: Services, state: dict) -> dict:
 
     def compute() -> dict:
         history: list[dict] = []
+        # a paid model gets a compact view; the local scripted policy keeps the full one
+        compact_focus = [k.lower() for k in brief.focus_keywords] if svc.llm.info.name.startswith("anthropic") else None
         trace: list[dict] = []
         sources: dict[str, dict] = {}
         seen: set[str] = set()
@@ -53,7 +80,8 @@ def live_research_agent(svc: Services, state: dict) -> dict:
                     node="research_agent", scope=svc.GLOBAL, stage="research", fp=fp, suffix=f"s{i}:policy",
                     provider=svc.llm.info,
                     fn=lambda: svc.llm.structured(ResearchStep, task="research_policy", payload={
-                        "brief": brief.dump(), "history": _view(history), "limits": limits}).model_dump()))
+                        "brief": brief.dump(), "history": _view(history, compact_focus), "limits": limits,
+                        "tools": TOOL_CATALOG, "allowed_hosts": cfg.allowed_hosts}).model_dump()))
             except BudgetExceeded:  # raised BEFORE any request is sent: stop safely with what was collected
                 stop = "max_api_budget"
                 break
@@ -117,7 +145,7 @@ def live_research_agent(svc: Services, state: dict) -> dict:
 
 def _refuse(step: ResearchStep, names: tuple[str, ...], seen: set[str]) -> str | None:
     if step.tool not in names:
-        return f"unknown tool {step.tool!r}"  # never substituted
+        return f"unknown tool {step.tool!r}; valid tools are exactly: {', '.join(names)}"  # never substituted
     key = "handle" if step.tool == "instagram_fetch" else "url"
     if not isinstance(step.args.get(key), str) or not step.args[key]:
         return f"missing argument {key!r}"
