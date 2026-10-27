@@ -1,5 +1,4 @@
 """Contracts, ledger, store, CLI and requirement H (no network / no paid APIs)."""
-import re
 import socket
 
 import pytest
@@ -117,16 +116,10 @@ def test_h_run_uses_only_mock_providers_and_costs_nothing(make_orch, brief):
 
 
 def test_h_source_has_no_network_or_vendor_client_imports():
-    banned = re.compile(r"^\s*(import|from)\s+(requests|httpx|aiohttp|urllib\.request|http\.client|"
-                        r"socket|openai|anthropic|google\.genai|replicate)\b", re.M)
-    # Phase 2: studio/tools/transport.py is the single sanctioned choke point for network access
-    # (tests inject RecordedTransport and block sockets). Nothing else may import a network client.
-    allowed = {ROOT / "studio" / "tools" / "transport.py"}
-    hits = [str(p) for p in (ROOT / "studio").rglob("*.py")
-            if p not in allowed and banned.search(p.read_text(encoding="utf-8"))]
-    assert hits == []
-    vendor = re.compile(r"^\s*(import|from)\s+(requests|httpx|aiohttp|openai|anthropic|google\.genai|replicate)", re.M)
-    assert not vendor.search(next(iter(allowed)).read_text(encoding="utf-8"))  # stdlib only, no vendor SDKs
+    """AST scan (see tests/netguard.py): only studio/tools/transport.py may import urllib.request."""
+    from .netguard import scan_tree
+    transport = ROOT / "studio" / "tools" / "transport.py"
+    assert scan_tree(ROOT / "studio", {transport: frozenset({"urllib.request"})}) == {}
 
 
 # CLI ----------------------------------------------------------------------

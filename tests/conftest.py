@@ -23,6 +23,7 @@ def no_network(monkeypatch):
         raise NetworkAttempt("network access attempted during tests")
     monkeypatch.setattr(socket.socket, "connect", blocked)
     monkeypatch.setattr(socket.socket, "connect_ex", blocked)
+    monkeypatch.setattr(socket.socket, "sendto", blocked)  # connectionless (UDP/DNS) route
     monkeypatch.setattr(socket, "create_connection", blocked)
     monkeypatch.setattr(socket, "getaddrinfo", blocked)
 
