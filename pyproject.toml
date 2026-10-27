@@ -15,7 +15,8 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=8"]
+images = ["pillow>=10"]   # optional: palette extraction, transparency check, background cut-out
+dev = ["pytest>=8", "pillow>=10"]
 
 [project.scripts]
 studio = "studio.cli:main"

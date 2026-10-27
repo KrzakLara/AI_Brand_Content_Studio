@@ -88,6 +88,7 @@ class Observation(Contract):
     status: Literal["verified", "manual", "assumption", "unknown"]
     basis: str = ""  # how it was established (e.g. "computed from 10 imported posts")
     evidence_ids: list[str] = Field(default_factory=list)
+    post_urls: list[str] = Field(default_factory=list)  # the concrete posts this conclusion rests on
 
 
 class ExamplePost(Contract):
@@ -114,6 +115,7 @@ class VariantEntry(Contract):
     currency: str = ""
     gtin13: str = ""
     availability: str = ""
+    price_retrieved_at: datetime | None = None  # when this price was read from the shop
     evidence_id: str = ""
     packaging_generation: Literal["unverified"] = "unverified"  # not knowable from text data
 
@@ -122,6 +124,7 @@ class PackagingObservation(Contract):
     """What a gallery image shows about the pack. Operator-attested, never auto-verified."""
 
     generation: Literal["old", "new", "split_comparison"]
+    view: str = ""  # front | back | lifestyle | comparison
     size: str = ""
     flavor: str = ""
     image_source_id: str
@@ -148,7 +151,8 @@ class ColorEntry(Contract):
     scope: str  # "website" - not Instagram
     basis: str
     frequency: int | None = None
-    status: Literal["verified", "assumption"] = "verified"
+    status: Literal["verified", "manual", "assumption"] = "verified"
+    post_urls: list[str] = Field(default_factory=list)  # posts this colour was measured in (Instagram scope)
 
 
 class FontEntry(Contract):
@@ -157,6 +161,45 @@ class FontEntry(Contract):
     basis: str
     frequency: int
     status: Literal["verified", "assumption"] = "verified"
+
+
+class PackshotSelection(Contract):
+    """The packshot chosen to represent the CURRENT pack, with how and when it was obtained."""
+
+    source_id: str
+    url: str
+    retrieved_at: datetime | None = None
+    last_modified: str | None = None  # server's Last-Modified header = when the file was published
+    pack_generation: str
+    view: str
+    format: str
+    width: int | None = None
+    height: int | None = None
+    meets_min_resolution: bool
+    alpha_capable: bool
+    has_transparency: bool
+    transparent_background: bool
+    background_hex: str | None = None
+    selection_basis: list[str] = Field(default_factory=list)
+    rejected: list[dict] = Field(default_factory=list)  # [{url, reasons}]
+    corroborating_post_urls: list[str] = Field(default_factory=list)
+    cutout_source_id: str | None = None  # derived transparent PNG, when one was needed
+    cutout: dict | None = None
+    status: Literal["manual", "assumption"] = "manual"  # generation/view are operator-attested
+    evidence_id: str = ""
+
+
+class FontChoice(Contract):
+    family: str
+    status: Literal["verified", "assumption"]  # is this really the brand's (web) font?
+    basis: str
+    recommended_use: str
+    recommended_use_status: Literal["verified", "assumption"] = "assumption"
+    license_note: str = ""
+    fallbacks: list[str] = Field(default_factory=list)
+    logotype_note: str = ""
+    evidence_ids: list[str] = Field(default_factory=list)
+    observed_in_posts: list[str] = Field(default_factory=list)
 
 
 class BrandProfile(Contract):
@@ -185,6 +228,9 @@ class BrandProfile(Contract):
     product_catalog: list[ProductEntry] = Field(default_factory=list)
     assumptions: list[Observation] = Field(default_factory=list)
     limitations: list[str] = Field(default_factory=list)
+    selected_packshot: PackshotSelection | None = None
+    selected_font: FontChoice | None = None
+    visual_analysis_post_urls: list[str] = Field(default_factory=list)  # posts whose covers were analysed
 
     @field_validator("palette")
     @classmethod

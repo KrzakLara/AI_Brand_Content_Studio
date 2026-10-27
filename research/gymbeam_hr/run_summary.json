@@ -5,24 +5,24 @@
   "policy_autonomous": false,
   "instagram_provider": "instagram-manual-import",
   "data_origins_ok_sources": {
-    "live": 22,
-    "manual_import": 11
+    "live": 29,
+    "manual_import": 31
   },
   "stop_reason": "policy_finished",
   "counts": {
-    "steps": 23,
-    "fetches": 22,
-    "ok": 33,
+    "steps": 29,
+    "fetches": 28,
+    "ok": 59,
     "not_ok": 0
   },
   "evidence": {
-    "verified": 64,
-    "manual": 5
+    "verified": 85,
+    "manual": 24
   },
   "analysis_mode": "heuristic_only",
   "operations": {
     "pending": 0,
-    "done": 47,
+    "done": 59,
     "failed": 0,
     "unknown": 0
   },
@@ -100,7 +100,7 @@
       "tool": "instagram_fetch",
       "args": {
         "handle": "gymbeamhr",
-        "limit": 10
+        "limit": 30
       },
       "why": "official Instagram posts",
       "ok": true,
@@ -116,7 +116,8 @@
         "S-08364f604a",
         "S-691cb23b36",
         "S-f554895a29",
-        "S-62ba0e40ba"
+        "S-62ba0e40ba",
+        "S-70711e662a"
       ]
     },
     {
@@ -175,19 +176,6 @@
       "i": 10,
       "tool": "web_fetch",
       "args": {
-        "url": "https://gymbeam.hr/kreatin-creapure-gymbeam.html"
-      },
-      "why": "candidate product page",
-      "ok": true,
-      "error": null,
-      "source_ids": [
-        "S-8943e859c5"
-      ]
-    },
-    {
-      "i": 11,
-      "tool": "web_fetch",
-      "args": {
         "url": "https://gymbeam.hr/kreatin-tabs-1000-mg-gymbeam.html"
       },
       "why": "candidate product page",
@@ -198,7 +186,7 @@
       ]
     },
     {
-      "i": 12,
+      "i": 11,
       "tool": "web_fetch",
       "args": {
         "url": "https://gymbeam.hr/ruzicasti-kreatin-gymbeam.html"
@@ -211,7 +199,90 @@
       ]
     },
     {
+      "i": 12,
+      "tool": "web_fetch",
+      "args": {
+        "url": "https://gymbeam.hr/ruzicasti-zele-bomboni-s-kreatinom-beastpink-gymbeam.html"
+      },
+      "why": "candidate product page",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-70d52574f7"
+      ]
+    },
+    {
       "i": 13,
+      "tool": "download_image",
+      "args": {
+        "url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/c/r/creatine-monohydrate-unflavoured-01_8.jpg",
+        "role": "packshot_candidate"
+      },
+      "why": "operator-listed packshot candidate",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-ca0f32962b"
+      ]
+    },
+    {
+      "i": 14,
+      "tool": "download_image",
+      "args": {
+        "url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/s/k/sk-creatine-monohydrate-unflavoured-01.jpg",
+        "role": "packshot_candidate"
+      },
+      "why": "operator-listed packshot candidate",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-07c1c3c1df"
+      ]
+    },
+    {
+      "i": 15,
+      "tool": "download_image",
+      "args": {
+        "url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/c/r/creatine-monohydrate-mango-maracuja-mockup-view3.jpg",
+        "role": "packshot_candidate"
+      },
+      "why": "operator-listed packshot candidate",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-78cbd90f61"
+      ]
+    },
+    {
+      "i": 16,
+      "tool": "download_image",
+      "args": {
+        "url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/f/d/fdjdsj.jpg",
+        "role": "packshot_candidate"
+      },
+      "why": "operator-listed packshot candidate",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-788f6541e8"
+      ]
+    },
+    {
+      "i": 17,
+      "tool": "download_image",
+      "args": {
+        "url": "https://gymbeam.hr/media/catalog/product/cache/bf5a31e851f50f3ed6850cbbf183db11/c/r/creatine-monohydrate-unflavoured-250-g-gymbeam.png",
+        "role": "packshot_candidate"
+      },
+      "why": "operator-listed packshot candidate",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-4ccb4225f6"
+      ]
+    },
+    {
+      "i": 18,
       "tool": "download_image",
       "args": {
         "url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/c/r/creatine-monohydrate-120-caps-gymbeam.jpg",
@@ -225,7 +296,7 @@
       ]
     },
     {
-      "i": 14,
+      "i": 19,
       "tool": "download_image",
       "args": {
         "url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/c/r/creatine-monohydrate-120-caps-gymbeam-lifestyle1.jpg",
@@ -239,21 +310,7 @@
       ]
     },
     {
-      "i": 15,
-      "tool": "download_image",
-      "args": {
-        "url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/f/d/fdjdsj.jpg",
-        "page_url": "https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html"
-      },
-      "why": "product reference image",
-      "ok": true,
-      "error": null,
-      "source_ids": [
-        "S-788f6541e8"
-      ]
-    },
-    {
-      "i": 16,
+      "i": 20,
       "tool": "download_image",
       "args": {
         "url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/k/m/km1500g.jpg",
@@ -267,7 +324,7 @@
       ]
     },
     {
-      "i": 17,
+      "i": 21,
       "tool": "download_image",
       "args": {
         "url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/k/m/km750g.jpg",
@@ -281,7 +338,7 @@
       ]
     },
     {
-      "i": 18,
+      "i": 22,
       "tool": "download_image",
       "args": {
         "url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/k/m/km1000g.jpg",
@@ -295,7 +352,7 @@
       ]
     },
     {
-      "i": 19,
+      "i": 23,
       "tool": "download_image",
       "args": {
         "url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/k/r/kreatin.jpg",
@@ -309,7 +366,7 @@
       ]
     },
     {
-      "i": 20,
+      "i": 24,
       "tool": "download_image",
       "args": {
         "url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/c/r/creatine_186srv_fr_6058185_web.png",
@@ -323,7 +380,7 @@
       ]
     },
     {
-      "i": 21,
+      "i": 25,
       "tool": "download_image",
       "args": {
         "url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/m/i/mikronizovany-kreatin634g.jpg",
@@ -337,7 +394,7 @@
       ]
     },
     {
-      "i": 22,
+      "i": 26,
       "tool": "download_image",
       "args": {
         "url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/m/i/mikronizovany-kreatin317g.jpg",
@@ -348,6 +405,34 @@
       "error": null,
       "source_ids": [
         "S-1625d7ebb4"
+      ]
+    },
+    {
+      "i": 27,
+      "tool": "download_image",
+      "args": {
+        "url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/k/r/kreati_n_powder_-_optimum_nutrition_4792_317gwithout_sale.jpg",
+        "page_url": "https://gymbeam.hr/kreatin-powder-optimum-nutrition.html"
+      },
+      "why": "product reference image",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-1f271232f7"
+      ]
+    },
+    {
+      "i": 28,
+      "tool": "download_image",
+      "args": {
+        "url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/d/a/daily-bezlabel-03_07_2024_creatine_performance_-_gymbeam_.jpg",
+        "page_url": "https://gymbeam.hr/creatine-performance-gymbeam.html"
+      },
+      "why": "product reference image",
+      "ok": true,
+      "error": null,
+      "source_ids": [
+        "S-e950f7ae1c"
       ]
     }
   ]

@@ -24,7 +24,7 @@ class ResearchConfig(BaseModel):
 
     model_config = ConfigDict(extra="forbid")
     max_steps: int = Field(default=30, ge=1)
-    max_fetches: int = Field(default=30, ge=0)
+    max_fetches: int = Field(default=40, ge=0)
     max_cost_usd: float = Field(default=0.25, ge=0)
     max_bytes: int = Field(default=4_000_000, ge=1)
     timeout_s: float = Field(default=20.0, gt=0)
@@ -34,8 +34,8 @@ class ResearchConfig(BaseModel):
     allowed_hosts: list[str] = Field(default_factory=lambda: ["gymbeam.hr"])
     user_agent: str = "AIBrandContentStudio-research/0.2 (take-home project; honours robots.txt)"
     max_product_pages: int = Field(default=8, ge=0)
-    max_images: int = Field(default=10, ge=0)
-    instagram_limit: int = Field(default=10, ge=1)
+    max_images: int = Field(default=16, ge=0)
+    instagram_limit: int = Field(default=30, ge=1)
     anthropic_max_tokens: int = Field(default=4096, ge=1)
 
 

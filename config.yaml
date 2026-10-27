@@ -26,7 +26,7 @@ pricing:
 # Live research bounds (Phase 2). Everything is capped; the agent stops at the first limit hit.
 research:
   max_steps: 30
-  max_fetches: 30
+  max_fetches: 40
   max_cost_usd: 0.25
   max_bytes: 4000000
   timeout_s: 20
@@ -35,5 +35,5 @@ research:
   respect_robots: true
   allowed_hosts: [gymbeam.hr]
   max_product_pages: 8
-  max_images: 10
-  instagram_limit: 10
+  max_images: 16
+  instagram_limit: 30

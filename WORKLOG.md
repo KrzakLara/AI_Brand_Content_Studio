@@ -45,13 +45,53 @@ Disclosure: the first reconnaissance requests and two live research runs sent a 
 email address to gymbeam.hr. It was removed from the config afterwards and the final research run used the
 clean User-Agent. Earlier runs' requests cannot be recalled.
 
+## 2026-10-27 - Phase 2b (closing the research phase)
+
+**Item 1 - real Anthropic run of research_agent: NOT DONE (blocked).** `ANTHROPIC_API_KEY` is not set in this
+environment (checked at the start and again later), so the autonomous agent could not run and **no comparison with the
+manually collected sources exists yet**. The adapter, loop, limits (`research.max_steps/max_fetches/max_cost_usd` in
+`config.yaml`) and recorded-fixture tests are in place; nothing was simulated. When a key exists:
+
+```powershell
+$env:ANTHROPIC_API_KEY = "..."          # never commit it
+studio research --mode live --policy anthropic --instagram import `
+  --instagram-import research/imports/instagram_gymbeamhr.yaml --run research-agent-live --out research/gymbeam_hr_agent
+studio compare-research --a research/gymbeam_hr_agent --b research/gymbeam_hr --label-a agent --label-b scripted --out docs/agent_vs_scripted.md
+```
+then paste the differences and `estimated_cost_usd` here. Cost of the real agent run so far: 0.00 USD (never ran).
+
+Done in this phase:
+- Item 2: Instagram sample raised from 10 to **30** newest brand-owned posts (19 video/reel, 10 carousel, 1 image).
+  Apify run `WtGf9fc7CBKSCedez` (actor `apify/instagram-post-scraper`, input and cost in `docs/instagram_collection.md`).
+  Imported programmatically from the raw export (0 caption/URL/timestamp mismatches); export saved under `research/exports/`.
+- Item 3: visual analysis of **14 cover images** with post URLs for every conclusion: people, product display,
+  composition, overlay typography, palette (computed). Labelled `manual` (operator-labelled, images not stored),
+  never `verified`. Format distribution over all 30 posts is `verified`, with URLs per format.
+- Items 4-5: current pack = NEW orange/silver "100% Pure micronised" pouch (Last-Modified of its images:
+  2026-08-30 primary image, 2026-10-20 front packshot; old pouch images dated up to 2025-12/2026-04; the pack also
+  appears in Instagram post DeweAhoFvZr). Selected packshot `creatine-monohydrate-unflavoured-01_8.jpg`
+  (1080x1080 JPEG, grey background, no alpha, claim badges overlap the pack) -> mechanical **cut-out step** added
+  (`studio/tools/imagecheck.py`), result re-inspected (transparent corners), limitation (badges stay) recorded.
+- Item 6: font = Inter (verified as the website text face, 8 CSS declarations); use as creative stand-in = assumption;
+  licence = assumption; wordmark typeface unknown.
+- Item 7: every price has `price_retrieved_at` (32 variants), also in `evidence_registry.json`.
+- Item 8: `.gitignore` ignores local Claude settings only; `.claude/skills/` is tracked again. CI guard updated.
+
+Defects found by the work itself: packshot selection ignored identical bytes under two URLs (attestation attached to
+the wrong URL; fixed + test); my first assumption "orange pouch = current" was wrong until server dates were checked;
+per-variant gallery packshots turned out to be the OLD design; cached analyst output did not reflect code changes
+(extractor version bumped, outputs regenerated from a clean run).
+
+Measured: Apify run 67.6 s; full pytest 124 passed in 89.5 s. Apify cost for this run about 0.10 USD (estimate;
+billing not checked). Human active time: not measured.
+
 ## Known limitations at end of Phase 2
 - The autonomous agent path (AnthropicLLM) is implemented and tested only against hand-authored recorded replies;
   it has never run against the real API (no key). The real research run used the scripted, non-autonomous policy.
 - Instagram posts are a manual import (10 brand-owned posts), not collected by the runtime. APIFY path is tested
   against fixtures only.
-- No vision model: Instagram visual style is `unknown`; packaging generations rest on operator-attested
-  observations (status `manual`), not on a model.
+- No vision model: Instagram visual style and packaging generations rest on operator-labelled observations
+  (status `manual`, 14 of 30 covers), not on a model.
 - Tone/voice is `unknown` without an LLM; only measurable signals (language, emoji, CTA, hashtags, formats) are verified.
 - Per-variant packaging generation is unestablished (all `unverified`).
 - Prices/ratings are snapshots from 2026-10-27.

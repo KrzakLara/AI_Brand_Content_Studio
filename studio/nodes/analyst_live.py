@@ -32,11 +32,12 @@ from studio.contracts import (
     VariantEntry,
 )
 from studio.fingerprint import fingerprint, sha256_bytes
+from studio.nodes import visual
 from studio.services import Services
 from studio.tools import extract
 from studio.tools.toolset import source_id
 
-EXTRACTOR_VERSION = "ex-1"
+EXTRACTOR_VERSION = "ex-3"
 EMOJI = re.compile("[\U0001F300-\U0001FAFF☀-➿]")
 HR_WORDS = {"i", "je", "za", "uz", "na", "vaš", "vas", "vam", "što", "se", "su", "da", "ne"}
 
@@ -49,8 +50,7 @@ class ToneAnalysis(BaseModel):
     cited_evidence_ids: list[str] = Field(default_factory=list)
 
 
-def _eid(subject: str, source_id: str, key: str) -> str:
-    return "E-" + hashlib.sha256(f"{subject}|{source_id}|{key}".encode()).hexdigest()[:8]
+_eid = visual.evidence_id  # same deterministic evidence ids everywhere
 
 
 class _Ledger:
@@ -89,6 +89,19 @@ class _Ledger:
                 self._text[key] = raw
         return self._text[key]
 
+    def bytes(self, sid: str) -> bytes | None:
+        """Hash-checked read of a binary artifact (None + integrity record on mismatch)."""
+        s = self.src[sid]
+        p = self.svc.run_dir / s.artifact_path if s.artifact_path else None
+        if not p or not p.is_file():
+            self.integrity[sid] = "is missing"
+            return None
+        data = p.read_bytes()
+        if (actual := sha256_bytes(data)) != s.artifact_sha256:
+            self.integrity[sid] = f"no longer matches (actual sha256 {actual[:16]}...)"
+            return None
+        return data
+
     def add(self, subject: str, sid: str, key: str, claim: str, quote: str, needles: list[str], mode: str,
             variant: str | None = None, value: dict | None = None, confidence: float = 0.9) -> str:
         s = self.src[sid]
@@ -115,8 +128,10 @@ def live_analyst(svc: Services, state: dict) -> dict:
     use_llm = bool(getattr(svc.llm, "supports_analysis", False))
     obs_file = Path(brief.manual_observations_path) if brief.manual_observations_path else None
     obs_hash = sha256_bytes(obs_file.read_bytes()) if obs_file and obs_file.is_file() else ""
+    vis_file = Path(brief.visual_observations_path) if brief.visual_observations_path else None
+    obs_hash += sha256_bytes(vis_file.read_bytes()) if vis_file and vis_file.is_file() else ""
     fp = fingerprint("analyst-live", research["fingerprint"], brief.brand_name, brief.product_name,
-                     brief.instagram_handle, brief.focus_keywords, EXTRACTOR_VERSION, obs_hash,
+                     brief.instagram_handle, brief.focus_keywords, brief.seed_images, EXTRACTOR_VERSION, obs_hash,
                      svc.llm.info.fingerprint() if use_llm else "heuristic_only", prompts.version("brand_analyst"))
 
     def compute() -> dict:
@@ -183,8 +198,9 @@ def _analyse(svc: Services, brief: BriefInput, index: SourceIndex, use_llm: bool
                 continue
             catalog.append(_product(led, s, prod, index))
 
+    attested: dict[str, dict] = {}
     if brief.manual_observations_path:
-        _manual_observations(led, Path(brief.manual_observations_path), index, catalog, limitations)
+        attested = _manual_observations(led, Path(brief.manual_observations_path), index, catalog, limitations)
     with_images = sum(bool(c.image_source_ids) for c in catalog)
     if with_images < len(catalog):
         limitations.append(f"Reference images were downloaded for {with_images} of {len(catalog)} catalog products "
@@ -214,15 +230,31 @@ def _analyse(svc: Services, brief: BriefInput, index: SourceIndex, use_llm: bool
             palette.append(hexv)
     if not fonts:
         limitations.append("No site CSS was retrieved, so typography is unknown.")
-    limitations.append("Colours and typography are measured on the website only; Instagram visuals were not "
-                       "analysed (no vision model available, and third-party media is not downloaded).")
+    limitations.append("Website colours/typography are measured from CSS. Instagram cover analysis (if present) is "
+                       "operator-labelled on cover frames only, from images that are not stored in the repository; "
+                       "no vision model ran in the studio.")
 
     # --- instagram ---------------------------------------------------------------------------
     posts, tone, formats, audience, ex_posts = _instagram(led, index, ok, limitations)
-    visual = [Observation(statement="Instagram visual style (imagery, layout, graphics) was not analysed.",
-                          status="unknown", basis="no vision capability in this run")]
+    vres = visual.visual_analysis(led, Path(brief.visual_observations_path), index, limitations) \
+        if brief.visual_observations_path else None
+    if vres is None:
+        limitations.append("Instagram visual style was not analysed (no visual observations supplied or usable).")
+    visual_obs = list(vres.observations) if vres else [Observation(
+        statement="Instagram visual style (imagery, layout, graphics) was not analysed.", status="unknown",
+        basis="no vision capability in this run and no operator observations")]
+    if vres:
+        color_entries += vres.colors
+    selection, derived = visual.select_packshot(svc, led, index, attested, vres.pack_posts if vres else {}, limitations)
+    index.sources.extend(derived)
+    for d in derived:
+        led.src[d.source_id] = d
+    font_ev = {t.family: next((i.evidence_id for i in led.items if i.subject == "css_font" and t.family in i.claim), "")
+               for t in typography}
+    font = visual.choose_font(typography, {k: v for k, v in font_ev.items() if v},
+                              [u for o in (vres.observations if vres else []) if "typography" in o.statement for u in o.post_urls])
     if palette:
-        visual.append(Observation(statement=f"Website palette: {', '.join(palette)} (website only).",
+        visual_obs.append(Observation(statement=f"Website palette: {', '.join(palette)} (website only).",
                                   status="verified", basis="theme-color + CSS frequency",
                                   evidence_ids=[i.evidence_id for i in led.items if i.subject in ("css_font", "site_meta")][:6]))
     tone.append(Observation(statement="Qualitative tone (e.g. playful vs. serious) is not determined: "
@@ -261,8 +293,10 @@ def _analyse(svc: Services, brief: BriefInput, index: SourceIndex, use_llm: bool
         palette=palette, product_fact_ids=products_ev, mock=False, analysis_mode=mode,
         audience_summary="ASSUMPTION (unverified): " + assumptions[0].statement,
         data_origins=dict(origins), identity=identity, communication_tone=tone, audience=audience,
-        visual_style=visual, colors=color_entries, typography=typography, content_formats=formats,
-        example_posts=ex_posts, product_catalog=catalog, assumptions=assumptions, limitations=limitations)
+        visual_style=visual_obs, colors=color_entries, typography=typography, content_formats=formats,
+        example_posts=ex_posts, product_catalog=catalog, assumptions=assumptions, limitations=limitations,
+        selected_packshot=selection, selected_font=font,
+        visual_analysis_post_urls=vres.post_urls if vres else [])
     return reg, profile
 
 
@@ -287,11 +321,13 @@ def _product(led: _Ledger, s: SourceItem, prod: dict, index: SourceIndex) -> Pro
         eid = led.add("product_variant", s.source_id, str(o["sku"]),
                       f"Variant {o['sku']} '{o['name']}' listed at {o.get('price')} {o.get('priceCurrency')}, "
                       f"availability {str(o.get('availability') or '').rsplit('/', 1)[-1]}",
-                      str(o["name"]), needles, "html", variant=vkey, value=o)
+                      str(o["name"]), needles, "html", variant=vkey,
+                      value={**o, "price_retrieved_at": s.retrieved_at.isoformat() if s.retrieved_at else None})
         variants.append(VariantEntry(
             sku=str(o["sku"]), name=str(o["name"]), size=size, flavor=flavor, price=o.get("price"),
             currency=str(o.get("priceCurrency") or ""), gtin13=str(o.get("gtin13") or ""),
-            availability=str(o.get("availability") or "").rsplit("/", 1)[-1], evidence_id=eid))
+            availability=str(o.get("availability") or "").rsplit("/", 1)[-1],
+            price_retrieved_at=s.retrieved_at, evidence_id=eid))
         ids.append(eid)
     got = {x.source_id for x in index.sources if x.retrieval_status == "ok" and x.kind == "image"}
     imgs = [source_id(i) for i in prod["images"] if source_id(i) in got]
@@ -300,47 +336,64 @@ def _product(led: _Ledger, s: SourceItem, prod: dict, index: SourceIndex) -> Pro
 
 
 def _manual_observations(led: "_Ledger", path: Path, index: SourceIndex, catalog: list[ProductEntry],
-                         limitations: list[str]) -> None:
-    """Operator-attested image observations: linked to the stored artifact by sha256, status 'manual'."""
+                         limitations: list[str]) -> dict[str, dict]:
+    """Operator-attested image observations: linked to the stored artifact by sha256, status 'manual'.
+
+    Returns {source_id: observation} for the observations that matched a stored image."""
+    matched: dict[str, dict] = {}
     if not path.is_file():
         limitations.append(f"manual observations file {path} not found; packaging not reviewed.")
-        return
+        return matched
     doc = yaml.safe_load(path.read_text(encoding="utf-8"))
     prov = doc.get("provenance") or {}
     if not all(prov.get(k) for k in ("observer", "method", "observed_at")):
         limitations.append("manual observations ignored: provenance (observer, method, observed_at) incomplete.")
-        return
-    images = {s.artifact_sha256: s for s in index.sources if s.kind == "image" and s.retrieval_status == "ok"}
+        return matched
+    images: dict[str, list[SourceItem]] = {}
+    for s in index.sources:
+        if s.kind == "image" and s.retrieval_status == "ok":
+            images.setdefault(s.artifact_sha256, []).append(s)
     for ob in doc.get("observations", []):
         wanted = ob.get("image_sha256")
         shas = wanted if isinstance(wanted, list) else [wanted]  # every listed hash was inspected by the observer
-        src = next((images[h] for h in shas if h in images), None)
-        if src is None:
+        # an attestation is about BYTES: it applies to every URL that served those bytes
+        srcs = list({s.source_id: s for h in shas for s in images.get(h, [])}.values())
+        if not srcs:
             limitations.append(f"manual observation for {ob.get('image_url')} ignored: no downloaded image with "
                                "that sha256 in the source index.")
             continue
-        p = led.svc.run_dir / src.artifact_path
-        if sha256_bytes(p.read_bytes()) != src.artifact_sha256:
-            limitations.append(f"manual observation for {ob['image_url']} ignored: stored image no longer matches its hash.")
-            continue
-        variant = f"pack:{ob['generation']} | {ob.get('size', '?')} | {ob.get('flavor', '?')}"
-        item = EvidenceItem(
-            evidence_id=_eid("packaging_observation", src.source_id, src.artifact_sha256[:12]),
-            claim=" ".join(str(ob["statement"]).split()), source_id=src.source_id, quote=f"image sha256 {ob['image_sha256'][:16]}",
-            confidence=0.7, origin="manual_import", subject="packaging_observation", source_url=src.url,
-            retrieved_at=src.retrieved_at, verification_status="manual",
-            verification_note=f"attested by {prov['observer']} on {prov['observed_at']}; image artifact hash matches",
-            packaging_variant=variant, structured_value={
-                "generation": ob["generation"], "includes_gift_merchandise": bool(ob.get("includes_gift_merchandise"))})
-        led.items.append(item)
-        for c in catalog:
-            if src.source_id in c.image_source_ids:
-                c.packaging_observations.append(PackagingObservation(
-                    generation=ob["generation"], size=str(ob.get("size", "")), flavor=str(ob.get("flavor", "")),
-                    image_source_id=src.source_id, evidence_id=item.evidence_id,
-                    includes_gift_merchandise=bool(ob.get("includes_gift_merchandise"))))
+        for src in srcs:
+            _attest_one(led, ob, src, prov, catalog, matched, limitations)
     if prov.get("caveat"):
         limitations.append("Packaging observations caveat: " + " ".join(str(prov["caveat"]).split()))
+    return matched
+
+
+def _attest_one(led, ob, src, prov, catalog, matched, limitations) -> None:
+    """Attach one operator observation to one stored image (re-checking the stored bytes first)."""
+    p = led.svc.run_dir / src.artifact_path
+    if sha256_bytes(p.read_bytes()) != src.artifact_sha256:
+        limitations.append(f"manual observation for {ob['image_url']} ignored: stored image no longer matches its hash.")
+        return
+    variant = f"pack:{ob['generation']} | {ob.get('size', '?')} | {ob.get('flavor', '?')}"
+    item = EvidenceItem(
+        evidence_id=_eid("packaging_observation", src.source_id, src.artifact_sha256[:12]),
+        claim=" ".join(str(ob["statement"]).split()), source_id=src.source_id,
+        quote=f"image sha256 {src.artifact_sha256[:16]}", confidence=0.7, origin="manual_import",
+        subject="packaging_observation", source_url=src.url, retrieved_at=src.retrieved_at,
+        verification_status="manual",
+        verification_note=f"attested by {prov['observer']} on {prov['observed_at']}; image artifact hash matches",
+        packaging_variant=variant, structured_value={
+            "generation": ob["generation"], "view": ob.get("view", ""),
+            "includes_gift_merchandise": bool(ob.get("includes_gift_merchandise"))})
+    led.items.append(item)
+    matched[src.source_id] = ob
+    for c in catalog:
+        if src.source_id in c.image_source_ids:
+            c.packaging_observations.append(PackagingObservation(
+                generation=ob["generation"], view=str(ob.get("view", "")), size=str(ob.get("size", "")),
+                flavor=str(ob.get("flavor", "")), image_source_id=src.source_id, evidence_id=item.evidence_id,
+                includes_gift_merchandise=bool(ob.get("includes_gift_merchandise"))))
 
 
 def _instagram(led, index, ok, limitations):
@@ -357,8 +410,8 @@ def _instagram(led, index, ok, limitations):
         f"Instagram: {len(posts)} brand-owned posts from '{doc['provenance'].get('method')}' "
         f"(origin: {prof.origin}); {doc.get('excluded_non_owner_posts', 0)} collaboration/tagged posts by other "
         "accounts were seen and excluded from brand-voice analysis. Likes/comments are a snapshot; hidden counts stay null.")
-    if len(posts) < 10:
-        limitations.append(f"Only {len(posts)} of the 10 targeted Instagram references are available.")
+    if len(posts) < 20:
+        limitations.append(f"Only {len(posts)} of the 20-30 targeted Instagram references are available.")
     post_src = {s.url: s for s in index.sources if s.kind == "instagram_post"}
     ex, ev_ids = [], []
     for p in posts:
@@ -393,8 +446,17 @@ def _instagram(led, index, ok, limitations):
         Observation(statement="Most frequent hashtags: " + ", ".join(f"#{t} ({c})" for t, c in tags.most_common(6)),
                     status="verified", basis=basis, evidence_ids=ev_ids),
     ]
-    formats = [Observation(statement=f"Post formats: " + ", ".join(f"{t} {c} ({c * 100 // n}%)" for t, c in types.most_common())
-                           + " (Sidecar = carousel).", status="verified", basis=basis, evidence_ids=ev_ids)]
+    by_type: dict[str, list[tuple[str, str]]] = {}
+    for p, e in zip(posts, ev_ids):
+        by_type.setdefault(p["type"], []).append((p["url"], e))
+    names = {"Video": "Video (Reel or feed video; the collected data cannot tell them apart)",
+             "Sidecar": "Sidecar (carousel)", "Image": "Image (single photo)"}
+    formats = [Observation(statement=f"Post formats over {n} posts: " + ", ".join(
+        f"{t} {c} ({c * 100 // n}%)" for t, c in types.most_common()), status="verified", basis=basis,
+        evidence_ids=ev_ids, post_urls=[p["url"] for p in posts])]
+    formats += [Observation(statement=f"{names.get(t, t)}: {len(h)} of {n} posts ({len(h) * 100 // n}%)",
+                            status="verified", basis=basis, evidence_ids=[e for _, e in h], post_urls=[u for u, _ in h])
+                for t, h in sorted(by_type.items(), key=lambda kv: -len(kv[1]))]
     seg = {t: tags[t] for t in ("gbwomen", "gbmen", "gbhealthy", "gbfit") if tags[t]}
     audience = [Observation(statement="Content is tagged by the brand's own segments: " +
                             ", ".join(f"#{t} ({c})" for t, c in seg.items()), status="verified", basis=basis,
