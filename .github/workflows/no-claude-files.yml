@@ -1,0 +1,27 @@
+name: no-claude-files
+
+# Fails if anything under .claude/ is tracked - including files force-added with `git add -f`
+# despite .gitignore. Claude Code configuration and skills must never be published.
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fail if .claude/ is tracked
+        shell: bash
+        run: |
+          tracked="$(git ls-files -- '.claude' '.claude/*' ':(icase).claude/**')"
+          if [ -n "$tracked" ]; then
+            echo "::error::Files under .claude/ are tracked and must be removed from Git:"
+            echo "$tracked"
+            echo "Fix: git rm -r --cached .claude && git commit"
+            exit 1
+          fi
+          echo "OK: no .claude/ files are tracked."
