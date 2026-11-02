@@ -17,6 +17,8 @@ dependencies = [
 [project.optional-dependencies]
 images = ["pillow>=10"]   # optional: palette extraction, transparency check, background cut-out
 dev = ["pytest>=8", "pillow>=10"]
+# local post-production scripts in plans/gymbeam_hr/ (reel/carousel edits, cover/footer/snap work, methodology PDF); no API key needed
+media = ["pillow>=10", "numpy", "imageio-ffmpeg", "opencv-python-headless", "reportlab"]
 
 [project.scripts]
 studio = "studio.cli:main"
