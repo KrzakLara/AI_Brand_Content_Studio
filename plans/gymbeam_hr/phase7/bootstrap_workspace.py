@@ -33,6 +33,7 @@ EXTRA = [  # (package path or folder, workspace path)
     ("phases/02_plan/content_plan_final_revision.json", "plans/gymbeam_hr/final_revision/content_plan_final_revision.json"),
     ("compliance/SLIDE5_CLAIM_REVIEW.md", "plans/gymbeam_hr/final_revision/SLIDE5_CLAIM_REVIEW.md"),
     ("COMMIT_PLAN.md", "plans/gymbeam_hr/final_revision/COMMIT_PLAN.md"),
+    ("setup/constraints_media_7G.txt", "constraints-media-7G.txt"),   # 7G: pins imageio-ffmpeg 0.7.0 (ffmpeg 7.1) etc. so rebuilt videos are byte-identical
 ]
 SKIP_PARTS = {"__pycache__", ".pytest_cache"}
 sha = lambda p: hashlib.sha256(Path(p).read_bytes()).hexdigest()
@@ -109,7 +110,7 @@ def main():
     (T / "BOOTSTRAP_REPORT.json").write_text(json.dumps(report, indent=1), encoding="utf-8")
     print(json.dumps({k: v for k, v in report.items() if k != "not_included_by_design"}, indent=1))
     print("\nNext (from", T, "):")
-    print('  py -3.12 -m venv .venv ; .\\.venv\\Scripts\\python.exe -m pip install -e ".[dev,media]"')
+    print('  py -3.12 -m venv .venv ; .\\.venv\\Scripts\\python.exe -m pip install -e ".[dev,media]" -c constraints-media-7G.txt')
     print("  .\\.venv\\Scripts\\python.exe -m pytest")
     print("  $env:STUDIO_NO_DOTENV='1' ; .\\.venv\\Scripts\\studio.exe run --mock --run demo --export-dir $env:TEMP\\mock_out")
     print(f"  $env:SUBMISSION_DIR='{P}' ; .\\.venv\\Scripts\\python.exe plans\\gymbeam_hr\\phase7\\smoke_tests.py")
