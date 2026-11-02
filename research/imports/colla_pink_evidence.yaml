@@ -1,0 +1,61 @@
+# Focused research on BeastPink Colla Pink (Phase 5), 2026-10-28. Loaded by the dossier through briefs/gymbeam_hr.yaml (extra_evidence_paths).
+# Source: official product page https://gymbeam.hr/colla-pinkbeastpink.html, fetched 2026-10-28 (stored in runs/colla-pink/source/, sha256 below).
+# Quotes are copied from the page text. 'verified' = re-found in the stored, hash-checked page; 'manual' = read by the operator on the stored official packshots.
+provenance:
+  product: BeastPink Colla Pink (GymBeam BeastPink)
+  parent_sku: "29715"
+  page_url: https://gymbeam.hr/colla-pinkbeastpink.html
+  retrieved_at: "2026-10-28T20:00:00Z"
+  page_sha256: 79b0bb526d738372f4ab562513f421bcbb310a3c3da0d05eaec0a6f937d1e753
+  packshots_dir: runs/colla-pink/source/
+colors:                       # colours the Colla Pink carousel may use (hex), with their basis
+  - {hex: "#b98f94", scope: jar, basis: "official packshot pixel sample, jar body in shade (measured)", status: verified}
+  - {hex: "#d6adb3", scope: jar, basis: "official packshot pixel sample, jar body in light (measured)", status: verified}
+  - {hex: "#fbf3f2", scope: background, basis: "blush white proposed by Lara's Phase 5 brief (art direction)", status: assumption}
+  - {hex: "#f4c7d0", scope: background, basis: "baby pink proposed by Lara's Phase 5 brief (art direction)", status: assumption}
+  - {hex: "#6e1f35", scope: typography, basis: "burgundy editorial type proposed by Lara's Phase 5 brief (art direction)", status: assumption}
+evidence:
+  - id: E-colla-nutrition
+    subject: colla_page_fact
+    status: verified
+    claim: "Product page nutrition table of Colla Pink, per 8 g serving"
+    quote: >-
+      Nutritivne vrijednosti 8 g *RI Hidrolizirani peptidi goveđeg kolagena 6300 mg ** Ekstrakt sjemenki grožđa 20:1 ( Vitis vinifera ) 400 mg ** Hijaluronska kiselina 40 mg **
+      Cink 10 mg 100 % Selen 89 μg 162 % Vitamin C 500 mg 625 % Niacin 32 mg 200 % Vitamin B2 2,8 mg 200 % Vitamin A 800 μg (2667 IU) 100 % Biotin 50 μg 100 %
+  - id: E-colla-dosage
+    subject: colla_page_fact
+    status: verified
+    claim: "Product page dosage"
+    quote: >-
+      Preporučena dnevna doza je 1 mjerica (8 g) , pomiješana s 200 do 300 ml vode . Napitak možete konzumirati u bilo koje doba dana , prema vlastitoj rutini.
+      pomiješajte jednu mjericu od 8 g praha s 200 – 300 ml vode i miješajte dok se potpuno ne otopi.
+  - id: E-colla-warning
+    subject: colla_page_fact
+    status: verified
+    claim: "Product page warning"
+    quote: >-
+      Nemojte prekoračiti preporučeni dnevni unos. Ovaj proizvod nije zamjena za raznoliku i uravnoteženu prehranu i zdrav način života.
+      Proizvod nije namijenjen djeci, trudnicama i dojiljama.
+  - id: E-colla-sugarfree
+    subject: colla_page_fact
+    status: verified
+    claim: "Product page: sugar free"
+    quote: "Ovaj napitak u prahu ne sadrži šećer i proizvodimo ga u vlastitom proizvodnom pogonu."
+  - id: E-colla-flavours
+    subject: colla_page_fact
+    status: verified
+    claim: "Product page flavour options"
+    quote: "grožđe mango - naranča malina jagoda - limunada šumsko voće"
+  - id: E-colla-health-wording
+    subject: colla_page_fact
+    status: verified
+    claim: "Product page health/benefit wording (DEFERRED, never used in copy)"
+    quote: >-
+      Oba minerala doprinose održavanju zdrave kose i noktiju, normalnoj funkciji imunološkog sustava i zaštiti stanica od oksidativnog stresa.
+      kolagen, hijaluronska kiselina i procijanidini iz sjemenki grožđa povezani sa statistički značajnim poboljšanjem hidratacije kože
+  - id: E-colla-jar-design
+    subject: packaging_observation
+    status: manual
+    claim: "The five official per-flavour packshots (1200x1200, white background) show the SAME dusty-rose jar and label; only the printed flavour word differs (strawberry lemonade, grape, mango orange, raspberry, wild berries). The older white-label Colla Pink design in the page gallery is a different pack and is excluded."
+    quote: "Colla pink | collagen peptides, zinc, vitamin C, hyaluronic acid, grape seed extract, with vitamins B3, B2 & B7, retinol | NET WT.: 240 g | flavour word"
+    note: "operator read the printed label at 1:1 on each stored packshot; the weight printed on the jar is 240 g although the packshot file names say 340 g"

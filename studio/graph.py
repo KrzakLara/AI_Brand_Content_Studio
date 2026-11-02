@@ -12,6 +12,13 @@ from studio.state import GraphState
 def build_graph(svc: Services, checkpointer, until: str | None = None):
     """``until="analyst"`` cuts the graph after the research teams (the Phase 2 research workflow)."""
     g = StateGraph(GraphState)
+    if until == "plan":  # Phase 3: strategy + plan approval only; research comes from the verified research assets
+        g.add_node("content_planner", lambda s: research.content_planner(svc, s))
+        g.add_node("approve_plan", lambda s: approvals.approve_plan(svc, s))
+        g.add_edge(START, "content_planner")
+        g.add_edge("content_planner", "approve_plan")
+        g.add_edge("approve_plan", END)
+        return g.compile(checkpointer=checkpointer)
     g.add_node("research_agent", lambda s: research.research_agent(svc, s))
     g.add_node("brand_product_analyst", lambda s: research.brand_product_analyst(svc, s))
     g.add_edge(START, "research_agent")

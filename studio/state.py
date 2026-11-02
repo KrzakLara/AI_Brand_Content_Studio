@@ -19,6 +19,9 @@ class GraphState(TypedDict, total=False):
     research: dict  # {source_index, evidence, trace, fingerprint}
     brand_profile: dict  # {profile, fingerprint}
     plan: dict  # {plan, fingerprint}
+    strategy_inputs: dict  # Phase 3: {research_dir, artifact_root, dossier_fingerprint} (a reference, not the data)
+    plan_feedback: list  # Phase 3: human revision requests, oldest first
+    plan_previous: dict | None  # Phase 3: the campaign plan being revised
     plan_approval: dict
     final_approval: dict
     posts: Annotated[dict, merge_dicts]  # post_id -> PostState dump

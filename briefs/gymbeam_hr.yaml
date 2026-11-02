@@ -1,8 +1,8 @@
-# Research brief for GymBeam Croatia. Research only: no campaign or product decision is made here.
+# CANONICAL brief for GymBeam Croatia (research seeds + campaign decisions). Supersedes the Phase 1 mock sample.
 brand_name: GymBeam
-product_name: 100% Kreatin Monohidrat (candidate - not yet decided)
-campaign_goal: Research only - no campaign decided in Phase 2
-audience: To be determined by research
+product_name: 100% Kreatin Monohidrat - GymBeam
+campaign_goal: Instagram mini-campaign of three posts (educational carousel, product hero, cinematic reel) for 100% Kreatin Monohidrat
+audience: Croatian-speaking people interested in fitness (assumption from research; no audience analytics available)
 language: hr
 website_url: https://gymbeam.hr
 instagram_handle: gymbeamhr
@@ -19,3 +19,20 @@ seed_images:   # operator-listed packshot candidates (some are deliberately wron
   - https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/f/d/fdjdsj.jpg
   - https://gymbeam.hr/media/catalog/product/cache/bf5a31e851f50f3ed6850cbbf183db11/c/r/creatine-monohydrate-unflavoured-250-g-gymbeam.png
 visual_observations_path: research/imports/instagram_visual_observations_gymbeamhr.yaml
+
+# --- Phase 3 decisions recorded by the human (2026-10-28) -------------------------------------------------
+confirmed_focal_product:
+  sku: "3885"
+  name: 100% Kreatin Monohidrat - GymBeam
+  confirmed_by: human (the operator, in the Claude Code session)
+  confirmed_on: "2026-10-28"
+  note: replaces the earlier 'candidate - not yet decided'; the selected packshot is its current unflavoured pack (size not printed)
+label_crops_path: research/imports/label_crops_gymbeam_hr.yaml
+extra_evidence_paths:   # Phase 5: Lara chose Colla Pink (BeastPink, parent SKU 29715) as the carousel product; hero and reel focal product stays creatine SKU 3885
+  - research/imports/colla_pink_evidence.yaml
+locked_copy:
+  hero_headline: SVAKA SERIJA POČINJE ODLUKOM.   # Lara's selection 2026-10-28 (replaces 'Samo bitno.'); set in two lines: SVAKA SERIJA / POČINJE ODLUKOM.
+campaign_constraints:
+  - Show the product only as the selected original packshot or unaltered crops of it; never redraw or generate packaging.
+  - No health or performance claim about the product without a separate claim-specific compliance review (conditions of use).
+  - No quantity (grams, servings, doses) because the selected packshot does not print a size.
