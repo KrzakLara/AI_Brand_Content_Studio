@@ -1,4 +1,8 @@
-# AI Brand Content Studio — Phase 1 (walking skeleton, mock providers)
+# CLI reference and phase notes (Phases 1-3)
+
+> **Current state (2026-10-29):** this README describes the Phase 1 mock skeleton. Phases 2-7 (live research agent, plan, hero, Colla Pink carousel, wafer Reel, submission package)
+> are documented in `WORKLOG.md`, `plans/gymbeam_hr/` and `submission/README.md`. Supported Python: **3.12 and 3.14** (full suite: 249 passed on 3.12.7 and on 3.14.0).
+> Local post-production scripts need `pip install -e ".[dev,media]"`. No paid API is called without keys and the spend guards.
 
 Take-home project for Sekvenca (Full-Stack Developer – AI Products).
 Phase 1 runs the **complete workflow from brand brief to exported deliverables with
@@ -19,8 +23,8 @@ Python 3.12; dependencies: pydantic, langgraph, langgraph-checkpoint-sqlite, pyy
 ## Run the mock workflow
 
 ```powershell
-studio run --mock                                   # default brief briefs/gymbeam.yaml
-studio run --brief briefs/gymbeam.yaml --mock
+studio run --mock                                   # default brief briefs/gymbeam_hr.yaml
+studio run --brief briefs/gymbeam_hr.yaml --mock
 ```
 
 Output goes to `submission/<run_id>/` (`manifest.json`, `MOCK_NOTICE.txt`,
@@ -118,3 +122,41 @@ studio compare-research --a research/gymbeam_hr_agent --b research/gymbeam_hr --
 
 Note: `--max-requests` counts the preflight and retries too, and is cumulative per run id (`runs/<id>/api_usage.jsonl`).
 The `.env` file (git-ignored) is read by the CLI for variables not already set; it is never printed or committed.
+
+
+## Phase 3 - content strategy and human approval
+
+A real model (config `models.planner_llm`, default `claude-sonnet-5-5`) plans three Instagram posts from the verified research
+(`research/gymbeam_hr/`). Every paid run needs explicit caps; the plan then **waits for you**. Nothing is approved automatically.
+
+```powershell
+# 1. generate (preflight + draft + at most one automatic repair = up to 3 requests)
+studio plan generate --run plan-gymbeam-hr-1 --max-requests 3 --max-api-spend-usd 0.50
+# 2. read everything: three concepts, exact evidence behind each claim, approval state for THIS hash
+studio plan review --run plan-gymbeam-hr-1
+# 3a. decide (you type the first 12 characters of the hash shown; refused without a terminal or --confirm)
+studio plan approve --run plan-gymbeam-hr-1 --comment "ok"
+studio plan reject  --run plan-gymbeam-hr-1 --comment "why"
+# 3b. or ask for changes: re-runs only the planner on the same research; the old approval stops counting
+studio plan revise  --run plan-gymbeam-hr-1 --feedback "add a person to the reel" --max-requests 2 --max-api-spend-usd 0.40
+#    (give the paid step its own allowance with --usage-tag rev1; --feedback-file stores your words verbatim in revision_history.json)
+studio plan revise  --run plan-gymbeam-hr-1 --feedback-file feedback.md --max-requests 2 --max-api-spend-usd 0.40 --usage-tag rev1
+#    a blocked step (validator error, refused budget) can be continued WITHOUT repeating paid calls recorded in the ledger:
+studio plan resume  --run plan-gymbeam-hr-1 --max-requests 2 --max-api-spend-usd 0.40 --usage-tag rev1
+# 4. write deliverables (content_plan.json, briefs/, evidence_map.json, plan_metadata.json, usage logs) - re-run after deciding
+studio plan export  --run plan-gymbeam-hr-1 --out plans/gymbeam_hr
+```
+
+Canonical brief: `briefs/gymbeam_hr.yaml` (the human's decisions are recorded there: focal product sku 3885, locked hero headline, constraints).
+Earlier plan versions stay under `plans/gymbeam_hr/history/`; the current plan is the top level of `plans/gymbeam_hr/`.
+
+### Human copy edits (`studio plan edit`)
+Edits are field-level, exact-match, atomic and audited; AI wording is never recorded as human-authored. Nothing is applied until a human has confirmed it.
+```powershell
+studio plan edit --run plan-gymbeam-hr-1 --edits edits.yaml --reason "Human copy review" --dry-run   # preview + validate, writes nothing
+studio plan edit --run plan-gymbeam-hr-1 --edits edits.yaml --reason "Human copy review"             # apply (every edit needs confirmed_by + confirmation_source)
+studio plan review --run plan-gymbeam-hr-1                                                            # then decide on the NEW hash
+```
+`edits.yaml`: `base_plan_hash` plus `edits[]` with `id, op (replace|remove), post (campaign|01|02|03), slide|shot, path, expected, replacement, reason,
+proposed_by (ai:<who>|human:<who>), requested_by, confirmed_by, confirmation_source`. The proposal for the current plan is
+`plans/gymbeam_hr/proposed_edits_for_lara.yaml` (all unconfirmed).
