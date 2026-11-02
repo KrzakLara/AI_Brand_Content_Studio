@@ -1,0 +1,82 @@
+# OPERATOR-LABELLED LABEL CROPS of the selected original packshot. Nothing here is generated or redrawn.
+provenance:
+  observer: Claude Code operator session (development time, 2026-10-28) - NOT a studio runtime vision model
+  method: >-
+    the stored original packshot was viewed at 1:1 and zoomed; badge circles were located by pixel analysis (colour runs at x=880), pack-face
+    regions by eye; each crop was rendered and checked. PROVENANCE AUDIT (2026-10-28): for every crop the origin of its pixels was determined by
+    inspecting the image - is it printed on the pouch itself, or a separate graphic placed around the product in the webshop image?
+  status: manual
+  source_url: https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/c/r/creatine-monohydrate-unflavoured-01_8.jpg
+  source_sha256: 99543edff63b17e355cd7bfcc734ef364ae81f08304e561e6a347c09e8954f1c   # the selected original packshot, 1080x1080
+  pack_generation: new
+  flavour_shown: Unflavoured
+  size_printed: none   # no weight is printed on the front: a gram quantity can NOT be matched to this image
+  origin_values:
+    physical_packaging: the pixels are the print on the pouch itself (inside the pouch outline)
+    webshop_graphic: a separate graphic (e.g. a round badge) placed around/over the pouch edge in the official webshop image; not packaging print
+    uncertain: origin could not be established; neither "Na pakiranju piše" nor "Na stranici proizvoda piše" may be asserted
+  note: crops are rectangles cut from the original by code at production time (box = x0,y0,x1,y1 in source pixels); never upscaled
+    beyond max_upscale; never recoloured, re-typeset or extended.
+crops:
+- id: label_name
+  box: [270, 380, 762, 500]
+  usable: true
+  origin: physical_packaging
+  origin_basis: "white band of the pouch front, entirely inside the pouch outline; no overlay graphics in the box"
+  shows: "'Creatine Monohydrate' on the white band of the pack front"
+  printed_text: ["Creatine Monohydrate"]
+  max_upscale: 2.0
+- id: label_purity
+  box: [270, 500, 762, 605]
+  usable: true
+  origin: physical_packaging
+  origin_basis: "red/dark band of the pouch front with the white 'Unflavoured' pill, entirely inside the pouch outline"
+  shows: "'100% Pure micronised' band with the 'Unflavoured' pill"
+  printed_text: ["100% Pure micronised", "Unflavoured"]
+  max_upscale: 2.0
+- id: badge_ifs
+  box: [765, 258, 965, 462]
+  usable: true
+  origin: webshop_graphic
+  origin_basis: "large round badge floating outside the pouch on the grey backdrop (box starts beyond the pouch edge; only a sliver of pouch is visible at its left). The same badge is also printed on the pouch face, but only ~56 px wide (see printed_badge_ifs)"
+  shows: "round IFS badge: 'Produced in an IFS-certified facility' (a sliver of the pouch edge is visible at its left)"
+  printed_text: ["Produced in an IFS-certified facility", "IFS"]
+  max_upscale: 2.0
+- id: badge_hplc
+  box: [765, 668, 965, 874]
+  usable: true
+  origin: webshop_graphic
+  origin_basis: "large round badge floating outside the pouch on the grey backdrop (box starts beyond the pouch edge). The same badge is also printed on the pouch face, but only ~56 px wide (see printed_badge_hplc)"
+  shows: "round HPLC badge: 'HPLC Tested / Pure composition'"
+  printed_text: ["HPLC Tested", "Pure composition"]
+  max_upscale: 2.0
+- id: printed_badge_ifs
+  box: [430, 608, 495, 680]
+  usable: false
+  origin: physical_packaging
+  exclusion_reason: "printed on the pouch face but only ~56 px wide: its arc text is only partly legible when enlarged; an enlargement is blurry and cannot be made clearer, so it is not used as a crop (box approximate)"
+- id: printed_badge_hplc
+  box: [496, 608, 562, 680]
+  usable: false
+  origin: physical_packaging
+  exclusion_reason: "printed on the pouch face but only ~56 px wide: its arc text ('HPLC Tested', 'PURE COMPOSITION') is only partly legible when enlarged, so it is not used as a crop (box approximate)"
+- id: badge_lab_tested
+  box: [765, 55, 965, 252]
+  usable: false
+  origin: webshop_graphic
+  exclusion_reason: "printed wording includes 'QUALITY GUARANTEED' (a guarantee); would republish it as a campaign statement"
+- id: badge_fast_absorption
+  box: [765, 468, 965, 665]
+  usable: false
+  origin: webshop_graphic
+  exclusion_reason: "printed wording 'Fast absorption / RAPID EFFECT' is a performance claim; needs claim-specific compliance review"
+- id: made_in_germany
+  box: [675, 925, 795, 962]
+  usable: false
+  origin: physical_packaging
+  exclusion_reason: "only 120x37 px: unusable as a crop; removed from the reel as well (human decision)"
+- id: wordmark
+  box: [270, 240, 790, 360]
+  usable: false
+  origin: physical_packaging
+  exclusion_reason: "wordmark is clipped by the overlapping badges; use the official logo asset, never a crop or a retyped wordmark"

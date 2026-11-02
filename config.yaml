@@ -2,7 +2,7 @@
 # these ids are recorded in fingerprints and the ledger but no model is called.
 runs_dir: runs
 export_dir: submission
-default_brief: briefs/gymbeam.yaml
+default_brief: briefs/gymbeam_hr.yaml
 max_repairs: 2
 budget_usd: 5.0
 research_max_steps: 6
@@ -13,6 +13,7 @@ models:
   image: mock-image-v1
   video: mock-video-v1
   research_llm: claude-sonnet-5-5   # live Anthropic adapter only (needs ANTHROPIC_API_KEY)
+  planner_llm: claude-sonnet-5-5    # Phase 3 content planner (live Anthropic adapter)
 
 # Unit prices are filled in Phase 2 when real providers are chosen and verified.
 # Token prices for the Anthropic adapter, per model id. A model with no entry here is refused (no spend cap possible).
@@ -24,6 +25,14 @@ anthropic_pricing:
     max_prompt_tokens: 100000
     source_url: https://platform.claude.com/docs/en/about-claude/pricing
     verified_on: "2026-10-27"   # base prices for prompts up to 100,000 tokens (over 100k: 0.50 in / 2.50 out)
+  claude-sonnet-5-5:
+    input_usd_per_mtok: 2.00
+    output_usd_per_mtok: 10.00
+    max_prompt_tokens: 1000000
+    source_url: https://platform.claude.com/docs/en/about-claude/pricing
+    verified_on: "2026-10-28"   # from the Claude API reference model table (cached 2026-10-06); not re-fetched from the live pricing page
+    forced_tool_choice: false   # Sonnet 5.5 returns HTTP 400 for tool_choice any/tool
+    effort: medium
 
 pricing:
   llm: {unit: call, usd_per_unit: 0.0}

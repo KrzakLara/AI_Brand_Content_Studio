@@ -376,6 +376,197 @@ def cmd_brief(a) -> int:
     return EXIT_OK
 
 
+
+# ---- Phase 3: content strategy + human approval ------------------------------------------------------
+def _planner_llm(settings, a, run_dir: Path):
+    """The ONE place a paid planner model is built; same guards as the research agent (request cap, spend cap, usage log)."""
+    model = a.model or settings.models.planner_llm
+    tag = f"_{a.usage_tag}" if getattr(a, "usage_tag", None) else ""  # a separate request/money allowance per paid step (e.g. rev1)
+    price = settings.anthropic_pricing.get(model)
+    for flag, val in (("--max-requests", a.max_requests), ("--max-api-spend-usd", a.max_api_spend_usd)):
+        if val is None:
+            raise ProviderUnavailable(f"a real planning run needs an explicit {flag}. Nothing was run")
+    if price is None:
+        raise ProviderUnavailable(f"anthropic_pricing in config.yaml has no entry for '{model}'; the spend cap cannot be enforced. Nothing was run")
+    transport = GuardedTransport(UrllibTransport(), limit=a.max_requests, hosts=("api.anthropic.com",),
+                                 log_path=run_dir / f"api_requests{tag}.log")
+    llm = AnthropicLLM(model, transport, 16000, "live", input_usd_per_mtok=price.input_usd_per_mtok,  # 16000 = TASK_MAX_TOKENS["content_plan"]
+                       output_usd_per_mtok=price.output_usd_per_mtok, max_prompt_tokens=price.max_prompt_tokens,
+                       budget_usd=a.max_api_spend_usd, max_requests=a.max_requests, usage_path=run_dir / f"api_usage{tag}.jsonl",
+                       forced_tool_choice=price.forced_tool_choice, output_effort=price.effort)
+    if not llm.api_key:
+        raise ProviderUnavailable("ANTHROPIC_API_KEY is not set. Nothing was run")
+    return llm
+
+
+def _plan_session(a, *, live: bool):
+    from studio.strategy.workflow import PlanSession
+    settings = load_settings(a.config)
+    run_dir = Path(a.runs_dir or settings.runs_dir) / a.run
+    llm = _planner_llm(settings, a, run_dir) if live else None
+    return PlanSession(settings, a.run, llm=llm, runs_dir=Path(a.runs_dir) if a.runs_dir else None), llm
+
+
+def _print_plan_result(res, llm) -> None:
+    print(f"run_id: {res.run_id}\nstatus: {res.status}")
+    if llm is not None:
+        acc = llm.accounting()
+        print(f"model: {llm.model_id}; API {acc['api_requests']}/{acc['max_requests']} requests, {acc['input_tokens']} in / "
+              f"{acc['output_tokens']} out tokens, spent {acc['spent_usd']} of {acc['budget_usd']} USD")
+    if res.paused_at:
+        print(f"waiting for YOUR decision on plan hash {res.paused_at['fingerprint']}")
+        print(f"review:  studio plan review --run {res.run_id}")
+        print(f"decide:  studio plan approve --run {res.run_id} --comment ...   |   studio plan reject --run {res.run_id} --comment ...")
+        print(f"or:      studio plan revise --run {res.run_id} --feedback ... (needs the same --max-requests/--max-api-spend-usd flags)")
+
+
+def _live_plan_errors(fn):
+    from studio.ledger import NeedsReconciliation
+    from studio.nodes.planner_live import PlanInvalid
+    try:
+        return fn()
+    except PlanInvalid as e:
+        print(f"plan rejected by the deterministic validator after the allowed repair:\n  " + "\n  ".join(str(p) for p in e.problems), file=sys.stderr)
+    except (ProviderUnavailable, ProviderResponseError, BudgetExceeded, NeedsReconciliation, ValueError, ValidationError) as e:
+        print(f"planning failed: {type(e).__name__}: {e}", file=sys.stderr)
+    return None
+
+
+def cmd_plan_generate(a) -> int:
+    try:
+        sess, llm = _plan_session(a, live=True)
+    except ProviderUnavailable as e:
+        print(f"error: {e}", file=sys.stderr)
+        return EXIT_ERROR
+    if not a.skip_preflight:
+        try:
+            pf = llm.preflight()
+        except (ProviderUnavailable, BudgetExceeded) as e:
+            print(f"error: {e}. Nothing was run.", file=sys.stderr)
+            return EXIT_ERROR
+        print(f"preflight ok: {pf['model']} accessible ({llm.api_requests} of {llm.max_requests} requests used)")
+    if a.preflight_only:
+        return EXIT_OK
+    res = _live_plan_errors(lambda: sess.generate(Path(a.research_dir), Path(a.artifact_root) if a.artifact_root else None))
+    if res is None:
+        acc = llm.accounting()
+        print(f"api accounting: {acc['api_requests']}/{acc['max_requests']} requests, spent {acc['spent_usd']} of {acc['budget_usd']} USD", file=sys.stderr)
+        return EXIT_ERROR
+    _print_plan_result(res, llm)
+    return EXIT_PAUSED if res.paused_at else EXIT_OK
+
+
+def cmd_plan_revise(a) -> int:
+    try:
+        sess, llm = _plan_session(a, live=True)
+    except ProviderUnavailable as e:
+        print(f"error: {e}", file=sys.stderr)
+        return EXIT_ERROR
+    text = Path(a.feedback_file).read_text(encoding="utf-8") if a.feedback_file else a.feedback
+    if not text:
+        print("error: give --feedback or --feedback-file. Nothing was run.", file=sys.stderr)
+        return EXIT_ERROR
+    res = _live_plan_errors(lambda: sess.revise(text, requested_by="human (verbatim, relayed by the operator session)"))
+    if res is None:
+        return EXIT_ERROR
+    _print_plan_result(res, llm)
+    return EXIT_PAUSED if res.paused_at else EXIT_OK
+
+
+def cmd_plan_resume(a) -> int:
+    """Continue a blocked/interrupted planning step; paid calls already in the ledger are NOT repeated."""
+    try:
+        sess, llm = _plan_session(a, live=True)
+    except ProviderUnavailable as e:
+        print(f"error: {e}", file=sys.stderr)
+        return EXIT_ERROR
+    res = _live_plan_errors(sess.resume)
+    if res is None:
+        return EXIT_ERROR
+    _print_plan_result(res, llm)
+    return EXIT_PAUSED if res.paused_at else EXIT_OK
+
+
+def _edit_new_value(c: dict) -> str:
+    if c["op"] == "replace":
+        return c["new_value"]
+    if c["op"] == "add_slide":
+        return f"(new slide) {c['new_value'].get('headline', {}).get('text')}"
+    return "(whole block replaced)" if c["op"] == "set_block" else "(removed)"
+
+
+def cmd_plan_edit(a) -> int:
+    """Apply a human-confirmed field-level edit file atomically (or --dry-run). No model is ever called."""
+    from studio.strategy.edits import EditError
+    sess, _ = _plan_session(a, live=False)
+    try:
+        r = sess.edit(a.edits, reason=a.reason, applied_by=a.applied_by, dry_run=a.dry_run)
+    except EditError as e:
+        print("edit REJECTED - nothing was changed:", file=sys.stderr)
+        for p in e.problems:
+            print(f"  - {p}", file=sys.stderr)
+        return EXIT_ERROR
+    print(f"{'DRY RUN (nothing written)' if r['dry_run'] else 'APPLIED'}: {len(r['changes'])} edit(s); plan {r['previous_plan_hash'][:12]} -> {r['resulting_plan_hash'][:12]}")
+    for c in r["changes"]:
+        where = f"{c['post']}{'/slide ' + str(c['slide']) if c['slide'] else ''}{'/shot ' + str(c['shot']) if c['shot'] else ''} {c['path']}"
+        print(f"  [{c['id']}] {c['op']} {where}  ({c['authorship']})")
+        print(f"      - {c['old_value']}")
+        print(f"      + {_edit_new_value(c)}")
+        print(f"      reason: {c['reason']}")
+    for f in r["flags"]:
+        print(f"  flag: {f}")
+    if not r["dry_run"]:
+        print(f"approval attached to the old hash no longer counts; review again: studio plan review --run {a.run}")
+    return EXIT_OK
+
+
+def cmd_plan_review(a) -> int:
+    sess, _ = _plan_session(a, live=False)
+    try:
+        text = sess.review_text()
+    except (KeyError, ValueError) as e:
+        print(f"error: nothing to review in run {a.run}: {e}", file=sys.stderr)
+        return EXIT_ERROR
+    print(text)
+    return EXIT_OK
+
+
+def _decide(a, approve: bool) -> int:
+    from studio.strategy.workflow import NotAuthorised
+    sess, _ = _plan_session(a, live=False)
+    h = sess.state()["plan"]["fingerprint"]
+    confirm = a.confirm
+    if not confirm:
+        if not sys.stdin.isatty():
+            print("error: a plan decision must be made by a human at a terminal (or with --confirm <first 12 hash chars> typed by "
+                  "you). Nothing was recorded.", file=sys.stderr)
+            return EXIT_ERROR
+        print(f"You are about to {'APPROVE' if approve else 'REJECT'} plan {h}")
+        confirm = input("Type the first 12 characters of the plan hash to confirm: ").strip()
+    try:
+        rec = sess.decide(approve=approve, comment=a.comment or "", approver=a.approver, confirmed_hash=confirm)
+    except (NotAuthorised, ValueError) as e:
+        print(f"error: {e}. Nothing was recorded.", file=sys.stderr)
+        return EXIT_ERROR
+    print(f"recorded {rec.decision.value} for plan hash {rec.artifact_fingerprint[:12]} by {rec.approver} ({rec.source.value})")
+    return EXIT_OK
+
+
+def cmd_plan_approve(a) -> int:
+    return _decide(a, True)
+
+
+def cmd_plan_reject(a) -> int:
+    return _decide(a, False)
+
+
+def cmd_plan_export(a) -> int:
+    sess, _ = _plan_session(a, live=False)
+    for p in sess.export(Path(a.out)):
+        print(f"wrote {p}")
+    return EXIT_OK
+
+
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(prog="studio", description="AI Brand Content Studio (Phase 1: mock only)")
     p.add_argument("--config", default="config.yaml")
@@ -441,6 +632,56 @@ def build_parser() -> argparse.ArgumentParser:
     cp.add_argument("--label-b", default="B")
     cp.add_argument("--out", help="also write the report (markdown) here")
     cp.set_defaults(fn=cmd_compare)
+
+    pl = sub.add_parser("plan", help="Phase 3: content strategy with human approval (generate / review / approve / reject / revise / export)")
+    ps = pl.add_subparsers(dest="plan_cmd", required=True)
+
+    def live_flags(x):
+        x.add_argument("--model", help="Anthropic model id (default: config models.planner_llm)")
+        x.add_argument("--max-requests", type=int, help="hard cap on ALL API requests incl. preflight and retries (REQUIRED)")
+        x.add_argument("--max-api-spend-usd", type=float, help="hard cap on Anthropic spend, checked before every request (REQUIRED)")
+        x.add_argument("--usage-tag", help="own usage/request log (and therefore own caps) for this step, e.g. rev1")
+
+    g = ps.add_parser("generate", help="plan three posts from the verified research with a real model, then wait for approval")
+    g.add_argument("--run", required=True)
+    g.add_argument("--research-dir", default="research/gymbeam_hr")
+    g.add_argument("--artifact-root", default="runs/research-gymbeam-hr-live", help="run folder holding the stored packshot files (hash-checked)")
+    live_flags(g)
+    g.add_argument("--skip-preflight", action="store_true")
+    g.add_argument("--preflight-only", action="store_true")
+    g.set_defaults(fn=cmd_plan_generate)
+    rv = ps.add_parser("revise", help="request changes: re-runs ONLY the planner on the same research")
+    rv.add_argument("--run", required=True)
+    rv.add_argument("--feedback", help="the revision request text")
+    rv.add_argument("--feedback-file", help="UTF-8 file with the human's feedback, stored verbatim")
+    live_flags(rv)
+    rv.set_defaults(fn=cmd_plan_revise)
+    rs_ = ps.add_parser("resume", help="continue a blocked/interrupted planning step (recorded paid calls are reused, not repeated)")
+    rs_.add_argument("--run", required=True)
+    live_flags(rs_)
+    rs_.set_defaults(fn=cmd_plan_resume)
+    ed = ps.add_parser("edit", help="apply human-confirmed field-level edits (exact match, atomic, validated, audited); no model call")
+    ed.add_argument("--run", required=True)
+    ed.add_argument("--edits", required=True, help="edits YAML (base_plan_hash + edits[])")
+    ed.add_argument("--reason", required=True)
+    ed.add_argument("--dry-run", action="store_true", help="preview and validate; write nothing (unconfirmed edits are allowed here)")
+    ed.add_argument("--applied-by", default="Claude Code", help="who ran the command (recorded; not the author of the wording)")
+    ed.set_defaults(fn=cmd_plan_edit)
+    rw = ps.add_parser("review", help="show all three concepts, the exact evidence behind every claim, and the approval state")
+    rw.add_argument("--run", required=True)
+    rw.set_defaults(fn=cmd_plan_review)
+    for name, fn, h in (("approve", cmd_plan_approve, "record YOUR approval for the exact plan hash on screen"),
+                        ("reject", cmd_plan_reject, "record YOUR rejection (comment required)")):
+        d = ps.add_parser(name, help=h)
+        d.add_argument("--run", required=True)
+        d.add_argument("--comment", default="")
+        d.add_argument("--approver", help="default: your OS user name")
+        d.add_argument("--confirm", help="first 12 characters of the plan hash (otherwise asked interactively)")
+        d.set_defaults(fn=fn)
+    ex = ps.add_parser("export", help="write content_plan.json, briefs, evidence map and metadata")
+    ex.add_argument("--run", required=True)
+    ex.add_argument("--out", default="plans/gymbeam_hr")
+    ex.set_defaults(fn=cmd_plan_export)
 
     st = sub.add_parser("status", help="show run status, ledger summary and cost")
     st.add_argument("--run", required=True)

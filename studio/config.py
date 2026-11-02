@@ -11,6 +11,7 @@ class Models(BaseModel):
     image: str
     video: str
     research_llm: str = "claude-sonnet-5-5"  # live research/analysis model id (configurable)
+    planner_llm: str = "claude-sonnet-5-5"  # live content planner (Phase 3)
 
 
 class Price(BaseModel):
@@ -49,13 +50,15 @@ class ModelPrice(BaseModel):
     max_prompt_tokens: int = Field(default=100_000, ge=1)
     source_url: str = ""
     verified_on: str = ""
+    forced_tool_choice: bool = True  # False for models that reject forced tool_choice (HTTP 400): auto + instruction
+    effort: str | None = None  # output_config.effort sent with each request (bounds thinking spend)
 
 
 class Settings(BaseModel):
     model_config = ConfigDict(extra="forbid")
     runs_dir: str = "runs"
     export_dir: str = "submission"
-    default_brief: str = "briefs/gymbeam.yaml"
+    default_brief: str = "briefs/gymbeam_hr.yaml"
     max_repairs: int = Field(default=2, ge=0)
     budget_usd: float = Field(default=5.0, ge=0)
     research_max_steps: int = Field(default=6, ge=1)  # mock research loop

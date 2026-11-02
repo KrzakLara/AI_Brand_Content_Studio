@@ -121,6 +121,9 @@ def brand_product_analyst(svc: Services, state: dict) -> dict:
 
 
 def content_planner(svc: Services, state: dict) -> dict:
+    if not svc.llm.info.is_mock:  # real model: evidence-validated campaign plan (Phase 3)
+        from studio.nodes.planner_live import live_content_planner
+        return live_content_planner(svc, state)
     brief = BriefInput.model_validate(state["brief"])
     fp = fingerprint(
         "plan", state["brand_profile"]["fingerprint"], brief.brand_name, brief.product_name,

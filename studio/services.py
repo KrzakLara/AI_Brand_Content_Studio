@@ -53,10 +53,10 @@ class Services:
         return f"{scope}|{stage}|{fp}|g{gen}|{suffix}"
 
     def op(self, *, node: str, scope: str, stage: str, fp: str, suffix: str, provider: ProviderInfo,
-           fn: Callable[[], dict], units: float = 1.0, artifact_of=None, verify=None) -> dict:
+           fn: Callable[[], dict], units: float = 1.0, artifact_of=None, verify=None, actual_cost=None) -> dict:
         return self.runner.run(
             node=node, scope=scope, provider=provider, key=self.key(scope, stage, fp, suffix),
-            fn=fn, units=units, artifact_of=artifact_of, verify=verify)
+            fn=fn, units=units, artifact_of=artifact_of, verify=verify, actual_cost=actual_cost)
 
     # -- artifacts ----------------------------------------------------------
     def write_artifact(self, post_id: str, fp: str, name: str, data: bytes, kind: ArtifactKind,

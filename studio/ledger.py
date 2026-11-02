@@ -163,6 +163,7 @@ class OperationRunner:
         units: float = 1.0,
         artifact_of: Callable[[dict], dict | None] | None = None,
         verify: Callable[[dict], bool] | None = None,
+        actual_cost: Callable[[dict], float] | None = None,
     ) -> dict:
         """Run ``fn`` (returns a small JSON dict) at most once per idempotency key.
 
@@ -188,6 +189,8 @@ class OperationRunner:
         except Exception as e:  # BaseException (crash/kill) deliberately leaves it pending
             self.ledger.fail(op_id, f"{type(e).__name__}: {e}")
             raise
+        if actual_cost is not None:  # paid LLM calls: record what the response's usage block really cost
+            usd = round(float(actual_cost(result)), 6)
         cost = CostRecord(
             operation_id=op_id, run_id=self.run_id, node=node, provider=provider.name,
             kind=provider.kind, model_id=provider.model_id, units=units, unit=unit,
