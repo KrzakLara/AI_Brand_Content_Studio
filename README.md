@@ -1,127 +1,128 @@
 # AI Brand Content Studio
 
-An end-to-end, human-supervised **AI content-production system**. It takes a brand brief, researches the brand from real sources, plans a small Instagram campaign, produces images and video, runs quality and compliance checks, and delivers reviewed posts. Every paid AI call is metered, capped and logged.
+AI sustav koji od briefa brenda dolazi do gotovih Instagram objava: istražuje brend, planira sadržaj, generira slike i videe, provjerava kvalitetu i priprema isporuku. Izrađen kao praktični zadatak za Sekvencu (Full-Stack Developer – AI Products).
 
-> **Disclaimer.** The GymBeam Croatia case in this repository is an **unofficial portfolio case study**, made as a practical task for a Full-Stack Developer – AI Products application. It is not an official GymBeam collaboration. The people shown in the generated media are fictional (AI-generated). GymBeam's photographs and the finished media are **not** distributed here (see [What is deliberately not in this repository](#what-is-deliberately-not-in-this-repository)).
+**Demonstracijski brend:** GymBeam Hrvatska ([@gymbeamhr](https://www.instagram.com/gymbeamhr/)).
+Zamišljeni portfolio rad: osobe su fiktivne (generirane umjetnom inteligencijom) i ne radi se o službenoj suradnji s GymBeamom ni BeastPinkom.
 
-## What it does and the problem it solves
+> **Mediji nisu u ovom repozitoriju.** Gotove slike i videi izvedeni su iz službenih fotografija brenda, pa su namjerno izostavljeni iz gita (`runs/` i `submission/*` su u `.gitignore`). Nalaze se u predajnom ZIP-u (`submission/posts/`). Ovdje su kod, promptovi, planovi, zapisi odluka i testovi kojima su objave nastale.
 
-Producing a coherent social campaign with generative AI is not "prompt in, picture out". Brand facts must be verified, claims must be traceable to evidence, paid image and video calls must not exceed the budget, outputs must be reviewed by a human, and the whole run must be resumable and auditable. This project implements that as software:
+---
 
-* **Evidence-based research.** A tool-calling research agent collects brand and product facts, label data and public Instagram data into an evidence registry. Every later claim points back to evidence.
-* **Plan before production.** A planner LLM proposes three posts (carousel, hero image, Reel) with concepts, copy and the evidence behind each claim. Nothing is produced until a human approves the plan hash.
-* **Controlled production.** Image-editing and image-to-video calls go through adapters with hard request and USD caps, request logs and fingerprints.
-* **Deterministic post-production.** Typography, cut-outs, footers, carousel assembly, Reel montage, foley/audio and QA are local, scripted and reproducible.
-* **QA and delivery.** Technical validation, evidence/compliance validation, reviewer steps, targeted repair, human final approval, and export with a manifest.
+## Tri gotove objave
 
-## Architecture
+| # | Objava | Format | Kako je nastala | Skripte u repou |
+|---|---|---|---|---|
+| 1 | **GymBeam 100% Kreatin Monohidrat – hero** „Svaka serija počinje odlukom." | slika 1080×1350 | pravo pakiranje sa službene fotografije (izrez i postavljanje kodom); scena s mokrim škriljevcem i čašom generirana s `gpt-image-2.5-sunburst` (maskirano uređivanje); naslov dodan kodom | `plans/gymbeam_hr/art_direction/hero_proof/` |
+| 2 | **BeastPink Colla Pink – karusel** „Vaš ružičasti ritual" | 6 slajdova 1080×1350: 4 slike + 2 videa (5 s) | scene generirane s `gpt-image-2.5-sunburst`, prava teglica vraćena kodom; slajdovi 3 i 5 animirani s Kling v4 (image-to-video); sav tekst na slajdovima i videima dodan kodom | `plans/gymbeam_hr/phase5/` |
+| 3 | **GymBeam 32% Protein Wafer – lifestyle Reel** (V8) | video 1080×1920, 8,83 s, sa zvukom | 14 keyframeova (`gpt-image-2.5-sunburst`, prema službenim fotografijama wafera i torbe Urban Duffle), 5 Kling klipova od 3 s, montaža u rough-cut stilu, sintetizirani zvuk i naslovnica B | `plans/gymbeam_hr/phase6/reel/` |
+
+### Gdje je točno što
+
+**Objava 1 – hero** (`plans/gymbeam_hr/art_direction/hero_proof/`)
+- `make_hero.py` – generiranje scene oko zaštićenog platna s pravim pakiranjem
+- `cutout.py`, `hero_v2.py` – izrez vrećice sa službene fotografije i postavljanje uz ograničeno usklađivanje svjetla
+- `glass_edit.py` – jedno plaćeno maskirano uređivanje: čaša pored vrećice
+- `glass_closer.py` – besplatan lokalni pomak čaše (verzija V5)
+- `preview_clean.py` – tipografija naslova (Inter)
+- zapisi: `plans/gymbeam_hr/hero_package/`
+
+**Objava 2 – karusel** (`plans/gymbeam_hr/phase5/`)
+- naslovnica: `cover_slide1_v2.py`, `retouch_cover2.py`, `cover_layout_v2.py`
+- slajdovi 2 i 4: `carousel_rest.py`, `jar_matte.py`, `slide2_remove_footer.py`
+- slajd 3 (video „Priprema"): `slide3_video_prep.py` → `slide3_video_generate.py` (Kling) → `slide3_final_v3.py`
+- slajd 5 (video „Napitak za ljepotu"): `slide5_video_prep.py`, `slide5_hair_calm.py` → `slide5_video_generate_v2.py` (Kling) → `slide5_final_v4.py` (tvrdnja o cinku prema Uredbi 432/2012)
+- slajd 6: `slide6_final.py`, `slide6_color_fix.py`, `slide6_harmonize.py`, `slide6_cleanup.py`
+- pregled svih slajdova: `final_contact_sheet_v4.py`
+- brief, dokazi i odluke: `PHASE5_CAROUSEL_BRIEF.md`, `colla_pink_brief.md`, `colla_pink_assets.yaml`
+
+**Objava 3 – Reel** (`plans/gymbeam_hr/phase6/reel/`)
+- keyframeovi: `gen_keyframe.py`, `gen_keyframe_S03B.py`
+- video klipovi: `run_kling.py`, `run_kling_S03B.py` (fal.ai `fal-ai/kling-video/v4/image-to-video`)
+- montaža konačne verzije: `assemble_reel_v8_candidate.py` (+ `reel_lib.py`)
+- zvuk: `foley.py` · naslovnica: `cover_wrapper_fix.py`
+- plan, odluke i QA: `REEL_PRODUCTION_PLAN_v3.md`, `FINAL_QA_REPORT.md`, `CONTINUITY_CHECKLIST.md`, `SOURCE_LEDGER.md`
+
+**Konačni plan i usklađenost** (`plans/gymbeam_hr/final_revision/`)
+- `CONTENT_PLAN_FINAL_REVISION.md` (R9) – točno tri predane objave, uz hashove datoteka
+- `FINAL_SCOPE_REVISION_7F.md` – kako je opseg prešao s briefa samo za kreatin na tri proizvoda
+- `ZINC_CLAIM_432_2012_HR.md`, `SLIDE5_CLAIM_REVIEW.md`, `POST2_FACT_CHECK_7F.md` – provjera zdravstvenih tvrdnji i činjenica
+- `CAPTION_CHANGES_7F.md`, `HASHTAG_CHECK_7F.md`, `ALT_TEXT_HR.md` – opisi, hashtagovi i alt tekstovi
+
+---
+
+## Kako sustav radi (faze)
 
 ```
-Brief ─▶ Research ─▶ Plan ─▶ Production ─▶ QA ─▶ Delivery
- YAML    agent +     planner   carousel /    validators,   export +
-         analyst     + human   hero / reel   reviewers,    manifest,
-                     approval  (3 branches)  repair/gate   audit trail
+brief → istraživanje → analiza brenda → plan → [ljudsko odobrenje] → produkcija → QA → [ljudsko odobrenje] → isporuka
 ```
 
-| Stage | Components | Kind |
+| Faza | Što radi | Gdje |
 |---|---|---|
-| Research | `research_agent` (autonomous tool-calling), `brand_product_analyst` (structured LLM + vision) | agent + step |
-| Plan | `content_planner` (structured LLM), human approval of the plan hash, audited field-level edits | step + human gate |
-| Production | `carousel_producer`, `hero_producer`, `reel_producer`; one independent branch per post | steps |
-| QA | technical + evidence validation (deterministic), brand/creative/video reviewers, `qa_judge` → PASS / targeted REPAIR / ESCALATE | steps |
-| Delivery | human final approval, exporter, manifest with hashes | step + human gate |
+| Brief | interaktivna pitanja (web, proizvodi, publika, ciljevi, uzori) → `brief.yaml` | `studio brief`, `briefs/gymbeam_hr.yaml` |
+| Istraživanje | agent (Claude Haiku 5.5) s alatima za web i Instagram (Apify, 30 objava) | `studio/nodes/research_live.py`, `research/` |
+| Analiza brenda | profil brenda i registar dokaza: svaka tvrdnja ima izvor, oznaku „provjereno" ili „pretpostavka" | `studio/nodes/analyst_live.py`, `research/gymbeam_hr_agent/` |
+| Plan | Claude Sonnet 5.5, strukturirani izlaz (shema `CampaignPlan/2`), validator tvrdnji, ljudske izmjene kroz `studio plan edit` | `studio/strategy/`, `plans/gymbeam_hr/content_plan.json` |
+| Produkcija | slike (`gpt-image-2.5-sunburst`), video (Kling v4), kompozicija pravog proizvoda, tipografija i montaža kodom | `plans/gymbeam_hr/art_direction/`, `phase5/`, `phase6/` |
+| QA i isporuka | provjere formata, vjernosti proizvoda, tvrdnji; pregled kadar po kadar; paket s hashovima | `studio/nodes/gates.py`, `plans/gymbeam_hr/phase7/` |
 
-Design rules: only the research step is an autonomous loop; everything else is a structured workflow step. LangGraph state holds small JSON and artifact *references* (path, SHA-256, size), never media bytes. A SQLite ledger records every operation, so a crashed run resumes without repeating completed (paid) work. Full specification: [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
+**Infrastruktura:** LangGraph s SQLite checkpointerom (nastavak nakon prekida), fingerprint cache (ponavljaju se samo faze čiji su se ulazi promijenili), operation ledger i spend guardovi (tvrdi proračun, ograničenje broja zahtjeva, bez automatskih ponavljanja), odobrenja vezana uz hash artefakta, mock provideri za testove bez API-ja.
 
-## Technology
+**Načela:**
+- Pravi proizvod se ne generira kada postoji službena fotografija: na heru i u karuselu pakiranje su pikseli službene fotografije. U Reelu su wafer i torba (stvarni proizvodi s gymbeam.hr) generirani prema službenim fotografijama, jer se proizvod u videu pomiče.
+- Sav vidljivi tekst na slikama i videima dodaje se kodom, ne generira ga model.
+- Svaka brojka ima izvor; zdravstvene tvrdnje samo u odobrenoj formulaciji.
+- Čovjek odobrava plan i završne verzije; odbijeni pokušaji i razlozi su zapisani.
 
-| | |
-|---|---|
-| Language / core | Python ≥ 3.12 (tested on 3.12 and 3.14), Pydantic contracts, PyYAML |
-| Orchestration | **LangGraph** with a SQLite checkpointer |
-| LLMs | **Anthropic** for the research agent and content planner (default `claude-sonnet-5-5`; Haiku 5.5 used for the cheap agent run) |
-| Image editing | **OpenAI** image-edit API (hero and carousel stills), behind a spend-guarded adapter |
-| Image-to-video | **fal.ai / Kling** (carousel and Reel clips), `studio/providers/fal_video.py` |
-| Post-production | Pillow, NumPy, OpenCV (headless), **FFmpeg** via `imageio-ffmpeg`, ReportLab |
-| Tests | pytest; network sockets are blocked during the suite |
+---
 
-## Repository layout
+## Pokretanje
 
-```
-studio/            application: contracts/ nodes/ providers/ strategy/ tools/ prompts/
-                   graph.py state.py ledger.py cost.py cli.py orchestrator.py
-briefs/            campaign brief (briefs/gymbeam_hr.yaml)
-research/          research outputs and labelled manual imports
-plans/gymbeam_hr/  content plan, evidence map, decision/edit history, and the production and
-                   post-production scripts (art_direction/, phase5/ carousel, phase6/reel/, phase7/ tooling)
-tests/             pytest suite (mock workflow, units, spend guards, strategy, edits, image adapter, provenance)
-docs/              architecture, Instagram collection notes, CLI notes for phases 1-3
-config.yaml        models, pricing table, caps (no secrets)
-.env.example       variable names only
-submission/        git-ignored; only README.md and .gitkeep are tracked
-```
-
-## Mock mode vs. real AI content
-
-This distinction matters:
-
-| | What it is | Output |
-|---|---|---|
-| `studio run --mock` | Architecture test with deterministic mock providers. **No AI, no network, no FFmpeg.** | Flat single-colour PNGs with a MOCK banner and JSON placeholders instead of video. **These are not the final posts.** |
-| Local reconstruction | The scripts in `plans/gymbeam_hr/` re-assemble the real media from archived AI outputs. Free and offline. | The real posts, but **no model is called**. Copying a stored PNG is not an AI generation. |
-| New paid AI generation | Live Anthropic / OpenAI / fal.ai calls with your own keys. | New, *different* media (generation is stochastic). Costs money. Not verified as a one-click flow. |
-
-The real GymBeam posts (hero, 6-slide carousel with two videos, Reel with audio) were produced by the live path in the original run (about 9.55 USD of image/video spend in total, hard-capped), with human approval at each gate. Those caps are consumed, so the paid scripts refuse to run again unchanged.
-
-## Quick start (Windows PowerShell)
+Testirano na Windowsu 10/11 s Pythonom 3.12 (i 3.14). macOS/Linux nisu testirani.
 
 ```powershell
-git clone git@github.com:KrzakLara/AI_Brand_Content_Studio.git
-cd AI_Brand_Content_Studio
 py -3.12 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -e ".[dev]"      # use ".[dev,media]" for the local post-production scripts
+.\.venv\Scripts\python.exe -m pip install -e ".[dev,media]"
+.\.venv\Scripts\python.exe -m pytest                       # 247 prolazi, 2 preskočena (trebaju službenu fotografiju)
 $env:STUDIO_NO_DOTENV = "1"
-.\.venv\Scripts\studio.exe run --mock --run demo           # MOCK workflow: placeholders only
-.\.venv\Scripts\python.exe -m pytest                       # no network, no API keys
+.\.venv\Scripts\studio.exe run --mock                      # test arhitekture s mock providerima
 ```
 
-Live commands (research, planning, approvals, edits) are documented in [`docs/DEVELOPMENT_LOG_PHASES_1_3.md`](docs/DEVELOPMENT_LOG_PHASES_1_3.md).
+> `studio run --mock` proizvodi **placeholdere** (jednobojne slike i JSON) kako bi se testirao tijek rada. To **nisu** objave.
 
-### API access needed for live runs (your own keys)
+**Ponovno sastavljanje sve tri stvarne objave** (lokalno, besplatno, bez API ključeva) radi se iz predajnog ZIP-a, jer on sadrži arhivirane AI izlaze: `submission/START_HERE.md`, opcija B, skripta `tools/REPRODUCE_SVE_TRI_OBJAVE_7F.ps1`.
 
-Copy `.env.example` to `.env` (git-ignored) and fill in only what you use:
+**Nova AI generacija** traži vlastite ključeve (`.env` prema `.env.example`: `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `FAL_KEY`, `APIFY_TOKEN`) i podizanje limita u skriptama, jer su ih originalni pokreti potrošili. Rezultat su nove, drukčije slike, a ocjenjuju se istim QA pravilima.
 
-* `ANTHROPIC_API_KEY`: research and planning
-* `OPENAI_API_KEY`: image edits
-* `FAL_KEY`: Kling video
-* `APIFY_TOKEN` (optional): Instagram scraping
+---
 
-Every paid command requires explicit `--max-requests` / `--max-api-spend-usd` caps. Keys are never printed or logged. Tests and mock runs need none.
+## Trošak
 
-## Results
+| Stavka | USD |
+|---|---|
+| Tekstualni modeli (istraživanje + plan) | 0,53 (potvrđeno) |
+| Slike (hero, karusel, Reel) | 2,80 (potvrđeno) |
+| Video, Kling | ≈ 7,06 (procjena po cijeni po sekundi) |
+| **Ukupno** | **≈ 10,39** |
 
-* End-to-end pipeline from brief to three reviewed posts, with human approval gates, resumable runs and a per-operation ledger.
-* A real research-agent run on Haiku 5.5, an evidence-linked plan, and audited human copy edits (AI wording is never recorded as human-authored).
-* Three delivered posts: a hero image, a BeastPink Colla Pink 6-slide carousel (2 Kling clips) and an 8.83 s Reel with sound design.
-* Test suite: all tests pass offline (249 passed in the development checkout; 247 passed + 2 skipped in a clean package extraction, where the 2 skipped need an official product photo that is not redistributed). No test makes a paid call.
+---
 
-## Limitations
+## Struktura repozitorija
 
-* Single brand and single market (Croatian). No web UI or API yet (`api/` and `web/` are placeholders).
-* Paid generation is stochastic and its caps are consumed. A new generation would produce different pictures and was not verified as a one-click flow.
-* Local reconstruction was tested on Windows 10, PowerShell 5.1 and Python 3.12 with pinned media packages. Byte-identical video needs the pinned `imageio-ffmpeg`; other platforms are untested.
-* Official GymBeam reference photographs must be fetched by the user, and some scripts assume them.
-* Compliance checks are an engineering aid, not legal review.
+```
+studio/            aplikacija: CLI, LangGraph graf, čvorovi, ugovori (Pydantic), provideri, ledger, promptovi
+plans/gymbeam_hr/  plan, povijest odluka i skripte koje su napravile objave (hero, karusel, Reel, pakiranje)
+research/          istraživanje: izvori, uvozi, Instagram izvoz
+briefs/            brief brenda
+tests/             pytest testovi
+docs/              arhitektura
+config.yaml        modeli, limiti, cijene
+.env.example       primjer konfiguracije bez ključeva
+WORKLOG.md         dnevnik rada po fazama
+```
 
-## Possible next steps
+## Ograničenja
 
-* A web review UI over the approval gates.
-* A provider abstraction for additional image and video models.
-* Automatic reference-asset fetching with licence checks.
-* Learned QA critics evaluated against human decisions.
-* A CI matrix (Python 3.12 / 3.14) with fixture replay of research.
-
-## What is deliberately not in this repository
-
-* `.env`, API keys, tokens, databases, caches, `.venv`, `.claude/`, local logs and API usage ledgers.
-* GymBeam's official photographs, the generated posts, raw Kling clips, the contact sheet built from product photos, and the final hand-in ZIP. Distribution rights are not confirmed, so `submission/*`, `runs/` and `*.zip` are git-ignored. They are delivered separately to the reviewers.
+- Nije odobreno za javno oglašavanje: nema dozvole za fotografije brenda ni pravnog pregleda tvrdnji, a hrvatski tekst nije lektorirao izvorni govornik.
+- Plaćeni koraci (agent, plan, slike, Kling) nisu ponovljivi bit po bit.
+- U Reelu je sitni tekst na omotu u pokretu mekši nego na fotografiji, a lice osobe blago varira između kadrova.
