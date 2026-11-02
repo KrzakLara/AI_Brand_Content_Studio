@@ -36,7 +36,7 @@ def settings():
 @pytest.fixture
 def brief():
     return BriefInput.model_validate(
-        yaml.safe_load((ROOT / "briefs" / "gymbeam.yaml").read_text(encoding="utf-8")))
+        yaml.safe_load((ROOT / "briefs" / "gymbeam_hr.yaml").read_text(encoding="utf-8")))
 
 
 @pytest.fixture

@@ -138,7 +138,7 @@ def test_cli_manual_approval_flow_and_status(tmp_path, capsys, monkeypatch):
     base = ["--runs-dir", str(tmp_path / "runs")]
     ex = ["--export-dir", str(tmp_path / "sub")]
     assert cli.main([*base, "run", "--mock", "--manual-approval", *ex, "--run", "r1",
-                     "--brief", "briefs/gymbeam.yaml"]) == cli.EXIT_PAUSED
+                     "--brief", "briefs/gymbeam_hr.yaml"]) == cli.EXIT_PAUSED
     assert cli.main([*base, "approve", "--run", "r1", "--gate", "final"]) == cli.EXIT_ERROR  # wrong gate
     assert cli.main([*base, "approve", "--run", "r1", "--gate", "plan"]) == cli.EXIT_OK
     assert cli.main([*base, "run", "--mock", "--manual-approval", *ex, "--run", "r1"]) == cli.EXIT_PAUSED
@@ -147,7 +147,7 @@ def test_cli_manual_approval_flow_and_status(tmp_path, capsys, monkeypatch):
     out = tmp_path / "approvals.yaml"
     assert cli.main([*base, "export-approvals", "--run", "r1", "--out", str(out)]) == cli.EXIT_OK
     assert cli.main([*base, "run", "--mock", *ex, "--approvals", str(out), "--run", "r2",
-                     "--brief", "briefs/gymbeam.yaml"]) == cli.EXIT_OK
+                     "--brief", "briefs/gymbeam_hr.yaml"]) == cli.EXIT_OK
     capsys.readouterr()
     assert cli.main([*base, "status", "--run", "r2"]) == cli.EXIT_OK
     assert '"status": "completed"' in capsys.readouterr().out

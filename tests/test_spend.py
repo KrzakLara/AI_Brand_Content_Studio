@@ -126,7 +126,7 @@ def test_cli_refuses_a_real_run_without_budget_or_prices_before_touching_the_net
     assert cli.main(["--runs-dir", str(tmp_path), "research", "--mode", "live", "--policy", "anthropic",
                      "--max-api-spend-usd", "1"]) == cli.EXIT_ERROR
     assert "explicit --max-requests" in capsys.readouterr().err
-    assert cli.main([*base, "--max-api-spend-usd", "1"]) == cli.EXIT_ERROR  # config.yaml prices are intentionally empty
+    assert cli.main([*base, "--max-api-spend-usd", "1", "--model", "claude-unpriced-test"]) == cli.EXIT_ERROR  # no price entry for this model
     err = capsys.readouterr().err
     assert "anthropic_pricing" in err and KEY not in err and "Nothing was run" in err
     assert not list(tmp_path.iterdir())
@@ -171,7 +171,9 @@ def test_config_carries_the_verified_haiku_55_prices_and_nothing_invented():
     h = p["claude-haiku-5-5"]
     assert (h.input_usd_per_mtok, h.output_usd_per_mtok, h.max_prompt_tokens) == (0.10, 0.50, 100_000)
     assert "platform.claude.com" in h.source_url and h.verified_on == "2026-10-27"
-    assert set(p) == {"claude-haiku-5-5"}  # no price for any other model was guessed
+    assert set(p) == {"claude-haiku-5-5", "claude-sonnet-5-5"}  # only models with a documented price (Sonnet added in Phase 3)
+    assert (p["claude-sonnet-5-5"].input_usd_per_mtok, p["claude-sonnet-5-5"].output_usd_per_mtok) == (2.00, 10.00)
+    assert p["claude-sonnet-5-5"].forced_tool_choice is False and h.forced_tool_choice is True
 
 
 def test_the_planned_haiku_run_fits_the_budget_with_a_wide_margin():
