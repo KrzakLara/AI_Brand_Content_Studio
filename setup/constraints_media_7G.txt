@@ -1,0 +1,9 @@
+# Phase 7G: versions of the media packages with which every delivered video/image was built and every byte-comparison passed (Python 3.12.7, Windows).
+# The 7B freeze files did not list these. Without the pin, pip installs the NEWEST imageio-ffmpeg (0.8.0 = ffmpeg 9.0.2 / x264 core 165):
+# decoded video frames still match, but video BYTES and the AAC audio of the Reel then differ from the delivered files (different encoder build).
+# Use:  python -m pip install -e ".[dev,media]" -c constraints-media-7G.txt     (bootstrap_workspace.py copies this file into the workspace root)
+imageio-ffmpeg==0.7.0
+numpy==2.5.4
+opencv-python-headless==5.0.0.93
+pillow==13.0.0
+reportlab==5.1.0
