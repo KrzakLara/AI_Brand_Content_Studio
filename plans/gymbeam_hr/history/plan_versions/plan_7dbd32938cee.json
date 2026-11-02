@@ -1,0 +1,731 @@
+{
+  "plan_hash": "7dbd32938cee9e03aa071ac6bdb59828464b3d143f1d5f0cf95152c0f0b086d0",
+  "campaign": {
+    "brand": "GymBeam Hrvatska",
+    "instagram_handle": "gymbeamhr",
+    "focal_product": {
+      "sku": "3885",
+      "name": "100% Kreatin Monohidrat - GymBeam"
+    },
+    "identity": {
+      "campaign_name": "Piše na pakiranju",
+      "big_idea": "Mirna kampanja koja govori samo ono što se može pročitati: što je otisnuto na pakiranju i što je provjereno na stranici.",
+      "throughline": "Svaki post drži se zapisanog: karusel čita pravu etiketu, hero pokazuje pakiranje bez dodataka, reel slaže jutarnje pripreme do jednog kadra s pakiranjem.",
+      "address_form": "vi_plural",
+      "voice_notes": "Mirno, kratko, uljudno 'vi/vaš'. Konkretne imenice, bez hypea, cijena i količina. Jedan emoji u captionu, najviše dva. Kvalitativni ton marke istraživanje nije utvrdilo pa je ovo prijedlog.",
+      "palette_use": [
+        "#0f0d0d: glavna tamna podloga",
+        "#2d2a2b: sekundarne plohe i sjene",
+        "#f2ede8: tekst i svijetle plohe",
+        "#726c6b: sporedni tekst i tanke linije",
+        "#ff8c32: jedini akcent (okviri, podcrtavanje, svjetlosni potez)"
+      ],
+      "typography": "Inter Bold za naslove (rečenični zapis), Inter Regular za sitniji tekst; verificirani web font marke. Logotip GymBeam samo kao službeni asset. Licenca Inter fonta nije provjerena.",
+      "shared_devices": [
+        "Tanki narančasti okvir (#ff8c32) koji označava ono što se čita ili pokazuje",
+        "Tamna ploha #0f0d0d s jednim toplim svjetlosnim potezom",
+        "Činjenice s pakiranja uvijek kao zasebna oznaka koju slaže kod, s uvodom 'Na pakiranju piše'",
+        "Bez gym-klišeja: predmeti, svjetlo, tišina"
+      ],
+      "basis": [
+        {
+          "statement": "Obraćanje s 'vi/vaš' u 22 od 30 captiona; emoji u svih 30.",
+          "status": "verified",
+          "evidence_ids": [
+            "O7",
+            "O5"
+          ]
+        },
+        {
+          "statement": "Tamne i neutralne podloge iz ručnog pregleda 14 naslovnica na razini sličice.",
+          "status": "manual",
+          "evidence_ids": [
+            "E-efb10183",
+            "E-bb511dec"
+          ]
+        },
+        {
+          "statement": "Narančasti akcent s weba marke; Inter je verificirani web font.",
+          "status": "verified",
+          "evidence_ids": [
+            "O45",
+            "E-ceb3f15e",
+            "E-8e56e0ab"
+          ]
+        },
+        {
+          "statement": "Kvalitativni ton marke i publika nisu utvrđeni.",
+          "status": "unavailable",
+          "evidence_ids": []
+        }
+      ]
+    },
+    "claims": [
+      {
+        "claim_id": "C1",
+        "text": "Na pakiranju piše: Creatine Monohydrate.",
+        "claim_type": "pack_text",
+        "evidence_ids": [
+          "E-crop-label_name"
+        ],
+        "basis_quote": "Creatine Monohydrate",
+        "as_of": null
+      },
+      {
+        "claim_id": "C2",
+        "text": "Na pakiranju piše: 100% Pure micronised, Unflavoured.",
+        "claim_type": "pack_text",
+        "evidence_ids": [
+          "E-crop-label_purity"
+        ],
+        "basis_quote": "100% Pure micronised; Unflavoured",
+        "as_of": null
+      },
+      {
+        "claim_id": "C3",
+        "text": "Na pakiranju piše: Produced in an IFS-certified facility.",
+        "claim_type": "pack_text",
+        "evidence_ids": [
+          "E-crop-badge_ifs"
+        ],
+        "basis_quote": "Produced in an IFS-certified facility",
+        "as_of": null
+      },
+      {
+        "claim_id": "C4",
+        "text": "Na pakiranju piše: HPLC Tested, Pure composition.",
+        "claim_type": "pack_text",
+        "evidence_ids": [
+          "E-crop-badge_hplc"
+        ],
+        "basis_quote": "HPLC Tested; Pure composition",
+        "as_of": null
+      },
+      {
+        "claim_id": "C5",
+        "text": "Na gymbeam.hr ocjena proizvoda je 4,8 na temelju 8291 recenzije (stanje 27. 10. 2026.).",
+        "claim_type": "rating",
+        "evidence_ids": [
+          "E-f34fb0e8"
+        ],
+        "basis_quote": "Listed rating 4.8 from 8291 reviews",
+        "as_of": "2026-10-27"
+      },
+      {
+        "claim_id": "C6",
+        "text": "Na pakiranju piše: Made in Germany.",
+        "claim_type": "pack_text",
+        "evidence_ids": [
+          "E-8637dbdb"
+        ],
+        "basis_quote": "Made in Germany",
+        "as_of": null
+      }
+    ],
+    "deferred_claims": [
+      {
+        "text": "Tvrdnje s product stranice sku 3885 o učinkovitosti i izvedbi (E-0921eae1).",
+        "evidence_ids": [
+          "E-0921eae1"
+        ],
+        "why_deferred": "Zdravstvena/performansna tvrdnja o proizvodu; ne koristi se u nijednom tekstu.",
+        "review_needed": [
+          "posebna provjera usklađenosti za svaku tvrdnju",
+          "uvjeti uporabe / conditions of use",
+          "odobrenje pravnog tima"
+        ]
+      },
+      {
+        "text": "Značke na slici pakiranja o jamstvu kvalitete i brzoj apsorpciji.",
+        "evidence_ids": [
+          "E-8637dbdb"
+        ],
+        "why_deferred": "Jamstvo i performansna tvrdnja koje dolaze uz nepromijenjeni packshot; nisu poruke kampanje.",
+        "review_needed": [
+          "provjera usklađenosti značaka",
+          "uvjeti uporabe / conditions of use"
+        ]
+      }
+    ],
+    "carousel": {
+      "post_id": "01",
+      "objective": "Edukacija i spremanja: vođeno čitanje stvarnog pakiranja, dio po dio.",
+      "concept_name": "Čitanje s etikete",
+      "big_idea": "Pakiranje se čita kao stranica: svaki slajd je nepromijenjeni izrez prave etikete, a uz njega zasebna oznaka s onim što točno piše.",
+      "creative_device": "Izrez etikete u tankom narančastom okviru s kodnom oznakom 'Na pakiranju piše' pokraj njega, slajd po slajd.",
+      "hook": {
+        "text": "Što sve piše na prednjoj strani?",
+        "claim_ids": []
+      },
+      "narrative_arc": "Pitanje, zatim četiri izreza prave etikete redom: naziv, sastav i okus, oznaka pogona, oznaka ispitivanja; na kraju poziv na spremanje.",
+      "slides": [
+        {
+          "n": 1,
+          "role": "hook",
+          "headline": {
+            "text": "Što sve piše na prednjoj strani?",
+            "claim_ids": []
+          },
+          "body": [
+            {
+              "text": "Prelistajte i pročitajte redom.",
+              "claim_ids": []
+            }
+          ],
+          "label_crops": [],
+          "callouts": [],
+          "visual_composition": "Ploha #0f0d0d, naslov Inter Bold #f2ede8 gore lijevo, margine 80 px. Prazan tanki narančasti okvir #ff8c32 u sredini kao najava izreza. Službeni logotip kao asset dolje lijevo.",
+          "people_in_frame": false,
+          "alt_text_hr": "Tamna ploha s naslovom Što sve piše na prednjoj strani i praznim narančastim okvirom."
+        },
+        {
+          "n": 2,
+          "role": "naziv",
+          "headline": {
+            "text": "Počnite od naziva",
+            "claim_ids": []
+          },
+          "body": [
+            {
+              "text": "Naziv sastojka prvo je što provjeravate.",
+              "claim_ids": []
+            }
+          ],
+          "label_crops": [
+            {
+              "crop_id": "label_name",
+              "purpose": "Neizmijenjeni izrez naziva na bijelom pojasu pakiranja."
+            }
+          ],
+          "callouts": [
+            {
+              "text": "Na pakiranju piše: Creatine Monohydrate.",
+              "claim_ids": [
+                "C1"
+              ]
+            }
+          ],
+          "visual_composition": "Ploha #2d2a2b. Izrez label_name u tankom narančastom okviru, širina oko 80% okvira, uvećanje najviše 2x. Oznaka callout ispod izreza, odvojena, Inter Regular #f2ede8. Naslov gore.",
+          "people_in_frame": false,
+          "alt_text_hr": "Izrez prednje strane pakiranja s nazivom Creatine Monohydrate i oznaka ispod s istim tekstom."
+        },
+        {
+          "n": 3,
+          "role": "sastav i okus",
+          "headline": {
+            "text": "Pa pročitajte pojas ispod",
+            "claim_ids": []
+          },
+          "body": [
+            {
+              "text": "Tu stoji i okus, u maloj tableti.",
+              "claim_ids": []
+            }
+          ],
+          "label_crops": [
+            {
+              "crop_id": "label_purity",
+              "purpose": "Neizmijenjeni izrez pojasa s oznakom okusa."
+            }
+          ],
+          "callouts": [
+            {
+              "text": "Na pakiranju piše: 100% Pure micronised, Unflavoured.",
+              "claim_ids": [
+                "C2"
+              ]
+            }
+          ],
+          "visual_composition": "Ploha #0f0d0d. Izrez label_purity u narančastom okviru u sredini, callout zasebno ispod. Naslov gore lijevo.",
+          "people_in_frame": false,
+          "alt_text_hr": "Izrez pojasa pakiranja s tekstom 100% Pure micronised i oznakom okusa, ispod oznaka s istim tekstom."
+        },
+        {
+          "n": 4,
+          "role": "oznaka pogona",
+          "headline": {
+            "text": "Okrugle oznake čitajte doslovno",
+            "claim_ids": []
+          },
+          "body": [
+            {
+              "text": "Ova se odnosi na pogon u kojem je proizvedeno.",
+              "claim_ids": []
+            }
+          ],
+          "label_crops": [
+            {
+              "crop_id": "badge_ifs",
+              "purpose": "Neizmijenjeni izrez okrugle IFS oznake."
+            }
+          ],
+          "callouts": [
+            {
+              "text": "Na pakiranju piše: Produced in an IFS-certified facility.",
+              "claim_ids": [
+                "C3"
+              ]
+            }
+          ],
+          "visual_composition": "Ploha #f2ede8, tekst #0f0d0d. Okrugli izrez badge_ifs lijevo, narančasti tanki prsten oko njega, callout desno od izreza, odvojen.",
+          "people_in_frame": false,
+          "alt_text_hr": "Izrez okrugle IFS oznake s pakiranja i pokraj nje oznaka s tekstom o IFS certificiranom pogonu."
+        },
+        {
+          "n": 5,
+          "role": "oznaka ispitivanja",
+          "headline": {
+            "text": "Pitajte što oznaka znači",
+            "claim_ids": []
+          },
+          "body": [
+            {
+              "text": "Naziv metode nije objašnjenje. Detalje potražite kod proizvođača.",
+              "claim_ids": []
+            }
+          ],
+          "label_crops": [
+            {
+              "crop_id": "badge_hplc",
+              "purpose": "Neizmijenjeni izrez okrugle HPLC oznake."
+            }
+          ],
+          "callouts": [
+            {
+              "text": "Na pakiranju piše: HPLC Tested, Pure composition.",
+              "claim_ids": [
+                "C4"
+              ]
+            }
+          ],
+          "visual_composition": "Ploha #2d2a2b. Okrugli izrez badge_hplc desno u narančastom prstenu, callout lijevo, odvojen. Naslov gore.",
+          "people_in_frame": false,
+          "alt_text_hr": "Izrez okrugle HPLC oznake s pakiranja i pokraj nje oznaka s tekstom HPLC Tested, Pure composition."
+        },
+        {
+          "n": 6,
+          "role": "spremanje i CTA",
+          "headline": {
+            "text": "Spremite za sljedeću kupnju",
+            "claim_ids": []
+          },
+          "body": [
+            {
+              "text": "Pošaljite nekome tko čita sitna slova.",
+              "claim_ids": []
+            }
+          ],
+          "label_crops": [],
+          "callouts": [],
+          "visual_composition": "Ploha #f2ede8, naslov #0f0d0d, ikona spremanja #ff8c32, službeni logotip kao asset dolje.",
+          "people_in_frame": false,
+          "alt_text_hr": "Svijetla ploha s pozivom da spremite objavu za sljedeću kupnju."
+        }
+      ],
+      "save_trigger": "Vodič po stvarnoj etiketi koji se može otvoriti pokraj bilo kojeg pakiranja i čitati redom.",
+      "people": {
+        "appear": false,
+        "treatment": "none",
+        "rationale": "Edukacija je u etiketi; osoba bi odvlačila pažnju od izreza.",
+        "casting_notes": ""
+      },
+      "packshot": {
+        "used": false,
+        "packshot_ref": null,
+        "treatment": null,
+        "instructions": []
+      },
+      "caption_hr": {
+        "text": "Etiketa se čita ovako: korak po korak. 🏷️ Prelistajte, spremite i usporedite sa svojim pakiranjem.",
+        "claim_ids": []
+      },
+      "cta": {
+        "text": "Spremite objavu, a više pogledajte na linku u opisu profila.",
+        "claim_ids": []
+      },
+      "hashtags": [
+        "gymbeamhr",
+        "gbfit"
+      ],
+      "distinct_from_others": "Jedini post koji se u cijelosti sastoji od izreza prave etikete s oznakama; hero je jedna tiha kompozicija s pakiranjem, a reel je priča u pokretu s rukama i siluetama.",
+      "basis": [
+        {
+          "statement": "Izrezi i tekstovi su operativno označeni (manual), nisu strojno provjereni.",
+          "status": "manual",
+          "evidence_ids": [
+            "E-crop-label_name",
+            "E-crop-label_purity",
+            "E-crop-badge_ifs",
+            "E-crop-badge_hplc"
+          ]
+        },
+        {
+          "statement": "Karuseli čine trećinu objava marke, edukativni karusel već postoji.",
+          "status": "verified",
+          "evidence_ids": [
+            "O13",
+            "E-3e1f8026"
+          ]
+        },
+        {
+          "statement": "Pojašnjenja uz slajdove su opće upute za čitanje, ne činjenice iz istraživanja.",
+          "status": "assumption",
+          "evidence_ids": []
+        }
+      ]
+    },
+    "hero": {
+      "post_id": "02",
+      "objective": "Prepoznatljivost i poželjnost: pakiranje samo, bez dodataka.",
+      "concept_name": "Jedan rub svjetla",
+      "big_idea": "Pakiranje stoji samo u tami, a jedan uski potez svjetla prelazi preko njega.",
+      "creative_device": "Jedan uski narančasti svjetlosni rub koji klizi uz rub pakiranja i ostavlja ostatak u tami.",
+      "headline": {
+        "text": "Samo bitno.",
+        "claim_ids": []
+      },
+      "supporting_copy": [
+        {
+          "text": "Na gymbeam.hr ocjena proizvoda je 4,8 na temelju 8291 recenzije (stanje 27. 10. 2026.).",
+          "claim_ids": [
+            "C5"
+          ]
+        }
+      ],
+      "art_direction": "Minimalistička tamna scena: mat ploha #2d2a2b ispred #0f0d0d. Jedna meka narančasta svjetlosna mrlja #ff8c32 na pozadini. Bez rekvizita, ljudi, plamenova, munja.",
+      "lighting": "Softbox slijeva pod 45°, topla temperatura, uski rim light desno. Duboke sjene, umjeren kontrast.",
+      "composition": "Pakiranje malo desno od sredine, visina oko 60% okvira. Prazan prostor oko njega. Tekst u gornjoj lijevoj zoni.",
+      "layout": "4:5 (1080x1350), margine 90 px. Naslov gore lijevo Inter Bold #f2ede8, riječ 'bitno' podcrtana #ff8c32. Potporna linija Inter Regular ispod, najviše dva retka. Službeni logotip kao asset donji lijevi kut. Donjih 150 px bez teksta.",
+      "background_palette": [
+        "#0f0d0d",
+        "#2d2a2b",
+        "#f2ede8",
+        "#ff8c32"
+      ],
+      "people": {
+        "appear": false,
+        "treatment": "none",
+        "rationale": "Proizvod je sam junak, po odluci čovjeka.",
+        "casting_notes": ""
+      },
+      "packshot": {
+        "used": true,
+        "packshot_ref": "selected_packshot",
+        "treatment": "unaltered_cutout_composite",
+        "instructions": [
+          "Samo odabrani izrezani packshot, neizmijenjen, bez ponovnog crtanja etikete.",
+          "Visina oko 60% okvira, donji rub na 78% visine, margina najmanje 120 px.",
+          "Samo meka kontaktna sjena #0f0d0d, oko 60% neprozirnosti.",
+          "Mehanički izrez zadržava rubne bedževe: vizualno provjeriti rubove."
+        ]
+      },
+      "caption_hr": {
+        "text": "Bez viška i bez buke. 🧡 Ono što piše na pakiranju stoji u prvom planu.",
+        "claim_ids": []
+      },
+      "cta": {
+        "text": "Pogledajte na linku u opisu profila.",
+        "claim_ids": []
+      },
+      "alt_text_hr": "Vrećica kreatin monohidrata GymBeam na tamnoj podlozi, osvijetljena toplim svjetlom slijeva, uz naslov Samo bitno.",
+      "hashtags": [
+        "gymbeamhr",
+        "gbig"
+      ],
+      "distinct_from_others": "Jedna statična kompozicija s pakiranjem i svjetlosnim rubom; karusel je niz izrezanih etiketa, a reel priča s rukama i siluetama.",
+      "basis": [
+        {
+          "statement": "Tamne neutralne podloge iz ručnog pregleda naslovnica.",
+          "status": "manual",
+          "evidence_ids": [
+            "E-efb10183",
+            "E-bb511dec"
+          ]
+        },
+        {
+          "statement": "Narančasti akcent s weba marke.",
+          "status": "verified",
+          "evidence_ids": [
+            "O45",
+            "E-ceb3f15e"
+          ]
+        },
+        {
+          "statement": "Ocjena je navedena kao izlistana ocjena na gymbeam.hr na dan snimke.",
+          "status": "verified",
+          "evidence_ids": [
+            "E-f34fb0e8"
+          ]
+        },
+        {
+          "statement": "Izrez packshota je mehanički, s poznatim ograničenjem rubova.",
+          "status": "manual",
+          "evidence_ids": [
+            "E-18591d8b",
+            "E-5af7d045"
+          ]
+        }
+      ]
+    },
+    "reel": {
+      "post_id": "03",
+      "objective": "Angažman i storytelling: pripreme za trening do kadra s pakiranjem.",
+      "concept_name": "Klik prije izlaska",
+      "big_idea": "Mali zvukovi pripreme, patent, vezica, kvaka, vode do jedne police na kojoj čeka pakiranje.",
+      "creative_device": "Svaki rez pada na zvuk malog predmeta; ruke i silueta nikad ne dijele kadar s pakiranjem.",
+      "hook": {
+        "text": "Sve je na svom mjestu.",
+        "claim_ids": []
+      },
+      "beginning": {
+        "shot_ns": [
+          1,
+          2
+        ],
+        "summary": "Ruke zatvaraju torbu, a u daljini prolazi silueta."
+      },
+      "development": {
+        "shot_ns": [
+          3,
+          4
+        ],
+        "summary": "Ruke vežu vezicu, a svjetlo otkriva policu s pakiranjem."
+      },
+      "payoff": {
+        "shot_ns": [
+          5,
+          6
+        ],
+        "summary": "Bliži kadar pakiranja s onim što piše na njemu i završni kadar s logotipom."
+      },
+      "shots": [
+        {
+          "n": 1,
+          "duration_s": 3.0,
+          "visual": "Tamna predsoblje, bokom: ruke zatvaraju patent sportske torbe. Samo ruke, bez lica, bez pakiranja.",
+          "camera_movement": "Spori dolly naprijed, plitka dubinska oštrina.",
+          "transition_out": "Rez na zvuk patenta.",
+          "on_screen_copy": [
+            {
+              "text": "Sve je na svom mjestu.",
+              "claim_ids": []
+            }
+          ],
+          "sound": "Zvuk patenta, tihi ambijent.",
+          "product_visible": false,
+          "product_treatment": "none",
+          "people_in_frame": true,
+          "people_treatment": "hands"
+        },
+        {
+          "n": 2,
+          "duration_s": 3.0,
+          "visual": "Hodnik iza mliječnog stakla: daleka silueta bez lica prolazi, topli svjetlosni pravokutnik na zidu.",
+          "camera_movement": "Statična kamera.",
+          "transition_out": "Rez na zvuk kvake.",
+          "on_screen_copy": [],
+          "sound": "Koraci, kvaka.",
+          "product_visible": false,
+          "product_treatment": "none",
+          "people_in_frame": true,
+          "people_treatment": "faceless_silhouette"
+        },
+        {
+          "n": 3,
+          "duration_s": 3.0,
+          "visual": "Makro: ruke zavezuju vezicu tenisice na tamnom podu. Bez pakiranja u kadru.",
+          "camera_movement": "Nisko, lagani pomak ulijevo.",
+          "transition_out": "Rez na zvuk povučene vezice.",
+          "on_screen_copy": [],
+          "sound": "Šuštanje vezice, tihi puls glazbe.",
+          "product_visible": false,
+          "product_treatment": "none",
+          "people_in_frame": true,
+          "people_treatment": "hands"
+        },
+        {
+          "n": 4,
+          "duration_s": 3.0,
+          "visual": "Prazna tamna polica #2d2a2b. Narančasti svjetlosni potez #ff8c32 prelazi i otkriva pakiranje. Nema osoba u kadru.",
+          "camera_movement": "Lagani kružni pomak kamere 10° oko pakiranja.",
+          "transition_out": "Spora zatamnjena dissolve.",
+          "on_screen_copy": [],
+          "sound": "Glazba raste, tihi zvuk svjetla.",
+          "product_visible": true,
+          "product_treatment": "deterministic_composite",
+          "people_in_frame": false,
+          "people_treatment": "none"
+        },
+        {
+          "n": 5,
+          "duration_s": 3.0,
+          "visual": "Bliži kadar pakiranja na tamnoj pozadini. Kodna oznaka u tankom narančastom okviru ispod pakiranja.",
+          "camera_movement": "Spori push-in digitalnim zumom izreza.",
+          "transition_out": "Rez na crno.",
+          "on_screen_copy": [
+            {
+              "text": "Na pakiranju piše: Made in Germany.",
+              "claim_ids": [
+                "C6"
+              ]
+            }
+          ],
+          "sound": "Glazba na vrhuncu, zatim pad.",
+          "product_visible": true,
+          "product_treatment": "deterministic_composite",
+          "people_in_frame": false,
+          "people_treatment": "none"
+        },
+        {
+          "n": 6,
+          "duration_s": 4.0,
+          "visual": "Ploha #0f0d0d, pakiranje u donjoj trećini, iznad njega službeni logotip kao asset i narančasta crta.",
+          "camera_movement": "Statično.",
+          "transition_out": "Zatamnjenje.",
+          "on_screen_copy": [
+            {
+              "text": "Spremno za izlazak.",
+              "claim_ids": []
+            }
+          ],
+          "sound": "Posljednji ton glazbe, zatim tišina.",
+          "product_visible": true,
+          "product_treatment": "deterministic_composite",
+          "people_in_frame": false,
+          "people_treatment": "none"
+        }
+      ],
+      "total_duration_s": 19.0,
+      "pacing": "Tri kratka kadra od po tri sekunde ritmom zvukova, zatim otkrivanje pakiranja, vrhunac i duži završni kadar. Ukupno 19 s.",
+      "sound_design": {
+        "music": "Minimalna ambijentalna elektronika s toplim sintisajzerom, bez udaraljki; licencirana glazba po izboru čovjeka.",
+        "sfx": [
+          "patent torbe",
+          "kvaka",
+          "vezica",
+          "tihi zvuk svjetla"
+        ],
+        "voiceover_hr": [],
+        "silence_moments": "Zadnja sekunda u tišini."
+      },
+      "product_placement": [
+        "Odabrani packshot samo kao neizmijenjeni izrezani kompozit, kadrovi 4, 5 i 6.",
+        "Kadar 4: polica, sjena kontaktna meka, svjetlo preko kompozita.",
+        "Kadar 5: samo digitalni zum izreza u okviru rezolucije.",
+        "Kadar 6: donja trećina, margina 120 px.",
+        "Ruke i silueta samo u kadrovima 1 do 3, nikad s pakiranjem."
+      ],
+      "cover_frame": "Kadar 4: pakiranje na tamnoj polici s narančastim potezom svjetla, naslov 'Sve je na svom mjestu.' u gornjoj trećini unutar 9:16 sigurne zone.",
+      "people": {
+        "appear": true,
+        "treatment": "hands_and_silhouette",
+        "rationale": "Ruke i silueta samo u odabranim kadrovima bez pakiranja, po odluci čovjeka.",
+        "casting_notes": "Anonimno, bez lica, bez stvarnih i imenovanih osoba; ruke bez prstenja i logotipa."
+      },
+      "packshot": {
+        "used": true,
+        "packshot_ref": "selected_packshot",
+        "treatment": "unaltered_cutout_composite",
+        "instructions": [
+          "Samo odabrani izrezani packshot, bez ponovnog crtanja.",
+          "Sigurne margine 9:16: 250 px gore, 340 px dolje bez teksta.",
+          "Provjeriti bedževe na rubu izreza prije montaže."
+        ]
+      },
+      "caption_hr": {
+        "text": "Patent, vezica, kvaka. 🎧 Pet sitnih zvukova prije izlaska. Koji je vaš?",
+        "claim_ids": []
+      },
+      "cta": {
+        "text": "Napišite u komentarima, a više pogledajte na linku u opisu profila.",
+        "claim_ids": []
+      },
+      "alt_text_hr": "Ruke zatvaraju torbu, daleka silueta prolazi hodnikom, ruke vežu vezicu, zatim topla svjetlost otkriva pakiranje kreatin monohidrata GymBeam na polici.",
+      "hashtags": [
+        "gymbeamhr",
+        "gbfit"
+      ],
+      "distinct_from_others": "Reel je priča vođena zvukom s rukama i siluetama izvan kadra pakiranja; karusel je čitanje etikete, a hero tiha statična kompozicija.",
+      "basis": [
+        {
+          "statement": "Video je 63% objava marke.",
+          "status": "verified",
+          "evidence_ids": [
+            "O11",
+            "O12"
+          ]
+        },
+        {
+          "statement": "Ruke se pojavljuju na jednoj od 14 pregledanih naslovnica; ritam i zvuk su kreativna pretpostavka.",
+          "status": "manual",
+          "evidence_ids": [
+            "E-795afb62"
+          ]
+        },
+        {
+          "statement": "Sadržaj videa izvan naslovnica nije poznat.",
+          "status": "unavailable",
+          "evidence_ids": []
+        }
+      ]
+    },
+    "open_questions": [
+      "Koju veličinu pakiranja prikazati: na odabranom packshotu nije otisnuta nijedna, pa se količine ne navode.",
+      "Packshot nosi proizvođačke značke ('Quality guaranteed', 'Fast absorption / Rapid effect') koje nisu poruke kampanje i trebaju provjeru usklađenosti.",
+      "Tvrdnje o učinkovitosti s product stranice odgođene su do posebne provjere uvjeta uporabe.",
+      "Potrebna je provjera teksta od strane izvornog govornika hrvatskog jezika.",
+      "Potrebno je dostaviti službeni logotip GymBeam kao asset.",
+      "Licenca Inter fonta (SIL OFL) nije provjerena.",
+      "Glazba za reel mora biti licencirana; odabir je na čovjeku.",
+      "Pojašnjenja uz IFS i HPLC oznake u karuselu su opće upute; potvrditi s proizvođačem prije objave.",
+      "Ocjena je snimka od 27. 10. 2026.; osvježiti ili izostaviti prije objave.",
+      "Mehanički izrez packshota zadržava bedževe na rubu; potrebna vizualna provjera."
+    ]
+  },
+  "packshot": {
+    "original_source_id": "S-ca0f32962b",
+    "original_url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/c/r/creatine-monohydrate-unflavoured-01_8.jpg",
+    "original_sha256": "99543edff63b17e355cd7bfcc734ef364ae81f08304e561e6a347c09e8954f1c",
+    "original_run_path": "research/raw/99543edff63b17e3.jpg",
+    "cutout_source_id": "S-5af7d045",
+    "cutout_sha256": "86613b3f58580bf96b4e3517095682da0842a4ba389b3e97db89eb50ce7023d8",
+    "cutout_run_path": "research/packshots/86613b3f58580bf9_cutout.png",
+    "pack_generation": "new",
+    "evidence_ids": [
+      "E-18591d8b",
+      "E-5af7d045"
+    ],
+    "status": "manual (operator-attested selection); cut-out is a mechanical edge flood-fill",
+    "known_limitation": "mechanical cut-out only: anything that is not background colour and touches the pack (e.g. overlapping claim badges, shadows) is kept",
+    "file_hash_verified_on_disk": {
+      "original": true,
+      "cutout": true
+    }
+  },
+  "meta": {
+    "model": "claude-sonnet-5-5",
+    "prompt": "content_planner",
+    "prompt_version": "d2708ebe35cd",
+    "dossier_fingerprint": "7628a2bda5170f2745596f3ef221e7f70435ffe9e19edafc8ceeae92c6e58499",
+    "schema": "CampaignPlan/2",
+    "validation": "passed (no blocking problems)",
+    "validation_flags": [
+      "[novelty_word_context/flag] carousel.slide2.body0: comparative/novelty word in 'Naziv sastojka prvo je što provjeravate.' (not applied to the product)"
+    ],
+    "calls": [
+      {
+        "call": "revise",
+        "task": "content_plan",
+        "model": "claude-sonnet-5-5",
+        "input_tokens": 41118,
+        "output_tokens": 11655,
+        "stop_reason": "tool_use",
+        "request_id": "req_011CgUMy9S6e5fG1iPyVNU9X",
+        "cost_usd": 0.198786
+      }
+    ],
+    "feedback_history": [
+      "Proceed with ONE targeted Phase 3 revision.\n\nI confirm GymBeam 100% Creatine Monohydrate,\nSKU 3885, as the campaign's focal product.\nRecord this choice in the canonical brief.\n\nApply the proposed creative improvements with\nthese corrections:\n\n1. Carousel: use actual label crops only where\n   original label imagery is available.\n   Render any additional verified facts as\n   separate code-generated callouts.\n   Never fabricate or redraw packaging details.\n   Match all quantities to the selected variant.\n\n2. Reel: show hands, movement or faceless\n   silhouettes in selected shots.\n   Keep the protected real product in\n   deterministic compositions.\n\n3. Hero: retain \"Samo bitno.\"\n   No unverified new-packaging claim.\n\n4. Do not automatically insert C1 or C2 into\n   the hero or reel.\n   Health/performance claims need separate\n   claim-specific compliance review, including\n   conditions of use. Omit them if uncertain.\n\n5. Flag unsupported comparative or novelty\n   claims contextually, rather than banning\n   ordinary words globally.\n\n6. Ensure natural, native Croatian and\n   genuinely distinct creative concepts.\n\n7. Use gymbeam_hr.yaml as the canonical brief,\n   but safely update references before removing\n   any legacy brief.\n\n8. Preserve the original rejected plan and\n   record my feedback as human revision history.\n\nRun one real targeted revision with a hard\n$0.40 estimated API cap. Do not bypass the\nbudget guard if it refuses another request.\n\nValidate and present all three revised concepts.\nSTOP before human approval and media generation.\n\nDo not start Phase 4 or add .claude/ files."
+    ]
+  }
+}

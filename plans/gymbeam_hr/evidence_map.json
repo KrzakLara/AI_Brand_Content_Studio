@@ -1,0 +1,317 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "text": "Na stranici proizvoda piše: u 8 g (1 mjerica): hidrolizirani peptidi goveđeg kolagena 6300 mg, ekstrakt sjemenki grožđa 20:1 400 mg, hijaluronska kiselina 40 mg.",
+      "type": "page_fact",
+      "as_of": "2026-10-28",
+      "basis_quote": "Hidrolizirani peptidi goveđeg kolagena 6300 mg ** Ekstrakt sjemenki grožđa 20:1 ( Vitis vinifera ) 400 mg ** Hijaluronska kiselina 40 mg",
+      "used_in": [
+        "carousel.slide2.callout0"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E-colla-nutrition",
+          "status": "verified",
+          "kind": "colla_page_fact",
+          "source_url": "https://gymbeam.hr/colla-pinkbeastpink.html",
+          "retrieved_at": "2026-10-28T20:00:00Z",
+          "sku_family": null,
+          "text": "Product page nutrition table of Colla Pink, per 8 g serving"
+        }
+      ]
+    },
+    {
+      "claim_id": "C2",
+      "text": "Na stranici proizvoda piše: u 8 g: cink 10 mg, selen 89 μg, vitamin C 500 mg.",
+      "type": "page_fact",
+      "as_of": "2026-10-28",
+      "basis_quote": "Cink 10 mg 100 % Selen 89 μg 162 % Vitamin C 500 mg",
+      "used_in": [
+        "carousel.slide2.callout1"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E-colla-nutrition",
+          "status": "verified",
+          "kind": "colla_page_fact",
+          "source_url": "https://gymbeam.hr/colla-pinkbeastpink.html",
+          "retrieved_at": "2026-10-28T20:00:00Z",
+          "sku_family": null,
+          "text": "Product page nutrition table of Colla Pink, per 8 g serving"
+        }
+      ]
+    },
+    {
+      "claim_id": "C3",
+      "text": "Na stranici proizvoda piše: u 8 g: niacin 32 mg, vitamin B2 2,8 mg, vitamin A 800 μg, biotin 50 μg.",
+      "type": "page_fact",
+      "as_of": "2026-10-28",
+      "basis_quote": "Niacin 32 mg 200 % Vitamin B2 2,8 mg 200 % Vitamin A 800 μg (2667 IU) 100 % Biotin 50 μg",
+      "used_in": [
+        "carousel.slide2.callout2"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E-colla-nutrition",
+          "status": "verified",
+          "kind": "colla_page_fact",
+          "source_url": "https://gymbeam.hr/colla-pinkbeastpink.html",
+          "retrieved_at": "2026-10-28T20:00:00Z",
+          "sku_family": null,
+          "text": "Product page nutrition table of Colla Pink, per 8 g serving"
+        }
+      ]
+    },
+    {
+      "claim_id": "C4",
+      "text": "Na stranici proizvoda piše: preporučena dnevna doza je 1 mjerica (8 g), pomiješana s 200 do 300 ml vode.",
+      "type": "page_fact",
+      "as_of": "2026-10-28",
+      "basis_quote": "Preporučena dnevna doza je 1 mjerica (8 g) , pomiješana s 200 do 300 ml vode",
+      "used_in": [
+        "carousel.slide4.callout0"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E-colla-dosage",
+          "status": "verified",
+          "kind": "colla_page_fact",
+          "source_url": "https://gymbeam.hr/colla-pinkbeastpink.html",
+          "retrieved_at": "2026-10-28T20:00:00Z",
+          "sku_family": null,
+          "text": "Product page dosage"
+        }
+      ]
+    },
+    {
+      "claim_id": "C5",
+      "text": "Na stranici proizvoda piše: nemojte prekoračiti preporučeni dnevni unos; proizvod nije zamjena za raznoliku i uravnoteženu prehranu.",
+      "type": "page_fact",
+      "as_of": "2026-10-28",
+      "basis_quote": "Nemojte prekoračiti preporučeni dnevni unos",
+      "used_in": [
+        "carousel.slide4.callout1"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E-colla-warning",
+          "status": "verified",
+          "kind": "colla_page_fact",
+          "source_url": "https://gymbeam.hr/colla-pinkbeastpink.html",
+          "retrieved_at": "2026-10-28T20:00:00Z",
+          "sku_family": null,
+          "text": "Product page warning"
+        }
+      ]
+    },
+    {
+      "claim_id": "C6",
+      "text": "Na stranici proizvoda piše: napitak možete konzumirati u bilo koje doba dana.",
+      "type": "page_fact",
+      "as_of": "2026-10-28",
+      "basis_quote": "Napitak možete konzumirati u bilo koje doba dana",
+      "used_in": [
+        "carousel.slide5.callout0"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E-colla-dosage",
+          "status": "verified",
+          "kind": "colla_page_fact",
+          "source_url": "https://gymbeam.hr/colla-pinkbeastpink.html",
+          "retrieved_at": "2026-10-28T20:00:00Z",
+          "sku_family": null,
+          "text": "Product page dosage"
+        }
+      ]
+    }
+  ],
+  "basis": [
+    {
+      "scope": "identity",
+      "statement": "Obraćanje s 'vi/vaš' u 22 od 30 captiona; emoji u svih 30.",
+      "claimed_status": "verified",
+      "cites": [
+        "O7",
+        "O5"
+      ],
+      "resolved_evidence_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "scope": "identity",
+      "statement": "Tamne i neutralne podloge iz ručnog pregleda 14 naslovnica na razini sličice.",
+      "claimed_status": "manual",
+      "cites": [
+        "E-efb10183",
+        "E-bb511dec"
+      ],
+      "resolved_evidence_statuses": [
+        "manual"
+      ]
+    },
+    {
+      "scope": "identity",
+      "statement": "Narančasti akcent s weba marke; Inter je verificirani web font.",
+      "claimed_status": "verified",
+      "cites": [
+        "O45",
+        "E-ceb3f15e",
+        "E-8e56e0ab"
+      ],
+      "resolved_evidence_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "scope": "identity",
+      "statement": "Kvalitativni ton marke i publika nisu utvrđeni.",
+      "claimed_status": "unavailable",
+      "cites": [],
+      "resolved_evidence_statuses": []
+    },
+    {
+      "scope": "01",
+      "statement": "Marka već objavljuje ružičaste objave: CreaGlow naslovnica u ružičastom izgledu sa serifnim naslovom i kreatoricom s posudom (ručni pregled naslovnice).",
+      "claimed_status": "manual",
+      "cites": [
+        "E-e73f15ab"
+      ],
+      "resolved_evidence_statuses": [
+        "manual"
+      ]
+    },
+    {
+      "scope": "01",
+      "statement": "Marka je 7. 10. 2026. objavila video o Pink Collagenu, pa ružičasta potkampanja ljepote odgovara marki.",
+      "claimed_status": "verified",
+      "cites": [
+        "E-87ecea41"
+      ],
+      "resolved_evidence_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "scope": "01",
+      "statement": "Činjenice o Colla Pink (sastav po mjerici, doziranje, upozorenje) potječu sa službene stranice proizvoda, dohvaćene 28. 10. 2026.",
+      "claimed_status": "verified",
+      "cites": [
+        "E-colla-nutrition",
+        "E-colla-dosage",
+        "E-colla-warning"
+      ],
+      "resolved_evidence_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "scope": "01",
+      "statement": "Svih pet službenih packshotova prikazuje istu ružičastu teglu; razlikuje se samo otisnuta riječ okusa (ručni pregled).",
+      "claimed_status": "manual",
+      "cites": [
+        "E-colla-jar-design"
+      ],
+      "resolved_evidence_statuses": [
+        "manual"
+      ]
+    },
+    {
+      "scope": "01",
+      "statement": "Fiktivna manekenka i dosljednost njezina lika kroz fotografije i videe kreativna su pretpostavka; dosljednost nije provjerena.",
+      "claimed_status": "assumption",
+      "cites": [],
+      "resolved_evidence_statuses": []
+    },
+    {
+      "scope": "02",
+      "statement": "Tamne neutralne podloge iz ručnog pregleda naslovnica.",
+      "claimed_status": "manual",
+      "cites": [
+        "E-efb10183",
+        "E-bb511dec"
+      ],
+      "resolved_evidence_statuses": [
+        "manual"
+      ]
+    },
+    {
+      "scope": "02",
+      "statement": "Narančasti akcent s weba marke.",
+      "claimed_status": "verified",
+      "cites": [
+        "O45",
+        "E-ceb3f15e"
+      ],
+      "resolved_evidence_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "scope": "02",
+      "statement": "Pravi packshot se izdvaja maskom bez webshop značaka; desni rub skriven značkama (oko 45 px) ostaje u sjeni jer se ne rekonstruira.",
+      "claimed_status": "manual",
+      "cites": [
+        "E-18591d8b",
+        "E-5af7d045"
+      ],
+      "resolved_evidence_statuses": [
+        "manual",
+        "verified"
+      ]
+    },
+    {
+      "scope": "03",
+      "statement": "Video je 63% objava marke.",
+      "claimed_status": "verified",
+      "cites": [
+        "O11",
+        "O12"
+      ],
+      "resolved_evidence_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "scope": "03",
+      "statement": "Ruke se pojavljuju na jednoj od 14 pregledanih naslovnica; ritam i zvuk su kreativna pretpostavka.",
+      "claimed_status": "manual",
+      "cites": [
+        "E-795afb62"
+      ],
+      "resolved_evidence_statuses": [
+        "manual"
+      ]
+    },
+    {
+      "scope": "03",
+      "statement": "Sadržaj videa izvan naslovnica nije poznat.",
+      "claimed_status": "unavailable",
+      "cites": [],
+      "resolved_evidence_statuses": []
+    }
+  ],
+  "pack_text_audit": [],
+  "packshot": {
+    "original_source_id": "S-ca0f32962b",
+    "original_url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/c/r/creatine-monohydrate-unflavoured-01_8.jpg",
+    "original_sha256": "99543edff63b17e355cd7bfcc734ef364ae81f08304e561e6a347c09e8954f1c",
+    "original_run_path": "research/raw/99543edff63b17e3.jpg",
+    "cutout_source_id": "S-5af7d045",
+    "cutout_sha256": "86613b3f58580bf96b4e3517095682da0842a4ba389b3e97db89eb50ce7023d8",
+    "cutout_run_path": "research/packshots/86613b3f58580bf9_cutout.png",
+    "pack_generation": "new",
+    "evidence_ids": [
+      "E-18591d8b",
+      "E-5af7d045"
+    ],
+    "status": "manual (operator-attested selection); cut-out is a mechanical edge flood-fill",
+    "known_limitation": "mechanical cut-out only: anything that is not background colour and touches the pack (e.g. overlapping claim badges, shadows) is kept",
+    "file_hash_verified_on_disk": {
+      "original": true,
+      "cutout": true
+    }
+  }
+}

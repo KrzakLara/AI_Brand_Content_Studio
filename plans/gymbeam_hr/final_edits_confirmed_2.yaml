@@ -1,0 +1,30 @@
+# Dodatni ispravak (nakon primjene E01-E21 i N01-N25): dvije nedosljednosti u mom vlastitom tekstu o tempu reela.
+base_plan_hash: defa48fc8ee82acfb74c42c0d6c62c317f9b5bacb91f329a232418b798233610
+edits:
+- id: N26
+  op: replace
+  post: '03'
+  path: pacing
+  expected: Tri brza kadra od po 1,5 s koja se režu točno na zvuk (patent, kvaka, vezica), zatim otkrivanje pakiranja, spor čist krupni plan i duži završni kadar s logotipom. Ukupno 13,5 s.
+  replacement: Tri brza kadra od po 1,5 s koja se režu točno na zvuk (patent, kvaka, vezica), zatim otkrivanje pakiranja, spor čist krupni plan i kratak završni kadar s logotipom. Ukupno 13,5 s.
+  reason: 'Nakon primjene: završni kadar (3 s) nije duži od kadra 5 (3,5 s), pa opis tempa nije bio točan.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluka 5: reel učiniti energičnijim kroz trajanje kadrova, zvučne efekte i ritmičnu montažu (ispravak mojih vlastitih
+    nedosljednosti nakon provjere)'
+  confirmation_scope: decision
+- id: N27
+  op: replace
+  post: '03'
+  shot: 1
+  path: camera_movement
+  expected: Spori dolly naprijed, plitka dubinska oštrina.
+  replacement: Kratki, brzi dolly naprijed, plitka dubinska oštrina.
+  reason: 'Odluka 5: kadar od 1,5 s ne može imati spori pomak; usklađeno s ritmom.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluka 5: reel učiniti energičnijim kroz trajanje kadrova, zvučne efekte i ritmičnu montažu (ispravak mojih vlastitih
+    nedosljednosti nakon provjere)'
+  confirmation_scope: decision

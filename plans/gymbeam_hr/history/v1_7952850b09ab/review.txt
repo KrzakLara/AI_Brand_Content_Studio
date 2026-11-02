@@ -1,0 +1,251 @@
+PLAN HASH: 7952850b09ab5e57d7ac51abf0138ea8094a5915b4c05dfe54cf70c8bc53c08c
+APPROVAL: NONE for this plan hash
+MODEL: claude-sonnet-5-5  prompt vcc1ed77d6dd8  calls: 2
+==============================================================================
+# Campaign: Pročitajte etiketu
+
+**Brand:** GymBeam Hrvatska (@gymbeamhr); focal product: 100% Kreatin Monohidrat - GymBeam (sku 3885)
+**Big idea:** Kreatin bez buke: smireni, uredni pogled na to što stoji na pakiranju i na stranici proizvoda, umjesto glasnog fitness marketinga.
+**Throughline:** Svaki post 'čita' proizvod kao etiketu: mirna tamna scena, jedan topli narančasti naglasak i kratka rečenica koja govori samo ono što je provjereno.
+**Address form:** vi_plural
+**Voice:** Mirno, jasno, uljudno obraćanje s 'vi/vaš'. Kratke rečenice, po jedan emoji u captionu, bez hypea, bez cijena, bez obećanja. Kvalitativni ton marke istraživanje nije utvrdilo pa je ovo prijedlog, ne zaključak.
+**Typography:** Inter Bold (verificirano kao web font marke) za naslove, rečenični zapis; Inter Regular za sitniji tekst. Logotip GymBeam isključivo kao dostavljeni službeni asset, nikada ispisan fontom. Licenca Inter fonta (SIL OFL) nije provjerena: potvrditi prije komercijalne uporabe.
+**Palette use:**
+- #0f0d0d: glavna tamna podloga
+- #2d2a2b: sekundarne plohe i sjene
+- #f2ede8: tekst i svijetle plohe
+- #726c6b: sporedni tekst i linije
+- #ff8c32: jedini akcent (podcrtavanje, oznaka, do oko 10% površine)
+**Shared devices:**
+- Narančasto podcrtavanje (#ff8c32) ispod jedne ključne riječi u svakom naslovu
+- Okrugla 'oznaka-etiketa' u kutu koja imitira naljepnicu, bez teksta s brojevima
+- Tamna ploha #0f0d0d s mekim toplim bočnim svjetlom
+- Bez ljudi i bez gym-kliše slika: predmeti, svjetlo, tišina
+
+## Research basis
+- [verified] Obraćanje s 'vi/vaš' u 22 od 30 captiona; emoji u svih 30.  (O7, O5)
+- [manual] Tamne i neutralne podloge (#0f0d0d, #2d2a2b, #f2ede8) iz ručnog pregleda 14 naslovnica na razini sličice.  (E-efb10183, E-bb511dec)
+- [verified] Narančasti akcent preuzet je s weba marke (theme colour #ff8c32).  (O45, E-ceb3f15e)
+- [verified] Inter je verificirani web font; wordmark je prilagođeni logotip koji treba dostaviti kao asset.  (E-8e56e0ab)
+- [unavailable] Kvalitativni ton marke i analitika publike nisu utvrđeni.  (no evidence)
+
+## Open questions
+- Potvrditi da je fokalni proizvod sku 3885 (brief ga vodi kao 'candidate - not yet decided').
+- Koja se generacija pakiranja stvarno isporučuje po varijanti nije utvrđeno; plan koristi novo pakiranje bez okusa.
+- Potrebno je dostaviti službeni logotip GymBeam kao asset.
+- Licenca Inter fonta (SIL OFL) nije provjerena.
+- Kvalitativni ton marke i analitika publike nisu utvrđeni; ton je prijedlog.
+- Glazba za reel mora biti licencirana; odabir je na čovjeku.
+- Mehanički izrez packshota zadržava bedževe na rubu pakiranja; potrebna vizualna provjera.
+- Ocjena i cijene namjerno nisu korištene u copyju.
+
+==============================================================================
+# Post 01 - Educational carousel: Etiketa u pet pogleda
+
+**Objective:** Edukacija i spremanja: naučiti publiku kako čitati etiketu i stranicu dodatka prehrani.
+**Big idea:** Podsjetnik za spremanje: na što gledati na pakiranju dodatka prije kupnje, uz jedan primjer s verificiranom izjavom proizvoda.
+**Hook:** “Kako pročitati etiketu dodatka prehrani”
+**Narrative arc:** Hook postavlja pitanje, četiri slajda daju kontrolnu listu (naziv, neto količina, sastojci, oznake), pretposljednji slajd pokazuje što stranica proizvoda kaže doslovno, zadnji poziva na spremanje.
+**Why it gets saved:** Kontrolna lista od četiri koraka koju je praktično imati pri ruci prije svake kupnje dodatka.
+**People:** NO - Edukativni sadržaj je tekstualno-grafički i ne treba osobu; razlikuje se od lifestyle naslovnica s osobom.
+- Product packshot: not used in this post
+
+## Slides
+### Slide 1 - hook
+- Headline: “Kako pročitati etiketu dodatka prehrani”
+- Body: “Prelistajte i spremite kao podsjetnik.”
+- Visual: Tamna ploha #0f0d0d, naslov Inter Bold u #f2ede8, lijevo poravnat u gornjoj trećini, riječ 'etiketu' podcrtana #ff8c32. Dolje desno prazna okrugla oznaka-etiketa. Logotip kao asset u donjem lijevom kutu. Margine 80 px.
+- People in frame: no
+- Alt text (hr): Tamna ploha s bijelim naslovom o čitanju etikete dodatka prehrani, riječ etiketu podcrtana narančasto.
+### Slide 2 - korak: naziv
+- Headline: “Pogledajte točan naziv”
+- Body: “Oblik sastojka mora biti jasno napisan na prednjoj strani.”
+- Visual: Ploha #2d2a2b, ogromno narančasto podcrtavanje ispod riječi 'naziv'; ispod ilustrativni grafički okvir naljepnice u #f2ede8 s praznim crtama (bez teksta proizvoda).
+- People in frame: no
+- Alt text (hr): Siva ploha s naslovom Pogledajte točan naziv i grafičkim okvirom naljepnice.
+### Slide 3 - korak: količina
+- Headline: “Provjerite neto količinu”
+- Body: “Uspoređujte pakiranja po težini, ne po veličini vrećice.”
+- Visual: Tamna ploha #0f0d0d, dvije jednostavne grafičke vrećice u #726c6b različite visine kao ilustracija, bez logotipa. Naslov gore, narančasta crta ispod 'neto'.
+- People in frame: no
+- Alt text (hr): Tamna ploha s dvije sive ilustracije vrećica i naslovom Provjerite neto količinu.
+### Slide 4 - korak: sastojci
+- Headline: “Okrenite pakiranje”
+- Body: “Sastojci i upute za uporabu nalaze se na poleđini.”
+- Visual: Svijetla ploha #f2ede8, tamni tekst #0f0d0d, grafička strelica u #ff8c32 koja označava 'okretanje'. Bez prikaza proizvoda.
+- People in frame: no
+- Alt text (hr): Svijetla ploha s naslovom Okrenite pakiranje i narančastom strelicom.
+### Slide 5 - korak: oznake
+- Headline: “Oznake na pakiranju su tvrdnje proizvođača”
+- Body: “Potražite što točno znače prije nego im povjerujete.”
+- Visual: Ploha #2d2a2b, tri prazna okrugla kruga u #726c6b koji imitiraju bedževe, jedan obrubljen #ff8c32. Naslov lijevo, margine 80 px.
+- People in frame: no
+- Alt text (hr): Siva ploha s tri okrugla praznih bedževa i naslovom o oznakama na pakiranju.
+### Slide 6 - primjer s izjavom
+- Headline: “Što kaže stranica proizvoda”
+- Body: “100% Kreatin monohidrat učinkovit je dodatak za povećanje fizičke izvedbe.”  [C1]
+- Body: “Navod s gymbeam.hr, stranica proizvoda Kreatin Monohidrat.”
+- Visual: Tamna ploha #0f0d0d, citat Inter Bold #f2ede8 u navodnicima, narančasta okomita crta lijevo od citata. Bez pakiranja.
+- People in frame: no
+- Alt text (hr): Tamna ploha s citatom s web stranice proizvoda o kreatin monohidratu.
+### Slide 7 - spremanje i CTA
+- Headline: “Spremite za sljedeću kupnju”
+- Body: “Pošaljite prijatelju koji još čita sitna slova.”
+- Visual: Ploha #f2ede8, naslov #0f0d0d, ikona spremanja u #ff8c32, službeni logotip GymBeam kao asset dolje.
+- People in frame: no
+- Alt text (hr): Svijetla ploha s pozivom da spremite objavu za sljedeću kupnju.
+
+## Caption and CTA
+- Caption (hr): “Mali podsjetnik prije svake kupnje dodatka prehrani. 🏷️ Prelistajte, spremite i podijelite s nekim tko voli znati što kupuje.”
+- CTA: “Više na linku u opisu profila 🔗”
+- Hashtags: #gymbeamhr #gbfit #gbig
+
+**Different from the other posts:** Karusel je tekstualno-grafički vodič bez proizvoda i ljudi; hero je statična scena s pakiranjem, a reel je tihi filmski prizor u pokretu.
+
+## Research basis
+- [verified] Karusel čini oko trećine objava marke; edukativni karusel s uputom 'prelistajte' već postoji u feedu.  (O13, E-3e1f8026)
+- [verified] Izjava na slajdu 6 doslovni je navod stranice proizvoda sku 3885.  (E-0921eae1)
+- [assumption] Opći savjeti o čitanju etikete su strateški prijedlog, ne činjenice iz istraživanja.  (no evidence)
+
+==============================================================================
+# Post 02 - Product hero: Jedna polica, jedno svjetlo
+
+**Objective:** Prepoznatljivost i poželjnost proizvoda.
+**Big idea:** Pakiranje kao jedini junak u tihoj tamnoj sceni s jednim toplim bočnim svjetlom; jedna rečenica s verificiranom izjavom.
+**Headline:** “Samo bitno.”
+**Supporting copy:** “100% Kreatin monohidrat učinkovit je dodatak za povećanje fizičke izvedbe.”  [C1]
+
+**Art direction:** Minimalistička tamna scena: mat površina u #2d2a2b ispred pozadine #0f0d0d. Bez rekvizita osim jedne meke narančaste svjetlosne mrlje (#ff8c32) na pozadini iza pakiranja, koja se odražava na srebrnom dijelu vrećice. Bez ljudi, plamenova, munja i gym-klišeja.
+**Lighting:** Jedan veliki softbox slijeva pod 45°, topla temperatura, blagi rim light desno. Duboke sjene, kontrast umjeren, bez glossy prejakih odsjaja.
+**Composition:** Pakiranje centrirano malo desno od sredine, visina oko 60% okvira, malo ispod geometrijskog središta. Tekst u lijevoj gornjoj zoni, prazan prostor oko pakiranja.
+**Layout (4:5):** 4:5 (1080x1350). Sigurne margine 90 px. Headline gore lijevo, Inter Bold, #f2ede8, riječ 'bitno' podcrtana #ff8c32. Potporna rečenica Inter Regular ispod, najviše tri retka. Službeni logotip GymBeam kao asset donji lijevi kut. Donjih 150 px bez teksta zbog sučelja.
+**Background palette:** #0f0d0d, #2d2a2b, #f2ede8, #ff8c32
+**People:** NO - Proizvod je jedini junak; scena bez osobe razlikuje hero od uobičajenih naslovnica s jednom osobom i izbjegava likenesse.
+- Product packshot: **selected original** (`selected_packshot`, unaltered_cutout_composite)
+  - Koristiti isključivo odabrani izrezani packshot, bez ikakvih izmjena, precrtavanja ili ponovnog generiranja etikete.
+  - Visina oko 60% okvira, centar oko 55% širine, donji rub na 78% visine.
+  - Dodati samo kontaktnu sjenu: meka, eliptična, #0f0d0d na oko 60% neprozirnosti, blago pomaknuta desno od svjetla.
+  - Znati da mehanički izrez zadržava rubne bedževe: provjeriti rubove prije objave.
+  - Minimalna margina pakiranja od ruba okvira 120 px.
+
+**Caption (hr):** “Kad je sve ostalo tiho, ostaje samo bitno. 🧡 Pogledajte pobliže kreatin monohidrat u novom pakiranju.”
+**CTA:** “Pogledajte na linku u opisu profila 🔗”
+**Alt text (hr):** Narančasto-srebrna vrećica kreatin monohidrata GymBeam na tamnoj površini, osvijetljena toplim svjetlom slijeva, s naslovom Samo bitno.
+**Hashtags:** 
+
+**Different from the other posts:** Hero je jedna statična fotografska kompozicija s pakiranjem u centru, za razliku od tekstualnog karusela bez proizvoda i filmskog reela u pokretu.
+
+## Research basis
+- [manual] Tamne neutralne podloge iz ručnog pregleda naslovnica (sličice, bez ljudi na dijelu njih).  (E-efb10183, E-bb511dec)
+- [verified] Narančasti akcent preuzet s weba marke.  (O45, E-ceb3f15e)
+- [manual] Izdvojen packshot s mehaničkim izrezom, poznato ograničenje rubova.  (E-18591d8b, E-5af7d045)
+- [verified] Izjava je doslovna verificirana rečenica stranice proizvoda.  (E-0921eae1)
+
+==============================================================================
+# Post 03 - Cinematic reel: Prije nego se svjetlo upali
+
+**Objective:** Angažman i storytelling kroz tihi filmski prizor.
+**Big idea:** Jutarnji ritual bez ljudi: predmeti u mraku kuhinje bude se uz zvuk, a pakiranje stiže u kadar tek u četvrtom planu, završavajući izjavom proizvoda.
+**Hook:** “Prije nego počne dan.”
+**Total duration:** 20 s (6 shots)
+**Pacing:** Spor početak (po 3 s), blago ubrzanje do otkrivanja pakiranja u 4. planu, zatim smirivanje. Ukupno 20 s.
+**Cover frame:** Kadar iz plana 4: pakiranje u toplom snopu svjetla na tamnoj ploči, s naslovom 'Prije nego počne dan.' u gornjoj trećini 9:16 sigurne zone.
+**People:** NO - Bez osoba zadržavamo fokus na ritualu i izbjegavamo likenesse; razlikuje se od većine naslovnica s jednom osobom.
+- Product packshot: **selected original** (`selected_packshot`, unaltered_cutout_composite)
+  - Isključivo odabrani izrezani packshot, bez redizajna ili ponovnog generiranja.
+  - Sigurne margine 9:16: 250 px gore i 340 px dolje bez teksta.
+  - Mehanički izrez zadržava bedževe na rubu: provjeriti prije montaže.
+
+## Story
+- Beginning (shots [1, 2]): Tamna kuhinja, prvo svjetlo i čaša čekaju.
+- Development (shots [3, 4]): Predmeti rituala se redaju, a pakiranje ulazi u kadar.
+- Payoff (shots [5, 6]): Pakiranje u toplom svjetlu, izjava proizvoda i završni kadar s logotipom.
+
+## Storyboard
+### Shot 1  (0-3 s, 3 s)
+- Visual: Tamna kuhinja prije zore, radna ploča u #2d2a2b, prozor sa slabim plavim svjetlom izvan fokusa. Prazan kadar, tišina.
+- Camera: Spor dolly naprijed, plitka dubinska oštrina.
+- Transition out: Tvrdi rez uz zvuk klika.
+- Sound: Tihi ambijent, daleki cvrkut.
+- On-screen: “Prije nego počne dan.”
+- Product visible: no; people in frame: no
+### Shot 2  (3-6 s, 3 s)
+- Visual: Makro kadar prazne staklene čaše, u nju se uliva voda, na stijenkama topla svjetlost.
+- Camera: Statična kamera, makro.
+- Transition out: Rez na zvuk žlice.
+- Sound: Zvuk ulijevanja vode.
+- Product visible: no; people in frame: no
+### Shot 3  (6-9 s, 3 s)
+- Visual: Na ploči se samostalno u kadar slaže predmeti (čaša, šejker, ručnik) kao stop-motion; bez ruku i osoba, bez dozvolenih prikaza količina.
+- Camera: Top-down, nepomično.
+- Transition out: Match cut na ploču, svjetlo se pojačava.
+- Sound: Kratki taktilni klikovi u ritmu glazbe.
+- Product visible: no; people in frame: no
+### Shot 4  (9-13 s, 4 s)
+- Visual: Topli bočni svjetlosni snop (#ff8c32) prelazi ploču i otkriva pakiranje kreatin monohidrata, centrirano, u kadru ostaju čaša i šejker.
+- Camera: Lagano kružno kretanje kamere 15° oko pakiranja.
+- Transition out: Spora zatamnjena dissolve.
+- Sound: Glazba raste, tihi whoosh svjetla.
+- Product visible: yes; people in frame: no
+### Shot 5  (13-16 s, 3 s)
+- Visual: Bliski plan pakiranja u toplom svjetlu, tamna pozadina. Tekst izjave se pojavljuje s narančastim podcrtavanjem.
+- Camera: Spori push-in.
+- Transition out: Rez na crno.
+- Sound: Glazba na vrhuncu, zatim pad.
+- On-screen: “Omogućit će vam da trenirate intenzivno, napravite više ponavljanja ili dulje sprintate.”  [C2]
+- Product visible: yes; people in frame: no
+### Shot 6  (16-20 s, 4 s)
+- Visual: Tamni kadar #0f0d0d, pakiranje u donjoj trećini, iznad njega službeni logotip GymBeam kao asset i narančasta crta.
+- Camera: Statično.
+- Transition out: Kraj, zatamnjenje.
+- Sound: Posljednji ton glazbe i tišina.
+- On-screen: “Pročitajte etiketu.”
+- Product visible: yes; people in frame: no
+
+## Sound design
+- Music: Minimalistički ambijentalni elektronički sloj s toplim sintisajzerom, bez dramatičnih udaraljki; licencirana glazba po izboru čovjeka.
+- SFX: voda koja se ulijeva
+- SFX: taktilni klikovi
+- SFX: tihi whoosh svjetla
+- Silence: Posljednjih oko 1 s u tišini nakon završnog tona.
+
+## Product placement
+- Odabrani packshot, neizmijenjeni izrezani kompozit, bez prerade etikete.
+- Plan 4: centar kadra, visina oko 55% okvira, sjena kontaktna meka #0f0d0d.
+- Plan 5: povećanje samo digitalnim zumom izrezanog packshota u okviru raspoložive rezolucije, bez redizajna.
+- Plan 6: donja trećina, margina 120 px od ruba, logotip kao asset.
+
+**Caption (hr):** “Neka se dan polako probudi. ☀️ Mali ritual, jedna čaša i vaš kreatin monohidrat. Što je prvo što napravite ujutro?”
+**CTA:** “Odgovorite u komentarima i pogledajte više na linku u opisu profila 🔗”
+**Alt text (hr):** Tamna kuhinja u zoru, topla svjetlost otkriva vrećicu kreatin monohidrata GymBeam pored čaše i šejkera.
+**Hashtags:** 
+
+**Different from the other posts:** Reel je filmski prizor u pokretu bez ljudi s otkrivanjem proizvoda, različit od statičnog hera i tekstualnog edukativnog karusela.
+
+## Research basis
+- [verified] Video čini 63% objava marke, pa je reel format koji publika već prati.  (O11, O12)
+- [unavailable] Sadržaj videa izvan naslovnica nije poznat; ritam i zvuk su kreativna pretpostavka.  (no evidence)
+- [verified] Završna izjava doslovni je navod stranice proizvoda sku 3885.  (E-0921eae1)
+
+==============================================================================
+EVIDENCE BEHIND EVERY CLAIM
+
+C1 [product_fact] 100% Kreatin monohidrat učinkovit je dodatak za povećanje fizičke izvedbe.
+  basis quote: “100% Kreatin monohidrat učinkovit je dodatak za povećanje fizičke izvedbe.”
+  used in: carousel.slide6.body0, hero.support0
+  - E-0921eae1 [verified] product_description https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html
+      100% Kreatin monohidrat učinkovit je dodatak za povećanje fizičke izvedbe. Omogućit će vam da trenirate intenzivno, napravite više ponavljanja ili dulje sprintate.
+
+C2 [product_fact] Omogućit će vam da trenirate intenzivno, napravite više ponavljanja ili dulje sprintate.
+  basis quote: “Omogućit će vam da trenirate intenzivno, napravite više ponavljanja ili dulje sprintate.”
+  used in: reel.shot5.copy0
+  - E-0921eae1 [verified] product_description https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html
+      100% Kreatin monohidrat učinkovit je dodatak za povećanje fizičke izvedbe. Omogućit će vam da trenirate intenzivno, napravite više ponavljanja ili dulje sprintate.
+
+PACKSHOT (code-injected, not model output)
+  original: https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/c/r/creatine-monohydrate-unflavoured-01_8.jpg
+  original sha256: 99543edff63b17e355cd7bfcc734ef364ae81f08304e561e6a347c09e8954f1c
+  cut-out sha256: 86613b3f58580bf96b4e3517095682da0842a4ba389b3e97db89eb50ce7023d8
+  status: manual (operator-attested selection); cut-out is a mechanical edge flood-fill
+  limitation: mechanical cut-out only: anything that is not background colour and touches the pack (e.g. overlapping claim badges, shadows) is kept
+  files verified on disk: {'original': True, 'cutout': True}

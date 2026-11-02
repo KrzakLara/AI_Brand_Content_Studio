@@ -1,0 +1,77 @@
+[
+  {
+    "correction_id": 1,
+    "corrected_at": "2026-10-28T09:58:40+00:00",
+    "corrected_by": "Claude Code",
+    "edit_id": 1,
+    "edit_item_id": "E15",
+    "text": "Patent, kvaka, vezice. 🎧 Tri sitna zvuka prije izlaska. A koji je vaš mali ritual prije treninga?",
+    "previously_recorded_authorship": "human_authored",
+    "corrected_authorship": "mixed_ai_proposed_and_human_authored",
+    "segments": [
+      {
+        "text": "Patent, kvaka, vezice.",
+        "origin": "ai_proposed_modified_by_human"
+      },
+      {
+        "text": "🎧 Tri sitna zvuka prije izlaska.",
+        "origin": "ai_proposed"
+      },
+      {
+        "text": "A koji je vaš mali ritual prije treninga?",
+        "origin": "human_authored"
+      }
+    ],
+    "basis": "The first two sentences ('Patent, kvaka, vezica. 🎧 Tri sitna zvuka prije izlaska.') are the AI suggestion E15 (plans/gymbeam_hr/history/review_round_1/proposed_edits_for_lara.yaml), which Lara adopted; she changed 'vezica' to 'vezice' and wrote the last sentence herself."
+  },
+  {
+    "correction_id": 2,
+    "corrected_at": "2026-10-28T09:58:40+00:00",
+    "corrected_by": "Claude Code",
+    "edit_id": 3,
+    "edit_item_id": "F3",
+    "text": "Patent, kvaka, vezica. 🎧 Tri sitna zvuka prije izlaska. A koji je vaš mali ritual prije treninga?",
+    "previously_recorded_authorship": "human_authored",
+    "corrected_authorship": "mixed_ai_proposed_and_human_authored",
+    "segments": [
+      {
+        "text": "Patent, kvaka, vezica.",
+        "origin": "ai_proposed"
+      },
+      {
+        "text": "🎧 Tri sitna zvuka prije izlaska.",
+        "origin": "ai_proposed"
+      },
+      {
+        "text": "A koji je vaš mali ritual prije treninga?",
+        "origin": "human_authored"
+      }
+    ],
+    "basis": "The first two sentences are the AI suggestion E15, restored verbatim by Lara in her final-three-corrections message ('vezica' again); 'A koji je vaš mali ritual prije treninga?' is Lara's own sentence (first appears in her message)."
+  },
+  {
+    "correction_id": 3,
+    "corrected_at": "2026-10-28T09:58:40+00:00",
+    "corrected_by": "Claude Code",
+    "edit_id": 3,
+    "edit_item_id": "F1",
+    "text": "Bez buke, bez ukrasa. 🧡 U fokusu je GymBeam kreatin monohidrat.",
+    "previously_recorded_authorship": "human_authored",
+    "corrected_authorship": "mixed_ai_proposed_and_human_authored",
+    "segments": [
+      {
+        "text": "Bez buke, bez ukrasa.",
+        "origin": "human_authored"
+      },
+      {
+        "text": "🧡",
+        "origin": "ai_proposed"
+      },
+      {
+        "text": "U fokusu je GymBeam kreatin monohidrat.",
+        "origin": "human_authored"
+      }
+    ],
+    "basis": "'Bez buke, bez ukrasa.' and 'U fokusu je GymBeam kreatin monohidrat.' come from Lara's messages; the 🧡 emoji was part of the AI-written hero caption of the plan (model output) and was kept."
+  }
+]

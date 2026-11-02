@@ -1,0 +1,287 @@
+PLAN HASH: 970975125494d10dda267d86d6ebab7f45ebb4983ae2dfb0444e0304afa01a99
+APPROVAL: NONE for this plan hash
+VALIDATION FLAGS (non-blocking, for you): none
+MODEL: claude-sonnet-5-5  prompt vd2708ebe35cd  calls: 1
+==============================================================================
+# Campaign: Piše na pakiranju
+
+**Brand:** GymBeam Hrvatska (@gymbeamhr); focal product: 100% Kreatin Monohidrat - GymBeam (sku 3885)
+**Big idea:** Mirna, fotografski dotjerana kampanja: pravo pakiranje u tri različita svijeta (studio, izbliza, pokret), a tvrdi se samo ono što je otisnuto na pakiranju.
+**Throughline:** Jedna marka, dvije fotografske obitelji: tamni mokri studio s narančastim akcentom (hero i reel s kreatinom) i svijetla ružičasta potkampanja ljepote i fitnessa (karusel s Colla Pink), kako marka već radi u ružičastim objavama (CreaGlow).
+**Address form:** vi_plural
+**Voice:** Mirno, kratko, uljudno 'vi/vaš'. Konkretne imenice, bez hypea, cijena i količina. Jedan emoji u captionu, najviše dva. Kvalitativni ton marke istraživanje nije utvrdilo pa je ovo prijedlog.
+**Typography:** Inter Bold za naslove (rečenični zapis), Inter Regular za sitniji tekst; verificirani web font marke. Logotip GymBeam samo kao službeni asset. Licenca Inter fonta nije provjerena.
+**Palette use:**
+- #0f0d0d: najdublja sjena i završni kadrovi; ne više jedina podloga
+- #2d2a2b: grafitni beton, tamne plohe i sjene
+- #f2ede8: tekst, topla svijetla svjetlost, tkanina i svijetle plohe
+- #726c6b: sporedni tekst, tanke linije, prašnjavi beton i staklo u sjeni
+- #ff8c32: jedini akcent (tanke linije, podcrtavanje, topli rim-light); nikad neonska zasićena ploha
+**Shared devices:**
+- Tanki narančasti okvir ili crta (#ff8c32) koji označava ono što se čita ili pokazuje
+- Fotorealistične scene s taktilnim površinama: topla bočna svjetlost u tamnom mokrom studiju (kreatin) i meka ružičasta i blush bijela svjetlost u potkampanji Colla Pink; svaka scena u svom svijetu, ali ista razina fotografije
+- Činjenice o proizvodu uvijek kao zasebna oznaka koju slaže kod, s uvodom 'Na pakiranju piše' ili 'Na stranici proizvoda piše'; pakiranje je uvijek pravi, neizmijenjeni packshot
+- Bez gym-klišeja i bez generiranih natpisa: sav tekst slaže kod, a pakiranje i logotip nikad ne crta generator slika
+
+## Research basis
+- [verified] Obraćanje s 'vi/vaš' u 22 od 30 captiona; emoji u svih 30.  (O7, O5)
+- [manual] Tamne i neutralne podloge iz ručnog pregleda 14 naslovnica na razini sličice.  (E-efb10183, E-bb511dec)
+- [verified] Narančasti akcent s weba marke; Inter je verificirani web font.  (O45, E-ceb3f15e, E-8e56e0ab)
+- [unavailable] Kvalitativni ton marke i publika nisu utvrđeni.  (no evidence)
+
+## Deferred claims (NOT used anywhere; need separate compliance review)
+- “Tvrdnje sa stranice proizvoda (sku 3885) o učinkovitosti i izvedbi (E-0921eae1).” (E-0921eae1) - Zdravstvena/performansna tvrdnja o proizvodu; ne koristi se u nijednom tekstu.; review: posebna provjera usklađenosti za svaku tvrdnju; uvjeti uporabe / conditions of use; odobrenje pravnog tima
+- “Značke na slici pakiranja o jamstvu kvalitete i brzoj apsorpciji.” (E-8637dbdb) - Jamstvo i performansna tvrdnja koje dolaze uz nepromijenjeni packshot; nisu poruke kampanje.; review: provjera usklađenosti značaka; uvjeti uporabe / conditions of use
+- “Tvrdnje sa stranice Colla Pink o kosi, noktima, koži, stvaranju kolagena i hidrataciji kože (minerali, vitamini, meta-analiza).” (E-colla-health-wording) - Zdravstvene i učinkovne tvrdnje o proizvodu; ne koriste se ni u jednom tekstu dok se ne provjere pojedinačno.; review: posebna provjera usklađenosti za svaku tvrdnju; uvjeti uporabe / conditions of use; odobrenje pravnog tima
+
+## Open questions
+- Količine: za kreatin (hero, reel) se ne prikazuje nijedna količina jer odabrani packshot ne prikazuje veličinu. Za Colla Pink prikazuju se samo količine sa službene stranice proizvoda (sastav po mjerici od 8 g, doziranje), svaka kao oznaka 'Na stranici proizvoda piše'; cijene i ocjene se ne koriste.
+- Slika packshota sadrži grafičke značke weba koje lebde uz rub vrećice i skrivaju desni rub pravog pakiranja. Značke se izdvajaju maskom i ne pojavljuju u kompozicijama; skriveni desni rub (oko 45 px) ne smije se rekonstruirati. Prije proizvodnje: zatražiti od GymBeama čistu službenu sliku pakiranja bez značaka, a do tada desni rub ostaje u dubokoj sjeni ili izvan kadra (vidi production_briefs.md).
+- Tvrdnje o učinkovitosti sa stranice proizvoda odgođene su do posebne provjere uvjeta uporabe.
+- Potrebna je provjera teksta od strane izvornog govornika hrvatskog jezika.
+- Službeni logotip GymBeam: pri preuzimanju se u manifest (asset_manifest.yaml) upisuju izvorni URL, vrijeme preuzimanja i hash datoteke; logotip se nikad ne crta niti ispisuje fontom.
+- Licenca Inter fonta (SIL OFL) nije provjerena.
+- Glazba i zvučni efekti: samo zvuk s provjerenom licencom koja dopušta namjeravanu uporabu; izvor i uvjeti licence upisuju se u manifest (asset_manifest.yaml). Zvuk još nije odabran.
+- Colla Pink: tvrdnje o kosi, noktima, koži, stvaranju kolagena i hidrataciji kože sa stranice proizvoda odgođene su do posebne provjere usklađenosti (uvjeti uporabe). Stranica proturječi sama sebi (tablica specifikacija: preporučena dnevna doza 2, 30 dana po pakiranju; tekst: 1 mjerica od 8 g i najviše 18 g dnevno), pa se koristi samo '1 mjerica (8 g) u 200 do 300 ml vode'.
+- Boja pripremljenog napitka Colla Pink nije potvrđena: videi ne prikazuju izmišljenu boju. Dosljednost lica fiktivne manekenke kroz fotografije i videe nije provjerena i može zahtijevati odbacivanje kadrova. Za video se razmatra Gemini Omni 1.1 Flash; cijena, pristup i naplata (odvojena od OpenAI kredita) čekaju odobrenje. Vezivanje teglje uz ruke manekenke zahtijeva ručni nadzor rubova.
+
+==============================================================================
+# Post 01 - Educational carousel: Ružičasti ritual
+
+**Objective:** Informiranje i spremanje: što je u napitku Colla Pink, kako se priprema i koji okus odabrati, u ružičastoj kampanji ljepote i fitnessa.
+**Big idea:** Informativna ružičasta kampanja: fiktivna fitness manekenka u bijeloj sportskoj odjeći, autentična ružičasta tegla Colla Pink i fotografije u mekoj paleti ružičaste i blush bijele, uz činjenice sa službene stranice proizvoda.
+**Creative device:** Mješoviti medij (četiri fotografije, dva videa) s istom fiktivnom manekenkom, istom ružičastom teglom i bordo naslovima koje slaže kod; svaka činjenica kao zasebna oznaka s izvorom.
+**Hook:** “Vaš ružičasti ritual.”
+**Narrative arc:** Naslovnica s manekenkom i teglom, sastav po mjerici, priprema u videu, upute za uporabu, isti ritual u videu s manekenkom, pa izbor okusa.
+**Why it gets saved:** Sastav po mjerici i upute za pripremu na jednom mjestu, za spremanje i dijeljenje.
+**People:** YES (fictional_model) - Fiktivna fitness manekenka u bijeloj sportskoj odjeći u kadrovima 1 i 5, po odluci čovjeka; ostali kadrovi bez ljudi. (casting: Potpuno fiktivna (AI-generirana) osoba: nikad stvarna, imenovana ni prepoznatljiva osoba i nikad lik influencerice iz referentnih objava; ista osoba u kadrovima 1 i 5 (isto lice, odjeća, svjetlo i prostor); bez logotipa na odjeći; prsti ne prekrivaju natpis na teglji.)
+- Product packshot: **selected original** (`colla_flavour_packshots`, unaltered_cutout_composite)
+  - Svaka tegla je službeni packshot svog okusa (1200x1200, bijela pozadina), izrezan rubnim matiranjem; sve tegle imaju isti ružičasti dizajn i nikad se ne prebojavaju.
+  - Tegla pokazuje samo svoj okus; sve tegle zajedno samo na slajdu 6. Najviše 1,0x izvorne veličine.
+  - Natpis na teglji nikad se ne crta, ne proširuje ni ne prekriva: prsti, voće i oznake ostaju izvan natpisa.
+  - U videima nema tegle u snimci; prava tegla pojavljuje se samo kao završni sloj koji slaže kod.
+
+## Slides
+### Slide 1 - FOTO: naslovnica
+- Headline: “Vaš ružičasti ritual.”
+- Body: “Colla Pink: sve što treba znati u šest kadrova.”
+- Visual: Fotografija 4:5 (1080x1350). Meka ružičasta studijska scena #f4c7d0 s blush bijelom #fbf3f2, difuzno svjetlo slijeva. Fiktivna fitness manekenka u bijeloj sportskoj odjeći drži pravu teglu Colla Pink okusa jagoda - limunada (službeni packshot koji slaže kod), s prstima ispod natpisa. Prsti nikad ne prekrivaju natpis na teglji. Naslov u bordo #6e1f35, snažna editorijalna tipografija koju slaže kod, u gornjoj trećini. Bez generiranog teksta i bez generirane tegle.
+- People in frame: yes
+- Alt text (hr): Fiktivna fitness manekenka u bijeloj sportskoj odjeći drži ružičastu teglu Colla Pink na mekoj ružičastoj pozadini, uz naslov Vaš ružičasti ritual.
+### Slide 2 - FOTO: što je unutra
+- Headline: “Što je unutra?”
+- Body: “Sastojci i količine sa službene stranice.”
+- Code-generated callout: “Na stranici proizvoda piše: u 8 g (1 mjerica): hidrolizirani peptidi goveđeg kolagena 6300 mg, ekstrakt sjemenki grožđa 20:1 400 mg, hijaluronska kiselina 40 mg.”  [C1]
+- Code-generated callout: “Na stranici proizvoda piše: u 8 g: cink 10 mg, selen 89 μg, vitamin C 500 mg.”  [C2]
+- Code-generated callout: “Na stranici proizvoda piše: u 8 g: niacin 32 mg, vitamin B2 2,8 mg, vitamin A 800 μg, biotin 50 μg.”  [C3]
+- Visual: Fotografija 4:5. Infografika na blush bijeloj podlozi #fbf3f2: u sredini prava tegla Colla Pink okusa grožđe (službeni packshot) sa zelenim grožđem kao rekvizitom i tri bordo #6e1f35 oznake sa sastojcima i količinama koje slaže kod, spojene tankim linijama. Oznake nikad ne prekrivaju natpis na teglji. Tekst čitljiv na mobitelu, kontrast najmanje 4,5:1.
+- People in frame: no
+- Alt text (hr): Ružičasta tegla Colla Pink okusa grožđe sa zelenim grožđem i tri oznake sa sastojcima i njihovim količinama.
+### Slide 3 - VIDEO 3,5 s: priprema
+- Headline: “Priprema.”
+- Body: “Prah, voda, miješanje.”
+- Visual: Video 4:5, oko 3,5 s. Makro: prah pada u čašu čiste vode, vrtlog pri miješanju, svjetlo slijeva kroz staklo, blush bijela podloga #fbf3f2. Nema tegle u kadru. Boja pripremljenog napitka nije potvrđena: prah ostaje blijed, a tekućina prozirna do mutna, bez izmišljene boje. Natpis slaže kod.
+- People in frame: no
+- Alt text (hr): Makro video: prah pada u čašu vode i vrtloži se pri miješanju, na mekoj blush bijeloj podlozi.
+### Slide 4 - FOTO: kako se priprema
+- Headline: “Kako se priprema?”
+- Body: “Odmjerite prah, dolijte vodu i promiješajte.”
+- Code-generated callout: “Na stranici proizvoda piše: preporučena dnevna doza je 1 mjerica (8 g), pomiješana s 200 do 300 ml vode.”  [C4]
+- Code-generated callout: “Na stranici proizvoda piše: nemojte prekoračiti preporučeni dnevni unos; proizvod nije zamjena za raznoliku i uravnoteženu prehranu.”  [C5]
+- Visual: Fotografija 4:5. Svijetla ružičasta podloga #f4c7d0, tri elegantna koraka s piktogramima u bordo #6e1f35 (prah, čaša vode, miješanje) koje slaže kod; u donjoj trećini prava tegla Colla Pink okusa mango - naranča (službeni packshot) uz kriške manga i naranče kao rekvizit. Tekst uputa čitljiv na mobitelu; natpis na teglji ostaje nepokriven.
+- People in frame: no
+- Alt text (hr): Tri koraka pripreme napitka s piktogramima, uz ružičastu teglu Colla Pink okusa mango - naranča i kriške manga i naranče.
+### Slide 5 - VIDEO 3,5 s: ružičasti ritual
+- Headline: “Mali ritual.”
+- Body: “Kad Vam odgovara.”
+- Code-generated callout: “Na stranici proizvoda piše: napitak možete konzumirati u bilo koje doba dana.”  [C6]
+- Visual: Video 4:5, oko 3,5 s. Ista fiktivna manekenka (isto lice, ista bijela sportska odjeća, isti ružičasti prostor i svjetlo) miješa pripremljeni napitak u čaši i podiže je prema kameri; spor pomak kamere. Nema tegle u snimci; prava tegla Colla Pink okusa malina pojavljuje se samo kao završni sloj koji slaže kod u zadnjoj sekundi. Boja napitka nije potvrđena: neutralna, prozirna tekućina.
+- People in frame: yes
+- Alt text (hr): Video: fiktivna fitness manekenka u bijeloj sportskoj odjeći miješa napitak u čaši i podiže je prema kameri u mekom ružičastom prostoru.
+### Slide 6 - FOTO: odaberite okus i poziv
+- Headline: “Odaberite svoj okus.”
+- Body: “Jagoda - limunada, grožđe, mango - naranča, malina i šumsko voće.”
+- Visual: Fotografija 4:5. Pet pravih tegli Colla Pink u nizu, sve istog ružičastog dizajna, svaka uz svoje voće: jagode i limuni, zeleno grožđe, mango i naranče, maline, miješano šumsko voće. Svijetla ružičasta podloga #f4c7d0 i blush bijela #fbf3f2, jedna tegla po okusu iz službenog packshota (nikad prebojana). Naslov u bordo #6e1f35; poziv na akciju slaže kod.
+- People in frame: no
+- Alt text (hr): Pet ružičastih tegli Colla Pink u nizu, svaka uz svoje voće: jagode i limuni, grožđe, mango i naranče, maline i šumsko voće.
+
+## Caption and CTA
+- Caption (hr): “Vaš ružičasti ritual uz Colla Pink. 💗 Što je unutra, kako se priprema i koji okus odabrati: prelistajte do kraja.”
+- CTA: “Spremite objavu, a više pogledajte na linku u opisu profila.”
+- Hashtags: #gymbeamhr #gbfit
+
+**Different from the other posts:** Jedini post s ljudskim likom (fiktivna manekenka), ružičastom paletom i činjenicama o drugom proizvodu (Colla Pink); hero je tamna studijska fotografija kreatina, a reel priča u pokretu s rukama i siluetama.
+
+## Research basis
+- [manual] Marka već objavljuje ružičaste objave: CreaGlow naslovnica u ružičastom izgledu sa serifnim naslovom i kreatoricom s posudom (ručni pregled naslovnice).  (E-e73f15ab)
+- [verified] Marka je 7. 10. 2026. objavila video o Pink Collagenu, pa ružičasta potkampanja ljepote odgovara marki.  (E-87ecea41)
+- [verified] Činjenice o Colla Pink (sastav po mjerici, doziranje, upozorenje) potječu sa službene stranice proizvoda, dohvaćene 28. 10. 2026.  (E-colla-nutrition, E-colla-dosage, E-colla-warning)
+- [manual] Svih pet službenih packshotova prikazuje istu ružičastu teglu; razlikuje se samo otisnuta riječ okusa (ručni pregled).  (E-colla-jar-design)
+- [assumption] Fiktivna manekenka i dosljednost njezina lika kroz fotografije i videe kreativna su pretpostavka; dosljednost nije provjerena.  (no evidence)
+
+==============================================================================
+# Post 02 - Product hero: Studijski portret
+
+**Objective:** Prepoznatljivost i poželjnost: pakiranje samo, bez dodataka.
+**Big idea:** Pakiranje kao jedini junak u fotografiji kakvu bi snimio komercijalni fotograf: topla bočna svjetlost, grafitni beton, duboke sjene i jedan uski narančasti rim-light.
+**Creative device:** Jedan narančasti rim-light uz rub pakiranja i prava kontaktna sjena na betonu: pakiranje stoji na površini, ne lebdi na pozadini.
+**Headline:** “SVAKA SERIJA POČINJE ODLUKOM.”
+
+**Art direction:** Premium studijska scena: mokra tamna kamena podloga s tankim slojem vode i kapljicama, topla tamna pozadina u grafitnim tonovima, uski narančasti rim-light #ff8c32 s lijeve pozadine, visoka čaša vode s kondenzacijom u prednjem desnom planu. Bez ljudi, plamenova, munja i generiranih natpisa.
+**Lighting:** Veliki softbox slijeva pod 45° (topla temperatura), slabo popunjavanje zdesna, uski rim-light iza. Desni rub pakiranja pada u dubok low-key pad svjetla (zadano ograničenjem packshota). Prava kontaktna sjena i suptilni odsjaj na betonu, generirani na pozadinskoj ploči i potvrđeni nad kompozitom.
+**Composition:** Pakiranje malo desno od sredine, visina oko 60% okvira (najviše 890 px, bez uvećanja izvora). Betonska površina u donjoj petini, kamera u visini pola pakiranja. Prazan prostor oko njega. Tekst u gornjoj lijevoj zoni.
+**Layout (4:5):** 4:5 (1080x1350). Naslov u dva retka gore lijevo (SVAKA SERIJA / POČINJE ODLUKOM.), Inter Medium s razmakom među slovima, #f2ede8, kratka narančasta crta #ff8c32 iznad naslova i narančasta završna točka; naslov ne dodiruje pakiranje. Bez podnožja i bez zasebnog logotipa: marka i naziv proizvoda vide se na stvarnom pakiranju. Tekst slaže kod.
+**Background palette:** #0f0d0d, #2d2a2b, #f2ede8, #ff8c32
+**People:** NO - Proizvod je sam junak, po odluci čovjeka.
+- Product packshot: **selected original** (`selected_packshot`, unaltered_cutout_composite)
+  - Samo odabrani izrezani packshot, neizmijenjen, bez ponovnog crtanja etikete.
+  - Visina oko 60% okvira, najviše 890 px (izvorni izvor ima oko 897 px visine pakiranja): bez uvećanja i bez AI povećavanja. Donji rub na 78% visine, margina najmanje 120 px.
+  - Samo meka kontaktna sjena #0f0d0d, oko 60% neprozirnosti.
+  - Webshop značke ne smiju ostati kao plutajući elementi: izdvojiti pravo pakiranje maskom. Piksele skrivene značkama ne rekonstruirati, rub staviti u sjenu ili izvan kadra. Ručno provjeriti rubove.
+
+**Caption (hr):** “Bez buke, bez ukrasa. 🧡 U fokusu je GymBeam kreatin monohidrat.”
+**CTA:** “Pogledajte na linku u opisu profila.”
+**Alt text (hr):** Vrećica kreatin monohidrata GymBeam na mokroj tamnoj podlozi uz čašu vode prekrivenu kondenzacijom, osvijetljena toplim svjetlom slijeva, uz naslov Svaka serija počinje odlukom.
+**Hashtags:** #gymbeamhr #gbig
+
+**Different from the other posts:** Jedna mirna fotografija pakiranja kreatina u mokrom tamnom studiju; karusel je svijetla ružičasta kampanja s drugim proizvodom (Colla Pink), a reel je priča u pokretu s rukama i siluetama.
+
+## Research basis
+- [manual] Tamne neutralne podloge iz ručnog pregleda naslovnica.  (E-efb10183, E-bb511dec)
+- [verified] Narančasti akcent s weba marke.  (O45, E-ceb3f15e)
+- [manual] Pravi packshot se izdvaja maskom bez webshop značaka; desni rub skriven značkama (oko 45 px) ostaje u sjeni jer se ne rekonstruira.  (E-18591d8b, E-5af7d045)
+
+==============================================================================
+# Post 03 - Cinematic reel: Klik prije izlaska
+
+**Objective:** Angažman i storytelling: pripreme za trening do kadra s pakiranjem.
+**Big idea:** Mali zvukovi pripreme (patent, kvaka, vezica) vode do jedne police na kojoj čeka pakiranje.
+**Creative device:** Svaki rez pada na zvuk malog predmeta; ruke i silueta nikad ne dijele kadar s pakiranjem. Fotorealistični ključni kadrovi, selektivna animacija i montaža u FFmpegu.
+**Hook:** “Sve je na svom mjestu.”
+**Total duration:** 14 s (6 shots)
+**Pacing:** Tri brza kadra od po 1,5 s koja se režu točno na zvuk (patent, kvaka, vezica), zatim otkrivanje pakiranja (3 s), spor čist krupni plan (4 s) i kratak završni kadar s logotipom (2,5 s). Ukupno 14 s.
+**Cover frame:** Kadar 4: pakiranje na tamnoj polici s narančastim potezom svjetla, naslov 'Sve je na svom mjestu.' u gornjoj trećini unutar 9:16 sigurne zone.
+**People:** YES (hands_and_silhouette) - Ruke i silueta samo u odabranim kadrovima bez pakiranja, po odluci čovjeka. (casting: Anonimno, bez lica, bez stvarnih i imenovanih osoba; ruke bez prstenja i logotipa.)
+- Product packshot: **selected original** (`selected_packshot`, unaltered_cutout_composite)
+  - Samo odabrani izrezani packshot, bez ponovnog crtanja.
+  - Sigurne margine 9:16: 250 px gore, 340 px dolje bez teksta.
+  - Izdvojiti pakiranje maskom bez webshop značaka; desni rub u sjeni ili izvan kadra, piksele skrivene značkama ne rekonstruirati. Ručno provjeriti rubove prije montaže.
+
+## Story
+- Beginning (shots [1, 2]): Ruke zatvaraju torbu, a u daljini prolazi silueta.
+- Development (shots [3, 4]): Ruke zavezuju vezicu, a svjetlo otkriva policu s pakiranjem.
+- Payoff (shots [5, 6]): Spor krupni plan pakiranja i završni kadar s logotipom.
+
+## Storyboard
+### Shot 1  (0-1.5 s, 1.5 s)
+- Visual: Fotorealistični ključni kadar: tamno predsoblje, topli rub svjetla s prozora na crnom najlonu torbe; ruke bez lica, bez prstenja, zatvaraju patent u makro planu. Bez pakiranja.
+- Camera: Kratki, brzi dolly naprijed, plitka dubinska oštrina.
+- Transition out: Tvrdi rez točno na zvuk patenta.
+- Sound: Oštar zvuk patenta na prvi udarac pulsa, tihi ambijent.
+- On-screen: “Sve je na svom mjestu.”
+- Product: not visible; people: hands
+### Shot 2  (1.5-3 s, 1.5 s)
+- Visual: Hodnik iza mliječnog stakla: daleka silueta bez lica prolazi, topli svjetlosni pravokutnik na betonskom zidu. Fotorealistični ključni kadar s blagom filmskom zrnatošću.
+- Camera: Statična kamera.
+- Transition out: Tvrdi rez točno na zvuk kvake.
+- Sound: Brzi koraci i zvuk kvake na udarac pulsa.
+- Product: not visible; people: faceless_silhouette
+### Shot 3  (3-4.5 s, 1.5 s)
+- Visual: Makro: ruke zavezuju vezicu tenisice na tamnom betonskom podu, topli bočni odsjaj na tkanini. Bez pakiranja u kadru.
+- Camera: Nisko, lagani pomak ulijevo.
+- Transition out: Tvrdi rez točno na povlačenje vezice.
+- Sound: Povlačenje vezice na udarac, puls glazbe jača.
+- Product: not visible; people: hands
+### Shot 4  (4.5-7.5 s, 3 s)
+- Visual: Betonska polica #2d2a2b u sjeni. Uski narančasti rim-light #ff8c32 prelazi preko police i otkriva pakiranje (pravi neizmijenjeni packshot postavljen kodom). Nema osoba u kadru.
+- Camera: Lagani kružni pomak kamere 10° oko pakiranja.
+- Transition out: Spora zatamnjena dissolve.
+- Sound: Glazba naglo raste, kratak prijelazni zvuk svjetla pri otkrivanju pakiranja.
+- Product: deterministic_composite; people: none
+### Shot 5  (7.5-11.5 s, 4 s)
+- Visual: Čist, spor krupni plan pravog pakiranja na toplo osvijetljenoj betonskoj polici, bez teksta na ekranu. Desni rub pakiranja u sjeni. Uvećanje najviše do izvorne rezolucije.
+- Camera: Spori push-in digitalnim zumom, najviše do izvorne rezolucije packshota (bez AI povećavanja).
+- Transition out: Rez na crno.
+- Sound: Glazba se spušta na tihi puls, krupni plan u gotovo potpunoj tišini.
+- Product: deterministic_composite; people: none
+### Shot 6  (11.5-14 s, 2.5 s)
+- Visual: Ploha #0f0d0d s toplim prelivom, pakiranje u donjoj trećini, iznad njega službeni logotip kao asset i narančasta crta #ff8c32.
+- Camera: Statično.
+- Transition out: Zatamnjenje.
+- Sound: Posljednji ton glazbe, zatim tišina.
+- On-screen: “Spremno za izlazak.”
+- Product: deterministic_composite; people: none
+
+## Sound design
+- Music: Kratka ritmična elektronička podloga s jasnim pulsom (oko 120 BPM) koja ubrzava do otkrivanja pakiranja i smiruje se na krupnom planu; samo glazba s provjerenom licencom.
+- SFX: patent torbe
+- SFX: kvaka
+- SFX: vezica
+- SFX: kratak prijelazni zvuk svjetla
+- Silence: Zadnja sekunda u tišini.
+
+## Product placement
+- Odabrani packshot samo kao neizmijenjeni izrezani kompozit, kadrovi 4, 5 i 6.
+- Kadar 4: polica, sjena kontaktna meka, svjetlo preko kompozita.
+- Kadar 5: samo digitalni zum izreza u okviru rezolucije.
+- Kadar 6: donja trećina, margina 120 px.
+- Ruke i silueta samo u kadrovima 1 do 3, nikad s pakiranjem.
+
+**Caption (hr):** “Patent, kvaka, vezica. 🎧 Tri sitna zvuka prije izlaska. A koji je vaš mali ritual prije treninga?”
+**CTA:** “Napišite u komentarima, a više pogledajte na linku u opisu profila.”
+**Alt text (hr):** Ruke zatvaraju torbu, daleka silueta prolazi hodnikom, ruke zavezuju vezicu, zatim topla svjetlost otkriva pakiranje kreatin monohidrata GymBeam na polici.
+**Hashtags:** #gymbeamhr #gbfit
+
+**Different from the other posts:** Reel je priča vođena zvukom s rukama i siluetama izvan kadra pakiranja; karusel je svijetla ružičasta kampanja s fiktivnom manekenkom, a hero tiha statična kompozicija.
+
+## Research basis
+- [verified] Video je 63% objava marke.  (O11, O12)
+- [manual] Ruke se pojavljuju na jednoj od 14 pregledanih naslovnica; ritam i zvuk su kreativna pretpostavka.  (E-795afb62)
+- [unavailable] Sadržaj videa izvan naslovnica nije poznat.  (no evidence)
+
+==============================================================================
+EVIDENCE BEHIND EVERY CLAIM
+
+C1 [page_fact] Na stranici proizvoda piše: u 8 g (1 mjerica): hidrolizirani peptidi goveđeg kolagena 6300 mg, ekstrakt sjemenki grožđa 20:1 400 mg, hijaluronska kiselina 40 mg.  (as of 2026-10-28)
+  basis quote: “Hidrolizirani peptidi goveđeg kolagena 6300 mg ** Ekstrakt sjemenki grožđa 20:1 ( Vitis vinifera ) 400 mg ** Hijaluronska kiselina 40 mg”
+  used in: carousel.slide2.callout0
+  - E-colla-nutrition [verified] colla_page_fact https://gymbeam.hr/colla-pinkbeastpink.html
+      Product page nutrition table of Colla Pink, per 8 g serving
+
+C2 [page_fact] Na stranici proizvoda piše: u 8 g: cink 10 mg, selen 89 μg, vitamin C 500 mg.  (as of 2026-10-28)
+  basis quote: “Cink 10 mg 100 % Selen 89 μg 162 % Vitamin C 500 mg”
+  used in: carousel.slide2.callout1
+  - E-colla-nutrition [verified] colla_page_fact https://gymbeam.hr/colla-pinkbeastpink.html
+      Product page nutrition table of Colla Pink, per 8 g serving
+
+C3 [page_fact] Na stranici proizvoda piše: u 8 g: niacin 32 mg, vitamin B2 2,8 mg, vitamin A 800 μg, biotin 50 μg.  (as of 2026-10-28)
+  basis quote: “Niacin 32 mg 200 % Vitamin B2 2,8 mg 200 % Vitamin A 800 μg (2667 IU) 100 % Biotin 50 μg”
+  used in: carousel.slide2.callout2
+  - E-colla-nutrition [verified] colla_page_fact https://gymbeam.hr/colla-pinkbeastpink.html
+      Product page nutrition table of Colla Pink, per 8 g serving
+
+C4 [page_fact] Na stranici proizvoda piše: preporučena dnevna doza je 1 mjerica (8 g), pomiješana s 200 do 300 ml vode.  (as of 2026-10-28)
+  basis quote: “Preporučena dnevna doza je 1 mjerica (8 g) , pomiješana s 200 do 300 ml vode”
+  used in: carousel.slide4.callout0
+  - E-colla-dosage [verified] colla_page_fact https://gymbeam.hr/colla-pinkbeastpink.html
+      Product page dosage
+
+C5 [page_fact] Na stranici proizvoda piše: nemojte prekoračiti preporučeni dnevni unos; proizvod nije zamjena za raznoliku i uravnoteženu prehranu.  (as of 2026-10-28)
+  basis quote: “Nemojte prekoračiti preporučeni dnevni unos”
+  used in: carousel.slide4.callout1
+  - E-colla-warning [verified] colla_page_fact https://gymbeam.hr/colla-pinkbeastpink.html
+      Product page warning
+
+C6 [page_fact] Na stranici proizvoda piše: napitak možete konzumirati u bilo koje doba dana.  (as of 2026-10-28)
+  basis quote: “Napitak možete konzumirati u bilo koje doba dana”
+  used in: carousel.slide5.callout0
+  - E-colla-dosage [verified] colla_page_fact https://gymbeam.hr/colla-pinkbeastpink.html
+      Product page dosage
+
+PACKSHOT (code-injected, not model output)
+  original: https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/c/r/creatine-monohydrate-unflavoured-01_8.jpg
+  original sha256: 99543edff63b17e355cd7bfcc734ef364ae81f08304e561e6a347c09e8954f1c
+  cut-out sha256: 86613b3f58580bf96b4e3517095682da0842a4ba389b3e97db89eb50ce7023d8
+  status: manual (operator-attested selection); cut-out is a mechanical edge flood-fill
+  limitation: mechanical cut-out only: anything that is not background colour and touches the pack (e.g. overlapping claim badges, shadows) is kept
+  files verified on disk: {'original': True, 'cutout': True}

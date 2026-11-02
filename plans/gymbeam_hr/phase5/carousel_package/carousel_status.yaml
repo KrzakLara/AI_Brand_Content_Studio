@@ -1,0 +1,54 @@
+schema: carousel-status/1
+carousel: BeastPink Colla Pink (plan id 01, Lara Post 2)
+plan_hash: 970975125494d10dda267d86d6ebab7f45ebb4983ae2dfb0444e0304afa01a99
+plan_approval: NONE (not approved, not tagged)
+slides:
+- n: 1
+  type: photo
+  file: slide1_cover_FROZEN_1080x1350.png
+  sha256: b925b8b31b58961e49f06094d1c41dfaab1c1c553cfc39e68a3af4471cb65c94
+  status: human_approved_and_frozen
+- n: 2
+  type: photo
+  file: slide2_sto_je_unutra_NO_FOOTER_1080x1350.png
+  sha256: edf8b8ee9d2e1182d6432f2ffe682057a7a683f1e9fa00621d73eca1a61c6663
+  status: produced_footer_source_text_removed_by_decision   # original with the footer text: runs/colla-pink/carousel/slide2_1080x1350.png (sha256 0decb571...)
+- n: 3
+  type: VIDEO
+  file: ../../../../runs/colla-pink/slide3_video/slide3_priprema_FINAL_v2_1080x1350.mp4
+  sha256: 608df004a71fc49542cd06a421a5c56b50817d40ec3cbd9311a2afeb13de8169
+  status: video_produced_title_PRIPREMA_colon_v2   # typography-only correction of v1 (aad34892103c2c3b...); raw Kling footage unchanged
+  previous_file: ../../../../runs/colla-pink/slide3_video/slide3_priprema_FINAL_1080x1350.mp4
+  previous_sha256: aad34892103c2c3b674962d66e861785672bb6040dba39c22d1cc43c27c1c455
+  keyframe_only_file: slide3_priprema_VIDEO_SLOT_KEYFRAME_ONLY_1080x1350.png
+- n: 4
+  type: photo
+  file: slide4_kako_pripremiti_1080x1350.png
+  sha256: 1e18ded8bb58595dfb88fd513c50c4d9ae817ba05410a5ad9327d0261128ecc4
+  status: produced_awaiting_human_approval
+- n: 5
+  type: VIDEO
+  file: ../../../../runs/colla-pink/slide5_video/slide5_napitak_za_ljepotu_FINAL_v3_1080x1350.mp4
+  sha256: 2c7d426d972b5b00a46f01ba079370034bef3bcb4aeaceb62adedf8f4f713c6a
+  superseded_file: ../../../../runs/colla-pink/slide5_video/slide5_napitak_za_ljepotu_FINAL_v2_1080x1350.mp4   # v2 kept unchanged; its line 'Njeguj svoju kožu, kosu i nokte.' was unsupported
+  superseded_sha256: e6eafec17880394c9af70d46079ab7411f1cd454657c9d41f738b0513417fc37
+  status: v3_claim_corrected_zinc_wording_2026-10-29   # video_produced_second_attempt_hair_calmed (v2); v3 = local text rebuild only   # first attempt (rejected, wind-like hair): slide5_mali_ritual_FINAL_1080x1350.mp4
+  keyframe_only_file: slide5_mali_ritual_VIDEO_SLOT_KEYFRAME_ONLY_1080x1350.png
+  keyframe_only_sha256: 147c8da1836f754ced33372ab18448a382fd54a6025740e38fd8f96478c7e83c
+  model_reference: runs/colla-pink/cover2_raw.png + frozen cover
+- n: 6
+  type: photo
+  file: slide6_odaberi_svoj_okus_FINAL.png
+  sha256: 3d119f26d37df9a33485f2c664ac7a49fdd41e15f5f672e79ff93784a5fc4b3b
+  status: human_approved_and_frozen
+  approved_by: Lara
+  approved_on: '2026-10-28'
+  backup_previous: slide6_BACKUP_pre_harmonization_FINAL.png
+  backup_sha256: 8dbedf256bf83dc9a077bcb67dafbec011f74fe9ff609c47499905e1880fd744
+  promoted_from: slide6_HARMONIZED_CANDIDATE.png
+completion: 'photos 4/4 produced (2 human-approved: slides 1 and 6); videos 2/2 produced (slide 3 v2 and slide 5 v3; Kling, 2026-10-29); plan approval still NONE'
+api:
+  requests_logged: 11
+  ledger_usd: 1.279031
+  phase5_spent_usd: 0.997086
+  phase5_remaining_usd: 2.002914

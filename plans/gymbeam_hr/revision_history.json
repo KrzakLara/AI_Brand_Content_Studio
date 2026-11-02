@@ -1,0 +1,16 @@
+[
+  {
+    "revision": 1,
+    "requested_by": "human (verbatim, relayed by the operator session)",
+    "is_approval": false,
+    "kind": "revision_request",
+    "feedback_verbatim": "Proceed with ONE targeted Phase 3 revision.\n\nI confirm GymBeam 100% Creatine Monohydrate,\nSKU 3885, as the campaign's focal product.\nRecord this choice in the canonical brief.\n\nApply the proposed creative improvements with\nthese corrections:\n\n1. Carousel: use actual label crops only where\n   original label imagery is available.\n   Render any additional verified facts as\n   separate code-generated callouts.\n   Never fabricate or redraw packaging details.\n   Match all quantities to the selected variant.\n\n2. Reel: show hands, movement or faceless\n   silhouettes in selected shots.\n   Keep the protected real product in\n   deterministic compositions.\n\n3. Hero: retain \"Samo bitno.\"\n   No unverified new-packaging claim.\n\n4. Do not automatically insert C1 or C2 into\n   the hero or reel.\n   Health/performance claims need separate\n   claim-specific compliance review, including\n   conditions of use. Omit them if uncertain.\n\n5. Flag unsupported comparative or novelty\n   claims contextually, rather than banning\n   ordinary words globally.\n\n6. Ensure natural, native Croatian and\n   genuinely distinct creative concepts.\n\n7. Use gymbeam_hr.yaml as the canonical brief,\n   but safely update references before removing\n   any legacy brief.\n\n8. Preserve the original rejected plan and\n   record my feedback as human revision history.\n\nRun one real targeted revision with a hard\n$0.40 estimated API cap. Do not bypass the\nbudget guard if it refuses another request.\n\nValidate and present all three revised concepts.\nSTOP before human approval and media generation.\n\nDo not start Phase 4 or add .claude/ files.\n",
+    "note": "",
+    "previous_plan_hash": "7952850b09ab5e57d7ac51abf0138ea8094a5915b4c05dfe54cf70c8bc53c08c",
+    "previous_plan_file": "plan/plan_7952850b09ab.json",
+    "dossier_before": "0e98b5a41ea3f074a0ac20a0cc32c79e8771cb02f800dd1c71519e8b4993696f",
+    "dossier_after": "7628a2bda5170f2745596f3ef221e7f70435ffe9e19edafc8ceeae92c6e58499",
+    "requested_at": "2026-10-28T09:00:52+00:00",
+    "new_plan_hash": "7dbd32938cee9e03aa071ac6bdb59828464b3d143f1d5f0cf95152c0f0b086d0"
+  }
+]

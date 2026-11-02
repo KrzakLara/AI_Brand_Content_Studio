@@ -1,0 +1,35 @@
+# Asset manifest (Phase 3 -> 4). Pending entries are placeholders: nothing has been downloaded or licensed yet.
+schema: asset-manifest/1
+status: 'PENDING: no audio selected and the official logo is NOT yet retrieved (nothing is acquired before the final plan approval)'
+packshot:
+  role: selected original product image; used ONLY unaltered (deterministic cut-out composite or unaltered label crops)
+  source_url: https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/c/r/creatine-monohydrate-unflavoured-01_8.jpg
+  retrieved_at: 2026-10-27T21:11:37Z (source_index.json)
+  sha256: 99543edff63b17e355cd7bfcc734ef364ae81f08304e561e6a347c09e8954f1c
+  cutout:
+    sha256: 86613b3f58580bf96b4e3517095682da0842a4ba389b3e97db89eb50ce7023d8
+    method: mechanical edge flood-fill; keeps the pack and its printed badges unaltered
+  hash_verified_on_disk:
+    original: true
+    cutout: true
+  label_crops_file: research/imports/label_crops_gymbeam_hr.yaml
+logo:
+  required: true
+  status: pending_after_final_plan_approval
+  source_url: null
+  retrieved_at: null
+  sha256: null
+  file: null
+  rules:
+  - official GymBeam logo asset only; never redrawn, recoloured or retyped in a font
+  - record source URL, retrieval timestamp (UTC) and sha256 of the stored file here at retrieval time
+  - fetch through the existing allow-listed, robots-respecting HttpClient (gymbeam.hr)
+audio:
+  required: true
+  status: none_selected
+  tracks: []
+  rules:
+  - only audio whose licence is verified and permits the intended use (organic and paid Instagram, commercial brand content)
+  - 'per track record: title, creator, source URL, licence name, licence URL, a hash of the saved licence text, permitted uses, attribution wording, retrieval timestamp
+    (UTC), sha256 of the audio file'
+  - no track is used while any of those fields is missing; sound-effect libraries follow the same rule

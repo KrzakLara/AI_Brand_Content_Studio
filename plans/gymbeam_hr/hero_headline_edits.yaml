@@ -1,0 +1,50 @@
+base_plan_hash: ac58dcacad86
+edits:
+- id: T01
+  path: headline.text
+  expected: Samo bitno.
+  replacement: SVAKA SERIJA POČINJE ODLUKOM.
+  reason: 'Selected advertising headline (set in two lines: SVAKA SERIJA / POČINJE ODLUKOM.). Rationale: short, calm and imperative in tone, speaks of the decision that starts a training block rather than
+    of the product''s claims (no health or performance statement), keeps the ''vi'' register, leaves the photograph and the real packaging to carry the brand.'
+  proposed_by: human:Lara
+  confirmation_source: Lara's hero typography selection and cleanup message, 2026-10-28 (headline chosen after reviewing the corrected hero composite)
+  confirmation_scope: wording
+  post: '02'
+  requested_by: human:Lara
+  confirmed_by: Lara
+- id: T02
+  path: layout
+  expected: '4:5 (1080x1350), margine 90 px. Naslov gore lijevo Inter Bold #f2ede8, riječ ''bitno'' podcrtana #ff8c32; tekst slaže kod. Službeni logotip kao asset donji lijevi kut. Donjih 150 px bez teksta.'
+  replacement: '4:5 (1080x1350). Naslov u dva retka gore lijevo (SVAKA SERIJA / POČINJE ODLUKOM.), Inter Medium s razmakom među slovima, #f2ede8, kratka narančasta crta #ff8c32 iznad naslova i narančasta
+    završna točka; naslov ne dodiruje pakiranje. Bez podnožja i bez zasebnog logotipa: marka i naziv proizvoda vide se na stvarnom pakiranju. Tekst slaže kod.'
+  reason: Layout follows the selected headline; the footer line and the separate logo were removed by Lara's decision.
+  proposed_by: ai:Claude Code
+  confirmation_source: 'Lara''s message 2026-10-28: headline selected, no footer, no separate logo; the exact words below are AI-written and are reviewed at the final approval'
+  confirmation_scope: decision
+  post: '02'
+  requested_by: human:Lara
+  confirmed_by: Lara
+- id: T03
+  path: alt_text_hr
+  expected: Vrećica kreatin monohidrata GymBeam na tamnom betonu, osvijetljena toplim svjetlom slijeva uz uski narančasti rub svjetla, uz naslov Samo bitno.
+  replacement: Vrećica kreatin monohidrata GymBeam na mokroj tamnoj podlozi uz čašu vode prekrivenu kondenzacijom, osvijetljena toplim svjetlom slijeva, uz naslov Svaka serija počinje odlukom.
+  reason: Alt text follows the selected headline and the produced scene (wet dark surface, glass of water).
+  proposed_by: ai:Claude Code
+  confirmation_source: 'Lara''s message 2026-10-28: headline selected, no footer, no separate logo; the exact words below are AI-written and are reviewed at the final approval'
+  confirmation_scope: decision
+  post: '02'
+  requested_by: human:Lara
+  confirmed_by: Lara
+- id: T04
+  path: art_direction
+  expected: 'Premium studijska scena: poliran grafitni beton #2d2a2b s finom zrnatošću, iza njega topla tamna pozadina prelivena od #0f0d0d prema toplijem tonu uz rub svjetla. Uski narančasti rim-light
+    #ff8c32 s lijeve pozadine. Bez rekvizita, ljudi, plamenova, munja i generiranih natpisa.'
+  replacement: 'Premium studijska scena: mokra tamna kamena podloga s tankim slojem vode i kapljicama, topla tamna pozadina u grafitnim tonovima, uski narančasti rim-light #ff8c32 s lijeve pozadine, visoka
+    čaša vode s kondenzacijom u prednjem desnom planu. Bez ljudi, plamenova, munja i generiranih natpisa.'
+  reason: Scene description updated to the approved hero direction (wet dark stone, glass of water); the plan still said polished concrete.
+  proposed_by: ai:Claude Code
+  confirmation_source: 'Lara''s message 2026-10-28: headline selected, no footer, no separate logo; the exact words below are AI-written and are reviewed at the final approval'
+  confirmation_scope: decision
+  post: '02'
+  requested_by: human:Lara
+  confirmed_by: Lara

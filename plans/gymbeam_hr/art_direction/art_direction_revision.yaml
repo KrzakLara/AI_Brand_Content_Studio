@@ -1,0 +1,17 @@
+schema: art-direction-revision/1
+recorded: 2026-10-28
+kind: human-directed art-direction change (not an AI-initiated change)
+directed_by: Lara
+basis: Lara's review of a GymBeam Instagram carousel (https://www.instagram.com/p/Db6IPbOCCKc/); she relayed its creative principles
+reference_handling: not viewed, downloaded or reproduced by this system; no reference imagery is used or presented as our work
+plan:
+  previous_hash: 58d044c1255139ecee257c07eb16422e3b33ffb32fd3ab8acd0931a522ac7e40   # verified against edit_history.json and the run state before editing
+  resulting_hash: ac58dcacad86fe4f90206ba9a594a9398dfbb9f579abd88672d223d9a20ab97a
+  mechanism: studio plan edit (edit entry 6, 64 edits, file art_direction_edits.yaml); no model call
+  authorship: ai_wording_implementing_human_decision (Lara confirmed the DECISION; she reviews the exact words at the final approval)
+  approval: NONE (the edit invalidates any approval; not approved)
+  validation: passed, 0 blocking; 2 flags (claim C3 now unused; carousel slide 5 alt text transcribes verified label wording)
+tool_change: edit ops add_slide and set_block (carousel only; schema-validated blocks) and packshot instructions made editable (packshot_ref, treatment, used stay protected)
+preserved: all earlier plan versions (history/plan_versions), research, evidence, API logs (unchanged, 0 new requests), edit history
+paid_api_calls: 0
+open_decisions: [clean official packshot from GymBeam, image model, video model, budget cap, logo, audio, font licence, native-speaker Croatian review]

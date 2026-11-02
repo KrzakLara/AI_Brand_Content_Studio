@@ -1,0 +1,956 @@
+[
+[
+"research/gymbeam_hr_agent/brand_profile.json",
+"phases/01_research/brand_profile.json",
+"Haiku research agent output",
+"phase1-2"
+],
+[
+"research/gymbeam_hr_agent/evidence_registry.json",
+"phases/01_research/evidence_registry.json",
+"Haiku research agent output",
+"phase1-2"
+],
+[
+"research/gymbeam_hr_agent/run_summary.json",
+"phases/01_research/run_summary.json",
+"Haiku research agent output",
+"phase1-2"
+],
+[
+"research/gymbeam_hr_agent/comparison_vs_manual.md",
+"phases/01_research/comparison_vs_manual.md",
+"Haiku research agent output",
+"phase1-2"
+],
+[
+"research/gymbeam_hr_agent/source_index.json",
+"phases/01_research/source_index.json",
+"Haiku research agent output",
+"phase1-2"
+],
+[
+"research/gymbeam_hr_agent_attempt1_failed/run_summary.json",
+"phases/01_research/attempt1_FAILED_run_summary.json",
+"first real agent run (failed, kept as evidence)",
+"phase1-2"
+],
+[
+"research/imports/colla_pink_evidence.yaml",
+"phases/05_carousel_post2/colla_pink_evidence.yaml",
+"Colla Pink verified page facts",
+"phase5"
+],
+[
+"briefs/gymbeam_hr.yaml",
+"phases/02_plan/gymbeam_hr_canonical_brief.yaml",
+"canonical brief",
+"phase3"
+],
+[
+"plans/gymbeam_hr/content_plan.json",
+"phases/02_plan/content_plan.json",
+"Sonnet 5.5 plan + human edit history (plan NOT approved)",
+"phase3"
+],
+[
+"plans/gymbeam_hr/plan_metadata.json",
+"phases/02_plan/plan_metadata.json",
+"Sonnet 5.5 plan + human edit history (plan NOT approved)",
+"phase3"
+],
+[
+"plans/gymbeam_hr/evidence_map.json",
+"phases/02_plan/evidence_map.json",
+"Sonnet 5.5 plan + human edit history (plan NOT approved)",
+"phase3"
+],
+[
+"plans/gymbeam_hr/edit_history.json",
+"phases/02_plan/edit_history.json",
+"Sonnet 5.5 plan + human edit history (plan NOT approved)",
+"phase3"
+],
+[
+"plans/gymbeam_hr/revision_history.json",
+"phases/02_plan/revision_history.json",
+"Sonnet 5.5 plan + human edit history (plan NOT approved)",
+"phase3"
+],
+[
+"plans/gymbeam_hr/art_direction/production_briefs.md",
+"phases/02_plan/production_briefs.md",
+"production briefs",
+"phase3"
+],
+[
+"plans/gymbeam_hr/hero_package/",
+"phases/03_hero_post1/package/",
+"hero status / QA / submission notes",
+"phase4"
+],
+[
+"runs/hero-proof/hero_A_1080x1350.png",
+"phases/03_hero_post1/hero_A_1080x1350.png",
+"hero intermediate / log",
+"phase4"
+],
+[
+"runs/hero-proof/hero_v2_corrected_1080x1350.png",
+"phases/03_hero_post1/hero_v2_corrected_1080x1350.png",
+"hero intermediate / log",
+"phase4"
+],
+[
+"runs/hero-proof/hero_v4_glass_edit_1080x1350.png",
+"phases/03_hero_post1/hero_v4_glass_edit_1080x1350.png",
+"hero intermediate / log",
+"phase4"
+],
+[
+"runs/hero-proof/hero_v5_closer_nolettering_1080x1350.png",
+"phases/03_hero_post1/hero_v5_closer_nolettering_1080x1350.png",
+"hero intermediate / log",
+"phase4"
+],
+[
+"runs/hero-proof/prompt_A.txt",
+"phases/03_hero_post1/prompt_A.txt",
+"hero intermediate / log",
+"phase4"
+],
+[
+"runs/hero-proof/prompt_B.txt",
+"phases/03_hero_post1/prompt_B.txt",
+"hero intermediate / log",
+"phase4"
+],
+[
+"runs/hero-proof/glass_edit_prompt.txt",
+"phases/03_hero_post1/glass_edit_prompt.txt",
+"hero intermediate / log",
+"phase4"
+],
+[
+"runs/hero-proof/api_requests.log",
+"phases/03_hero_post1/api_requests.log",
+"hero intermediate / log",
+"phase4"
+],
+[
+"runs/hero-proof/api_usage.jsonl",
+"phases/03_hero_post1/api_usage.jsonl",
+"hero intermediate / log",
+"phase4"
+],
+[
+"runs/hero-proof/hero_v2_fidelity.json",
+"phases/03_hero_post1/hero_v2_fidelity.json",
+"hero intermediate / log",
+"phase4"
+],
+[
+"plans/gymbeam_hr/phase5/PHASE5_CAROUSEL_BRIEF.md",
+"phases/05_carousel_post2/PHASE5_CAROUSEL_BRIEF.md",
+"carousel brief / assets",
+"phase5"
+],
+[
+"plans/gymbeam_hr/phase5/colla_pink_brief.md",
+"phases/05_carousel_post2/colla_pink_brief.md",
+"carousel brief / assets",
+"phase5"
+],
+[
+"plans/gymbeam_hr/phase5/colla_pink_assets.yaml",
+"phases/05_carousel_post2/colla_pink_assets.yaml",
+"carousel brief / assets",
+"phase5"
+],
+[
+"plans/gymbeam_hr/phase5/colla_pink_edits.yaml",
+"phases/05_carousel_post2/colla_pink_edits.yaml",
+"carousel brief / assets",
+"phase5"
+],
+[
+"plans/gymbeam_hr/phase5/carousel_package/",
+"phases/05_carousel_post2/carousel_package/",
+"carousel package notes / status",
+"phase5"
+],
+[
+"runs/colla-pink/cover2_raw.png",
+"phases/05_carousel_post2/raw/cover2_raw.png",
+"cover raw (accepted attempt 2)",
+"phase5"
+],
+[
+"runs/colla-pink/cover2_prompt.txt",
+"ai_recipe/prompts/carousel/cover2_prompt.txt",
+"cover prompt (used)",
+"prompt"
+],
+[
+"runs/colla-pink/cover_prompt.txt",
+"ai_recipe/prompts/carousel/cover_attempt1_REJECTED_prompt.txt",
+"rejected cover prompt",
+"prompt"
+],
+[
+"runs/colla-pink/carousel/s2_raw.png",
+"phases/05_carousel_post2/raw/s2_raw.png",
+"slide 2 raw generation",
+"phase5"
+],
+[
+"runs/colla-pink/carousel/s2_prompt.txt",
+"ai_recipe/prompts/carousel/s2_prompt.txt",
+"slide 2 prompt",
+"prompt"
+],
+[
+"runs/colla-pink/carousel/s3_raw.png",
+"phases/05_carousel_post2/raw/s3_raw.png",
+"slide 3 raw generation",
+"phase5"
+],
+[
+"runs/colla-pink/carousel/s3_prompt.txt",
+"ai_recipe/prompts/carousel/s3_prompt.txt",
+"slide 3 prompt",
+"prompt"
+],
+[
+"runs/colla-pink/carousel/s4_raw.png",
+"phases/05_carousel_post2/raw/s4_raw.png",
+"slide 4 raw generation",
+"phase5"
+],
+[
+"runs/colla-pink/carousel/s4_prompt.txt",
+"ai_recipe/prompts/carousel/s4_prompt.txt",
+"slide 4 prompt",
+"prompt"
+],
+[
+"runs/colla-pink/carousel/s5_raw.png",
+"phases/05_carousel_post2/raw/s5_raw.png",
+"slide 5 raw generation",
+"phase5"
+],
+[
+"runs/colla-pink/carousel/s5_prompt.txt",
+"ai_recipe/prompts/carousel/s5_prompt.txt",
+"slide 5 prompt",
+"prompt"
+],
+[
+"runs/colla-pink/carousel/s6_raw.png",
+"phases/05_carousel_post2/raw/s6_raw.png",
+"slide 6 raw generation",
+"phase5"
+],
+[
+"runs/colla-pink/carousel/s6_prompt.txt",
+"ai_recipe/prompts/carousel/s6_prompt.txt",
+"slide 6 prompt",
+"prompt"
+],
+[
+"runs/colla-pink/SLIDE6_APPROVED_PINK_FRUIT_DESIGN_1092x1440.png",
+"phases/05_carousel_post2/raw/SLIDE6_human_approved_design_1092x1440.png",
+"Lara's approved slide-6 design (input)",
+"phase5"
+],
+[
+"runs/colla-pink/carousel_final/slide2_footer_before_after_REVIEW.png",
+"phases/05_carousel_post2/slide2_footer_removal_before_after.png",
+"slide 2 footer removal evidence",
+"phase5"
+],
+[
+"runs/colla-pink/slide3_video/kling_raw.mp4",
+"phases/05_carousel_post2/slide3_video/kling_raw.mp4",
+"slide 3 video material (FINAL_1080x1350 = superseded v1 with title 'Priprema.')",
+"phase5b"
+],
+[
+"runs/colla-pink/slide3_video/kling_prompt.txt",
+"phases/05_carousel_post2/slide3_video/kling_prompt.txt",
+"slide 3 video material (FINAL_1080x1350 = superseded v1 with title 'Priprema.')",
+"phase5b"
+],
+[
+"runs/colla-pink/slide3_video/kling_request.json",
+"phases/05_carousel_post2/slide3_video/kling_request.json",
+"slide 3 video material (FINAL_1080x1350 = superseded v1 with title 'Priprema.')",
+"phase5b"
+],
+[
+"runs/colla-pink/slide3_video/fal_usage.jsonl",
+"phases/05_carousel_post2/slide3_video/fal_usage.jsonl",
+"slide 3 video material (FINAL_1080x1350 = superseded v1 with title 'Priprema.')",
+"phase5b"
+],
+[
+"runs/colla-pink/slide3_video/start_frame_clean_1080x1350.png",
+"phases/05_carousel_post2/slide3_video/start_frame_clean_1080x1350.png",
+"slide 3 video material (FINAL_1080x1350 = superseded v1 with title 'Priprema.')",
+"phase5b"
+],
+[
+"runs/colla-pink/slide3_video/text_layer_v2_1080x1350.png",
+"phases/05_carousel_post2/slide3_video/text_layer_v2_1080x1350.png",
+"slide 3 video material (FINAL_1080x1350 = superseded v1 with title 'Priprema.')",
+"phase5b"
+],
+[
+"runs/colla-pink/slide3_video/preview_frame_with_text_v2.png",
+"phases/05_carousel_post2/slide3_video/preview_frame_with_text_v2.png",
+"slide 3 video material (FINAL_1080x1350 = superseded v1 with title 'Priprema.')",
+"phase5b"
+],
+[
+"runs/colla-pink/slide3_video/slide3_priprema_FINAL_1080x1350.mp4",
+"phases/05_carousel_post2/slide3_video/slide3_priprema_FINAL_1080x1350.mp4",
+"slide 3 video material (FINAL_1080x1350 = superseded v1 with title 'Priprema.')",
+"phase5b"
+],
+[
+"runs/colla-pink/slide3_video/qa/slide3_v2_QA_first_mid_last.png",
+"phases/05_carousel_post2/slide3_video/qa/slide3_v2_QA_first_mid_last.png",
+"slide 3 video material (FINAL_1080x1350 = superseded v1 with title 'Priprema.')",
+"phase5b"
+],
+[
+"runs/colla-pink/slide5_video/kling_raw.mp4",
+"phases/05_carousel_post2/slide5_video/kling_raw.mp4",
+"slide 5 video material (v1 files = rejected first attempt)",
+"phase5b"
+],
+[
+"runs/colla-pink/slide5_video/kling_raw_v2.mp4",
+"phases/05_carousel_post2/slide5_video/kling_raw_v2.mp4",
+"slide 5 video material (v1 files = rejected first attempt)",
+"phase5b"
+],
+[
+"runs/colla-pink/slide5_video/kling_prompt.txt",
+"phases/05_carousel_post2/slide5_video/kling_prompt.txt",
+"slide 5 video material (v1 files = rejected first attempt)",
+"phase5b"
+],
+[
+"runs/colla-pink/slide5_video/kling_prompt_v2.txt",
+"phases/05_carousel_post2/slide5_video/kling_prompt_v2.txt",
+"slide 5 video material (v1 files = rejected first attempt)",
+"phase5b"
+],
+[
+"runs/colla-pink/slide5_video/kling_request.json",
+"phases/05_carousel_post2/slide5_video/kling_request.json",
+"slide 5 video material (v1 files = rejected first attempt)",
+"phase5b"
+],
+[
+"runs/colla-pink/slide5_video/kling_request_v2.json",
+"phases/05_carousel_post2/slide5_video/kling_request_v2.json",
+"slide 5 video material (v1 files = rejected first attempt)",
+"phase5b"
+],
+[
+"runs/colla-pink/slide5_video/fal_usage.jsonl",
+"phases/05_carousel_post2/slide5_video/fal_usage.jsonl",
+"slide 5 video material (v1 files = rejected first attempt)",
+"phase5b"
+],
+[
+"runs/colla-pink/slide5_video/start_frame_clean_1080x1350.png",
+"phases/05_carousel_post2/slide5_video/start_frame_clean_1080x1350.png",
+"slide 5 video material (v1 files = rejected first attempt)",
+"phase5b"
+],
+[
+"runs/colla-pink/slide5_video/start_frame_hair_calmed_1080x1350.png",
+"phases/05_carousel_post2/slide5_video/start_frame_hair_calmed_1080x1350.png",
+"slide 5 video material (v1 files = rejected first attempt)",
+"phase5b"
+],
+[
+"runs/colla-pink/slide5_video/text_layer_v3_1080x1350.png",
+"phases/05_carousel_post2/slide5_video/text_layer_v3_1080x1350.png",
+"slide 5 video material (v1 files = rejected first attempt)",
+"phase5b"
+],
+[
+"runs/colla-pink/slide5_video/hair_before_after_REVIEW.png",
+"phases/05_carousel_post2/slide5_video/hair_before_after_REVIEW.png",
+"slide 5 video material (v1 files = rejected first attempt)",
+"phase5b"
+],
+[
+"runs/colla-pink/slide5_video/preview_v3_final_typography.png",
+"phases/05_carousel_post2/slide5_video/preview_v3_final_typography.png",
+"slide 5 video material (v1 files = rejected first attempt)",
+"phase5b"
+],
+[
+"runs/colla-pink/slide5_video/slide5_mali_ritual_FINAL_1080x1350.mp4",
+"phases/05_carousel_post2/slide5_video/slide5_mali_ritual_FINAL_1080x1350.mp4",
+"slide 5 video material (v1 files = rejected first attempt)",
+"phase5b"
+],
+[
+"runs/colla-pink/slide3_video/kling_prompt.txt",
+"ai_recipe/prompts/kling/slide3_kling_prompt.txt",
+"Kling prompt slide 3 (used)",
+"prompt"
+],
+[
+"runs/colla-pink/slide5_video/kling_prompt.txt",
+"ai_recipe/prompts/kling/slide5_attempt1_REJECTED_kling_prompt.txt",
+"Kling prompt slide 5 v1 (rejected)",
+"prompt"
+],
+[
+"runs/colla-pink/slide5_video/kling_prompt_v2.txt",
+"ai_recipe/prompts/kling/slide5_v2_kling_prompt.txt",
+"Kling prompt slide 5 v2 (used)",
+"prompt"
+],
+[
+"runs/hero-proof/prompt_A.txt",
+"ai_recipe/prompts/hero/prompt_A.txt",
+"hero scene prompt (used)",
+"prompt"
+],
+[
+"runs/hero-proof/prompt_B.txt",
+"ai_recipe/prompts/hero/prompt_B.txt",
+"hero prompt B",
+"prompt"
+],
+[
+"runs/hero-proof/glass_edit_prompt.txt",
+"ai_recipe/prompts/hero/glass_edit_prompt.txt",
+"hero glass edit prompt (used)",
+"prompt"
+],
+[
+"studio/prompts/brand_analyst.md",
+"ai_recipe/prompts/agents/brand_analyst.md",
+"LLM system prompts (research / plan / QA agents)",
+"prompt"
+],
+[
+"studio/prompts/brand_guardian.md",
+"ai_recipe/prompts/agents/brand_guardian.md",
+"LLM system prompts (research / plan / QA agents)",
+"prompt"
+],
+[
+"studio/prompts/content_planner.md",
+"ai_recipe/prompts/agents/content_planner.md",
+"LLM system prompts (research / plan / QA agents)",
+"prompt"
+],
+[
+"studio/prompts/creative_critic.md",
+"ai_recipe/prompts/agents/creative_critic.md",
+"LLM system prompts (research / plan / QA agents)",
+"prompt"
+],
+[
+"studio/prompts/creative_spec.md",
+"ai_recipe/prompts/agents/creative_spec.md",
+"LLM system prompts (research / plan / QA agents)",
+"prompt"
+],
+[
+"studio/prompts/qa_judge.md",
+"ai_recipe/prompts/agents/qa_judge.md",
+"LLM system prompts (research / plan / QA agents)",
+"prompt"
+],
+[
+"studio/prompts/research_agent.md",
+"ai_recipe/prompts/agents/research_agent.md",
+"LLM system prompts (research / plan / QA agents)",
+"prompt"
+],
+[
+"studio/prompts/video_critic.md",
+"ai_recipe/prompts/agents/video_critic.md",
+"LLM system prompts (research / plan / QA agents)",
+"prompt"
+],
+[
+"runs/gymbeam-wafer-reel/prompts/KLING_S02_prompt_SENT.txt",
+"ai_recipe/prompts/reel/KLING_S02_prompt_SENT.txt",
+"reel prompt as sent",
+"prompt"
+],
+[
+"runs/gymbeam-wafer-reel/prompts/KLING_S03_prompt_SENT.txt",
+"ai_recipe/prompts/reel/KLING_S03_prompt_SENT.txt",
+"reel prompt as sent",
+"prompt"
+],
+[
+"runs/gymbeam-wafer-reel/prompts/KLING_S06_prompt_SENT.txt",
+"ai_recipe/prompts/reel/KLING_S06_prompt_SENT.txt",
+"reel prompt as sent",
+"prompt"
+],
+[
+"runs/gymbeam-wafer-reel/prompts/KLING_S08_prompt_SENT.txt",
+"ai_recipe/prompts/reel/KLING_S08_prompt_SENT.txt",
+"reel prompt as sent",
+"prompt"
+],
+[
+"runs/gymbeam-wafer-reel/prompts/S01_prompt_SENT.txt",
+"ai_recipe/prompts/reel/S01_prompt_SENT.txt",
+"reel prompt as sent",
+"prompt"
+],
+[
+"runs/gymbeam-wafer-reel/prompts/S02_prompt_SENT.txt",
+"ai_recipe/prompts/reel/S02_prompt_SENT.txt",
+"reel prompt as sent",
+"prompt"
+],
+[
+"runs/gymbeam-wafer-reel/prompts/S02a_prompt_SENT.txt",
+"ai_recipe/prompts/reel/S02a_prompt_SENT.txt",
+"reel prompt as sent",
+"prompt"
+],
+[
+"runs/gymbeam-wafer-reel/prompts/S03_prompt_SENT.txt",
+"ai_recipe/prompts/reel/S03_prompt_SENT.txt",
+"reel prompt as sent",
+"prompt"
+],
+[
+"runs/gymbeam-wafer-reel/prompts/S04_prompt_SENT.txt",
+"ai_recipe/prompts/reel/S04_prompt_SENT.txt",
+"reel prompt as sent",
+"prompt"
+],
+[
+"runs/gymbeam-wafer-reel/prompts/S05_prompt_SENT.txt",
+"ai_recipe/prompts/reel/S05_prompt_SENT.txt",
+"reel prompt as sent",
+"prompt"
+],
+[
+"runs/gymbeam-wafer-reel/prompts/S06_prompt_SENT.txt",
+"ai_recipe/prompts/reel/S06_prompt_SENT.txt",
+"reel prompt as sent",
+"prompt"
+],
+[
+"runs/gymbeam-wafer-reel/prompts/S06a_prompt_SENT.txt",
+"ai_recipe/prompts/reel/S06a_prompt_SENT.txt",
+"reel prompt as sent",
+"prompt"
+],
+[
+"runs/gymbeam-wafer-reel/prompts/S07a_prompt_SENT.txt",
+"ai_recipe/prompts/reel/S07a_prompt_SENT.txt",
+"reel prompt as sent",
+"prompt"
+],
+[
+"runs/gymbeam-wafer-reel/prompts/S07b_prompt_SENT.txt",
+"ai_recipe/prompts/reel/S07b_prompt_SENT.txt",
+"reel prompt as sent",
+"prompt"
+],
+[
+"runs/gymbeam-wafer-reel/prompts/S08_prompt_SENT.txt",
+"ai_recipe/prompts/reel/S08_prompt_SENT.txt",
+"reel prompt as sent",
+"prompt"
+],
+[
+"runs/gymbeam-wafer-reel/prompts/S08b_prompt_SENT.txt",
+"ai_recipe/prompts/reel/S08b_prompt_SENT.txt",
+"reel prompt as sent",
+"prompt"
+],
+[
+"runs/gymbeam-wafer-reel/prompts/S09_prompt_SENT.txt",
+"ai_recipe/prompts/reel/S09_prompt_SENT.txt",
+"reel prompt as sent",
+"prompt"
+],
+[
+"runs/gymbeam-wafer-reel/prompts/MODEL_SETTINGS.md",
+"ai_recipe/prompts/reel/MODEL_SETTINGS.md",
+"reel model settings",
+"prompt"
+],
+[
+"runs/gymbeam-wafer-reel/keyframes/S01_keyframe_1080x1920.png",
+"phases/06_reel_post3/keyframes/S01_keyframe_1080x1920.png",
+"reel keyframe 1080x1920",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/keyframes/S02_keyframe_1080x1920.png",
+"phases/06_reel_post3/keyframes/S02_keyframe_1080x1920.png",
+"reel keyframe 1080x1920",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/keyframes/S02a_keyframe_1080x1920.png",
+"phases/06_reel_post3/keyframes/S02a_keyframe_1080x1920.png",
+"reel keyframe 1080x1920",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/keyframes/S03_keyframe_1080x1920.png",
+"phases/06_reel_post3/keyframes/S03_keyframe_1080x1920.png",
+"reel keyframe 1080x1920",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/keyframes/S04_keyframe_1080x1920.png",
+"phases/06_reel_post3/keyframes/S04_keyframe_1080x1920.png",
+"reel keyframe 1080x1920",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/keyframes/S05_keyframe_1080x1920.png",
+"phases/06_reel_post3/keyframes/S05_keyframe_1080x1920.png",
+"reel keyframe 1080x1920",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/keyframes/S06_keyframe_1080x1920.png",
+"phases/06_reel_post3/keyframes/S06_keyframe_1080x1920.png",
+"reel keyframe 1080x1920",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/keyframes/S06a_keyframe_1080x1920.png",
+"phases/06_reel_post3/keyframes/S06a_keyframe_1080x1920.png",
+"reel keyframe 1080x1920",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/keyframes/S07a_keyframe_1080x1920.png",
+"phases/06_reel_post3/keyframes/S07a_keyframe_1080x1920.png",
+"reel keyframe 1080x1920",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/keyframes/S07b_keyframe_1080x1920.png",
+"phases/06_reel_post3/keyframes/S07b_keyframe_1080x1920.png",
+"reel keyframe 1080x1920",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/keyframes/S08_keyframe_1080x1920.png",
+"phases/06_reel_post3/keyframes/S08_keyframe_1080x1920.png",
+"reel keyframe 1080x1920",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/keyframes/S08b_keyframe_1080x1920.png",
+"phases/06_reel_post3/keyframes/S08b_keyframe_1080x1920.png",
+"reel keyframe 1080x1920",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/keyframes/S09_keyframe_1080x1920.png",
+"phases/06_reel_post3/keyframes/S09_keyframe_1080x1920.png",
+"reel keyframe 1080x1920",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/keyframes/S01_raw.png",
+"phases/06_reel_post3/keyframes/S01_raw.png",
+"opening still used by V4 (raw 1152x2048)",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/video_clips/S02_kling_raw.mp4",
+"phases/06_reel_post3/video_clips/S02_kling_raw.mp4",
+"Kling raw clip / request",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/video_clips/S02_kling_request.json",
+"phases/06_reel_post3/video_clips/S02_kling_request.json",
+"Kling raw clip / request",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/video_clips/S03_kling_raw.mp4",
+"phases/06_reel_post3/video_clips/S03_kling_raw.mp4",
+"Kling raw clip / request",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/video_clips/S03_kling_request.json",
+"phases/06_reel_post3/video_clips/S03_kling_request.json",
+"Kling raw clip / request",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/video_clips/S06_kling_raw.mp4",
+"phases/06_reel_post3/video_clips/S06_kling_raw.mp4",
+"Kling raw clip / request",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/video_clips/S06_kling_request.json",
+"phases/06_reel_post3/video_clips/S06_kling_request.json",
+"Kling raw clip / request",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/video_clips/S08_kling_raw.mp4",
+"phases/06_reel_post3/video_clips/S08_kling_raw.mp4",
+"Kling raw clip / request",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/video_clips/S08_kling_request.json",
+"phases/06_reel_post3/video_clips/S08_kling_request.json",
+"Kling raw clip / request",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/logs/api_usage.jsonl",
+"phases/06_reel_post3/logs/api_usage.jsonl",
+"reel logs",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/logs/api_requests.log",
+"phases/06_reel_post3/logs/api_requests.log",
+"reel logs",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/logs/fal_usage.jsonl",
+"phases/06_reel_post3/logs/fal_usage.jsonl",
+"reel logs",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/logs/assembly_timeline_V4.txt",
+"phases/06_reel_post3/logs/assembly_timeline_V4.txt",
+"reel logs",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/REEL_WORKLOG.md",
+"phases/06_reel_post3/REEL_WORKLOG.md",
+"reel documentation",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/REEL_PRODUCTION_PLAN_v3.md",
+"phases/06_reel_post3/REEL_PRODUCTION_PLAN_v3.md",
+"reel documentation",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/qa/V4_EDIT_REPORT.md",
+"phases/06_reel_post3/qa/V4_EDIT_REPORT.md",
+"reel QA",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/qa/V5_SNAP_PROTOTYPE_REPORT.md",
+"phases/06_reel_post3/qa/V5_SNAP_PROTOTYPE_REPORT.md",
+"reel QA",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/qa/V4_CONTACT_SHEET.png",
+"phases/06_reel_post3/qa/V4_CONTACT_SHEET.png",
+"reel QA",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/qa/V4_CUT_INSPECTION.png",
+"phases/06_reel_post3/qa/V4_CUT_INSPECTION.png",
+"reel QA",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/qa/V5_SOURCE_COMPARISON.png",
+"phases/06_reel_post3/qa/V5_SOURCE_COMPARISON.png",
+"reel QA",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/qa/CONTINUITY_CHECKLIST.md",
+"phases/06_reel_post3/qa/CONTINUITY_CHECKLIST.md",
+"reel QA",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/review_package/CAPTION.md",
+"phases/06_reel_post3/review_package/CAPTION.md",
+"reel review package",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/review_package/PRODUCT_REFERENCE_LEDGER.md",
+"phases/06_reel_post3/review_package/PRODUCT_REFERENCE_LEDGER.md",
+"reel review package",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/review_package/COSTS_ACTUAL_VS_ESTIMATED.md",
+"phases/06_reel_post3/review_package/COSTS_ACTUAL_VS_ESTIMATED.md",
+"reel review package",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/review_package/VERSIONS_AND_REJECTIONS.md",
+"phases/06_reel_post3/review_package/VERSIONS_AND_REJECTIONS.md",
+"reel review package",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/review_package/LIMITATIONS.md",
+"phases/06_reel_post3/review_package/LIMITATIONS.md",
+"reel review package",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/review_package/REPRODUCE.md",
+"phases/06_reel_post3/review_package/REPRODUCE.md",
+"reel review package",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/review_package/SHA256_MANIFEST.txt",
+"phases/06_reel_post3/review_package/SHA256_MANIFEST.txt",
+"reel review package",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/references/official_v2/OFFICIAL_WAFER_PHOTOS.md",
+"phases/06_reel_post3/references/OFFICIAL_WAFER_PHOTOS.md",
+"official wafer photos ledger",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/references/official_v2/official_wafer_photos_ledger.json",
+"phases/06_reel_post3/references/official_wafer_photos_ledger.json",
+"official photos URL + SHA-256",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/references/reference_ledger.json",
+"phases/06_reel_post3/references/reference_ledger.json",
+"product photo ledger",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/cover_options/COVER_OPTIONS_SIDE_BY_SIDE.png",
+"posts/post_03_gymbeam_wafer_reel/alternatives/COVER_OPTIONS_A_B_C_SIDE_BY_SIDE.png",
+"cover options overview",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/review_package/GYMBEAM_WAFER_REEL_V4_COVER_ALT_clean_wrapper_1080x1920.png",
+"posts/post_03_gymbeam_wafer_reel/alternatives/COVER_C_clean_wrapper_1080x1920.png",
+"cover alternative C",
+"phase6"
+],
+[
+"runs/gymbeam-wafer-reel/review_package/GYMBEAM_WAFER_REEL_V4_COVER_1080x1920.png",
+"posts/post_03_gymbeam_wafer_reel/alternatives/COVER_A_original_1080x1920.png",
+"cover alternative A",
+"phase6"
+],
+[
+"plans/gymbeam_hr/art_direction/hero_proof/",
+"ai_recipe/code/hero_proof/",
+"hero scripts",
+"code"
+],
+[
+"plans/gymbeam_hr/phase5/",
+"ai_recipe/code/phase5/",
+"carousel + slide 2/3/5 scripts",
+"code"
+],
+[
+"plans/gymbeam_hr/phase6/reel/",
+"ai_recipe/code/phase6_reel/",
+"reel scripts",
+"code"
+],
+[
+"studio/providers/live.py",
+"ai_recipe/code/studio/live.py",
+"spend-guarded provider code",
+"code"
+],
+[
+"studio/providers/fal_video.py",
+"ai_recipe/code/studio/fal_video.py",
+"spend-guarded provider code",
+"code"
+],
+[
+"studio/providers/base.py",
+"ai_recipe/code/studio/base.py",
+"spend-guarded provider code",
+"code"
+],
+[
+"studio/tools/transport.py",
+"ai_recipe/code/studio/transport.py",
+"spend-guarded provider code",
+"code"
+],
+[
+"studio/cost.py",
+"ai_recipe/code/studio/cost.py",
+"spend-guarded provider code",
+"code"
+],
+[
+"studio/ledger.py",
+"ai_recipe/code/studio/ledger.py",
+"spend-guarded provider code",
+"code"
+],
+[
+"plans/gymbeam_hr/phase7/",
+"ai_recipe/code/phase7/",
+"packaging, smoke-test and PDF scripts",
+"code"
+],
+[
+"config.yaml",
+"ai_recipe/code/config.yaml",
+"pricing / model config",
+"code"
+],
+[
+"pyproject.toml",
+"setup/pyproject.toml",
+"package definition",
+"setup"
+],
+[
+"WORKLOG.md",
+"phases/WORKLOG_root.md",
+"project worklog (ends at Phase 5; later phases are in PHASES.md)",
+"phases"
+]
+]

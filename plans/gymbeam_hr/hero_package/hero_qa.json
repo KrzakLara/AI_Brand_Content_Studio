@@ -1,0 +1,52 @@
+{
+ "dimensions": [
+  1080,
+  1350
+ ],
+ "dimensions_ok": true,
+ "headline_bbox": [
+  95,
+  116,
+  672,
+  220
+ ],
+ "headline_bottom_above_pouch_top_px": 30,
+ "headline_text": "SVAKA SERIJA / POČINJE ODLUKOM.",
+ "headline_font": "Inter Medium 50 px, tracking 7 px, #f2ede8; accent line and full stop #ff8c32 (code-rendered)",
+ "changed_px_vs_V2 wordmark+label band (404,400,860,730)": 10702,
+ "changed_px_vs_V2 badges+lower print (404,730,860,1050)": 3625,
+ "left_scene_headline_unchanged_vs_V2": 39044,
+ "pouch_fidelity_vs_source (measured on the pouch layer before the glass change)": {
+  "deltaE76_median": 6.43,
+  "deltaE76_p95": 15.46,
+  "label_detail_correlation": 0.9928,
+  "smooth_gain_mean": 0.881,
+  "smooth_gain_min": 0.75,
+  "smooth_gain_max": 1.05
+ },
+ "api": {
+  "requests_logged": 4,
+  "failed_401": 1,
+  "failed_429": 1,
+  "paid_images": 2,
+  "total_cost_usd": 0.281945,
+  "experiment_cap_usd": 2.5
+ },
+ "final_sha256": "f05d1f3983f99981b452f33b4a469b7df9ea70e5b4c636dfca079c259d0161ba",
+ "identical_to_selected_v5": true,
+ "v5_vs_v2_pouch_regions": {
+  "label band": {
+   "mean_abs_luminance_diff_vs_V2_of_255": 0.0,
+   "detail_correlation_vs_V2": 1.0
+  },
+  "wordmark": {
+   "mean_abs_luminance_diff_vs_V2_of_255": 1.21,
+   "detail_correlation_vs_V2": 0.9992
+  },
+  "badges+lower print": {
+   "mean_abs_luminance_diff_vs_V2_of_255": 0.58,
+   "detail_correlation_vs_V2": 0.9994
+  }
+ },
+ "note": "V5 differs slightly from V2 inside the pouch: V4/V5 compute the relighting gain without the model pixels that sat under the old glass (small brightness difference, detail unchanged) and include the repaired second shaker contact on the right seal."
+}

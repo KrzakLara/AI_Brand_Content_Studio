@@ -1,0 +1,35 @@
+# Final scope revision (Phase 7F). Companion of FINAL_SCOPE_REVISION_7F.md. The ORIGINAL brief ai_recipe/repo/briefs/gymbeam_hr.yaml is preserved unchanged
+# (sha256 e4e6572ec2c39227c57fbce3b60e980246b0e9449cfb998bdc99d3e147bb32d2); this file does not replace it and is not read by the pipeline code.
+revision: scope-7F
+date: "2026-11-01"
+original_brief: ai_recipe/repo/briefs/gymbeam_hr.yaml
+original_brief_scope: three posts (carousel, hero, reel) for 100% Kreatin Monohidrat; Phase 5 note inside the brief: Colla Pink chosen for the carousel, hero and reel stay creatine
+evolution:
+  - "2026-10-28: focal product creatine SKU 3885 confirmed; Lara chose Colla Pink for the carousel (Phase 5)"
+  - "2026-10-29 (Phase 6): planned creatine reel 'Klik prije izlaska' never produced; Lara directed a wafer lifestyle Reel instead (R9)"
+  - "2026-11-01 (Phase 7F): rough-cut / UGC-inspired editing style chosen; Reel V8 selected"
+final_scope:
+  - post: 1
+    product: GymBeam 100% Creatine Monohydrate (SKU 3885)
+    format: static hero image 1080x1350
+    direction: premium advertising
+  - post: 2
+    product: BeastPink Colla Pink
+    format: educational six-slide carousel 1080x1350 (4 images + 2 videos)
+    direction: informative lifestyle content
+  - post: 3
+    product: GymBeam 32% Protein Wafer (+ Urban Duffle Bag Black)
+    format: lifestyle Reel 1080x1920, 8.833 s
+    direction: organic rough-cut, TikTok/UGC-inspired montage
+constraint_clarifications:
+  no_quantity: >-
+    Forbids invented or unsupported numerical claims. Verified quantities printed on authentic packaging AND confirmed in official product documentation
+    may be shown (Post 2 slide 2 and slide 4, sourced and dated). It does not permit any other or new quantity. Post 1 and Post 3 show none.
+  never_generate_packaging: >-
+    Kept for Post 1 (real pouch pixels) and Post 2 (source-based packshot jars). Post 3 deviates: the wafer pack and bag are AI-rendered in moving video,
+    because source photography cannot provide the moving interaction. Documented production deviation, NOT proof of accuracy; reference validation,
+    visual QA and the stated limitations are retained.
+  health_claims: unchanged; slide 5 uses the three authorised zinc claims (Reg. 432/2012, official Croatian text); not a clearance of the advertisement
+status:
+  A_private_take_home_demonstration: "Author-reviewed and accepted for the Sekvenca private take-home demonstration, including visual content, captions and Reel audio. Confirmed in writing by the author on 2026-11-01."
+  B_public_commercial_advertising: "Portfolio demonstration only; not approved for public commercial advertising. Not authorized without additional rights and compliance review; no brand or legal approval is claimed."

@@ -1,0 +1,16 @@
+# Tehnički ispravak tipa podatka nakon primjene Q01-Q13: broj završnog slajda spremljen je kao 5.0 umjesto 5. Tekst i sadržaj plana se ne mijenjaju.
+base_plan_hash: 3b8d8894b467c14cf3396a8b5425d1a20302cefb3fb8da8b8f55418c9cdb6804
+edits:
+- id: R01
+  op: replace
+  post: '01'
+  slide: 5
+  path: "n"
+  expected: '5'
+  replacement: '5'
+  reason: Normalizacija tipa (5.0 -> 5) nakon renumeracije slajdova; greška u mom alatu, ne sadržajna izmjena.
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - tehnički ispravak
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: "Larina poruka 'PHASE 3 - FINAL VISUAL PROVENANCE AUDIT': ispraviti plan i izdati ispravljen hash (tehnička normalizacija tipa)"
+  confirmation_scope: decision

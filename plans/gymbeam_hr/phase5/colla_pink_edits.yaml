@@ -1,0 +1,785 @@
+base_plan_hash: a923c3229e0344b840b462111de2d4af24b69d5025876eec6e5fec97128f4b8b
+edits:
+- id: P01
+  op: replace
+  post: campaign
+  path: identity.throughline
+  expected: 'Jedna fotografska obitelj: topla bočna svjetlost, taktilne površine (beton, voda, staklo, tkanina) i jedan narančasti akcent. Hero je studijski portret pakiranja, karusel je kreatin izbliza u šest kadrova (četiri
+    fotografije, dva videa), reel je priča u pokretu.'
+  replacement: 'Jedna marka, dvije fotografske obitelji: tamni mokri studio s narančastim akcentom (hero i reel s kreatinom) i svijetla ružičasta potkampanja ljepote i fitnessa (karusel s Colla Pink), kako marka već radi u
+    ružičastim objavama (CreaGlow).'
+  reason: 'Phase 5 decision: pink sub-campaign inside the same brand campaign'
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: P02
+  op: replace
+  post: campaign
+  path: identity.shared_devices[1]
+  expected: Fotorealistične scene s toplom bočnom svjetlošću i taktilnim površinama (beton, voda, staklo, tkanina); tamni studio samo kao jedna od scena
+  replacement: 'Fotorealistične scene s taktilnim površinama: topla bočna svjetlost u tamnom mokrom studiju (kreatin) i meka ružičasta i blush bijela svjetlost u potkampanji Colla Pink; svaka scena u svom svijetu, ali ista
+    razina fotografije'
+  reason: two photographic families
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: P03
+  op: replace
+  post: campaign
+  path: identity.shared_devices[2]
+  expected: Činjenice s pakiranja uvijek kao zasebna oznaka koju slaže kod, s uvodom 'Na pakiranju piše'; pakiranje je uvijek pravi, neizmijenjeni packshot
+  replacement: Činjenice o proizvodu uvijek kao zasebna oznaka koju slaže kod, s uvodom 'Na pakiranju piše' ili 'Na stranici proizvoda piše'; pakiranje je uvijek pravi, neizmijenjeni packshot
+  reason: page facts of Colla Pink are rendered the same way as pack text
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: P04
+  op: replace
+  post: campaign
+  path: open_questions[0]
+  expected: 'Količine se ne prikazuju: odabrani packshot ne prikazuje veličinu pakiranja, pa se nijedna količina ne navodi dok se ne potkrijepi za odabranu varijantu.'
+  replacement: 'Količine: za kreatin (hero, reel) se ne prikazuje nijedna količina jer odabrani packshot ne prikazuje veličinu. Za Colla Pink prikazuju se samo količine sa službene stranice proizvoda (sastav po mjerici od
+    8 g, doziranje), svaka kao oznaka ''Na stranici proizvoda piše''; cijene i ocjene se ne koriste.'
+  reason: quantities rule split per product
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: P05
+  op: replace
+  post: campaign
+  path: open_questions[7]
+  expected: 'Slajd s IFS oznakom i HPLC oznakom uklonjeni su iz karusela: obje su grafike weba, a ne otisak na vrećici. Novi karusel koristi samo izreze otisnutog teksta (naziv i okus/čistoća) u izvornoj veličini, bez uvećanja.'
+  replacement: 'Colla Pink: tvrdnje o kosi, noktima, koži, stvaranju kolagena i hidrataciji kože sa stranice proizvoda odgođene su do posebne provjere usklađenosti (uvjeti uporabe). Stranica proturječi sama sebi (tablica specifikacija:
+    preporučena dnevna doza 2, 30 dana po pakiranju; tekst: 1 mjerica od 8 g i najviše 18 g dnevno), pa se koristi samo ''1 mjerica (8 g) u 200 do 300 ml vode''.'
+  reason: open questions for Colla Pink
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: P06
+  op: replace
+  post: campaign
+  path: open_questions[8]
+  expected: 'Mehanički izrez packshota nije dovoljan: zadržava webshop značke i pozadinu. Potrebna je prava maska vrećice (vidi production_briefs.md); izrađena maska se ručno provjerava prije svake kompozicije.'
+  replacement: 'Boja pripremljenog napitka Colla Pink nije potvrđena: videi ne prikazuju izmišljenu boju. Dosljednost lica fiktivne manekenke kroz fotografije i videe nije provjerena i može zahtijevati odbacivanje kadrova.
+    Za video se razmatra Gemini Omni 1.1 Flash; cijena, pristup i naplata (odvojena od OpenAI kredita) čekaju odobrenje. Vezivanje teglje uz ruke manekenke zahtijeva ručni nadzor rubova.'
+  reason: open questions for Colla Pink
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: P10
+  op: remove
+  post: campaign
+  path: claims[0]
+  expected: 'Na pakiranju piše: Creatine Monohydrate.'
+  reason: creatine pack claims no longer used by any copy line
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: P11
+  op: remove
+  post: campaign
+  path: claims[1]
+  expected: 'Na pakiranju piše: 100% Pure micronised, Unflavoured.'
+  reason: creatine pack claims no longer used by any copy line
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: P12
+  op: remove
+  post: campaign
+  path: claims[2]
+  expected: 'Na stranici proizvoda piše: Produced in an IFS-certified facility.'
+  reason: creatine page-graphic claim no longer used by any copy line
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: AC1
+  op: add_item
+  post: campaign
+  path: claims
+  value_json:
+    claim_id: C1
+    text: 'Na stranici proizvoda piše: u 8 g (1 mjerica): hidrolizirani peptidi goveđeg kolagena 6300 mg, ekstrakt sjemenki grožđa 20:1 400 mg, hijaluronska kiselina 40 mg.'
+    claim_type: page_fact
+    evidence_ids:
+    - E-colla-nutrition
+    basis_quote: Hidrolizirani peptidi goveđeg kolagena 6300 mg ** Ekstrakt sjemenki grožđa 20:1 ( Vitis vinifera ) 400 mg ** Hijaluronska kiselina 40 mg
+    as_of: '2026-10-28'
+  reason: verified page fact of the carousel product (official page, fetched 2026-10-28)
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: AC2
+  op: add_item
+  post: campaign
+  path: claims
+  value_json:
+    claim_id: C2
+    text: 'Na stranici proizvoda piše: u 8 g: cink 10 mg, selen 89 μg, vitamin C 500 mg.'
+    claim_type: page_fact
+    evidence_ids:
+    - E-colla-nutrition
+    basis_quote: Cink 10 mg 100 % Selen 89 μg 162 % Vitamin C 500 mg
+    as_of: '2026-10-28'
+  reason: verified page fact of the carousel product (official page, fetched 2026-10-28)
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: AC3
+  op: add_item
+  post: campaign
+  path: claims
+  value_json:
+    claim_id: C3
+    text: 'Na stranici proizvoda piše: u 8 g: niacin 32 mg, vitamin B2 2,8 mg, vitamin A 800 μg, biotin 50 μg.'
+    claim_type: page_fact
+    evidence_ids:
+    - E-colla-nutrition
+    basis_quote: Niacin 32 mg 200 % Vitamin B2 2,8 mg 200 % Vitamin A 800 μg (2667 IU) 100 % Biotin 50 μg
+    as_of: '2026-10-28'
+  reason: verified page fact of the carousel product (official page, fetched 2026-10-28)
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: AC4
+  op: add_item
+  post: campaign
+  path: claims
+  value_json:
+    claim_id: C4
+    text: 'Na stranici proizvoda piše: preporučena dnevna doza je 1 mjerica (8 g), pomiješana s 200 do 300 ml vode.'
+    claim_type: page_fact
+    evidence_ids:
+    - E-colla-dosage
+    basis_quote: Preporučena dnevna doza je 1 mjerica (8 g) , pomiješana s 200 do 300 ml vode
+    as_of: '2026-10-28'
+  reason: verified page fact of the carousel product (official page, fetched 2026-10-28)
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: AC5
+  op: add_item
+  post: campaign
+  path: claims
+  value_json:
+    claim_id: C5
+    text: 'Na stranici proizvoda piše: nemojte prekoračiti preporučeni dnevni unos; proizvod nije zamjena za raznoliku i uravnoteženu prehranu.'
+    claim_type: page_fact
+    evidence_ids:
+    - E-colla-warning
+    basis_quote: Nemojte prekoračiti preporučeni dnevni unos
+    as_of: '2026-10-28'
+  reason: verified page fact of the carousel product (official page, fetched 2026-10-28)
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: AC6
+  op: add_item
+  post: campaign
+  path: claims
+  value_json:
+    claim_id: C6
+    text: 'Na stranici proizvoda piše: napitak možete konzumirati u bilo koje doba dana.'
+    claim_type: page_fact
+    evidence_ids:
+    - E-colla-dosage
+    basis_quote: Napitak možete konzumirati u bilo koje doba dana
+    as_of: '2026-10-28'
+  reason: verified page fact of the carousel product (official page, fetched 2026-10-28)
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: AD1
+  op: add_item
+  post: campaign
+  path: deferred_claims
+  value_json:
+    text: Tvrdnje sa stranice Colla Pink o kosi, noktima, koži, stvaranju kolagena i hidrataciji kože (minerali, vitamini, meta-analiza).
+    evidence_ids:
+    - E-colla-health-wording
+    why_deferred: Zdravstvene i učinkovne tvrdnje o proizvodu; ne koriste se ni u jednom tekstu dok se ne provjere pojedinačno.
+    review_needed:
+    - posebna provjera usklađenosti za svaku tvrdnju
+    - uvjeti uporabe / conditions of use
+    - odobrenje pravnog tima
+  reason: benefit wording deferred as for creatine
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: H01
+  op: replace
+  post: '02'
+  path: distinct_from_others
+  expected: Jedna mirna fotografija pakiranja u studiju; karusel je kreatin izbliza u šest kadrova s fotografijama i videima, a reel je priča u pokretu s rukama i siluetama.
+  replacement: Jedna mirna fotografija pakiranja kreatina u mokrom tamnom studiju; karusel je svijetla ružičasta kampanja s drugim proizvodom (Colla Pink), a reel je priča u pokretu s rukama i siluetama.
+  reason: carousel is now Colla Pink
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: R01
+  op: replace
+  post: '03'
+  path: distinct_from_others
+  expected: Reel je priča vođena zvukom s rukama i siluetama izvan kadra pakiranja; karusel je čitanje etikete, a hero tiha statična kompozicija.
+  replacement: Reel je priča vođena zvukom s rukama i siluetama izvan kadra pakiranja; karusel je svijetla ružičasta kampanja s fiktivnom manekenkom, a hero tiha statična kompozicija.
+  reason: carousel is now Colla Pink
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: K01
+  op: replace
+  post: '01'
+  path: objective
+  expected: 'Edukacija: razumjeti proizvod izbliza (kako izgleda prah, kako se miješa i što je doista otisnuto na pakiranju), u mješavini fotografija i videa.'
+  replacement: 'Informiranje i spremanje: što je u napitku Colla Pink, kako se priprema i koji okus odabrati, u ružičastoj kampanji ljepote i fitnessa.'
+  reason: Phase 5 carousel objective
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: K02
+  op: replace
+  post: '01'
+  path: concept_name
+  expected: Kreatin izbliza
+  replacement: Ružičasti ritual
+  reason: new concept
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: K03
+  op: replace
+  post: '01'
+  path: big_idea
+  expected: 'Šest elemenata kao približavanje: pakiranje, prah, rutina, voda, etiketa i zatvaranje. Svaki kadar ima svoju svrhu i svoju fotografsku scenu, a sve što se tvrdi o pakiranju čita se iz neuvećanih izreza prave etikete.'
+  replacement: 'Informativna ružičasta kampanja: fiktivna fitness manekenka u bijeloj sportskoj odjeći, autentična ružičasta tegla Colla Pink i fotografije u mekoj paleti ružičaste i blush bijele, uz činjenice sa službene
+    stranice proizvoda.'
+  reason: Lara's brief
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: K04
+  op: replace
+  post: '01'
+  path: creative_device
+  expected: 'Mješoviti medij: četiri fotografije i dva kratka videa (3 do 4 s), isti topli fotografski svijet; etiketa se prikazuje izrezima u izvornoj veličini i oštrom tipografijom koju slaže kod.'
+  replacement: Mješoviti medij (četiri fotografije, dva videa) s istom fiktivnom manekenkom, istom ružičastom teglom i bordo naslovima koje slaže kod; svaka činjenica kao zasebna oznaka s izvorom.
+  reason: signature mechanic
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: K05
+  op: replace
+  post: '01'
+  path: hook.text
+  expected: Kreatin izbliza.
+  replacement: Vaš ružičasti ritual.
+  reason: hook
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: K06
+  op: replace
+  post: '01'
+  path: narrative_arc
+  expected: Fotografija otvara pakiranjem, video donosi prah u pokretu, fotografija pokazuje rutinu, video vodu i miješanje, fotografija čita etiketu, završna fotografija zatvara pakiranjem i pozivom.
+  replacement: Naslovnica s manekenkom i teglom, sastav po mjerici, priprema u videu, upute za uporabu, isti ritual u videu s manekenkom, pa izbor okusa.
+  reason: arc
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: K07
+  op: replace
+  post: '01'
+  path: save_trigger
+  expected: 'Etiketa pročitana na kadru: dva izreza izvornog teksta s pakiranja uz oštre oznake, za usporedbu s vlastitim pakiranjem.'
+  replacement: Sastav po mjerici i upute za pripremu na jednom mjestu, za spremanje i dijeljenje.
+  reason: save trigger
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: K08
+  op: replace
+  post: '01'
+  path: caption_hr.text
+  expected: 'Kreatin izbliza: prah, voda i ono što piše na pakiranju. 🧡 Prelistajte do kraja.'
+  replacement: 'Vaš ružičasti ritual uz Colla Pink. 💗 Što je unutra, kako se priprema i koji okus odabrati: prelistajte do kraja.'
+  reason: caption
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: K09
+  op: replace
+  post: '01'
+  path: distinct_from_others
+  expected: Jedini post s videima i lifestyle kadrom u nizu; hero je jedna studijska fotografija pakiranja, a reel je priča od pripreme do kadra s pakiranjem.
+  replacement: Jedini post s ljudskim likom (fiktivna manekenka), ružičastom paletom i činjenicama o drugom proizvodu (Colla Pink); hero je tamna studijska fotografija kreatina, a reel priča u pokretu s rukama i siluetama.
+  reason: distinctness
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: K10
+  op: remove
+  post: '01'
+  path: slides[0]
+  expected: Kreatin izbliza.
+  reason: old creatine slide replaced by the Colla Pink storyboard
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: K11
+  op: remove
+  post: '01'
+  path: slides[1]
+  expected: Prah u pokretu.
+  reason: old creatine slide replaced by the Colla Pink storyboard
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: K12
+  op: remove
+  post: '01'
+  path: slides[2]
+  expected: Prije treninga.
+  reason: old creatine slide replaced by the Colla Pink storyboard
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: K13
+  op: remove
+  post: '01'
+  path: slides[3]
+  expected: Voda i prah.
+  reason: old creatine slide replaced by the Colla Pink storyboard
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: K14
+  op: remove
+  post: '01'
+  path: slides[4]
+  expected: Što piše na pakiranju
+  reason: old creatine slide replaced by the Colla Pink storyboard
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: K15
+  op: remove
+  post: '01'
+  path: slides[5]
+  expected: Pogledajte izbliza.
+  reason: old creatine slide replaced by the Colla Pink storyboard
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: K20
+  op: set_block
+  post: '01'
+  path: people
+  value_json:
+    appear: true
+    treatment: fictional_model
+    rationale: Fiktivna fitness manekenka u bijeloj sportskoj odjeći u kadrovima 1 i 5, po odluci čovjeka; ostali kadrovi bez ljudi.
+    casting_notes: 'Potpuno fiktivna (AI-generirana) osoba: nikad stvarna, imenovana ni prepoznatljiva osoba i nikad lik influencerice iz referentnih objava; ista osoba u kadrovima 1 i 5 (isto lice, odjeća, svjetlo i prostor);
+      bez logotipa na odjeći; prsti ne prekrivaju natpis na teglji.'
+  reason: model is fictional
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: K21
+  op: set_block
+  post: '01'
+  path: packshot
+  value_json:
+    used: true
+    packshot_ref: colla_flavour_packshots
+    treatment: unaltered_cutout_composite
+    instructions:
+    - Svaka tegla je službeni packshot svog okusa (1200x1200, bijela pozadina), izrezan rubnim matiranjem; sve tegle imaju isti ružičasti dizajn i nikad se ne prebojavaju.
+    - Tegla pokazuje samo svoj okus; sve tegle zajedno samo na slajdu 6. Najviše 1,0x izvorne veličine.
+    - 'Natpis na teglji nikad se ne crta, ne proširuje ni ne prekriva: prsti, voće i oznake ostaju izvan natpisa.'
+    - U videima nema tegle u snimci; prava tegla pojavljuje se samo kao završni sloj koji slaže kod.
+  reason: own official packshots
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: K22
+  op: set_block
+  post: '01'
+  path: product
+  value_json:
+    sku: '29715'
+    name: Colla Pink - BeastPink
+    page_url: https://gymbeam.hr/colla-pinkbeastpink.html
+    jar_design: Isti ružičasti dizajn tegle za svih pet okusa (službeni packshotovi); mijenja se samo otisnuta riječ okusa. Natpis na teglji otisnuo je proizvođač; ne mijenja se.
+    flavours:
+    - name_hr: jagoda - limunada
+      printed_flavour: strawberry lemonade
+      variant_sku: '29716'
+      fruit: jagode i limuni
+      packshot_file: colla_pink_strawberry_lemonade_340_g_beastpink_wb.png
+      packshot_sha256: 1fa5e11df25dd326571d3ef7a4f0d9278e4fa5398b738e438d8cabf7c10ead9d
+      used_on_slides:
+      - 1
+      - 6
+    - name_hr: grožđe
+      printed_flavour: grape
+      variant_sku: '57454'
+      fruit: zeleno grožđe
+      packshot_file: colla_pink_grape_340_g_beastpink_wb.png
+      packshot_sha256: 6d8dd0b244786935e2d2939109349ee7e14e8824127d2746baa44de2bc2ed123
+      used_on_slides:
+      - 2
+      - 6
+    - name_hr: mango - naranča
+      printed_flavour: mango orange
+      variant_sku: '29717'
+      fruit: mango i naranče
+      packshot_file: colla_pink_mango_orange_340_g_beastpink_wb.png
+      packshot_sha256: d0809a8b15b5ba716b2e280e58edfcecf723166afb1376aeef7c1f48c708ad70
+      used_on_slides:
+      - 4
+      - 6
+    - name_hr: malina
+      printed_flavour: raspberry
+      variant_sku: '90922'
+      fruit: maline
+      packshot_file: colla_pink_raspberry_240_g_gymbeam.png
+      packshot_sha256: 85455dcf73e4cd427ee0a0afdd006c6cf9a1b7d94d991d5eadb07e5374df3592
+      used_on_slides:
+      - 5
+      - 6
+    - name_hr: šumsko voće
+      printed_flavour: wild berries
+      variant_sku: '57457'
+      fruit: miješano šumsko voće
+      packshot_file: colla_pink_wild_berries_340_g_beastpink_wb.png
+      packshot_sha256: 9dc399dbe152379b1a75f99a96c02eeff01922c28bd103388f1bbf0f43483c3a
+      used_on_slides:
+      - 6
+    evidence_ids:
+    - E-colla-nutrition
+    - E-colla-dosage
+    - E-colla-warning
+    - E-colla-sugarfree
+    - E-colla-flavours
+    - E-colla-jar-design
+  reason: Post 2 is about Colla Pink
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: K23
+  op: set_block
+  post: '01'
+  path: basis
+  value_json:
+  - statement: 'Marka već objavljuje ružičaste objave: CreaGlow naslovnica u ružičastom izgledu sa serifnim naslovom i kreatoricom s posudom (ručni pregled naslovnice).'
+    status: manual
+    evidence_ids:
+    - E-e73f15ab
+  - statement: Marka je 7. 10. 2026. objavila video o Pink Collagenu, pa ružičasta potkampanja ljepote odgovara marki.
+    status: verified
+    evidence_ids:
+    - E-87ecea41
+  - statement: Činjenice o Colla Pink (sastav po mjerici, doziranje, upozorenje) potječu sa službene stranice proizvoda, dohvaćene 28. 10. 2026.
+    status: verified
+    evidence_ids:
+    - E-colla-nutrition
+    - E-colla-dosage
+    - E-colla-warning
+  - statement: Svih pet službenih packshotova prikazuje istu ružičastu teglu; razlikuje se samo otisnuta riječ okusa (ručni pregled).
+    status: manual
+    evidence_ids:
+    - E-colla-jar-design
+  - statement: Fiktivna manekenka i dosljednost njezina lika kroz fotografije i videe kreativna su pretpostavka; dosljednost nije provjerena.
+    status: assumption
+    evidence_ids: []
+  reason: evidence behind the new carousel
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: K31
+  op: add_slide
+  post: '01'
+  path: slides
+  value_json:
+    n: 1
+    role: 'FOTO: naslovnica'
+    headline:
+      text: Vaš ružičasti ritual.
+      claim_ids: []
+    body:
+    - text: 'Colla Pink: sve što treba znati u šest kadrova.'
+      claim_ids: []
+    label_crops: []
+    callouts: []
+    visual_composition: 'Fotografija 4:5 (1080x1350). Meka ružičasta studijska scena #f4c7d0 s blush bijelom #fbf3f2, difuzno svjetlo slijeva. Fiktivna fitness manekenka u bijeloj sportskoj odjeći drži pravu teglu Colla Pink
+      okusa jagoda - limunada (službeni packshot koji slaže kod), s prstima ispod natpisa. Prsti nikad ne prekrivaju natpis na teglji. Naslov u bordo #6e1f35, snažna editorijalna tipografija koju slaže kod, u gornjoj trećini.
+      Bez generiranog teksta i bez generirane tegle.'
+    people_in_frame: true
+    alt_text_hr: Fiktivna fitness manekenka u bijeloj sportskoj odjeći drži ružičastu teglu Colla Pink na mekoj ružičastoj pozadini, uz naslov Vaš ružičasti ritual.
+  reason: new storyboard element
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: K32
+  op: add_slide
+  post: '01'
+  path: slides
+  value_json:
+    n: 2
+    role: 'FOTO: što je unutra'
+    headline:
+      text: Što je unutra?
+      claim_ids: []
+    body:
+    - text: Sastojci i količine sa službene stranice.
+      claim_ids: []
+    label_crops: []
+    callouts:
+    - text: 'Na stranici proizvoda piše: u 8 g (1 mjerica): hidrolizirani peptidi goveđeg kolagena 6300 mg, ekstrakt sjemenki grožđa 20:1 400 mg, hijaluronska kiselina 40 mg.'
+      claim_ids:
+      - C1
+    - text: 'Na stranici proizvoda piše: u 8 g: cink 10 mg, selen 89 μg, vitamin C 500 mg.'
+      claim_ids:
+      - C2
+    - text: 'Na stranici proizvoda piše: u 8 g: niacin 32 mg, vitamin B2 2,8 mg, vitamin A 800 μg, biotin 50 μg.'
+      claim_ids:
+      - C3
+    visual_composition: 'Fotografija 4:5. Infografika na blush bijeloj podlozi #fbf3f2: u sredini prava tegla Colla Pink okusa grožđe (službeni packshot) sa zelenim grožđem kao rekvizitom i tri bordo #6e1f35 oznake sa sastojcima
+      i količinama koje slaže kod, spojene tankim linijama. Oznake nikad ne prekrivaju natpis na teglji. Tekst čitljiv na mobitelu, kontrast najmanje 4,5:1.'
+    people_in_frame: false
+    alt_text_hr: Ružičasta tegla Colla Pink okusa grožđe sa zelenim grožđem i tri oznake sa sastojcima i njihovim količinama.
+  reason: new storyboard element
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: K33
+  op: add_slide
+  post: '01'
+  path: slides
+  value_json:
+    n: 3
+    role: 'VIDEO 3,5 s: priprema'
+    headline:
+      text: Priprema.
+      claim_ids: []
+    body:
+    - text: Prah, voda, miješanje.
+      claim_ids: []
+    label_crops: []
+    callouts: []
+    visual_composition: 'Video 4:5, oko 3,5 s. Makro: prah pada u čašu čiste vode, vrtlog pri miješanju, svjetlo slijeva kroz staklo, blush bijela podloga #fbf3f2. Nema tegle u kadru. Boja pripremljenog napitka nije potvrđena:
+      prah ostaje blijed, a tekućina prozirna do mutna, bez izmišljene boje. Natpis slaže kod.'
+    people_in_frame: false
+    alt_text_hr: 'Makro video: prah pada u čašu vode i vrtloži se pri miješanju, na mekoj blush bijeloj podlozi.'
+  reason: new storyboard element
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: K34
+  op: add_slide
+  post: '01'
+  path: slides
+  value_json:
+    n: 4
+    role: 'FOTO: kako se priprema'
+    headline:
+      text: Kako se priprema?
+      claim_ids: []
+    body:
+    - text: Odmjerite prah, dolijte vodu i promiješajte.
+      claim_ids: []
+    label_crops: []
+    callouts:
+    - text: 'Na stranici proizvoda piše: preporučena dnevna doza je 1 mjerica (8 g), pomiješana s 200 do 300 ml vode.'
+      claim_ids:
+      - C4
+    - text: 'Na stranici proizvoda piše: nemojte prekoračiti preporučeni dnevni unos; proizvod nije zamjena za raznoliku i uravnoteženu prehranu.'
+      claim_ids:
+      - C5
+    visual_composition: 'Fotografija 4:5. Svijetla ružičasta podloga #f4c7d0, tri elegantna koraka s piktogramima u bordo #6e1f35 (prah, čaša vode, miješanje) koje slaže kod; u donjoj trećini prava tegla Colla Pink okusa mango
+      - naranča (službeni packshot) uz kriške manga i naranče kao rekvizit. Tekst uputa čitljiv na mobitelu; natpis na teglji ostaje nepokriven.'
+    people_in_frame: false
+    alt_text_hr: Tri koraka pripreme napitka s piktogramima, uz ružičastu teglu Colla Pink okusa mango - naranča i kriške manga i naranče.
+  reason: new storyboard element
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: K35
+  op: add_slide
+  post: '01'
+  path: slides
+  value_json:
+    n: 5
+    role: 'VIDEO 3,5 s: ružičasti ritual'
+    headline:
+      text: Mali ritual.
+      claim_ids: []
+    body:
+    - text: Kad Vam odgovara.
+      claim_ids: []
+    label_crops: []
+    callouts:
+    - text: 'Na stranici proizvoda piše: napitak možete konzumirati u bilo koje doba dana.'
+      claim_ids:
+      - C6
+    visual_composition: 'Video 4:5, oko 3,5 s. Ista fiktivna manekenka (isto lice, ista bijela sportska odjeća, isti ružičasti prostor i svjetlo) miješa pripremljeni napitak u čaši i podiže je prema kameri; spor pomak kamere.
+      Nema tegle u snimci; prava tegla Colla Pink okusa malina pojavljuje se samo kao završni sloj koji slaže kod u zadnjoj sekundi. Boja napitka nije potvrđena: neutralna, prozirna tekućina.'
+    people_in_frame: true
+    alt_text_hr: 'Video: fiktivna fitness manekenka u bijeloj sportskoj odjeći miješa napitak u čaši i podiže je prema kameri u mekom ružičastom prostoru.'
+  reason: new storyboard element
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
+- id: K36
+  op: add_slide
+  post: '01'
+  path: slides
+  value_json:
+    n: 6
+    role: 'FOTO: odaberite okus i poziv'
+    headline:
+      text: Odaberite svoj okus.
+      claim_ids: []
+    body:
+    - text: Jagoda - limunada, grožđe, mango - naranča, malina i šumsko voće.
+      claim_ids: []
+    label_crops: []
+    callouts: []
+    visual_composition: 'Fotografija 4:5. Pet pravih tegli Colla Pink u nizu, sve istog ružičastog dizajna, svaka uz svoje voće: jagode i limuni, zeleno grožđe, mango i naranče, maline, miješano šumsko voće. Svijetla ružičasta
+      podloga #f4c7d0 i blush bijela #fbf3f2, jedna tegla po okusu iz službenog packshota (nikad prebojana). Naslov u bordo #6e1f35; poziv na akciju slaže kod.'
+    people_in_frame: false
+    alt_text_hr: 'Pet ružičastih tegli Colla Pink u nizu, svaka uz svoje voće: jagode i limuni, grožđe, mango i naranče, maline i šumsko voće.'
+  reason: new storyboard element
+  proposed_by: ai:Claude Code
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Lara''s Phase 5 message 2026-10-28 (Option B: Colla Pink as Carousel Post 2, baby-pink beauty & fitness campaign, six slides 4 photos + 2 videos, fictional model); the exact words below are AI-written
+    and are reviewed at the final approval'
+  confirmation_scope: decision
