@@ -1,0 +1,27 @@
+schema: phase5-assets/1
+product: BeastPink Colla Pink (GymBeam BeastPink)
+page: https://gymbeam.hr/colla-pinkbeastpink.html
+retrieved_at: 2026-10-28
+status: reference assets downloaded for inspection only; nothing generated or published; files in git-ignored runs/colla-pink/source/
+packaging_fact: all five flavours use the same dusty-rose jar and label design; only the printed flavour word differs (checked on the five official packshots)
+printed_net_weight: 240 g          # file names say 340 g: filename is wrong, the label and price-per-kg (13.50 EUR = 56.25 EUR/kg) say 240 g
+excluded_images:
+  - old white-label design (colla_pink_grape.png, colla_pink_mango.png, 800 px)
+  - HOT SALE 40% graphic (colla_pink_240g.jpg)
+  - bundle shot jar + sachets (daily-bezlabel ... strawberry_lemonade_29715_.jpg): other products in frame
+flavours:
+  - {hr: jagoda - limunada, printed: strawberry lemonade, sku: 29716, gtin13: "8588007275734", fruit: strawberries + lemons,
+     file: colla_pink_strawberry_lemonade_340_g_beastpink_wb.png, sha256: 1fa5e11df25dd326571d3ef7a4f0d9278e4fa5398b738e438d8cabf7c10ead9d}
+  - {hr: grožđe, printed: grape, sku: 57454, gtin13: "8586022215001", fruit: green grapes,
+     file: colla_pink_grape_340_g_beastpink_wb.png, sha256: 6d8dd0b244786935e2d2939109349ee7e14e8824127d2746baa44de2bc2ed123}
+  - {hr: mango - naranča, printed: mango orange, sku: 29717, gtin13: "8588007275741", fruit: mangoes + oranges,
+     file: colla_pink_mango_orange_340_g_beastpink_wb.png, sha256: d0809a8b15b5ba716b2e280e58edfcecf723166afb1376aeef7c1f48c708ad70}
+  - {hr: malina, printed: raspberry, sku: 90922, gtin13: "8586025955850", fruit: raspberries,
+     file: colla_pink_raspberry_240_g_gymbeam.png, sha256: 85455dcf73e4cd427ee0a0afdd006c6cf9a1b7d94d991d5eadb07e5374df3592}
+  - {hr: šumsko voće, printed: wild berries, sku: 57457, gtin13: "8586022214998", fruit: mixed berries,
+     file: colla_pink_wild_berries_340_g_beastpink_wb.png, sha256: 9dc399dbe152379b1a75f99a96c02eeff01922c28bd103388f1bbf0f43483c3a}
+source_base_url: https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/c/o/
+image_properties: {size: 1200x1200, background: white (255,255,255), jar_bbox: [217, 178, 983, 1081], jar_px: 766x903, same geometry for all five}
+page_facts_dated_2026-10-28: {price_eur: 13.50, rating: 4.6, review_count: 2034, dose_g: 8, collagen_peptides_mg_per_dose: 6300, sugar_free: true}
+pack_text_verified_at_1to1: [Colla pink, collagen peptides, zinc, vitamin C, hyaluronic acid, grape seed extract, with vitamins B3, B2 & B7, retinol, "NET WT.: 240 g", flavour word]
+required_before_production: [hash-checked cut-out per flavour (edge matte, inspected at 6x), logo decision, claim review for any health wording, video model and price]

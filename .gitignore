@@ -11,3 +11,11 @@ submission/*
 
 # Claude Code configuration, settings and skills: never tracked
 .claude/
+
+# submission archives are for inspection only, never committed
+*.zip
+
+# local logs, usage ledgers and verification logs of the submission build: never tracked
+*.log
+api_usage*.jsonl
+plans/gymbeam_hr/art_direction/storyboard_contact_sheet.png

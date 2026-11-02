@@ -1,0 +1,11 @@
+schema: hero-status/1
+post: hero (plan id 02)
+status: selected_and_frozen_by_human      # NOT approved for publication; NOT a plan approval
+selected_by: Lara
+selected_on: 2026-10-28
+asset: runs/hero-proof/hero_package/hero_FINAL_v5_1080x1350.png
+sha256: f05d1f3983f99981b452f33b4a469b7df9ea70e5b4c636dfca079c259d0161ba
+plan_hash_at_selection: a923c3229e0344b840b462111de2d4af24b69d5025876eec6e5fec97128f4b8b
+plan_approval: NONE
+creative_changes_allowed: false
+open: [official logo asset, public-use permission for brand photos, native-speaker Croatian check, compliance review of printed badges]

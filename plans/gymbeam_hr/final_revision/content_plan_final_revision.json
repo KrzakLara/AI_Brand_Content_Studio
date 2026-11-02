@@ -1,0 +1,168 @@
+{
+  "revision": "R9",
+  "date": "2026-10-29",
+  "updated": "2026-11-01 (Phase 7F)",
+  "kind": "final_delivery_revision_documentation",
+  "is_approval": false,
+  "supersedes_plan_hash": "970975125494d10dda267d86d6ebab7f45ebb4983ae2dfb0444e0304afa01a99",
+  "preserved_originals": {
+    "plans/gymbeam_hr/content_plan.json": "0edacd907fc75f354b7b34ab03bb8e26b64f89115ef282aa0dba3ff31d6b6097",
+    "plans/gymbeam_hr/history/plan_versions/plan_970975125494.json": "6f2a00f8e3cc9fb8d43dba1198fe1cbf5f7d9b0228262d9198fa20a691875a8c"
+  },
+  "human_decision": {
+    "decided_by": "Lara",
+    "decision": "Third post is the GymBeam 32% Protein Wafer Lifestyle Reel (final version V8) instead of the plan reel 'Klik prije izlaska'; final direction = Post 1 Creatine Hero V5, Post 2 Colla Pink six-slide carousel, Post 3 Wafer Lifestyle Reel V8",
+    "source": "Phase 6 direction (phases/06_reel_post3/REEL_PRODUCTION_PLAN_v3.md: wafer Reel concept approved by Lara; V1-V3 rejected, V4 requested, cover B selected), Lara's Phase 7C instruction ('final creative direction is approved in principle'), and her visual selection of V8 over V4-V7 in the Phase 7F instruction",
+    "verbatim_phase6_archived": false,
+    "human_confirmation": "direction approved in principle (phase7c); V8 and the final deliverables (Posts 1-3, R9) reviewed and accepted by the author, including the Reel audio, confirmed in writing on 2026-11-01 (FINAL_SIGNOFF_7F.md)",
+    "workflow_plan_approval": "NONE (plan hash 970975125494 unchanged)",
+    "reel_editing_style_rationale": "Za treću objavu namjerno sam odabrala rough-cut stil montaže, inspiriran aktualnom TikTok i UGC estetikom. Izraženiji rezovi između kadrova kreativna su odluka kojom se nastoji postići spontaniji, autentičniji dojam sadržaja, uz jasnu priču i vidljivost proizvoda.",
+    "reel_editing_style_note": "Human creative decision, stated by the author in the first person. It is not a justification for visual defects of the AI material; those are listed in posts/post_03_gymbeam_wafer_reel/POST.md."
+  },
+  "approval_status": {
+    "A_take_home_demonstration": "Author-reviewed and accepted for the Sekvenca private take-home demonstration, including visual content, captions and Reel audio. Confirmed in writing by the author (Lara) on 2026-11-01.",
+    "B_public_commercial_advertising": "Portfolio demonstration only; not approved for public commercial advertising. Not authorized for public commercial advertising without additional rights and compliance review; no brand or legal approval is claimed.",
+    "audio_review": "Reel V8 audio (synthetic foley) reviewed and accepted by the author on 2026-11-01"
+  },
+  "author_confirmation": {
+    "date": "2026-11-01",
+    "statement": "Author-reviewed and accepted for the Sekvenca private take-home demonstration, including visual content, captions and Reel audio.",
+    "limitation": "Portfolio demonstration only; not approved for public commercial advertising.",
+    "scope": "Posts 1-3 final media, BeastPink videos, Wafer Reel V8 incl. audio, captions, R9",
+    "brand_or_legal_approval": "none claimed"
+  },
+  "posts": [
+    {
+      "order": 1,
+      "plan_post_id": "02",
+      "format": "hero_image",
+      "title": "GymBeam 100% Creatine Monohydrate hero",
+      "deliverable": "posts/post_01_creatine_hero/hero_FINAL_v5_1080x1350.png",
+      "size": "1080x1350",
+      "objective": "Prepoznatljivost i poželjnost: pakiranje samo, bez dodataka.",
+      "changed_from_plan": false,
+      "hashtags": [
+        "#gymbeamhr",
+        "#gbig"
+      ],
+      "deliverable_sha256": {
+        "posts/post_01_creatine_hero/hero_FINAL_v5_1080x1350.png": "f05d1f3983f99981b452f33b4a469b7df9ea70e5b4c636dfca079c259d0161ba"
+      },
+      "caption_final": "Bez buke, bez ukrasa. 🧡 U fokusu je GymBeam kreatin monohidrat. Pogledajte poveznicu u opisu profila. Zamišljeni portfolio oglas: scena i čaša generirane su umjetnom inteligencijom, a pakiranje potječe sa službene fotografije. Nije službena suradnja s GymBeamom. #gymbeamhr #gbig",
+      "final_hashtags": [
+        "#gymbeamhr",
+        "#gbig"
+      ],
+      "caption_status": "final text of record (compliance/CAPTION_CHANGES_7F.md), selected with R9"
+    },
+    {
+      "order": 2,
+      "plan_post_id": "01",
+      "format": "carousel",
+      "title": "BeastPink Colla Pink 'Ružičasti ritual'",
+      "deliverable": "posts/post_02_beastpink_carousel/",
+      "size": "1080x1350",
+      "slides": 6,
+      "slide_media": [
+        "png",
+        "png",
+        "mp4",
+        "png",
+        "mp4",
+        "png"
+      ],
+      "objective": "Informiranje i spremanje: što je u napitku Colla Pink, kako se priprema i koji okus odabrati.",
+      "changed_from_plan": false,
+      "hashtags": [
+        "#gymbeamhr",
+        "#gbfit",
+        "#beastpink"
+      ],
+      "slide_files": [
+        "posts/post_02_beastpink_carousel/slide_1_cover_FROZEN_1080x1350.png",
+        "posts/post_02_beastpink_carousel/slide_2_sto_je_unutra_NO_FOOTER_1080x1350.png",
+        "posts/post_02_beastpink_carousel/slide_3_PRIPREMA_video_v3_1080x1350.mp4",
+        "posts/post_02_beastpink_carousel/slide_4_kako_pripremiti_1080x1350.png",
+        "posts/post_02_beastpink_carousel/slide_5_napitak_za_ljepotu_video_v4_1080x1350.mp4",
+        "posts/post_02_beastpink_carousel/slide_6_odaberi_svoj_okus_FINAL_v2_1080x1350.png"
+      ],
+      "deliverable_sha256": {
+        "posts/post_02_beastpink_carousel/slide_1_cover_FROZEN_1080x1350.png": "b925b8b31b58961e49f06094d1c41dfaab1c1c553cfc39e68a3af4471cb65c94",
+        "posts/post_02_beastpink_carousel/slide_2_sto_je_unutra_NO_FOOTER_1080x1350.png": "edf8b8ee9d2e1182d6432f2ffe682057a7a683f1e9fa00621d73eca1a61c6663",
+        "posts/post_02_beastpink_carousel/slide_3_PRIPREMA_video_v3_1080x1350.mp4": "33fa345416d2964d492e58d82c045b823f87e29ed775e5249436313608d8ddf9",
+        "posts/post_02_beastpink_carousel/slide_4_kako_pripremiti_1080x1350.png": "1e18ded8bb58595dfb88fd513c50c4d9ae817ba05410a5ad9327d0261128ecc4",
+        "posts/post_02_beastpink_carousel/slide_5_napitak_za_ljepotu_video_v4_1080x1350.mp4": "57dfccf43ddfe3f9e2c10251397770239e21f0d6a3701fb5789e44807f36c13a",
+        "posts/post_02_beastpink_carousel/slide_6_odaberi_svoj_okus_FINAL_v2_1080x1350.png": "7ba9106a01317880036801f23e3982fb8f9210298273e3ee0c8357e548863e24",
+        "posts/post_02_beastpink_carousel/BEASTPINK_CAROUSEL_FINAL_CONTACT_SHEET_v4.png": "4848449e5883af1ae5c6818d69a54972b89ec8656de6bb4b988334f9c714c7d8"
+      },
+      "slide3_text": [
+        "PRIPREMA:",
+        "Prah. Voda. Gotovo."
+      ],
+      "slide5_text": [
+        "NAPITAK ZA LJEPOTU",
+        "Ljepota počinje iznutra.",
+        "Cink doprinosi održavanju normalne kože i kose te normalnih noktiju."
+      ],
+      "slide6_text_unchanged": "ODABERI SVOJ OKUS.",
+      "versions_7f": {
+        "slide3": "v3 (subtitle 51 -> 37 px; footage identical to v2)",
+        "slide5": "v4 (zinc wording per official Croatian Reg. 432/2012)",
+        "slide6": "v2 (3 local retouches; frozen original kept)"
+      },
+      "caption_final": "Vaš ružičasti ritual uz Colla Pink. 💗 Što je unutra, kako se priprema i koji okus odabrati: prelistajte do kraja. Spremite objavu, a više pogledajte putem poveznice u opisu profila. Dodatak prehrani nije zamjena za raznoliku i uravnoteženu prehranu i zdrav način života. Preporučena dnevna doza: 1 mjerica (8 g) u 200–300 ml vode; ne prekoračujte preporučeni dnevni unos. Proizvod nije namijenjen djeci, trudnicama i dojiljama. Zamišljeni portfolio oglas: osoba i prizori u objavi generirani su umjetnom inteligencijom. Nije službena suradnja s GymBeamom ni BeastPinkom. #gymbeamhr #gbfit #beastpink",
+      "caption_note": "accompanying statement for Reg. (EC) 1924/2006 Art. 10(2) from the product page; page discrepancies (18 g FAQ maximum; pregnant/breastfeeding wording) flagged in compliance/POST2_FACT_CHECK_7F.md, not resolved",
+      "final_hashtags": [
+        "#gymbeamhr",
+        "#gbfit",
+        "#beastpink"
+      ],
+      "caption_status": "final text of record, selected with R9",
+      "compliance_status": "NOT CLEARED, legal review not done: slide 5 uses the three authorised zinc claims (official Croatian text of Reg. 432/2012, compliance/ZINC_CLAIM_432_2012_HR.md); this is a supported zinc statement, NOT a clearance of the complete advertisement"
+    },
+    {
+      "order": 3,
+      "plan_post_id": "03",
+      "format": "reel",
+      "title": "GymBeam 32% Protein Wafer Lifestyle Reel FINAL V8 'Moj mali gym essential'",
+      "deliverable": "posts/post_03_gymbeam_wafer_reel/GYMBEAM_WAFER_LIFESTYLE_REEL_FINAL_V8.mp4",
+      "cover": "selected cover B",
+      "size": "1080x1920",
+      "duration_s": 8.833,
+      "frames": 212,
+      "fps": 24,
+      "objective": "Angažman i storytelling: kuhinja - torba - auto - teretana s vafelom i torbom, u rough-cut / UGC-inspiriranom stilu montaže.",
+      "changed_from_plan": true,
+      "replaced_plan_concept": "Klik prije izlaska (creatine, 14 s, 6 shots, faceless hands/silhouette)",
+      "hashtags": [
+        "#gymbeamhr",
+        "#gbfit",
+        "#ProteinWafer"
+      ],
+      "hashtags_differ_from_plan": true,
+      "deliverable_sha256": {
+        "posts/post_03_gymbeam_wafer_reel/GYMBEAM_WAFER_LIFESTYLE_REEL_FINAL_V8.mp4": "5f8788d8af7d99222a5b03dd98c347b570ef5e27fdf4f8b98d726c2f8b9f3173",
+        "posts/post_03_gymbeam_wafer_reel/GYMBEAM_WAFER_REEL_SELECTED_COVER_B_1080x1920.png": "630171479aa71e24c1ec3c3379945a042616d82b470543055f4fc33afaf38dc8"
+      },
+      "caption_final": "Od jutarnjih obveza do treninga — neke sitnice jednostavno uvijek idu sa mnom. 🤎 GymBeam 32% Protein Wafer. Zamišljeni portfolio oglas (AI-generirani sadržaj) — nije službena suradnja s GymBeamom ni stvarna preporuka influencera. #gymbeamhr #gbfit #ProteinWafer",
+      "final_hashtags": [
+        "#gymbeamhr",
+        "#gbfit",
+        "#ProteinWafer"
+      ],
+      "hashtags_note": "#gymbeamhr and #gbfit are brand tags (compliance/HASHTAG_CHECK_7F.md); #ProteinWafer is descriptive; plan reel tags were #gymbeamhr #gbfit",
+      "caption_status": "final text of record, selected with R9",
+      "audio": "synthetic foley; reviewed and accepted by the author on 2026-11-01",
+      "history": "V4 rejected (malformed bag handle); V5, V6, V7 candidates not selected; V8 selected by Lara; all kept in phases/06_reel_post3/versions/",
+      "new_generation_7f": {
+        "keyframe_S03B_usd": 0.115665,
+        "kling_S03B_usd_logged_rate": 0.705,
+        "kling_billing_verified": false
+      }
+    }
+  ],
+  "captions_status": "Phase 7F final texts of record (compliance/CAPTION_CHANGES_7F.md)",
+  "signoff_text": "Author-reviewed and accepted for the Sekvenca private take-home demonstration, including visual content, captions and Reel audio. Portfolio demonstration only; not approved for public commercial advertising.",
+  "signoff_status": "RECORDED 2026-11-01: confirmed in writing by the author (FINAL_SIGNOFF_7F.md); no brand or legal approval claimed",
+  "final_scope_revision": "phases/02_plan/FINAL_SCOPE_REVISION_7F.md (+ .yaml); original brief ai_recipe/repo/briefs/gymbeam_hr.yaml preserved unchanged"
+}

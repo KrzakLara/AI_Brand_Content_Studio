@@ -1,0 +1,560 @@
+# KONAČNE IZMJENE (primjena preko `studio plan edit`).
+# E01-E21: AI prijedlozi koje je Lara potvrdila u poruci; E12 i E15 su Larin vlastiti tekst (proposed_by: human:Lara).
+# N01-N25: AI tekst koji provodi Larine odluke 3, 5, 6, 7, 8. confirmation_scope: decision = Lara je potvrdila ODLUKU, a ne točne riječi;
+# te riječi Lara pregledava pri završnom odobrenju plana.
+base_plan_hash: 7dbd32938cee9e03aa071ac6bdb59828464b3d143f1d5f0cf95152c0f0b086d0
+edits:
+- id: E01
+  op: replace
+  post: '01'
+  slide: 2
+  path: body[0].text
+  expected: Naziv sastojka prvo je što provjeravate.
+  replacement: Naziv je prvo što provjeravate.
+  reason: 'Neprirodan red riječi. Uz to je ''naziv sastojka'' netočno: na izrezu je naziv proizvoda (Creatine Monohydrate), a ne popis sastojaka.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'': primijeniti ranije pregledane E01-E21 uz izmjene E12 i E15'
+  confirmation_scope: wording
+- id: E02
+  op: replace
+  post: '01'
+  slide: 3
+  path: body[0].text
+  expected: Tu stoji i okus, u maloj tableti.
+  replacement: Okus piše u maloj bijeloj oznaci.
+  reason: '''Tableta'' na hrvatskom znači pilulu. Smisao je mala zaobljena oznaka ''Unflavoured'' na izrezu label_purity (na slici je bijela).'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'': primijeniti ranije pregledane E01-E21 uz izmjene E12 i E15'
+  confirmation_scope: wording
+- id: E03
+  op: replace
+  post: '01'
+  slide: 4
+  path: body[0].text
+  expected: Ova se odnosi na pogon u kojem je proizvedeno.
+  replacement: Oznaka se odnosi na pogon u kojem se proizvodi.
+  reason: 'Gramatika: nedostaje imenica (''ova'' je dvosmisleno), ''proizvedeno'' nema subjekta. Smisao ostaje u okviru otisnutog teksta ''Produced in an IFS-certified facility''; ne objašnjava što IFS
+    znači.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'': primijeniti ranije pregledane E01-E21 uz izmjene E12 i E15'
+  confirmation_scope: wording
+- id: E04
+  op: replace
+  post: '01'
+  slide: 2
+  path: alt_text_hr
+  expected: Izrez prednje strane pakiranja s nazivom Creatine Monohydrate i oznaka ispod s istim tekstom.
+  replacement: Izrez prednje strane pakiranja s nazivom Creatine Monohydrate i oznakom ispod s istim tekstom.
+  reason: 'Padež: ''s nazivom ... i oznaka'' treba biti ''i oznakom''.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'': primijeniti ranije pregledane E01-E21 uz izmjene E12 i E15'
+  confirmation_scope: wording
+- id: E05
+  op: replace
+  post: '01'
+  slide: 3
+  path: alt_text_hr
+  expected: Izrez pojasa pakiranja s tekstom 100% Pure micronised i oznakom okusa, ispod oznaka s istim tekstom.
+  replacement: Izrez pojasa na pakiranju s tekstom 100% Pure micronised i oznakom okusa; ispod izreza je oznaka s istim tekstom.
+  reason: '''ispod oznaka'' je nejasno i neprirodno; razdvojeno je što je izrez, a što oznaka koju slaže kod. Prepisani tekst otisnut je na izrezu label_purity.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'': primijeniti ranije pregledane E01-E21 uz izmjene E12 i E15'
+  confirmation_scope: wording
+- id: E06
+  op: replace
+  post: '01'
+  slide: 4
+  path: alt_text_hr
+  expected: Izrez okrugle IFS oznake s pakiranja i pokraj nje oznaka s tekstom o IFS certificiranom pogonu.
+  replacement: Izrez okrugle IFS oznake s pakiranja i pokraj nje oznaka s tekstom Produced in an IFS-certified facility.
+  reason: Umjesto vlastite parafraze ('o IFS certificiranom pogonu') doslovan prijepis otisnutog teksta, provjerljiv na izrezu badge_ifs; ne dodaje značenje.
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'': primijeniti ranije pregledane E01-E21 uz izmjene E12 i E15'
+  confirmation_scope: wording
+- id: E07
+  op: remove
+  post: '02'
+  path: supporting_copy[0]
+  expected: Na gymbeam.hr ocjena proizvoda je 4,8 na temelju 8291 recenzije (stanje 27. 10. 2026.).
+  reason: 'Uputa (Lara): ukloniti datiranu ocjenu 4,8 i broj recenzija.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'': primijeniti ranije pregledane E01-E21 uz izmjene E12 i E15'
+  confirmation_scope: wording
+- id: E08
+  op: remove
+  post: campaign
+  path: claims[4]
+  expected: Na gymbeam.hr ocjena proizvoda je 4,8 na temelju 8291 recenzije (stanje 27. 10. 2026.).
+  reason: 'Posljedica E07: tvrdnja C5 (ocjena) više se nigdje ne koristi.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'': primijeniti ranije pregledane E01-E21 uz izmjene E12 i E15'
+  confirmation_scope: wording
+- id: E09
+  op: remove
+  post: '02'
+  path: basis[2]
+  expected: Ocjena je navedena kao izlistana ocjena na gymbeam.hr na dan snimke.
+  reason: 'Posljedica E07: obrazloženje o ocjeni više nije potrebno.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'': primijeniti ranije pregledane E01-E21 uz izmjene E12 i E15'
+  confirmation_scope: wording
+- id: E10
+  op: remove
+  post: campaign
+  path: open_questions[8]
+  expected: Ocjena je snimka od 27. 10. 2026.; osvježiti ili izostaviti prije objave.
+  reason: 'Posljedica E07: pitanje o osvježavanju ocjene više ne vrijedi.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'': primijeniti ranije pregledane E01-E21 uz izmjene E12 i E15'
+  confirmation_scope: wording
+- id: E11
+  op: replace
+  post: '02'
+  path: layout
+  expected: '4:5 (1080x1350), margine 90 px. Naslov gore lijevo Inter Bold #f2ede8, riječ ''bitno'' podcrtana #ff8c32. Potporna linija Inter Regular ispod, najviše dva retka. Službeni logotip kao asset
+    donji lijevi kut. Donjih 150 px bez teksta.'
+  replacement: '4:5 (1080x1350), margine 90 px. Naslov gore lijevo Inter Bold #f2ede8, riječ ''bitno'' podcrtana #ff8c32. Službeni logotip kao asset donji lijevi kut. Donjih 150 px bez teksta.'
+  reason: 'Posljedica E07: hero više nema potpornu liniju, pa je uklonjena i iz opisa rasporeda.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'': primijeniti ranije pregledane E01-E21 uz izmjene E12 i E15'
+  confirmation_scope: wording
+- id: E12
+  op: replace
+  post: '02'
+  path: caption_hr.text
+  expected: Bez viška i bez buke. 🧡 Ono što piše na pakiranju stoji u prvom planu.
+  replacement: Bez buke, bez ukrasa.
+  reason: 'Larina formulacija cijelog opisa hera (zamjenjuje AI prijedlog E12). Tumačenje: cijeli opis postaje ova rečenica, bez emojija.'
+  proposed_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'tekst koji je Lara sama dala u poruci: Larina poruka ''PHASE 3 - Final corrections and approval gate'''
+  confirmation_scope: wording
+- id: E13
+  op: replace
+  post: '03'
+  path: big_idea
+  expected: Mali zvukovi pripreme, patent, vezica, kvaka, vode do jedne police na kojoj čeka pakiranje.
+  replacement: Mali zvukovi pripreme (patent, kvaka, vezica) vode do jedne police na kojoj čeka pakiranje.
+  reason: Zarezi čine rečenicu nejasnom (tko vodi kamo); redoslijed sada prati storyboard (kadrovi 1, 2, 3).
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'': primijeniti ranije pregledane E01-E21 uz izmjene E12 i E15'
+  confirmation_scope: wording
+- id: E14
+  op: replace
+  post: '03'
+  shot: 1
+  path: visual
+  expected: 'Tamna predsoblje, bokom: ruke zatvaraju patent sportske torbe. Samo ruke, bez lica, bez pakiranja.'
+  replacement: 'Tamno predsoblje, kadar sa strane: ruke zatvaraju patent sportske torbe. Samo ruke, bez lica, bez pakiranja.'
+  reason: 'Rod: ''tamno predsoblje'' (srednji rod). ''Bokom'' je nejasno; tumačim kao kadar sa strane. Lara potvrđuje smisao.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'': primijeniti ranije pregledane E01-E21 uz izmjene E12 i E15'
+  confirmation_scope: wording
+- id: E15
+  op: replace
+  post: '03'
+  path: caption_hr.text
+  expected: Patent, vezica, kvaka. 🎧 Pet sitnih zvukova prije izlaska. Koji je vaš?
+  replacement: Patent, kvaka, vezice. 🎧 Tri sitna zvuka prije izlaska. A koji je vaš mali ritual prije treninga?
+  reason: Larin tekst opisa reela (zamjenjuje AI prijedlog E15); ispravlja 'Pet' u 'Tri' i usklađen je sa storyboardom.
+  proposed_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'tekst koji je Lara sama dala u poruci: Larina poruka ''PHASE 3 - Final corrections and approval gate'''
+  confirmation_scope: wording
+- id: E16
+  op: replace
+  post: '03'
+  path: development.summary
+  expected: Ruke vežu vezicu, a svjetlo otkriva policu s pakiranjem.
+  replacement: Ruke zavezuju vezicu, a svjetlo otkriva policu s pakiranjem.
+  reason: 'Ujednačen izraz sa storyboardom (kadar 3: ''zavezuju vezicu'').'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'': primijeniti ranije pregledane E01-E21 uz izmjene E12 i E15'
+  confirmation_scope: wording
+- id: E17
+  op: replace
+  post: '03'
+  path: alt_text_hr
+  expected: Ruke zatvaraju torbu, daleka silueta prolazi hodnikom, ruke vežu vezicu, zatim topla svjetlost otkriva pakiranje kreatin monohidrata GymBeam na polici.
+  replacement: Ruke zatvaraju torbu, daleka silueta prolazi hodnikom, ruke zavezuju vezicu, zatim topla svjetlost otkriva pakiranje kreatin monohidrata GymBeam na polici.
+  reason: 'Ujednačen izraz sa storyboardom (kadar 3: ''zavezuju vezicu'').'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'': primijeniti ranije pregledane E01-E21 uz izmjene E12 i E15'
+  confirmation_scope: wording
+- id: E18
+  op: replace
+  post: campaign
+  path: identity.throughline
+  expected: 'Svaki post drži se zapisanog: karusel čita pravu etiketu, hero pokazuje pakiranje bez dodataka, reel slaže jutarnje pripreme do jednog kadra s pakiranjem.'
+  replacement: 'Svaki post drži se zapisanog: karusel čita pravu etiketu, hero pokazuje pakiranje bez dodataka, reel slaže pripreme prije izlaska do jednog kadra s pakiranjem.'
+  reason: 'Neusklađeno s reelom: reel prikazuje pripreme prije izlaska (torba, tenisice, kvaka), ne jutro.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'': primijeniti ranije pregledane E01-E21 uz izmjene E12 i E15'
+  confirmation_scope: wording
+- id: E19
+  op: replace
+  post: campaign
+  path: deferred_claims[0].text
+  expected: Tvrdnje s product stranice sku 3885 o učinkovitosti i izvedbi (E-0921eae1).
+  replacement: Tvrdnje sa stranice proizvoda (sku 3885) o učinkovitosti i izvedbi (E-0921eae1).
+  reason: '''product stranice'' je miješanje jezika; ispravno ''sa stranice proizvoda''.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'': primijeniti ranije pregledane E01-E21 uz izmjene E12 i E15'
+  confirmation_scope: wording
+- id: E20
+  op: replace
+  post: campaign
+  path: open_questions[2]
+  expected: Tvrdnje o učinkovitosti s product stranice odgođene su do posebne provjere uvjeta uporabe.
+  replacement: Tvrdnje o učinkovitosti sa stranice proizvoda odgođene su do posebne provjere uvjeta uporabe.
+  reason: '''s product stranice'' -> ''sa stranice proizvoda''.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'': primijeniti ranije pregledane E01-E21 uz izmjene E12 i E15'
+  confirmation_scope: wording
+- id: E21
+  op: replace
+  post: campaign
+  path: open_questions[7]
+  expected: Pojašnjenja uz IFS i HPLC oznake u karuselu su opće upute; potvrditi s proizvođačem prije objave.
+  replacement: Slajdovi 4 i 5 samo prenose otisnuti tekst oznaka i ne objašnjavaju što IFS i HPLC znače jer to nije potkrijepljeno dokazima; prije objave potvrditi s GymBeamom dokumentaciju iza tih oznaka.
+  reason: 'Nakon pregleda: u karuselu nema pojašnjenja značenja IFS/HPLC (nema dokaza), pa pitanje treba odražavati stvarno stanje umjesto ''opće upute''.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'': primijeniti ranije pregledane E01-E21 uz izmjene E12 i E15'
+  confirmation_scope: wording
+- id: N01
+  op: remove
+  post: '03'
+  shot: 5
+  path: on_screen_copy[0]
+  expected: 'Na pakiranju piše: Made in Germany.'
+  reason: 'Odluka 3: tekst ''Made in Germany'' uklonjen iz kadra 5.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluka 3: ukloniti ''Made in Germany'' iz kadra 5; čist, spor krupni plan proizvoda'
+  confirmation_scope: decision
+- id: N02
+  op: remove
+  post: campaign
+  path: claims[5]
+  expected: 'Na pakiranju piše: Made in Germany.'
+  reason: 'Posljedica N01: tvrdnja C6 više se nigdje ne koristi.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluka 3: ukloniti ''Made in Germany'' iz kadra 5; čist, spor krupni plan proizvoda'
+  confirmation_scope: decision
+- id: N03
+  op: replace
+  post: '03'
+  shot: 5
+  path: visual
+  expected: Bliži kadar pakiranja na tamnoj pozadini. Kodna oznaka u tankom narančastom okviru ispod pakiranja.
+  replacement: Čist, spor krupni plan pakiranja na tamnoj pozadini, bez teksta na ekranu.
+  reason: 'Odluka 3: kadar 5 je čist krupni plan; kodna oznaka s tekstom uklonjena.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluka 3: ukloniti ''Made in Germany'' iz kadra 5; čist, spor krupni plan proizvoda'
+  confirmation_scope: decision
+- id: N04
+  op: replace
+  post: '03'
+  path: payoff.summary
+  expected: Bliži kadar pakiranja s onim što piše na njemu i završni kadar s logotipom.
+  replacement: Spor krupni plan pakiranja i završni kadar s logotipom.
+  reason: Sažetak usklađen s odlukom 3 (u kadru više nema teksta s pakiranja).
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluka 3: ukloniti ''Made in Germany'' iz kadra 5; čist, spor krupni plan proizvoda'
+  confirmation_scope: decision
+- id: N05
+  op: replace
+  post: '03'
+  shot: 1
+  path: duration_s
+  expected: '3'
+  replacement: '1.5'
+  reason: 'Odluka 5: ritam. Tri brza kadra po 1,5 s, zatim sporiji kadrovi s proizvodom (kadar 1).'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluka 5: reel učiniti energičnijim kroz trajanje kadrova, zvučne efekte i ritmičnu montažu'
+  confirmation_scope: decision
+- id: N06
+  op: replace
+  post: '03'
+  shot: 2
+  path: duration_s
+  expected: '3'
+  replacement: '1.5'
+  reason: 'Odluka 5: ritam. Tri brza kadra po 1,5 s, zatim sporiji kadrovi s proizvodom (kadar 2).'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluka 5: reel učiniti energičnijim kroz trajanje kadrova, zvučne efekte i ritmičnu montažu'
+  confirmation_scope: decision
+- id: N07
+  op: replace
+  post: '03'
+  shot: 3
+  path: duration_s
+  expected: '3'
+  replacement: '1.5'
+  reason: 'Odluka 5: ritam. Tri brza kadra po 1,5 s, zatim sporiji kadrovi s proizvodom (kadar 3).'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluka 5: reel učiniti energičnijim kroz trajanje kadrova, zvučne efekte i ritmičnu montažu'
+  confirmation_scope: decision
+- id: N08
+  op: replace
+  post: '03'
+  shot: 4
+  path: duration_s
+  expected: '3'
+  replacement: '2.5'
+  reason: 'Odluka 5: ritam. Tri brza kadra po 1,5 s, zatim sporiji kadrovi s proizvodom (kadar 4).'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluka 5: reel učiniti energičnijim kroz trajanje kadrova, zvučne efekte i ritmičnu montažu'
+  confirmation_scope: decision
+- id: N09
+  op: replace
+  post: '03'
+  shot: 5
+  path: duration_s
+  expected: '3'
+  replacement: '3.5'
+  reason: 'Odluka 5: kadar 5 (spor čist krupni plan proizvoda) traje 3,5 s.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluka 5: reel učiniti energičnijim kroz trajanje kadrova, zvučne efekte i ritmičnu montažu'
+  confirmation_scope: decision
+- id: N10
+  op: replace
+  post: '03'
+  shot: 6
+  path: duration_s
+  expected: '4'
+  replacement: '3'
+  reason: 'Odluka 5: završni kadar s logotipom skraćen na 3 s.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluka 5: reel učiniti energičnijim kroz trajanje kadrova, zvučne efekte i ritmičnu montažu'
+  confirmation_scope: decision
+- id: N11
+  op: replace
+  post: '03'
+  path: total_duration_s
+  expected: '19'
+  replacement: '13.5'
+  reason: 'Odluka 5: zbroj trajanja kadrova (1,5+1,5+1,5+2,5+3,5+3) = 13,5 s.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluka 5: reel učiniti energičnijim kroz trajanje kadrova, zvučne efekte i ritmičnu montažu'
+  confirmation_scope: decision
+- id: N12
+  op: replace
+  post: '03'
+  path: pacing
+  expected: Tri kratka kadra od po tri sekunde ritmom zvukova, zatim otkrivanje pakiranja, vrhunac i duži završni kadar. Ukupno 19 s.
+  replacement: Tri brza kadra od po 1,5 s koja se režu točno na zvuk (patent, kvaka, vezica), zatim otkrivanje pakiranja, spor čist krupni plan i duži završni kadar s logotipom. Ukupno 13,5 s.
+  reason: 'Odluka 5: opis tempa usklađen s novim trajanjima.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluka 5: reel učiniti energičnijim kroz trajanje kadrova, zvučne efekte i ritmičnu montažu'
+  confirmation_scope: decision
+- id: N13
+  op: replace
+  post: '03'
+  shot: 1
+  path: transition_out
+  expected: Rez na zvuk patenta.
+  replacement: Tvrdi rez točno na zvuk patenta.
+  reason: 'Odluka 5: ritmična montaža, rez na udarac zvuka.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluka 5: reel učiniti energičnijim kroz trajanje kadrova, zvučne efekte i ritmičnu montažu'
+  confirmation_scope: decision
+- id: N14
+  op: replace
+  post: '03'
+  shot: 2
+  path: transition_out
+  expected: Rez na zvuk kvake.
+  replacement: Tvrdi rez točno na zvuk kvake.
+  reason: 'Odluka 5: ritmična montaža, rez na udarac zvuka.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluka 5: reel učiniti energičnijim kroz trajanje kadrova, zvučne efekte i ritmičnu montažu'
+  confirmation_scope: decision
+- id: N15
+  op: replace
+  post: '03'
+  shot: 3
+  path: transition_out
+  expected: Rez na zvuk povučene vezice.
+  replacement: Tvrdi rez točno na povlačenje vezice.
+  reason: 'Odluka 5: ritmična montaža, rez na udarac zvuka.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluka 5: reel učiniti energičnijim kroz trajanje kadrova, zvučne efekte i ritmičnu montažu'
+  confirmation_scope: decision
+- id: N16
+  op: replace
+  post: '03'
+  shot: 1
+  path: sound
+  expected: Zvuk patenta, tihi ambijent.
+  replacement: Oštar zvuk patenta na prvi udarac pulsa, tihi ambijent.
+  reason: 'Odluka 5: naglašeniji zvučni efekti.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluka 5: reel učiniti energičnijim kroz trajanje kadrova, zvučne efekte i ritmičnu montažu'
+  confirmation_scope: decision
+- id: N17
+  op: replace
+  post: '03'
+  shot: 2
+  path: sound
+  expected: Koraci, kvaka.
+  replacement: Brzi koraci i zvuk kvake na udarac pulsa.
+  reason: 'Odluka 5: naglašeniji zvučni efekti.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluka 5: reel učiniti energičnijim kroz trajanje kadrova, zvučne efekte i ritmičnu montažu'
+  confirmation_scope: decision
+- id: N18
+  op: replace
+  post: '03'
+  shot: 3
+  path: sound
+  expected: Šuštanje vezice, tihi puls glazbe.
+  replacement: Povlačenje vezice na udarac, puls glazbe jača.
+  reason: 'Odluka 5: naglašeniji zvučni efekti.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluka 5: reel učiniti energičnijim kroz trajanje kadrova, zvučne efekte i ritmičnu montažu'
+  confirmation_scope: decision
+- id: N19
+  op: replace
+  post: '03'
+  shot: 4
+  path: sound
+  expected: Glazba raste, tihi zvuk svjetla.
+  replacement: Glazba naglo raste, kratak prijelazni zvuk svjetla pri otkrivanju pakiranja.
+  reason: 'Odluka 5: energičnije otkrivanje pakiranja.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluka 5: reel učiniti energičnijim kroz trajanje kadrova, zvučne efekte i ritmičnu montažu'
+  confirmation_scope: decision
+- id: N20
+  op: replace
+  post: '03'
+  shot: 5
+  path: sound
+  expected: Glazba na vrhuncu, zatim pad.
+  replacement: Glazba se spušta na tihi puls, krupni plan u gotovo potpunoj tišini.
+  reason: 'Odluka 5 i 3: mirni krupni plan nakon energičnog uvoda.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluka 5: reel učiniti energičnijim kroz trajanje kadrova, zvučne efekte i ritmičnu montažu'
+  confirmation_scope: decision
+- id: N21
+  op: replace
+  post: '03'
+  path: sound_design.music
+  expected: Minimalna ambijentalna elektronika s toplim sintisajzerom, bez udaraljki; licencirana glazba po izboru čovjeka.
+  replacement: Kratka ritmična elektronička podloga s jasnim pulsom (oko 120 BPM) koja ubrzava do otkrivanja pakiranja i smiruje se na krupnom planu; samo glazba s provjerenom licencom.
+  reason: 'Odluka 5 i 7: energičniji ritam; glazba isključivo s provjerenom licencom.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluka 5: reel učiniti energičnijim kroz trajanje kadrova, zvučne efekte i ritmičnu montažu'
+  confirmation_scope: decision
+- id: N22
+  op: replace
+  post: '03'
+  path: sound_design.sfx[3]
+  expected: tihi zvuk svjetla
+  replacement: kratak prijelazni zvuk svjetla
+  reason: 'Odluka 5: efekt otkrivanja nije ''tihi'' nego kratak i čujan.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluka 5: reel učiniti energičnijim kroz trajanje kadrova, zvučne efekte i ritmičnu montažu'
+  confirmation_scope: decision
+- id: N23
+  op: replace
+  post: campaign
+  path: open_questions[6]
+  expected: Glazba za reel mora biti licencirana; odabir je na čovjeku.
+  replacement: 'Glazba i zvučni efekti: samo zvuk s provjerenom licencom koja dopušta namjeravanu uporabu; izvor i uvjeti licence upisuju se u manifest (asset_manifest.yaml). Zvuk još nije odabran.'
+  reason: Odluka 7.
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluke 6-8: bez količina; samo audio s provjerenom licencom; službeni logotip uz URL, vrijeme i hash'
+  confirmation_scope: decision
+- id: N24
+  op: replace
+  post: campaign
+  path: open_questions[4]
+  expected: Potrebno je dostaviti službeni logotip GymBeam kao asset.
+  replacement: 'Službeni logotip GymBeam: pri preuzimanju se u manifest (asset_manifest.yaml) upisuju izvorni URL, vrijeme preuzimanja i hash datoteke; logotip se nikad ne crta niti ispisuje fontom.'
+  reason: Odluka 8.
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluke 6-8: bez količina; samo audio s provjerenom licencom; službeni logotip uz URL, vrijeme i hash'
+  confirmation_scope: decision
+- id: N25
+  op: replace
+  post: campaign
+  path: open_questions[0]
+  expected: 'Koju veličinu pakiranja prikazati: na odabranom packshotu nije otisnuta nijedna, pa se količine ne navode.'
+  replacement: 'Količine se ne prikazuju: odabrani packshot ne prikazuje veličinu pakiranja, pa se nijedna količina ne navodi dok se ne potkrijepi za odabranu varijantu.'
+  reason: Odluka 6.
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - Final corrections and approval gate'', odluke 6-8: bez količina; samo audio s provjerenom licencom; službeni logotip uz URL, vrijeme i hash'
+  confirmation_scope: decision

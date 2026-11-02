@@ -1,0 +1,49 @@
+# Tri završne ispravke: sav tekst je Larin (proposed_by: human:Lara), dan u njezinoj poruci.
+base_plan_hash: 758230e540607234dacf9da99cdb6c850421ec6b741184e7143ad9a41232a57e
+edits:
+- id: F1
+  op: replace
+  post: '02'
+  path: caption_hr.text
+  expected: Bez buke, bez ukrasa.
+  replacement: Bez buke, bez ukrasa. 🧡 U fokusu je GymBeam kreatin monohidrat.
+  reason: Larin točan tekst opisa hera (zamjenjuje njezin raniji kraći tekst iz E12).
+  proposed_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: tekst koji je Lara sama dala u poruci 'PHASE 3 - FINAL THREE COPY CORRECTIONS'
+  confirmation_scope: wording
+- id: F2a
+  op: replace
+  post: '01'
+  slide: 5
+  path: headline.text
+  expected: Pitajte što oznaka znači
+  replacement: Oznaka testiranja
+  reason: Larin točan naslov slajda 5; izrez i atribucija ostaju nepromijenjeni.
+  proposed_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: tekst koji je Lara sama dala u poruci 'PHASE 3 - FINAL THREE COPY CORRECTIONS'
+  confirmation_scope: wording
+- id: F2b
+  op: replace
+  post: '01'
+  slide: 5
+  path: body[0].text
+  expected: Naziv metode nije objašnjenje. Detalje potražite kod proizvođača.
+  replacement: I ona je otisnuta na prednjoj strani.
+  reason: Larin točan tekst slajda 5 (zamjenjuje AI prijedlog 'Naziv metode nije objašnjenje...').
+  proposed_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: tekst koji je Lara sama dala u poruci 'PHASE 3 - FINAL THREE COPY CORRECTIONS'
+  confirmation_scope: wording
+- id: F3
+  op: replace
+  post: '03'
+  path: caption_hr.text
+  expected: Patent, kvaka, vezice. 🎧 Tri sitna zvuka prije izlaska. A koji je vaš mali ritual prije treninga?
+  replacement: Patent, kvaka, vezica. 🎧 Tri sitna zvuka prije izlaska. A koji je vaš mali ritual prije treninga?
+  reason: 'Larin točan opis reela (jedina razlika prema E15: ''vezica'' umjesto ''vezice''); usklađeno sa storyboardom: patent (kadar 1), kvaka (2), vezica (3).'
+  proposed_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: tekst koji je Lara sama dala u poruci 'PHASE 3 - FINAL THREE COPY CORRECTIONS'
+  confirmation_scope: wording

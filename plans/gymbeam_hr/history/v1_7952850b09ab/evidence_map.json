@@ -1,0 +1,231 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "text": "100% Kreatin monohidrat učinkovit je dodatak za povećanje fizičke izvedbe.",
+      "type": "product_fact",
+      "as_of": null,
+      "basis_quote": "100% Kreatin monohidrat učinkovit je dodatak za povećanje fizičke izvedbe.",
+      "used_in": [
+        "carousel.slide6.body0",
+        "hero.support0"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E-0921eae1",
+          "status": "verified",
+          "kind": "product_description",
+          "source_url": "https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html",
+          "retrieved_at": "2026-10-27T21:11:33.011054Z",
+          "sku_family": "3885",
+          "text": "100% Kreatin monohidrat učinkovit je dodatak za povećanje fizičke izvedbe. Omogućit će vam da trenirate intenzivno, napravite više ponavljanja ili dulje sprintate."
+        }
+      ]
+    },
+    {
+      "claim_id": "C2",
+      "text": "Omogućit će vam da trenirate intenzivno, napravite više ponavljanja ili dulje sprintate.",
+      "type": "product_fact",
+      "as_of": null,
+      "basis_quote": "Omogućit će vam da trenirate intenzivno, napravite više ponavljanja ili dulje sprintate.",
+      "used_in": [
+        "reel.shot5.copy0"
+      ],
+      "evidence": [
+        {
+          "evidence_id": "E-0921eae1",
+          "status": "verified",
+          "kind": "product_description",
+          "source_url": "https://gymbeam.hr/kreatin1-monohidrat-gymbeam.html",
+          "retrieved_at": "2026-10-27T21:11:33.011054Z",
+          "sku_family": "3885",
+          "text": "100% Kreatin monohidrat učinkovit je dodatak za povećanje fizičke izvedbe. Omogućit će vam da trenirate intenzivno, napravite više ponavljanja ili dulje sprintate."
+        }
+      ]
+    }
+  ],
+  "basis": [
+    {
+      "scope": "identity",
+      "statement": "Obraćanje s 'vi/vaš' u 22 od 30 captiona; emoji u svih 30.",
+      "claimed_status": "verified",
+      "cites": [
+        "O7",
+        "O5"
+      ],
+      "resolved_evidence_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "scope": "identity",
+      "statement": "Tamne i neutralne podloge (#0f0d0d, #2d2a2b, #f2ede8) iz ručnog pregleda 14 naslovnica na razini sličice.",
+      "claimed_status": "manual",
+      "cites": [
+        "E-efb10183",
+        "E-bb511dec"
+      ],
+      "resolved_evidence_statuses": [
+        "manual"
+      ]
+    },
+    {
+      "scope": "identity",
+      "statement": "Narančasti akcent preuzet je s weba marke (theme colour #ff8c32).",
+      "claimed_status": "verified",
+      "cites": [
+        "O45",
+        "E-ceb3f15e"
+      ],
+      "resolved_evidence_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "scope": "identity",
+      "statement": "Inter je verificirani web font; wordmark je prilagođeni logotip koji treba dostaviti kao asset.",
+      "claimed_status": "verified",
+      "cites": [
+        "E-8e56e0ab"
+      ],
+      "resolved_evidence_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "scope": "identity",
+      "statement": "Kvalitativni ton marke i analitika publike nisu utvrđeni.",
+      "claimed_status": "unavailable",
+      "cites": [],
+      "resolved_evidence_statuses": []
+    },
+    {
+      "scope": "01",
+      "statement": "Karusel čini oko trećine objava marke; edukativni karusel s uputom 'prelistajte' već postoji u feedu.",
+      "claimed_status": "verified",
+      "cites": [
+        "O13",
+        "E-3e1f8026"
+      ],
+      "resolved_evidence_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "scope": "01",
+      "statement": "Izjava na slajdu 6 doslovni je navod stranice proizvoda sku 3885.",
+      "claimed_status": "verified",
+      "cites": [
+        "E-0921eae1"
+      ],
+      "resolved_evidence_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "scope": "01",
+      "statement": "Opći savjeti o čitanju etikete su strateški prijedlog, ne činjenice iz istraživanja.",
+      "claimed_status": "assumption",
+      "cites": [],
+      "resolved_evidence_statuses": []
+    },
+    {
+      "scope": "02",
+      "statement": "Tamne neutralne podloge iz ručnog pregleda naslovnica (sličice, bez ljudi na dijelu njih).",
+      "claimed_status": "manual",
+      "cites": [
+        "E-efb10183",
+        "E-bb511dec"
+      ],
+      "resolved_evidence_statuses": [
+        "manual"
+      ]
+    },
+    {
+      "scope": "02",
+      "statement": "Narančasti akcent preuzet s weba marke.",
+      "claimed_status": "verified",
+      "cites": [
+        "O45",
+        "E-ceb3f15e"
+      ],
+      "resolved_evidence_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "scope": "02",
+      "statement": "Izdvojen packshot s mehaničkim izrezom, poznato ograničenje rubova.",
+      "claimed_status": "manual",
+      "cites": [
+        "E-18591d8b",
+        "E-5af7d045"
+      ],
+      "resolved_evidence_statuses": [
+        "manual",
+        "verified"
+      ]
+    },
+    {
+      "scope": "02",
+      "statement": "Izjava je doslovna verificirana rečenica stranice proizvoda.",
+      "claimed_status": "verified",
+      "cites": [
+        "E-0921eae1"
+      ],
+      "resolved_evidence_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "scope": "03",
+      "statement": "Video čini 63% objava marke, pa je reel format koji publika već prati.",
+      "claimed_status": "verified",
+      "cites": [
+        "O11",
+        "O12"
+      ],
+      "resolved_evidence_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "scope": "03",
+      "statement": "Sadržaj videa izvan naslovnica nije poznat; ritam i zvuk su kreativna pretpostavka.",
+      "claimed_status": "unavailable",
+      "cites": [],
+      "resolved_evidence_statuses": []
+    },
+    {
+      "scope": "03",
+      "statement": "Završna izjava doslovni je navod stranice proizvoda sku 3885.",
+      "claimed_status": "verified",
+      "cites": [
+        "E-0921eae1"
+      ],
+      "resolved_evidence_statuses": [
+        "verified"
+      ]
+    }
+  ],
+  "packshot": {
+    "original_source_id": "S-ca0f32962b",
+    "original_url": "https://gymbeam.hr/media/catalog/product/cache/70f742f66feec18cb83790f14444a3d1/c/r/creatine-monohydrate-unflavoured-01_8.jpg",
+    "original_sha256": "99543edff63b17e355cd7bfcc734ef364ae81f08304e561e6a347c09e8954f1c",
+    "original_run_path": "research/raw/99543edff63b17e3.jpg",
+    "cutout_source_id": "S-5af7d045",
+    "cutout_sha256": "86613b3f58580bf96b4e3517095682da0842a4ba389b3e97db89eb50ce7023d8",
+    "cutout_run_path": "research/packshots/86613b3f58580bf9_cutout.png",
+    "pack_generation": "new",
+    "evidence_ids": [
+      "E-18591d8b",
+      "E-5af7d045"
+    ],
+    "status": "manual (operator-attested selection); cut-out is a mechanical edge flood-fill",
+    "known_limitation": "mechanical cut-out only: anything that is not background colour and touches the pack (e.g. overlapping claim badges, shadows) is kept",
+    "file_hash_verified_on_disk": {
+      "original": true,
+      "cutout": true
+    }
+  }
+}

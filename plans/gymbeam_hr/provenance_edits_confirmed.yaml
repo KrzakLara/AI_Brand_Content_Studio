@@ -1,0 +1,177 @@
+# REVIZIJA POREKLA IZREZA (nakon vizualne provjere): uklanja HPLC slajd, ispravlja atribuciju IFS slajda ('Na stranici proizvoda piše').
+# confirmation_scope: decision = Lara je potvrdila PRAVILA; riječi su AI-jeve i ona ih pregledava pri završnom odobrenju.
+base_plan_hash: 0499a71e6e49f0c769b78d7fcc15286e4599dacee10cf90eec9dbeb07a53af78
+edits:
+- id: Q01
+  op: remove
+  post: '01'
+  path: slides[4]
+  expected: Oznaka testiranja
+  reason: 'Revizija porijekla: slajd 5 (HPLC) uklonjen: izrez je grafika weba, a otisnuta mala značka na vrećici nije dovoljno čitljiva za izrez; tvrdnja ''otisnuta na prednjoj strani'' ne može se potkrijepiti
+    prikazanim izrezom.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - FINAL VISUAL PROVENANCE AUDIT'': pravila o porijeklu izreza (''Na pakiranju piše'' samo za tekst otisnut na pakiranju; ''Na stranici proizvoda piše'' za
+    grafike weba; ukloniti ili zamijeniti nevažeći slajd)'
+  confirmation_scope: decision
+- id: Q02
+  op: replace
+  post: '01'
+  slide: 6
+  path: n
+  expected: '6'
+  replacement: '5'
+  reason: 'Revizija porijekla: završni slajd preimenovan iz 6 u 5 nakon uklanjanja slajda 5 (numeracija 1..n).'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - FINAL VISUAL PROVENANCE AUDIT'': pravila o porijeklu izreza (''Na pakiranju piše'' samo za tekst otisnut na pakiranju; ''Na stranici proizvoda piše'' za
+    grafike weba; ukloniti ili zamijeniti nevažeći slajd)'
+  confirmation_scope: decision
+- id: Q03
+  op: remove
+  post: campaign
+  path: claims[3]
+  expected: 'Na pakiranju piše: HPLC Tested, Pure composition.'
+  reason: 'Revizija porijekla: tvrdnja C4 (HPLC) više se ne koristi.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - FINAL VISUAL PROVENANCE AUDIT'': pravila o porijeklu izreza (''Na pakiranju piše'' samo za tekst otisnut na pakiranju; ''Na stranici proizvoda piše'' za
+    grafike weba; ukloniti ili zamijeniti nevažeći slajd)'
+  confirmation_scope: decision
+- id: Q04
+  op: replace
+  post: campaign
+  path: claims[2].claim_type
+  expected: pack_text
+  replacement: page_graphic
+  reason: 'Revizija porijekla: IFS izrez je grafika weba, pa tvrdnja nije ''pack_text'' nego ''page_graphic''.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - FINAL VISUAL PROVENANCE AUDIT'': pravila o porijeklu izreza (''Na pakiranju piše'' samo za tekst otisnut na pakiranju; ''Na stranici proizvoda piše'' za
+    grafike weba; ukloniti ili zamijeniti nevažeći slajd)'
+  confirmation_scope: decision
+- id: Q05
+  op: replace
+  post: campaign
+  path: claims[2].text
+  expected: 'Na pakiranju piše: Produced in an IFS-certified facility.'
+  replacement: 'Na stranici proizvoda piše: Produced in an IFS-certified facility.'
+  reason: 'Revizija porijekla: ispravna atribucija (grafika na slici proizvoda na webshopu, ne tekst otisnut na vrećici).'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - FINAL VISUAL PROVENANCE AUDIT'': pravila o porijeklu izreza (''Na pakiranju piše'' samo za tekst otisnut na pakiranju; ''Na stranici proizvoda piše'' za
+    grafike weba; ukloniti ili zamijeniti nevažeći slajd)'
+  confirmation_scope: decision
+- id: Q06
+  op: replace
+  post: '01'
+  slide: 4
+  path: callouts[0].text
+  expected: 'Na pakiranju piše: Produced in an IFS-certified facility.'
+  replacement: 'Na stranici proizvoda piše: Produced in an IFS-certified facility.'
+  reason: 'Revizija porijekla: ispravna atribucija pod izrezom.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - FINAL VISUAL PROVENANCE AUDIT'': pravila o porijeklu izreza (''Na pakiranju piše'' samo za tekst otisnut na pakiranju; ''Na stranici proizvoda piše'' za
+    grafike weba; ukloniti ili zamijeniti nevažeći slajd)'
+  confirmation_scope: decision
+- id: Q07
+  op: replace
+  post: '01'
+  slide: 4
+  path: alt_text_hr
+  expected: Izrez okrugle IFS oznake s pakiranja i pokraj nje oznaka s tekstom Produced in an IFS-certified facility.
+  replacement: Izrez okrugle IFS oznake sa slike proizvoda na stranici i pokraj nje oznaka s tekstom Produced in an IFS-certified facility.
+  reason: 'Revizija porijekla: alt tekst više ne tvrdi da je izrez s pakiranja.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - FINAL VISUAL PROVENANCE AUDIT'': pravila o porijeklu izreza (''Na pakiranju piše'' samo za tekst otisnut na pakiranju; ''Na stranici proizvoda piše'' za
+    grafike weba; ukloniti ili zamijeniti nevažeći slajd)'
+  confirmation_scope: decision
+- id: Q08
+  op: replace
+  post: '01'
+  path: narrative_arc
+  expected: 'Pitanje, zatim četiri izreza prave etikete redom: naziv, sastav i okus, oznaka pogona, oznaka ispitivanja; na kraju poziv na spremanje.'
+  replacement: 'Pitanje, zatim tri izreza originalne slike redom: naziv, sastav i okus te okrugla IFS oznaka s weba; na kraju poziv na spremanje.'
+  reason: 'Revizija porijekla: tri izreza umjesto četiri; označeno je koji je s weba.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - FINAL VISUAL PROVENANCE AUDIT'': pravila o porijeklu izreza (''Na pakiranju piše'' samo za tekst otisnut na pakiranju; ''Na stranici proizvoda piše'' za
+    grafike weba; ukloniti ili zamijeniti nevažeći slajd)'
+  confirmation_scope: decision
+- id: Q09
+  op: replace
+  post: '01'
+  path: big_idea
+  expected: 'Pakiranje se čita kao stranica: svaki slajd je nepromijenjeni izrez prave etikete, a uz njega zasebna oznaka s onim što točno piše.'
+  replacement: 'Pakiranje se čita kao stranica: svaki slajd je nepromijenjeni izrez originalne slike proizvoda, a uz njega zasebna oznaka koja kaže što točno piše i gdje.'
+  reason: 'Revizija porijekla: izrez više nije uvijek ''prava etiketa''.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - FINAL VISUAL PROVENANCE AUDIT'': pravila o porijeklu izreza (''Na pakiranju piše'' samo za tekst otisnut na pakiranju; ''Na stranici proizvoda piše'' za
+    grafike weba; ukloniti ili zamijeniti nevažeći slajd)'
+  confirmation_scope: decision
+- id: Q10
+  op: replace
+  post: '01'
+  path: creative_device
+  expected: Izrez etikete u tankom narančastom okviru s kodnom oznakom 'Na pakiranju piše' pokraj njega, slajd po slajd.
+  replacement: Izrez originalne slike u tankom narančastom okviru s kodnom oznakom 'Na pakiranju piše' (tekst otisnut na vrećici) ili 'Na stranici proizvoda piše' (grafika weba) pokraj njega, slajd po slajd.
+  reason: 'Revizija porijekla: oba izvora jasno razdvojena.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - FINAL VISUAL PROVENANCE AUDIT'': pravila o porijeklu izreza (''Na pakiranju piše'' samo za tekst otisnut na pakiranju; ''Na stranici proizvoda piše'' za
+    grafike weba; ukloniti ili zamijeniti nevažeći slajd)'
+  confirmation_scope: decision
+- id: Q11
+  op: replace
+  post: campaign
+  path: identity.shared_devices[2]
+  expected: Činjenice s pakiranja uvijek kao zasebna oznaka koju slaže kod, s uvodom 'Na pakiranju piše'
+  replacement: Činjenice s pakiranja ili sa stranice proizvoda uvijek kao zasebna oznaka koju slaže kod, s uvodom 'Na pakiranju piše' odnosno 'Na stranici proizvoda piše'
+  reason: 'Revizija porijekla: dodan drugi uvod.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - FINAL VISUAL PROVENANCE AUDIT'': pravila o porijeklu izreza (''Na pakiranju piše'' samo za tekst otisnut na pakiranju; ''Na stranici proizvoda piše'' za
+    grafike weba; ukloniti ili zamijeniti nevažeći slajd)'
+  confirmation_scope: decision
+- id: Q12
+  op: replace
+  post: campaign
+  path: open_questions[7]
+  expected: Slajdovi 4 i 5 samo prenose otisnuti tekst oznaka i ne objašnjavaju što IFS i HPLC znače jer to nije potkrijepljeno dokazima; prije objave potvrditi s GymBeamom dokumentaciju iza tih oznaka.
+  replacement: 'Slajd 4 prenosi tekst IFS grafike sa slike proizvoda na webshopu (ne otisnuti tekst na vrećici) i ne objašnjava što IFS znači jer to nije potkrijepljeno dokazima; prije objave potvrditi
+    s GymBeamom dokumentaciju iza oznake. Slajd s HPLC oznakom uklonjen: izrez je grafika weba, a ista mala značka otisnuta na vrećici nije dovoljno čitljiva da bi bila izrez.'
+  reason: 'Revizija porijekla: stanje nakon revizije porijekla.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - FINAL VISUAL PROVENANCE AUDIT'': pravila o porijeklu izreza (''Na pakiranju piše'' samo za tekst otisnut na pakiranju; ''Na stranici proizvoda piše'' za
+    grafike weba; ukloniti ili zamijeniti nevažeći slajd)'
+  confirmation_scope: decision
+- id: Q13
+  op: replace
+  post: campaign
+  path: open_questions[1]
+  expected: Packshot nosi proizvođačke značke ('Quality guaranteed', 'Fast absorption / Rapid effect') koje nisu poruke kampanje i trebaju provjeru usklađenosti.
+  replacement: Slika packshota sadrži grafičke značke weba (među ostalima 'Quality guaranteed' i 'Fast absorption / Rapid effect') koje lebde uz rub vrećice; iste su značke otisnute i malo na prednjoj strani
+    vrećice. One nisu poruke kampanje, ostaju neizmijenjene na originalnoj slici i traže provjeru usklađenosti; otvorena je odluka o kadriranju packshota s njima ili bez njih.
+  reason: 'Revizija porijekla: ispravan opis porijekla znački.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: Lara
+  confirmation_source: 'Larina poruka ''PHASE 3 - FINAL VISUAL PROVENANCE AUDIT'': pravila o porijeklu izreza (''Na pakiranju piše'' samo za tekst otisnut na pakiranju; ''Na stranici proizvoda piše'' za
+    grafike weba; ukloniti ili zamijeniti nevažeći slajd)'
+  confirmation_scope: decision

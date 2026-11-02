@@ -1,0 +1,226 @@
+# PRIJEDLOG ZA LARIN PREGLED - nije primijenjen.
+# Svi su prijedlozi riječi AI PRIJEDLOZI (proposed_by: ai:...). Nijedan nije potvrđen: confirmed_by i confirmation_source su null.
+# Lara ih potvrđuje tako da za pojedini zapis upiše confirmed_by: Lara i confirmation_source (npr. 'potvrđeno u razgovoru, <datum>'),
+# ili pošalje vlastiti tekst (tada proposed_by: human:Lara). Nepotvrđeni zapisi blokiraju primjenu (osim uz --dry-run).
+# Primjena: studio plan edit --run plan-gymbeam-hr-1 --edits <datoteka> --reason "Human copy review"
+base_plan_hash: 7dbd32938cee9e03aa071ac6bdb59828464b3d143f1d5f0cf95152c0f0b086d0
+edits:
+- id: E01
+  op: replace
+  post: '01'
+  slide: 2
+  path: body[0].text
+  expected: Naziv sastojka prvo je što provjeravate.
+  replacement: Naziv je prvo što provjeravate.
+  reason: 'Neprirodan red riječi. Uz to je ''naziv sastojka'' netočno: na izrezu je naziv proizvoda (Creatine Monohydrate), a ne popis sastojaka.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: null
+  confirmation_source: null
+- id: E02
+  op: replace
+  post: '01'
+  slide: 3
+  path: body[0].text
+  expected: Tu stoji i okus, u maloj tableti.
+  replacement: Okus piše u maloj bijeloj oznaci.
+  reason: '''Tableta'' na hrvatskom znači pilulu. Smisao je mala zaobljena oznaka ''Unflavoured'' na izrezu label_purity (na slici je bijela).'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: null
+  confirmation_source: null
+- id: E03
+  op: replace
+  post: '01'
+  slide: 4
+  path: body[0].text
+  expected: Ova se odnosi na pogon u kojem je proizvedeno.
+  replacement: Oznaka se odnosi na pogon u kojem se proizvodi.
+  reason: 'Gramatika: nedostaje imenica (''ova'' je dvosmisleno), ''proizvedeno'' nema subjekta. Smisao ostaje u okviru otisnutog teksta ''Produced in an IFS-certified facility''; ne objašnjava što IFS
+    znači.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: null
+  confirmation_source: null
+- id: E04
+  op: replace
+  post: '01'
+  slide: 2
+  path: alt_text_hr
+  expected: Izrez prednje strane pakiranja s nazivom Creatine Monohydrate i oznaka ispod s istim tekstom.
+  replacement: Izrez prednje strane pakiranja s nazivom Creatine Monohydrate i oznakom ispod s istim tekstom.
+  reason: 'Padež: ''s nazivom ... i oznaka'' treba biti ''i oznakom''.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: null
+  confirmation_source: null
+- id: E05
+  op: replace
+  post: '01'
+  slide: 3
+  path: alt_text_hr
+  expected: Izrez pojasa pakiranja s tekstom 100% Pure micronised i oznakom okusa, ispod oznaka s istim tekstom.
+  replacement: Izrez pojasa na pakiranju s tekstom 100% Pure micronised i oznakom okusa; ispod izreza je oznaka s istim tekstom.
+  reason: '''ispod oznaka'' je nejasno i neprirodno; razdvojeno je što je izrez, a što oznaka koju slaže kod. Prepisani tekst otisnut je na izrezu label_purity.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: null
+  confirmation_source: null
+- id: E06
+  op: replace
+  post: '01'
+  slide: 4
+  path: alt_text_hr
+  expected: Izrez okrugle IFS oznake s pakiranja i pokraj nje oznaka s tekstom o IFS certificiranom pogonu.
+  replacement: Izrez okrugle IFS oznake s pakiranja i pokraj nje oznaka s tekstom Produced in an IFS-certified facility.
+  reason: Umjesto vlastite parafraze ('o IFS certificiranom pogonu') doslovan prijepis otisnutog teksta, provjerljiv na izrezu badge_ifs; ne dodaje značenje.
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: null
+  confirmation_source: null
+- id: E07
+  op: remove
+  post: '02'
+  path: supporting_copy[0]
+  expected: Na gymbeam.hr ocjena proizvoda je 4,8 na temelju 8291 recenzije (stanje 27. 10. 2026.).
+  reason: 'Uputa (Lara): ukloniti datiranu ocjenu 4,8 i broj recenzija.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: null
+  confirmation_source: null
+- id: E08
+  op: remove
+  post: campaign
+  path: claims[4]
+  expected: Na gymbeam.hr ocjena proizvoda je 4,8 na temelju 8291 recenzije (stanje 27. 10. 2026.).
+  reason: 'Posljedica E07: tvrdnja C5 (ocjena) više se nigdje ne koristi.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: null
+  confirmation_source: null
+- id: E09
+  op: remove
+  post: '02'
+  path: basis[2]
+  expected: Ocjena je navedena kao izlistana ocjena na gymbeam.hr na dan snimke.
+  reason: 'Posljedica E07: obrazloženje o ocjeni više nije potrebno.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: null
+  confirmation_source: null
+- id: E10
+  op: remove
+  post: campaign
+  path: open_questions[8]
+  expected: Ocjena je snimka od 27. 10. 2026.; osvježiti ili izostaviti prije objave.
+  reason: 'Posljedica E07: pitanje o osvježavanju ocjene više ne vrijedi.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  requested_by: human:Lara
+  confirmed_by: null
+  confirmation_source: null
+- id: E11
+  op: replace
+  post: '02'
+  path: layout
+  expected: '4:5 (1080x1350), margine 90 px. Naslov gore lijevo Inter Bold #f2ede8, riječ ''bitno'' podcrtana #ff8c32. Potporna linija Inter Regular ispod, najviše dva retka. Službeni logotip kao asset
+    donji lijevi kut. Donjih 150 px bez teksta.'
+  replacement: '4:5 (1080x1350), margine 90 px. Naslov gore lijevo Inter Bold #f2ede8, riječ ''bitno'' podcrtana #ff8c32. Službeni logotip kao asset donji lijevi kut. Donjih 150 px bez teksta.'
+  reason: 'Posljedica E07: hero više nema potpornu liniju, pa je uklonjena i iz opisa rasporeda.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: null
+  confirmation_source: null
+- id: E12
+  op: replace
+  post: '02'
+  path: caption_hr.text
+  expected: Bez viška i bez buke. 🧡 Ono što piše na pakiranju stoji u prvom planu.
+  replacement: Bez buke i bez kićenja. 🧡 Ono što piše na pakiranju stoji u prvom planu.
+  reason: '''Bez viška'' se može pročitati kao tvrdnja o sastavu proizvoda (bez dodataka), a to nije potkrijepljeno dokazima. ''Bez kićenja'' zadržava ton i odnosi se na dizajn. Odluka je Larina.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: null
+  confirmation_source: null
+- id: E13
+  op: replace
+  post: '03'
+  path: big_idea
+  expected: Mali zvukovi pripreme, patent, vezica, kvaka, vode do jedne police na kojoj čeka pakiranje.
+  replacement: Mali zvukovi pripreme (patent, kvaka, vezica) vode do jedne police na kojoj čeka pakiranje.
+  reason: Zarezi čine rečenicu nejasnom (tko vodi kamo); redoslijed sada prati storyboard (kadrovi 1, 2, 3).
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: null
+  confirmation_source: null
+- id: E14
+  op: replace
+  post: '03'
+  shot: 1
+  path: visual
+  expected: 'Tamna predsoblje, bokom: ruke zatvaraju patent sportske torbe. Samo ruke, bez lica, bez pakiranja.'
+  replacement: 'Tamno predsoblje, kadar sa strane: ruke zatvaraju patent sportske torbe. Samo ruke, bez lica, bez pakiranja.'
+  reason: 'Rod: ''tamno predsoblje'' (srednji rod). ''Bokom'' je nejasno; tumačim kao kadar sa strane. Lara potvrđuje smisao.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: null
+  confirmation_source: null
+- id: E15
+  op: replace
+  post: '03'
+  path: caption_hr.text
+  expected: Patent, vezica, kvaka. 🎧 Pet sitnih zvukova prije izlaska. Koji je vaš?
+  replacement: Patent, kvaka, vezica. 🎧 Tri sitna zvuka prije izlaska. Koji vam je najdraži?
+  reason: Opisana su tri zvuka predmeta (patent, kvaka, vezica), a pisalo je 'Pet'. Redoslijed prati storyboard. 'Koji je vaš?' je dvosmisleno, pa 'Koji vam je najdraži?'.
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: null
+  confirmation_source: null
+- id: E16
+  op: replace
+  post: '03'
+  path: development.summary
+  expected: Ruke vežu vezicu, a svjetlo otkriva policu s pakiranjem.
+  replacement: Ruke zavezuju vezicu, a svjetlo otkriva policu s pakiranjem.
+  reason: 'Ujednačen izraz sa storyboardom (kadar 3: ''zavezuju vezicu'').'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: null
+  confirmation_source: null
+- id: E17
+  op: replace
+  post: '03'
+  path: alt_text_hr
+  expected: Ruke zatvaraju torbu, daleka silueta prolazi hodnikom, ruke vežu vezicu, zatim topla svjetlost otkriva pakiranje kreatin monohidrata GymBeam na polici.
+  replacement: Ruke zatvaraju torbu, daleka silueta prolazi hodnikom, ruke zavezuju vezicu, zatim topla svjetlost otkriva pakiranje kreatin monohidrata GymBeam na polici.
+  reason: 'Ujednačen izraz sa storyboardom (kadar 3: ''zavezuju vezicu'').'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: null
+  confirmation_source: null
+- id: E18
+  op: replace
+  post: campaign
+  path: identity.throughline
+  expected: 'Svaki post drži se zapisanog: karusel čita pravu etiketu, hero pokazuje pakiranje bez dodataka, reel slaže jutarnje pripreme do jednog kadra s pakiranjem.'
+  replacement: 'Svaki post drži se zapisanog: karusel čita pravu etiketu, hero pokazuje pakiranje bez dodataka, reel slaže pripreme prije izlaska do jednog kadra s pakiranjem.'
+  reason: 'Neusklađeno s reelom: reel prikazuje pripreme prije izlaska (torba, tenisice, kvaka), ne jutro.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: null
+  confirmation_source: null
+- id: E19
+  op: replace
+  post: campaign
+  path: deferred_claims[0].text
+  expected: Tvrdnje s product stranice sku 3885 o učinkovitosti i izvedbi (E-0921eae1).
+  replacement: Tvrdnje sa stranice proizvoda (sku 3885) o učinkovitosti i izvedbi (E-0921eae1).
+  reason: '''product stranice'' je miješanje jezika; ispravno ''sa stranice proizvoda''.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: null
+  confirmation_source: null
+- id: E20
+  op: replace
+  post: campaign
+  path: open_questions[2]
+  expected: Tvrdnje o učinkovitosti s product stranice odgođene su do posebne provjere uvjeta uporabe.
+  replacement: Tvrdnje o učinkovitosti sa stranice proizvoda odgođene su do posebne provjere uvjeta uporabe.
+  reason: '''s product stranice'' -> ''sa stranice proizvoda''.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: null
+  confirmation_source: null
+- id: E21
+  op: replace
+  post: campaign
+  path: open_questions[7]
+  expected: Pojašnjenja uz IFS i HPLC oznake u karuselu su opće upute; potvrditi s proizvođačem prije objave.
+  replacement: Slajdovi 4 i 5 samo prenose otisnuti tekst oznaka i ne objašnjavaju što IFS i HPLC znače jer to nije potkrijepljeno dokazima; prije objave potvrditi s GymBeamom dokumentaciju iza tih oznaka.
+  reason: 'Nakon pregleda: u karuselu nema pojašnjenja značenja IFS/HPLC (nema dokaza), pa pitanje treba odražavati stvarno stanje umjesto ''opće upute''.'
+  proposed_by: ai:Claude Code (Sonnet 5.5 session) - prijedlog
+  confirmed_by: null
+  confirmation_source: null

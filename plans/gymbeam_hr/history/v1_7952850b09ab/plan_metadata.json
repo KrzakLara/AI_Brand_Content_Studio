@@ -1,0 +1,80 @@
+{
+  "model": "claude-sonnet-5-5",
+  "prompt": "content_planner",
+  "prompt_version": "cc1ed77d6dd8",
+  "dossier_fingerprint": "0e98b5a41ea3f074a0ac20a0cc32c79e8771cb02f800dd1c71519e8b4993696f",
+  "schema": "CampaignPlan/1",
+  "validation": "passed",
+  "calls": [
+    {
+      "call": "draft",
+      "task": "content_plan",
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 28572,
+      "output_tokens": 10222,
+      "stop_reason": "tool_use",
+      "request_id": "req_011CgUKsXx2YAEd6L2oFgym2",
+      "cost_usd": 0.159364
+    },
+    {
+      "call": "repair1",
+      "task": "content_plan",
+      "model": "claude-sonnet-5-5",
+      "input_tokens": 37412,
+      "output_tokens": 9220,
+      "stop_reason": "tool_use",
+      "request_id": "req_011CgUKybndP63mRzPB8XRAq",
+      "cost_usd": 0.167024
+    }
+  ],
+  "feedback_history": [],
+  "plan_hash": "7952850b09ab5e57d7ac51abf0138ea8094a5915b4c05dfe54cf70c8bc53c08c",
+  "run_id": "plan-gymbeam-hr-1",
+  "approval": {
+    "decision": null,
+    "hash": "7952850b09ab5e57d7ac51abf0138ea8094a5915b4c05dfe54cf70c8bc53c08c",
+    "stale_ignored": false,
+    "text": "NONE for this plan hash"
+  },
+  "usage": {
+    "requests_total": 3,
+    "message_requests": 2,
+    "preflight_requests": 1,
+    "input_tokens": 65984,
+    "output_tokens": 19442,
+    "cost_usd": 0.326388,
+    "calls": [
+      {
+        "cost_usd": 0.159364,
+        "input_tokens": 28572,
+        "kind": "usage",
+        "model": "claude-sonnet-5-5",
+        "output_tokens": 10222,
+        "request_id": "req_011CgUKsXx2YAEd6L2oFgym2",
+        "requests": 0,
+        "stop_reason": "tool_use",
+        "task": "content_plan"
+      },
+      {
+        "cost_usd": 0.167024,
+        "input_tokens": 37412,
+        "kind": "usage",
+        "model": "claude-sonnet-5-5",
+        "output_tokens": 9220,
+        "request_id": "req_011CgUKybndP63mRzPB8XRAq",
+        "requests": 0,
+        "stop_reason": "tool_use",
+        "task": "content_plan"
+      }
+    ]
+  },
+  "ledger": {
+    "operations": {
+      "pending": 0,
+      "done": 2,
+      "failed": 0,
+      "unknown": 0
+    },
+    "ledger_cost_usd": 0.326388
+  }
+}
