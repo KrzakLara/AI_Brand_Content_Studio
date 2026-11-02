@@ -91,6 +91,7 @@ class _Parser(HTMLParser):
 def parse_html(raw: str, base_url: str) -> ParsedPage:
     p = _Parser(base_url)
     p.feed(raw)
+    p.close()  # flush text held back at end of input (Python 3.14 buffers an unterminated <title> as RCDATA)
     p.page.title = " ".join(p.page.title.split())
     p.page.text = " ".join(" ".join(p._text).split())[:20000]
     return p.page
