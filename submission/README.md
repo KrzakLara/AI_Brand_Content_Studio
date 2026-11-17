@@ -6,7 +6,7 @@ This folder is a placeholder for the project's full archive package: raw AI outp
 
 ## Media rights
 
-The rights statement that applies to every media file in this repository is in [`../README.md` → Prava na medije](../README.md#prava-na-medije). In short:
+The rights statement that applies to every media file in this repository is in [`../README.md` → Media Rights & Disclaimer](../README.md#media-rights--disclaimer). In short:
 
 - The posts are speculative portfolio work for non-commercial demonstration only. They are not an official GymBeam or BeastPink collaboration, the brands neither commissioned nor approved them, and they are not approved for advertising.
 - The product packaging in Posts 1 and 2 is cut out of official brand product photographs. In Post 3, the wafer and the bag are AI renders based on official photographs. **The rights holders have not granted permission to publish these photographs.** The media will be removed if a rights holder asks.

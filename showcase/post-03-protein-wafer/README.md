@@ -41,4 +41,4 @@ Kratka UGC priča „kuhinja → torba → auto → teretana". Wafer je glavni p
 ## Poznata ograničenja
 Pri rezu u kadar s torbom postoji skok kontinuiteta, lice blago varira između kadrova, a u kadru teretane cipela je zamućena. Sitni tekst na omotu je mekši u pokretu. Pakiranje i torba u videu su AI renderi prema službenim fotografijama, ne pikseli s fotografije.
 
-*⚠️ Prava objave nisu riješena: dopuštenje nositelja prava za službene fotografije nije pribavljeno. Detalji: [README → Prava na medije](../../README.md#prava-na-medije).*
+*⚠️ Prava objave nisu riješena: dopuštenje nositelja prava za službene fotografije nije pribavljeno. Detalji: [README → Media Rights & Disclaimer](../../README.md#media-rights--disclaimer).*

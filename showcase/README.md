@@ -8,7 +8,7 @@ Tri isporučene Instagram objave koje je proizveo AI Brand Content Studio:
 | 2 – BeastPink Colla Pink, karusel | 6 slajdova 1080×1350 (4 slike i 2 videa) | [`post-02-colla-pink/`](post-02-colla-pink/) |
 | 3 – GymBeam Protein Wafer, lifestyle Reel | video 1080×1920, 8,83 s, sa zvukom | [`post-03-protein-wafer/`](post-03-protein-wafer/) |
 
-Prava i ograničenja korištenja: [README → Prava na medije](../README.md#prava-na-medije).
+Prava i ograničenja korištenja: [README → Media Rights & Disclaimer](../README.md#media-rights--disclaimer).
 
 ## Manifest: datoteke u ovoj mapi i isporučene verzije
 
