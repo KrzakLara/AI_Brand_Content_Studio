@@ -30,4 +30,4 @@ Edukativni lifestyle karusel: što je u napitku, kako se priprema, tvrdnja o cin
 > Zamišljeni portfolio oglas: osoba i prizori u objavi generirani su umjetnom inteligencijom. Nije službena suradnja s GymBeamom ni BeastPinkom.
 > #gymbeamhr #gbfit #beastpink
 
-*Prava i ograničenja korištenja: [README → Prava na medije](../../README.md#prava-na-medije). SHA-256 svih datoteka: [`showcase/README.md`](../README.md).*
+*⚠️ Prava objave nisu riješena: dopuštenje nositelja prava za službene fotografije nije pribavljeno. Detalji: [README → Prava na medije](../../README.md#prava-na-medije). SHA-256 svih datoteka: [`showcase/README.md`](../README.md).*

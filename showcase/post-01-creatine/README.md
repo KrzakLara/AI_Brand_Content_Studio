@@ -24,4 +24,4 @@ Premium oglas proizvoda: vrećica kreatina na mokrom tamnom škriljevcu, uz ča�
 > Zamišljeni portfolio oglas: scena i čaša generirane su umjetnom inteligencijom, a pakiranje potječe sa službene fotografije. Nije službena suradnja s GymBeamom.
 > #gymbeamhr #gbig
 
-*Prava i ograničenja korištenja: [README → Prava na medije](../../README.md#prava-na-medije).*
+*⚠️ Prava objave nisu riješena: dopuštenje nositelja prava za službene fotografije nije pribavljeno. Detalji: [README → Prava na medije](../../README.md#prava-na-medije).*

@@ -7,6 +7,8 @@ Zamišljeni portfolio rad: osobe su fiktivne (generirane umjetnom inteligencijom
 
 > **Gotove objave su u [`showcase/`](showcase/)**: samo finalne, isporučene datoteke. Sadržaj je bajt po bajt identičan isporučenim datotekama (provjereno SHA-256, [manifest](showcase/README.md)). Međuverzije, sirovi AI izlazi i logovi nisu u gitu (`runs/` i `submission/*` su u `.gitignore`). Prije korištenja medija pročitaj [Prava na medije](#prava-na-medije).
 
+> ⚠️ **Status prava objave: NERIJEŠENO.** Objave 1 i 2 sadrže izreze službenih fotografija brendova, a objava 3 AI rendere izrađene prema njima. Dopuštenje nositelja prava za javnu objavu nije pribavljeno.
+
 ---
 
 ## Final Campaign Deliverables
@@ -151,6 +153,8 @@ WORKLOG.md         dnevnik rada po fazama
 ```
 
 ## Prava na medije
+
+**Status: neriješeno.** Mediji u `showcase/` objavljeni su bez dopuštenja nositelja prava na službene fotografije.
 
 - **Nekomercijalni portfolio prikaz.** Objave su zamišljeni (spekulativni) oglasi. Nisu službena suradnja s GymBeamom ni BeastPinkom, brendovi ih nisu naručili ni odobrili i nisu namijenjene oglašavanju.
 - **Zaštitni znakovi** GymBeam i BeastPink, nazivi proizvoda i dizajn pakiranja vlasništvo su njihovih nositelja.
