@@ -45,11 +45,11 @@ r = {
         "reel_editing_style_note": "Human creative decision, stated by the author in the first person. It is not a justification for visual defects of the AI material; those are listed in posts/post_03_gymbeam_wafer_reel/POST.md.",
     },
     "approval_status": {
-        "A_take_home_demonstration": "Author-reviewed and accepted for the Sekvenca private take-home demonstration, including visual content, captions and Reel audio. Confirmed in writing by the author (Lara) on 2026-11-01.",
+        "A_private_portfolio_demonstration": "Author-reviewed and accepted for the private portfolio demonstration, including visual content, captions and Reel audio. Confirmed in writing by the author (Lara) on 2026-11-01.",
         "B_public_commercial_advertising": "Portfolio demonstration only; not approved for public commercial advertising. Not authorized for public commercial advertising without additional rights and compliance review; no brand or legal approval is claimed.",
         "audio_review": "Reel V8 audio (synthetic foley) reviewed and accepted by the author on 2026-11-01",
     },
-    "author_confirmation": {"date": "2026-11-01", "statement": "Author-reviewed and accepted for the Sekvenca private take-home demonstration, including visual content, captions and Reel audio.", "limitation": "Portfolio demonstration only; not approved for public commercial advertising.", "scope": "Posts 1-3 final media, BeastPink videos, Wafer Reel V8 incl. audio, captions, R9", "brand_or_legal_approval": "none claimed"},
+    "author_confirmation": {"date": "2026-11-01", "statement": "Author-reviewed and accepted for the private portfolio demonstration, including visual content, captions and Reel audio.", "limitation": "Portfolio demonstration only; not approved for public commercial advertising.", "scope": "Posts 1-3 final media, BeastPink videos, Wafer Reel V8 incl. audio, captions, R9", "brand_or_legal_approval": "none claimed"},
     "posts": [
         {"order": 1, "plan_post_id": "02", "format": "hero_image", "title": "GymBeam 100% Creatine Monohydrate hero", "deliverable": HERO, "size": "1080x1350",
          "objective": "Prepoznatljivost i poželjnost: pakiranje samo, bez dodataka.", "changed_from_plan": False, "hashtags": ["#gymbeamhr", "#gbig"],
@@ -75,7 +75,7 @@ r = {
          "new_generation_7f": {"keyframe_S03B_usd": 0.115665, "kling_S03B_usd_logged_rate": 0.705, "kling_billing_verified": False}},
     ],
     "captions_status": "Phase 7F final texts of record (compliance/CAPTION_CHANGES_7F.md)",
-    "signoff_text": "Author-reviewed and accepted for the Sekvenca private take-home demonstration, including visual content, captions and Reel audio. Portfolio demonstration only; not approved for public commercial advertising.",
+    "signoff_text": "Author-reviewed and accepted for the private portfolio demonstration, including visual content, captions and Reel audio. Portfolio demonstration only; not approved for public commercial advertising.",
     "signoff_status": "RECORDED 2026-11-01: confirmed in writing by the author (FINAL_SIGNOFF_7F.md); no brand or legal approval claimed",
     "final_scope_revision": "phases/02_plan/FINAL_SCOPE_REVISION_7F.md (+ .yaml); original brief ai_recipe/repo/briefs/gymbeam_hr.yaml preserved unchanged",
 }
@@ -83,7 +83,7 @@ r = {
 H = lambda rel: sha(SUB / rel)[:16] + "…"
 md = f"""# Content plan — final delivery revision (R9), updated 2026-11-01 (Phase 7F)
 
-**Status: documents exactly what is delivered.** Author-reviewed and accepted for the Sekvenca private take-home demonstration, including visual content, captions and Reel audio. Confirmed in writing by the author (Lara) on 2026-11-01 for Posts 1–3 (final 7F versions), the Reel audio, the captions and this plan R9. R9 is documentation, not a workflow-tool approval: the tool's approval status of plan hash `970975125494…` is NONE (historical, unchanged). **Portfolio demonstration only; not approved for public commercial advertising.**
+**Status: documents exactly what is delivered.** Author-reviewed and accepted for the private portfolio demonstration, including visual content, captions and Reel audio. Confirmed in writing by the author (Lara) on 2026-11-01 for Posts 1–3 (final 7F versions), the Reel audio, the captions and this plan R9. R9 is documentation, not a workflow-tool approval: the tool's approval status of plan hash `970975125494…` is NONE (historical, unchanged). **Portfolio demonstration only; not approved for public commercial advertising.**
 
 Final scope and the evolution from the original creatine-only brief: `FINAL_SCOPE_REVISION_7F.md` (+ `.yaml`); the original brief `ai_recipe/repo/briefs/gymbeam_hr.yaml` is preserved unchanged.
 
@@ -134,10 +134,10 @@ Evolution of the scope (original creatine-only brief → three-product demonstra
 ## 5. Status — two different categories (do not confuse them)
 | Category | Status |
 |---|---|
-| **A. Author-reviewed and accepted for the Sekvenca private take-home demonstration, including visual content, captions and Reel audio.** | Confirmed in writing by the author (Lara) on 2026-11-01: Post 1 Creatine Hero V5, Post 2 Colla Pink carousel (7F corrections), Post 3 Wafer Reel V8 incl. its audio, the captions, R9. |
+| **A. Author-reviewed and accepted for the private portfolio demonstration, including visual content, captions and Reel audio.** | Confirmed in writing by the author (Lara) on 2026-11-01: Post 1 Creatine Hero V5, Post 2 Colla Pink carousel (7F corrections), Post 3 Wafer Reel V8 incl. its audio, the captions, R9. |
 | **B. Portfolio demonstration only; not approved for public commercial advertising.** | Not authorized for public commercial advertising without additional rights and compliance review: brand/trademark and photo permission not obtained, legal review of claims not done, native-speaker proofreading not done; no brand or legal approval is claimed. The workflow tool's approval status of the original plan hash is NONE (historical). |
 
-**Author approval statement (recorded 2026-11-01, `FINAL_SIGNOFF_7F.md`):** "Author-reviewed and accepted for the Sekvenca private take-home demonstration, including visual content, captions and Reel audio. Portfolio demonstration only; not approved for public commercial advertising."
+**Author approval statement (recorded 2026-11-01, `FINAL_SIGNOFF_7F.md`):** "Author-reviewed and accepted for the private portfolio demonstration, including visual content, captions and Reel audio. Portfolio demonstration only; not approved for public commercial advertising."
 
 ## 6. Verification and open limitations
 - R9 lists each deliverable with its SHA-256; `phase7/smoke_tests.py` re-checks that the files in `submission/posts/` match them and that the original plan files are unchanged.

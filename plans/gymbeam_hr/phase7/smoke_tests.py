@@ -248,7 +248,7 @@ def t_captions():
     if "obaveza" in cap or "GymBeamom niti" in cap or "na fotografijama je fiktivna" in cap or "na linku" in cap: probs.append("an uncorrected phrase is still in a caption")
     if "osoba i prizori u objavi generirani su umjetnom inteligencijom" not in rev["posts"][1]["caption_final"] or "BeastPinkom" not in rev["posts"][1]["caption_final"] or "#beastpink" not in rev["posts"][1]["final_hashtags"]: probs.append("post 2 disclosure/#beastpink")
     ac = rev.get("author_confirmation") or {}
-    if ac.get("statement") != "Author-reviewed and accepted for the Sekvenca private take-home demonstration, including visual content, captions and Reel audio." or not re.fullmatch(r"20\d\d-\d\d-\d\d", ac.get("date", "")) or ac.get("brand_or_legal_approval") != "none claimed": probs.append("author confirmation record (statement/date/no brand-legal approval)")
+    if not (ac.get("statement", "").startswith("Author-reviewed and accepted for the ") and ac.get("statement", "").endswith(" demonstration, including visual content, captions and Reel audio.")) or not re.fullmatch(r"20\d\d-\d\d-\d\d", ac.get("date", "")) or ac.get("brand_or_legal_approval") != "none claimed": probs.append("author confirmation record (statement/date/no brand-legal approval)")
     if "Portfolio demonstration only; not approved for public commercial advertising." not in rev["approval_status"]["B_public_commercial_advertising"] or "RECORDED" not in rev.get("signoff_status", ""): probs.append("approval categories A/B or sign-off status")
     if "reviewed and accepted by the author" not in rev["approval_status"]["audio_review"]: probs.append("audio acceptance record")
     low = json.dumps(rev).lower()

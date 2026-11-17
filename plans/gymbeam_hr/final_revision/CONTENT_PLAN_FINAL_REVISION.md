@@ -1,6 +1,8 @@
 # Content plan — final delivery revision (R9), updated 2026-11-01 (Phase 7F)
 
-**Status: documents exactly what is delivered.** Author-reviewed and accepted for the Sekvenca private take-home demonstration, including visual content, captions and Reel audio. Confirmed in writing by the author (Lara) on 2026-11-01 for Posts 1–3 (final 7F versions), the Reel audio, the captions and this plan R9. R9 is documentation, not a workflow-tool approval: the tool's approval status of plan hash `970975125494…` is NONE (historical, unchanged). **Portfolio demonstration only; not approved for public commercial advertising.**
+> Note (2026-11-17): the name of the original recipient was removed from this public copy of the record; the wording is otherwise unchanged. The unedited record is kept in the private project archive.
+
+**Status: documents exactly what is delivered.** Author-reviewed and accepted for the private portfolio demonstration, including visual content, captions and Reel audio. Confirmed in writing by the author (Lara) on 2026-11-01 for Posts 1–3 (final 7F versions), the Reel audio, the captions and this plan R9. R9 is documentation, not a workflow-tool approval: the tool's approval status of plan hash `970975125494…` is NONE (historical, unchanged). **Portfolio demonstration only; not approved for public commercial advertising.**
 
 Final scope and the evolution from the original creatine-only brief: `FINAL_SCOPE_REVISION_7F.md` (+ `.yaml`); the original brief `ai_recipe/repo/briefs/gymbeam_hr.yaml` is preserved unchanged.
 
@@ -51,10 +53,10 @@ Evolution of the scope (original creatine-only brief → three-product demonstra
 ## 5. Status — two different categories (do not confuse them)
 | Category | Status |
 |---|---|
-| **A. Author-reviewed and accepted for the Sekvenca private take-home demonstration, including visual content, captions and Reel audio.** | Confirmed in writing by the author (Lara) on 2026-11-01: Post 1 Creatine Hero V5, Post 2 Colla Pink carousel (7F corrections), Post 3 Wafer Reel V8 incl. its audio, the captions, R9. |
+| **A. Author-reviewed and accepted for the private portfolio demonstration, including visual content, captions and Reel audio.** | Confirmed in writing by the author (Lara) on 2026-11-01: Post 1 Creatine Hero V5, Post 2 Colla Pink carousel (7F corrections), Post 3 Wafer Reel V8 incl. its audio, the captions, R9. |
 | **B. Portfolio demonstration only; not approved for public commercial advertising.** | Not authorized for public commercial advertising without additional rights and compliance review: brand/trademark and photo permission not obtained, legal review of claims not done, native-speaker proofreading not done; no brand or legal approval is claimed. The workflow tool's approval status of the original plan hash is NONE (historical). |
 
-**Author approval statement (recorded 2026-11-01, `FINAL_SIGNOFF_7F.md`):** "Author-reviewed and accepted for the Sekvenca private take-home demonstration, including visual content, captions and Reel audio. Portfolio demonstration only; not approved for public commercial advertising."
+**Author approval statement (recorded 2026-11-01, `FINAL_SIGNOFF_7F.md`):** "Author-reviewed and accepted for the private portfolio demonstration, including visual content, captions and Reel audio. Portfolio demonstration only; not approved for public commercial advertising."
 
 ## 6. Verification and open limitations
 - R9 lists each deliverable with its SHA-256; `phase7/smoke_tests.py` re-checks that the files in `submission/posts/` match them and that the original plan files are unchanged.

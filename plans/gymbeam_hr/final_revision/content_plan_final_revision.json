@@ -20,13 +20,13 @@
     "reel_editing_style_note": "Human creative decision, stated by the author in the first person. It is not a justification for visual defects of the AI material; those are listed in posts/post_03_gymbeam_wafer_reel/POST.md."
   },
   "approval_status": {
-    "A_take_home_demonstration": "Author-reviewed and accepted for the Sekvenca private take-home demonstration, including visual content, captions and Reel audio. Confirmed in writing by the author (Lara) on 2026-11-01.",
+    "A_private_portfolio_demonstration": "Author-reviewed and accepted for the private portfolio demonstration, including visual content, captions and Reel audio. Confirmed in writing by the author (Lara) on 2026-11-01.",
     "B_public_commercial_advertising": "Portfolio demonstration only; not approved for public commercial advertising. Not authorized for public commercial advertising without additional rights and compliance review; no brand or legal approval is claimed.",
     "audio_review": "Reel V8 audio (synthetic foley) reviewed and accepted by the author on 2026-11-01"
   },
   "author_confirmation": {
     "date": "2026-11-01",
-    "statement": "Author-reviewed and accepted for the Sekvenca private take-home demonstration, including visual content, captions and Reel audio.",
+    "statement": "Author-reviewed and accepted for the private portfolio demonstration, including visual content, captions and Reel audio.",
     "limitation": "Portfolio demonstration only; not approved for public commercial advertising.",
     "scope": "Posts 1-3 final media, BeastPink videos, Wafer Reel V8 incl. audio, captions, R9",
     "brand_or_legal_approval": "none claimed"
@@ -162,7 +162,7 @@
     }
   ],
   "captions_status": "Phase 7F final texts of record (compliance/CAPTION_CHANGES_7F.md)",
-  "signoff_text": "Author-reviewed and accepted for the Sekvenca private take-home demonstration, including visual content, captions and Reel audio. Portfolio demonstration only; not approved for public commercial advertising.",
+  "signoff_text": "Author-reviewed and accepted for the private portfolio demonstration, including visual content, captions and Reel audio. Portfolio demonstration only; not approved for public commercial advertising.",
   "signoff_status": "RECORDED 2026-11-01: confirmed in writing by the author (FINAL_SIGNOFF_7F.md); no brand or legal approval claimed",
   "final_scope_revision": "phases/02_plan/FINAL_SCOPE_REVISION_7F.md (+ .yaml); original brief ai_recipe/repo/briefs/gymbeam_hr.yaml preserved unchanged"
 }
