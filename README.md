@@ -1,11 +1,39 @@
 # AI Brand Content Studio
 
-AI sustav koji od briefa brenda dolazi do gotovih Instagram objava: istražuje brend, planira sadržaj, generira slike i videe, provjerava kvalitetu i priprema isporuku. Izrađen kao praktični zadatak za Sekvencu (Full-Stack Developer – AI Products).
+AI sustav koji od briefa brenda dolazi do gotovih Instagram objava: istražuje brend, planira sadržaj, generira slike i videe, provjerava kvalitetu i priprema isporuku. Portfolio projekt iz područja AI proizvoda: višeagentni tijek rada (LangGraph), stvarne integracije AI providera, kontrola troška i ljudsko odobrenje.
 
 **Demonstracijski brend:** GymBeam Hrvatska ([@gymbeamhr](https://www.instagram.com/gymbeamhr/)).
 Zamišljeni portfolio rad: osobe su fiktivne (generirane umjetnom inteligencijom) i ne radi se o službenoj suradnji s GymBeamom ni BeastPinkom.
 
-> **Mediji nisu u ovom repozitoriju.** Gotove slike i videi izvedeni su iz službenih fotografija brenda, pa su namjerno izostavljeni iz gita (`runs/` i `submission/*` su u `.gitignore`). Nalaze se u predajnom ZIP-u (`submission/posts/`). Ovdje su kod, promptovi, planovi, zapisi odluka i testovi kojima su objave nastale.
+> **Gotove objave su u [`showcase/`](showcase/)**: samo finalne, isporučene datoteke. Sadržaj je bajt po bajt identičan isporučenim datotekama (provjereno SHA-256, [manifest](showcase/README.md)). Međuverzije, sirovi AI izlazi i logovi nisu u gitu (`runs/` i `submission/*` su u `.gitignore`). Prije korištenja medija pročitaj [Prava na medije](#prava-na-medije).
+
+---
+
+## Final Campaign Deliverables
+
+Što je sustav stvarno proizveo: tri Instagram objave za GymBeam Hrvatska, vidljive bez instalacije.
+
+### Objava 1 – GymBeam Creatine Monohydrate · premium hero
+
+<a href="showcase/post-01-creatine/"><img src="showcase/post-01-creatine/creatine-hero-1080x1350.png" width="360" alt="GymBeam Creatine Monohydrate na mokrom škriljevcu uz čašu vode, naslov SVAKA SERIJA POČINJE ODLUKOM."></a>
+
+Statična slika 1080×1350, finalna verzija V5. Pravo pakiranje je izrezano iz službene fotografije i postavljeno kodom. Scena i čaša generirane su s `gpt-image-2.5-sunburst`, a naslov je iscrtan kodom. → [detalji i caption](showcase/post-01-creatine/)
+
+### Objava 2 – BeastPink Colla Pink · karusel od 6 slajdova
+
+| 1 | 2 | 3 ▶ video | 4 | 5 ▶ video | 6 |
+|---|---|---|---|---|---|
+| <img src="showcase/post-02-colla-pink/slide-1-cover.png" width="130" alt="Slajd 1: Vaš ružičasti ritual"> | <img src="showcase/post-02-colla-pink/slide-2-ingredients.png" width="130" alt="Slajd 2: Što je unutra?"> | [<img src="showcase/post-02-colla-pink/slide-3-preparation-poster.jpg" width="130" alt="Slajd 3: Priprema (video)">](showcase/post-02-colla-pink/slide-3-preparation.mp4) | <img src="showcase/post-02-colla-pink/slide-4-how-to-prepare.png" width="130" alt="Slajd 4: Kako pripremiti?"> | [<img src="showcase/post-02-colla-pink/slide-5-beauty-drink-poster.jpg" width="130" alt="Slajd 5: Napitak za ljepotu (video)">](showcase/post-02-colla-pink/slide-5-beauty-drink.mp4) | <img src="showcase/post-02-colla-pink/slide-6-flavours.png" width="130" alt="Slajd 6: Odaberi svoj okus"> |
+
+Edukativni lifestyle karusel 4:5 sa 4 slike i 2 videa od 5 s. Scene su generirane s `gpt-image-2.5-sunburst`, a prava teglica vraćena je kodom. Slajdovi 3 i 5 animirani su s Kling v4 (image-to-video). Sav tekst dodan je kodom, a tvrdnja o cinku prati Uredbu (EU) 432/2012. → [svi slajdovi, videi i caption](showcase/post-02-colla-pink/)
+
+### Objava 3 – GymBeam Protein Wafer · lifestyle Reel
+
+<a href="showcase/post-03-protein-wafer/protein-wafer-reel.mp4"><img src="showcase/post-03-protein-wafer/reel-cover-grid-4x5.png" width="300" alt="Naslovnica Reela: žena u kuhinji drži GymBeam Protein Wafer"></a>
+
+**▶ [Reel FINAL V8 (MP4, 1080×1920, 8,83 s, sa zvukom)](showcase/post-03-protein-wafer/protein-wafer-reel.mp4)** · [naslovnica (9:16)](showcase/post-03-protein-wafer/reel-cover-9x16.png)
+
+UGC priča „kuhinja → torba → auto → teretana". Uključuje 14 keyframeova (`gpt-image-2.5-sunburst`, prema službenim fotografijama wafera i torbe) i 5 Kling klipova. Montaža je u rough-cut stilu, uz sintetizirani foley. V8 je odabran nakon odbijenih verzija V4–V7. → [kadrovi, caption i ograničenja](showcase/post-03-protein-wafer/)
 
 ---
 
@@ -90,7 +118,7 @@ $env:STUDIO_NO_DOTENV = "1"
 
 > `studio run --mock` proizvodi **placeholdere** (jednobojne slike i JSON) kako bi se testirao tijek rada. To **nisu** objave.
 
-**Ponovno sastavljanje sve tri stvarne objave** (lokalno, besplatno, bez API ključeva) radi se iz predajnog ZIP-a, jer on sadrži arhivirane AI izlaze: `submission/START_HERE.md`, opcija B, skripta `tools/REPRODUCE_SVE_TRI_OBJAVE_7F.ps1`.
+**Ponovno sastavljanje sve tri stvarne objave** (lokalno, besplatno, bez API ključeva) radi se iz arhivskog paketa projekta koji sadrži sirove AI izlaze (nije u ovom repozitoriju), skriptom `tools/REPRODUCE_SVE_TRI_OBJAVE_7F.ps1`.
 
 **Nova AI generacija** traži vlastite ključeve (`.env` prema `.env.example`: `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `FAL_KEY`, `APIFY_TOKEN`) i podizanje limita u skriptama, jer su ih originalni pokreti potrošili. Rezultat su nove, drukčije slike, a ocjenjuju se istim QA pravilima.
 
@@ -110,6 +138,7 @@ $env:STUDIO_NO_DOTENV = "1"
 ## Struktura repozitorija
 
 ```
+showcase/          tri finalne objave (slike, karusel, Reel MP4) s opisima
 studio/            aplikacija: CLI, LangGraph graf, čvorovi, ugovori (Pydantic), provideri, ledger, promptovi
 plans/gymbeam_hr/  plan, povijest odluka i skripte koje su napravile objave (hero, karusel, Reel, pakiranje)
 research/          istraživanje: izvori, uvozi, Instagram izvoz
@@ -121,8 +150,15 @@ config.yaml        modeli, limiti, cijene
 WORKLOG.md         dnevnik rada po fazama
 ```
 
+## Prava na medije
+
+- **Nekomercijalni portfolio prikaz.** Objave su zamišljeni (spekulativni) oglasi. Nisu službena suradnja s GymBeamom ni BeastPinkom, brendovi ih nisu naručili ni odobrili i nisu namijenjene oglašavanju.
+- **Zaštitni znakovi** GymBeam i BeastPink, nazivi proizvoda i dizajn pakiranja vlasništvo su njihovih nositelja.
+- **Službene fotografije:** u objavama 1 i 2 pakiranje je izrezano iz službenih fotografija proizvoda. U objavi 3 wafer i torba su AI renderi izrađeni prema službenim fotografijama. **Dopuštenje nositelja prava za objavu tih fotografija nije pribavljeno.** Na zahtjev nositelja prava mediji će biti uklonjeni.
+- **Osobe** u objavama su fiktivne i generirane umjetnom inteligencijom.
+- Zdravstvene tvrdnje i hrvatski tekst nisu prošli pravni pregled ni lekturu izvornog govornika.
+
 ## Ograničenja
 
-- Nije odobreno za javno oglašavanje: nema dozvole za fotografije brenda ni pravnog pregleda tvrdnji, a hrvatski tekst nije lektorirao izvorni govornik.
 - Plaćeni koraci (agent, plan, slike, Kling) nisu ponovljivi bit po bit.
 - U Reelu je sitni tekst na omotu u pokretu mekši nego na fotografiji, a lice osobe blago varira između kadrova.

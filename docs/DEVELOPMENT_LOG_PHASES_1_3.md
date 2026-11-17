@@ -4,7 +4,7 @@
 > are documented in `WORKLOG.md`, `plans/gymbeam_hr/` and `submission/README.md`. Supported Python: **3.12 and 3.14** (full suite: 249 passed on 3.12.7 and on 3.14.0).
 > Local post-production scripts need `pip install -e ".[dev,media]"`. No paid API is called without keys and the spend guards.
 
-Take-home project for Sekvenca (Full-Stack Developer – AI Products).
+Portfolio project (AI products).
 Phase 1 runs the **complete workflow from brand brief to exported deliverables with
 deterministic mock providers only**. No AI API, network call, FFmpeg or paid service is
 used. Everything produced is labelled MOCK. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).

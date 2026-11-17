@@ -1,6 +1,6 @@
 # AI Brand Content Studio — Architecture
 
-Take-home for Sekvenca (Full-Stack Developer – AI Products). This document is the
+Portfolio project (AI products). This document is the
 primary architecture specification; it was created at the start of Phase 1 from the
 agreed requirements (no prior file existed).
 
